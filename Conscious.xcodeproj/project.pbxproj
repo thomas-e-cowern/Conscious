@@ -55,8 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				41D89A8521EE8BEF00CFF725 /* Model */,
-				41D89A8421EE8BEB00CFF725 /* View */,
-				41D89A8321EE8BE900CFF725 /* Controller */,
 				41D89A8221EE8BDE00CFF725 /* Resorces */,
 			);
 			path = Conscious;
@@ -72,20 +70,6 @@
 				41D89A7C21EE8BB700CFF725 /* Info.plist */,
 			);
 			path = Resorces;
-			sourceTree = "<group>";
-		};
-		41D89A8321EE8BE900CFF725 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		41D89A8421EE8BEB00CFF725 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		41D89A8521EE8BEF00CFF725 /* Model */ = {
