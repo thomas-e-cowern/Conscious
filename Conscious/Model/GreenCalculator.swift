@@ -59,7 +59,7 @@ struct GreenCalculator {
         let dietType = dietType.results
         let wastedFood = wastedFood * 315
         
-        return locallyProducedFood + dietType + wastedFood
+        return dietType - (dietType * locallyProducedFood) + wastedFood
     }
     
     // MARK: - Home
@@ -69,6 +69,26 @@ struct GreenCalculator {
     
     enum States {
         static var all = ["AK", "AL", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"]
+    }
+    
+    enum typeOfHouse {
+        case apartment
+        case tinyHouse
+        case house
+        case condo
+        
+        var results: Double {
+            switch self {
+            case .apartment:
+                return 5.59
+            case .tinyHouse:
+                return 3.49
+            case .house:
+                return 6.35
+            case .condo:
+                return 6.03
+            }
+        }
     }
     
     enum homeHeatingFuel {
@@ -99,12 +119,11 @@ struct GreenCalculator {
         var results: Double {
             switch self {
             case .energySavingLightBulbs:
-                return 400
+                return 0.18
             case .efficientInsullation:
-                // NEEDS WORK
-                return 0
+                return 1.92
             case .solarPanels:
-                return 5760
+                return 2.61
             }
         }
     }
@@ -118,36 +137,25 @@ struct GreenCalculator {
         var results: Double {
             switch self {
             case .paper:
-                return 89
+                return 0.04
             case .plastic:
-                return 205
+                return 0.09
             case .glass:
-                return 189
+                return 0.08
             case . food:
-                // NEEDS WORK
-                return 0
+                return 0.67
             }
         }
     }
     
-    enum typeOfHouse {
-        case apartment
-        case tinyHouse
-        case house
-        case condo
+    func houseCalculator(typeOfHouse: typeOfHouse, homeHeatingFuel: homeHeatingFuel, energySavingImprovement: energySavingImprovement, wasteRecycling: wasteRecycling) -> Double {
         
-        var results: Double {
-            switch self {
-            case .apartment:
-                return 5.59
-            case .tinyHouse:
-                return 3.49
-            case .house:
-                return 6.35
-            case .condo:
-                return 6.03
-            }
-        }
+        let typeOfHouse = typeOfHouse.results
+        let homeHeatingFuel = homeHeatingFuel.results
+        let energySavingImprovement = energySavingImprovement.results
+        let wasteRecycling = wasteRecycling.results
+        
+        return (typeOfHouse + homeHeatingFuel) - (energySavingImprovement + wasteRecycling)
     }
     
     // MARK: - Travel
@@ -161,11 +169,11 @@ struct GreenCalculator {
         var results: Double {
             switch self {
             case .lessThan100Miles:
-                return 5200
+                return 2.36
             case .between100And200:
-                return 10400
+                return 4.72
             case .greaterThan200:
-                return 14500
+                return 6.58
             }
         }
     }
@@ -197,15 +205,15 @@ struct GreenCalculator {
         var results: Double {
             switch self {
             case .electricCar:
-                return 4453.0
+                return 2.02
             case .hybridCar:
-                return 6108.0
+                return 2.77
             case .smallGasCar:
-                return 7627.0
+                return 3.46
             case .meduimGasCar:
-                return 9421.0
+                return 4.27
             case .largeGasCar:
-                return 11435.0
+                return 5.19
             }
         }
     }
@@ -234,4 +242,19 @@ struct GreenCalculator {
         case appliances
         case furniture
     }
+}
+
+
+extension GreenCalculator {
+    
+//    func greenCalculator() -> Double {
+//
+//        let houseCal = houseCalculator(typeOfHouse: <#T##GreenCalculator.typeOfHouse#>, homeHeatingFuel: <#T##GreenCalculator.homeHeatingFuel#>, energySavingImprovement: <#T##GreenCalculator.energySavingImprovement#>, wasteRecycling: <#T##GreenCalculator.wasteRecycling#>)
+//
+//        let travelCal = travelCalculator(personalTransportation: <#T##GreenCalculator.personalTransportation#>, mostUsedVechile: <#T##GreenCalculator.mostUsedVechile#>, numberOfFlight: <#T##Int#>, numberOfDrivesPerWeek: <#T##GreenCalculator.numberOfDrivesPerWeek#>)
+//
+//        let foodCal = foodCalculator(locallyProducedFood: <#T##GreenCalculator.locallyProducedFood#>, dietType: <#T##GreenCalculator.dietType#>, wastedFood: <#T##Double#>)
+//
+//        return houseCal + travelCal + foodCal
+//    }
 }
