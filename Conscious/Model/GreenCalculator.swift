@@ -12,8 +12,10 @@ struct GreenCalculator {
     
     // MARK: - Food
     var wastedFood: Double
+    var locallyProducedFood: LocallyProducedFood
+    var dietType: DietType
     
-    enum locallyProducedFood {
+    enum LocallyProducedFood {
         case alot
         case some
         case none
@@ -30,7 +32,7 @@ struct GreenCalculator {
         }
     }
     
-    enum dietType {
+    enum DietType {
         case mostlyMeat
         case someMeat
         case rarelyMeat
@@ -53,11 +55,11 @@ struct GreenCalculator {
         }
     }
     
-    func foodCalculator(locallyProducedFood: locallyProducedFood, dietType: dietType, wastedFood: Double) -> Double {
+    func foodCalculator() -> Double {
         
-        let locallyProducedFood = locallyProducedFood.results
-        let dietType = dietType.results
-        let wastedFood = wastedFood * 315
+        let locallyProducedFood = self.locallyProducedFood.results
+        let dietType = self.dietType.results
+        let wastedFood = self.wastedFood * 315
         
         return dietType - (dietType * locallyProducedFood) + wastedFood
     }
@@ -66,12 +68,16 @@ struct GreenCalculator {
     var numberOfHouseHoldMembers: Int = 1
     var houseTemInWinter: Double
     var turnOffLights: Bool
+    var typeOfHouse: TypeOfHouse
+    var homeHeatingFuel: HomeHeatingFuel
+    var energySavingImprovement: EnergySavingImprovement
+    var wasteRecycling: WasteRecycling
     
     enum States {
         static var all = ["AK", "AL", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"]
     }
     
-    enum typeOfHouse {
+    enum TypeOfHouse {
         case apartment
         case tinyHouse
         case house
@@ -91,7 +97,7 @@ struct GreenCalculator {
         }
     }
     
-    enum homeHeatingFuel {
+    enum HomeHeatingFuel {
         case gas
         case oil
         case electric
@@ -111,7 +117,7 @@ struct GreenCalculator {
         }
     }
     
-    enum energySavingImprovement {
+    enum EnergySavingImprovement {
         case energySavingLightBulbs
         case efficientInsullation
         case solarPanels
@@ -128,7 +134,7 @@ struct GreenCalculator {
         }
     }
     
-    enum wasteRecycling {
+    enum WasteRecycling {
         case paper
         case plastic
         case glass
@@ -148,20 +154,23 @@ struct GreenCalculator {
         }
     }
     
-    func houseCalculator(typeOfHouse: typeOfHouse, homeHeatingFuel: homeHeatingFuel, energySavingImprovement: energySavingImprovement, wasteRecycling: wasteRecycling) -> Double {
+    func houseCalculator() -> Double {
         
-        let typeOfHouse = typeOfHouse.results
-        let homeHeatingFuel = homeHeatingFuel.results
-        let energySavingImprovement = energySavingImprovement.results
-        let wasteRecycling = wasteRecycling.results
+        let typeOfHouse = self.typeOfHouse.results
+        let homeHeatingFuel = self.homeHeatingFuel.results
+        let energySavingImprovement = self.energySavingImprovement.results
+        let wasteRecycling = self.wasteRecycling.results
         
         return (typeOfHouse + homeHeatingFuel) - (energySavingImprovement + wasteRecycling)
     }
     
     // MARK: - Travel
     var numberOfFlight: Int = 0
+    var numberOfDrivesPerWeek: NumberOfDrivesPerWeek
+    var personalTransportation: PersonalTransportation
+    var mostUsedVechile: MostUsedVechile
     
-    enum numberOfDrivesPerWeek {
+    enum NumberOfDrivesPerWeek {
         case lessThan100Miles
         case between100And200
         case greaterThan200
@@ -178,7 +187,7 @@ struct GreenCalculator {
         }
     }
     
-    enum personalTransportation {
+    enum PersonalTransportation {
         case car
         case motorBike
         case none
@@ -195,7 +204,7 @@ struct GreenCalculator {
         }
     }
     
-    enum mostUsedVechile {
+    enum MostUsedVechile {
         case electricCar
         case hybridCar
         case smallGasCar
@@ -218,12 +227,12 @@ struct GreenCalculator {
         }
     }
     
-    func travelCalculator(personalTransportation: personalTransportation, mostUsedVechile: mostUsedVechile, numberOfFlight: Int, numberOfDrivesPerWeek: numberOfDrivesPerWeek) -> Double {
+    func travelCalculator() -> Double {
         
-        let personalTransportation = personalTransportation.results
-        let mostUsedVechile = mostUsedVechile.results
-        let numberOfFlight = Double(numberOfFlight) * 0.9
-        let numberOfDrivesPerWeek = numberOfDrivesPerWeek.results
+        let personalTransportation = self.personalTransportation.results
+        let mostUsedVechile = self.mostUsedVechile.results
+        let numberOfFlight = Double(self.numberOfFlight) * 0.9
+        let numberOfDrivesPerWeek = self.numberOfDrivesPerWeek.results
         
         return personalTransportation + mostUsedVechile + numberOfFlight + numberOfDrivesPerWeek
     }
@@ -236,7 +245,7 @@ struct GreenCalculator {
         case Year
     }
     
-    enum purchasedItems {
+    enum PurchasedItems {
         case TV
         case Computer
         case appliances
@@ -244,17 +253,15 @@ struct GreenCalculator {
     }
 }
 
-
 extension GreenCalculator {
     
-//    func greenCalculator() -> Double {
-//
-//        let houseCal = houseCalculator(typeOfHouse: <#T##GreenCalculator.typeOfHouse#>, homeHeatingFuel: <#T##GreenCalculator.homeHeatingFuel#>, energySavingImprovement: <#T##GreenCalculator.energySavingImprovement#>, wasteRecycling: <#T##GreenCalculator.wasteRecycling#>)
-//
-//        let travelCal = travelCalculator(personalTransportation: <#T##GreenCalculator.personalTransportation#>, mostUsedVechile: <#T##GreenCalculator.mostUsedVechile#>, numberOfFlight: <#T##Int#>, numberOfDrivesPerWeek: <#T##GreenCalculator.numberOfDrivesPerWeek#>)
-//
-//        let foodCal = foodCalculator(locallyProducedFood: <#T##GreenCalculator.locallyProducedFood#>, dietType: <#T##GreenCalculator.dietType#>, wastedFood: <#T##Double#>)
-//
-//        return houseCal + travelCal + foodCal
-//    }
+    func greenCalculator() -> Double {
+        let houseCal = houseCalculator()
+        let travelCal = travelCalculator()
+        let foodCal = foodCalculator()
+        return houseCal + travelCal + foodCal
+    }
+    
+//    let greenCal = GreenCalculator(wastedFood: <#T##Double#>, locallyProducedFood: <#T##GreenCalculator.LocallyProducedFood#>, dietType: <#T##GreenCalculator.DietType#>, numberOfHouseHoldMembers: <#T##Int#>, houseTemInWinter: <#T##Double#>, turnOffLights: <#T##Bool#>, typeOfHouse: <#T##GreenCalculator.TypeOfHouse#>, homeHeatingFuel: <#T##GreenCalculator.HomeHeatingFuel#>, energySavingImprovement: <#T##GreenCalculator.EnergySavingImprovement#>, wasteRecycling: <#T##GreenCalculator.WasteRecycling#>, numberOfFlight: <#T##Int#>, numberOfDrivesPerWeek: <#T##GreenCalculator.NumberOfDrivesPerWeek#>, personalTransportation: <#T##GreenCalculator.PersonalTransportation#>, mostUsedVechile: <#T##GreenCalculator.MostUsedVechile#>)
 }
+
