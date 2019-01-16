@@ -15,10 +15,10 @@ struct GreenCalculator {
     var locallyProducedFood: LocallyProducedFood
     var dietType: DietType
     
-    enum LocallyProducedFood {
-        case alot
-        case some
-        case none
+    enum LocallyProducedFood: String, Answer {
+        case alot = "A lot of the food I buy is locally sourced"
+        case some = "Some of the food I buy is locally sourced"
+        case none = "Local sourcing isn’t a top priority for me"
         
         var results: Double {
             switch self {
@@ -30,14 +30,16 @@ struct GreenCalculator {
                 return 0
             }
         }
+        
+        
     }
     
-    enum DietType {
-        case mostlyMeat
-        case someMeat
-        case rarelyMeat
-        case vegetarian
-        case vegan
+    enum DietType: String, Answer {
+        case mostlyMeat = "Meat in most meals"
+        case someMeat = "Meat in some meals"
+        case rarelyMeat = "Meat very rarely / just fish"
+        case vegetarian = "Vegetarian"
+        case vegan = "Vegan"
         
         var results: Double {
             switch self {
@@ -265,3 +267,4 @@ extension GreenCalculator {
 //    let greenCal = GreenCalculator(wastedFood: <#T##Double#>, locallyProducedFood: <#T##GreenCalculator.LocallyProducedFood#>, dietType: <#T##GreenCalculator.DietType#>, numberOfHouseHoldMembers: <#T##Int#>, houseTemInWinter: <#T##Double#>, turnOffLights: <#T##Bool#>, typeOfHouse: <#T##GreenCalculator.TypeOfHouse#>, homeHeatingFuel: <#T##GreenCalculator.HomeHeatingFuel#>, energySavingImprovement: <#T##GreenCalculator.EnergySavingImprovement#>, wasteRecycling: <#T##GreenCalculator.WasteRecycling#>, numberOfFlight: <#T##Int#>, numberOfDrivesPerWeek: <#T##GreenCalculator.NumberOfDrivesPerWeek#>, personalTransportation: <#T##GreenCalculator.PersonalTransportation#>, mostUsedVechile: <#T##GreenCalculator.MostUsedVechile#>)
 }
 
+protocol Answer: CaseIterable {}
