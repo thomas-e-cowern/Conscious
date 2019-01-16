@@ -54,7 +54,6 @@
 		41D89A6F21EE8B9F00CFF725 /* Conscious */ = {
 			isa = PBXGroup;
 			children = (
-				41D89A8521EE8BEF00CFF725 /* Model */,
 				41D89A8221EE8BDE00CFF725 /* Resorces */,
 			);
 			path = Conscious;
@@ -72,6 +71,22 @@
 			path = Resorces;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
+=======
+		41D89A8321EE8BE900CFF725 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		41D89A8421EE8BEB00CFF725 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		41D89A8521EE8BEF00CFF725 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +95,7 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+>>>>>>> dcd9c66685201db635bd60a53a40bb6cfd9e89c1
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
