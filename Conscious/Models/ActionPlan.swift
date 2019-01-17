@@ -35,13 +35,4 @@ enum Categories: String {
             return ["Wait To Upgrade", "Thrift Shop", "Avoid Fast Fashion", "Recycle Your Clothes", "Rechargeable Batteries", "Support Eco-Friendly Businesses"]
         }
     }
-    
-//    func createActionPlan(dictOfResults: [String:Double]) {
-//        let cumulativePlan = []
-//        for item in dictOfResults {
-//            return food[0..<food.count*dictOfResults[item]]
-//        }
-//    }
-//}
-
 }

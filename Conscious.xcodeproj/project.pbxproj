@@ -14,7 +14,12 @@
 		41D89A7B21EE8BB700CFF725 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D89A7921EE8BB700CFF725 /* LaunchScreen.storyboard */; };
 		7E0AA97621EF900E00AB9EEB /* GreenCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0AA97521EF900E00AB9EEB /* GreenCalculator.swift */; };
 		7ECE818721F0F71B00F2F9DA /* ActionPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE818621F0F71B00F2F9DA /* ActionPlan.swift */; };
-		7ECE818C21F10EBD00F2F9DA /* GreenCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE818B21F10EBD00F2F9DA /* GreenCalculatorViewController.swift */; };
+		7ECE818E21F120D600F2F9DA /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE818D21F120D600F2F9DA /* Food.swift */; };
+		7ECE819021F120F100F2F9DA /* Travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE818F21F120F000F2F9DA /* Travel.swift */; };
+		7ECE819221F120FD00F2F9DA /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE819121F120FD00F2F9DA /* House.swift */; };
+		7ECE819B21F1234F00F2F9DA /* ActionPlanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE819A21F1234F00F2F9DA /* ActionPlanController.swift */; };
+		7ECE819D21F12FBB00F2F9DA /* GreenCalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE819C21F12FBB00F2F9DA /* GreenCalculatorController.swift */; };
+		7ECE819F21F136CD00F2F9DA /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE819E21F136CD00F2F9DA /* QuizViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +32,12 @@
 		41D89A7C21EE8BB700CFF725 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E0AA97521EF900E00AB9EEB /* GreenCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenCalculator.swift; sourceTree = "<group>"; };
 		7ECE818621F0F71B00F2F9DA /* ActionPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPlan.swift; sourceTree = "<group>"; };
-		7ECE818B21F10EBD00F2F9DA /* GreenCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenCalculatorViewController.swift; sourceTree = "<group>"; };
+		7ECE818D21F120D600F2F9DA /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		7ECE818F21F120F000F2F9DA /* Travel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel.swift; sourceTree = "<group>"; };
+		7ECE819121F120FD00F2F9DA /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
+		7ECE819A21F1234F00F2F9DA /* ActionPlanController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPlanController.swift; sourceTree = "<group>"; };
+		7ECE819C21F12FBB00F2F9DA /* GreenCalculatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenCalculatorController.swift; sourceTree = "<group>"; };
+		7ECE819E21F136CD00F2F9DA /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				41D89A8521EE8BEF00CFF725 /* Models */,
+				7ECE819321F122BD00F2F9DA /* ModelControllers */,
 				7ECE818821F1096400F2F9DA /* ViewControllers */,
 				4152896A21F106130028E573 /* OnboardingPageViewController.swift */,
 				41D89A8221EE8BDE00CFF725 /* Resorces */,
@@ -83,8 +94,11 @@
 		41D89A8521EE8BEF00CFF725 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7ECE818621F0F71B00F2F9DA /* ActionPlan.swift */,
 				7E0AA97521EF900E00AB9EEB /* GreenCalculator.swift */,
+				7ECE818D21F120D600F2F9DA /* Food.swift */,
+				7ECE819121F120FD00F2F9DA /* House.swift */,
+				7ECE818F21F120F000F2F9DA /* Travel.swift */,
+				7ECE818621F0F71B00F2F9DA /* ActionPlan.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -92,9 +106,18 @@
 		7ECE818821F1096400F2F9DA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				7ECE818B21F10EBD00F2F9DA /* GreenCalculatorViewController.swift */,
+				7ECE819E21F136CD00F2F9DA /* QuizViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7ECE819321F122BD00F2F9DA /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7ECE819C21F12FBB00F2F9DA /* GreenCalculatorController.swift */,
+				7ECE819A21F1234F00F2F9DA /* ActionPlanController.swift */,
+			);
+			path = ModelControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,11 +191,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7ECE818C21F10EBD00F2F9DA /* GreenCalculatorViewController.swift in Sources */,
+				7ECE819021F120F100F2F9DA /* Travel.swift in Sources */,
+				7ECE819B21F1234F00F2F9DA /* ActionPlanController.swift in Sources */,
+				7ECE819D21F12FBB00F2F9DA /* GreenCalculatorController.swift in Sources */,
+				7ECE819221F120FD00F2F9DA /* House.swift in Sources */,
 				4152896B21F106130028E573 /* OnboardingPageViewController.swift in Sources */,
 				41D89A7121EE8B9F00CFF725 /* AppDelegate.swift in Sources */,
+				7ECE819F21F136CD00F2F9DA /* QuizViewController.swift in Sources */,
 				7ECE818721F0F71B00F2F9DA /* ActionPlan.swift in Sources */,
 				7E0AA97621EF900E00AB9EEB /* GreenCalculator.swift in Sources */,
+				7ECE818E21F120D600F2F9DA /* Food.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
