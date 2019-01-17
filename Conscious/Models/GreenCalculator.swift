@@ -52,8 +52,6 @@ struct GreenCalculator {
                 return 0
             }
         }
-        
-        
     }
     
     enum DietType: String, Answer {
