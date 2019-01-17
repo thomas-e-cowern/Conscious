@@ -15,6 +15,8 @@ struct GreenCalculator {
     var locallyProducedFood: LocallyProducedFood
     var dietType: DietType
     
+    let foodQuestions = ["Of the food you buy how much is wasted and thrown away?", "How often do you buy locally produced food?", "How would you best describe your diet?"]
+    
     enum WastedFood: String, Answer {
         case none = "None"
         case lessThan10Percent = "0% to 10%"
@@ -94,6 +96,8 @@ struct GreenCalculator {
     var homeHeatingFuel: HomeHeatingFuel
     var energySavingImprovement: EnergySavingImprovement
     var wasteRecycling: WasteRecycling
+    
+    let householdQuestions = [" How many people live in the house above the age of 18?", "What temperature do you keep your house at in the winter?", "Do you regularly turn off lights and appliances when not used for long periods of time?", "What type of house do you live in?", "How do you heat your home", "Do you have any of these energy saving improvements in your home?", "Which of the following do you recycle?"]
     
     enum States {
         static var all = ["AK", "AL", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"]
@@ -247,6 +251,8 @@ struct GreenCalculator {
     var personalTransportation: PersonalTransportation
     var mostUsedVechile: MostUsedVechile
     
+    var travelQuestions = ["In the last year, how many round trip flights have you made?", "How many miles a week do you drive", "What kind of vehicle do you travel in most?", "What kind of vehicle do you travel in most?"]
+    
     enum NumberOfFlight: String, Answer {
         case oneToTwo = "1 or 2 flights per year"
         case threeToFour = "3 or 4 flights per year"
@@ -363,3 +369,4 @@ extension GreenCalculator {
 }
 
 protocol Answer: CaseIterable {}
+protocol Question {}
