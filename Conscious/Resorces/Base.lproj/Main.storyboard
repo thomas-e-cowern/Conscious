@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Page View Controller-->
+        <!--Onboarding Page View Controller-->
         <scene sceneID="RdG-Bi-ikn">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="rtG-cc-nlr" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="rtG-cc-nlr" customClass="OnboardingPageViewController" customModule="Conscious" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTl-je-Vgd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2329" y="15"/>
@@ -21,12 +21,12 @@
         <!--View Controller-->
         <scene sceneID="jE9-Rq-PNi">
             <objects>
-                <viewController storyboardIdentifier="onboardOne" id="lOa-CM-s7M" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="onboardOneViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lOa-CM-s7M" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZZ6-9S-PKY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E1g-yc-wO1">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="E1g-yc-wO1">
                                 <rect key="frame" x="0.0" y="44" width="414" height="458"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make a Difference" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFi-NO-DKh">
@@ -69,12 +69,12 @@
         <!--View Controller-->
         <scene sceneID="QTx-bc-cQO">
             <objects>
-                <viewController storyboardIdentifier="onboardTwo" id="NMc-Ai-g5n" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="onboardTwoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NMc-Ai-g5n" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uW4-lW-nLM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uCq-PJ-PGx">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="uCq-PJ-PGx">
                                 <rect key="frame" x="0.0" y="44" width="414" height="458"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Be a part of something bigger" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8FS-xc-heN">
@@ -117,7 +117,7 @@
         <!--View Controller-->
         <scene sceneID="OlP-9n-Uml">
             <objects>
-                <viewController storyboardIdentifier="onboardThree" id="3bi-wi-gH4" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="onboardThreeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3bi-wi-gH4" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gvU-XE-Sdt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -128,7 +128,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PZK-3b-mWm">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="221.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pPr-wU-AkZ">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="001-grapes-with-leaf-and-stem" translatesAutoresizingMaskIntoConstraints="NO" id="pPr-wU-AkZ">
                                                 <rect key="frame" x="149" y="0.0" width="116" height="116"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="116" id="Pdm-z1-Gdm"/>
@@ -156,7 +156,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VNd-E2-OYD">
                                         <rect key="frame" x="0.0" y="245.5" width="414" height="222"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="avM-ui-Jsh">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="002-home" translatesAutoresizingMaskIntoConstraints="NO" id="avM-ui-Jsh">
                                                 <rect key="frame" x="149" y="0.0" width="116" height="116"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="avM-ui-Jsh" secondAttribute="height" multiplier="1:1" id="9du-DE-ufd"/>
@@ -184,7 +184,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Q0H-Bt-SK8">
                                         <rect key="frame" x="0.0" y="491.5" width="414" height="221.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WKS-B5-3Qy">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="003-worldwide" translatesAutoresizingMaskIntoConstraints="NO" id="WKS-B5-3Qy">
                                                 <rect key="frame" x="149" y="0.0" width="116" height="116"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="WKS-B5-3Qy" secondAttribute="height" multiplier="1:1" id="Etm-0t-tXW"/>
@@ -358,6 +358,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="001-grapes-with-leaf-and-stem" width="347.77359008789062" height="347.77359008789062"/>
+        <image name="002-home" width="344.52337646484375" height="344.52337646484375"/>
+        <image name="003-worldwide" width="512" height="512"/>
         <image name="placeholder" width="1280" height="800"/>
     </resources>
 </document>
