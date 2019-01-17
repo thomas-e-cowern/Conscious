@@ -11,9 +11,29 @@ import Foundation
 struct GreenCalculator {
     
     // MARK: - Food
-    var wastedFood: Double
+    var wastedFood: WastedFood
     var locallyProducedFood: LocallyProducedFood
     var dietType: DietType
+    
+    enum WastedFood: String, Answer {
+        case none = "None"
+        case lessThan10Percent = "0% to 10%"
+        case between10and30Percent = "11% to 30%"
+        case over30Percent = "More than 30%"
+        
+        var results: Double {
+            switch self {
+            case .none:
+                return 0.0
+            case .lessThan10Percent:
+                return 0.1 * 315
+            case .between10and30Percent:
+                return 0.3 * 315
+            case .over30Percent:
+                return 0.5 * 315
+            }
+        }
+    }
     
     enum LocallyProducedFood: String, Answer {
         case alot = "A lot of the food I buy is locally sourced"
@@ -61,15 +81,15 @@ struct GreenCalculator {
         
         let locallyProducedFood = self.locallyProducedFood.results
         let dietType = self.dietType.results
-        let wastedFood = self.wastedFood * 315
+        let wastedFood = self.wastedFood.results
         
         return dietType - (dietType * locallyProducedFood) + wastedFood
     }
     
     // MARK: - Home
-    var numberOfHouseHoldMembers: Int = 1
-    var houseTemInWinter: Double
-    var turnOffLights: Bool
+    var numberOfHouseHoldMembers: NumberOfHouseHoldMembers
+    var houseTempInWinter: HouseTempInWinter
+    var turnOffLights: TurnOffLights
     var typeOfHouse: TypeOfHouse
     var homeHeatingFuel: HomeHeatingFuel
     var energySavingImprovement: EnergySavingImprovement
@@ -79,11 +99,62 @@ struct GreenCalculator {
         static var all = ["AK", "AL", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"]
     }
     
-    enum TypeOfHouse {
-        case apartment
-        case tinyHouse
-        case house
-        case condo
+    enum NumberOfHouseHoldMembers: String, Answer  {
+        case oneToTwo = "1 or 2 household members"
+        case threeToFour = "3 or 4 household members"
+        case fiveToSeven = "5 to 7 household members"
+        case aboveSeven = "8 or more household members"
+        
+        var results: Double {
+            switch self {
+            case .oneToTwo:
+                return 2.0
+            case .threeToFour:
+                return 4.0
+            case .fiveToSeven:
+                return 7.0
+            case .aboveSeven:
+                return 10.0
+            }
+        }
+    }
+    
+    enum HouseTempInWinter: String, Answer {
+        case cool = "I keep my home cool"
+        case warm = "I keep my home warm"
+        case hot = "I keep my home hot"
+        
+        var results: Double {
+            switch self {
+            case .cool:
+                return 0.2
+            case .warm:
+                return 0.1
+            case .hot:
+                return -0.2
+            }
+        }
+    }
+    
+    enum TurnOffLights: String, Answer {
+        case yes = "Yes"
+        case no = "No"
+        
+        var results: Double {
+            switch self {
+            case .yes:
+                return 0.09
+            case .no:
+                return 0.0
+            }
+        }
+    }
+    
+    enum TypeOfHouse: String, Answer {
+        case apartment = "Apartment"
+        case tinyHouse = "Tiny House"
+        case house = "House"
+        case condo = "Condo"
         
         var results: Double {
             switch self {
@@ -99,11 +170,11 @@ struct GreenCalculator {
         }
     }
     
-    enum HomeHeatingFuel {
-        case gas
-        case oil
-        case electric
-        case wood
+    enum HomeHeatingFuel: String, Answer {
+        case gas = "Natural Gas"
+        case oil = "Oil"
+        case electric = "Electric"
+        case wood = "Wood"
         
         var results: Double {
             switch self {
@@ -119,10 +190,10 @@ struct GreenCalculator {
         }
     }
     
-    enum EnergySavingImprovement {
-        case energySavingLightBulbs
-        case efficientInsullation
-        case solarPanels
+    enum EnergySavingImprovement: String, Answer {
+        case energySavingLightBulbs = "Energy Saving Lightbulbs"
+        case efficientInsullation = "Efficient Insulation"
+        case solarPanels = "Solar Panels"
         
         var results: Double {
             switch self {
@@ -136,11 +207,11 @@ struct GreenCalculator {
         }
     }
     
-    enum WasteRecycling {
-        case paper
-        case plastic
-        case glass
-        case food
+    enum WasteRecycling: String, Answer {
+        case paper = "Paper"
+        case plastic = "Plastic"
+        case glass = "Glass"
+        case food = "Food"
         
         var results: Double {
             switch self {
@@ -157,20 +228,44 @@ struct GreenCalculator {
     }
     
     func houseCalculator() -> Double {
-        
+        let numberOfHouseholdMembers = self.numberOfHouseHoldMembers.results
+        let houseTempInWinter = self.houseTempInWinter.results
+        let turnOffLights = self.turnOffLights.results
         let typeOfHouse = self.typeOfHouse.results
         let homeHeatingFuel = self.homeHeatingFuel.results
         let energySavingImprovement = self.energySavingImprovement.results
         let wasteRecycling = self.wasteRecycling.results
         
-        return (typeOfHouse + homeHeatingFuel) - (energySavingImprovement + wasteRecycling)
+        let totalHomeEmissions = numberOfHouseholdMembers + typeOfHouse + homeHeatingFuel
+        
+        return ((totalHomeEmissions) - (totalHomeEmissions * houseTempInWinter)) - (turnOffLights + energySavingImprovement + wasteRecycling)
     }
     
     // MARK: - Travel
-    var numberOfFlight: Int = 0
+    var numberOfFlight: NumberOfFlight
     var numberOfDrivesPerWeek: NumberOfDrivesPerWeek
     var personalTransportation: PersonalTransportation
     var mostUsedVechile: MostUsedVechile
+    
+    enum NumberOfFlight: String, Answer {
+        case oneToTwo = "1 or 2 flights per year"
+        case threeToFour = "3 or 4 flights per year"
+        case fiveToSeven = "5 to 7 flights per year"
+        case aboveSeven = "8 or more flights per year"
+        
+        var results: Double {
+            switch self {
+            case .oneToTwo:
+                return 2.0 * 0.9
+            case .threeToFour:
+                return 4.0 * 0.9
+            case .fiveToSeven:
+                return 7.0 * 0.9
+            case .aboveSeven:
+                return 10.0 * 0.9
+            }
+        }
+    }
     
     enum NumberOfDrivesPerWeek {
         case lessThan100Miles
@@ -233,7 +328,7 @@ struct GreenCalculator {
         
         let personalTransportation = self.personalTransportation.results
         let mostUsedVechile = self.mostUsedVechile.results
-        let numberOfFlight = Double(self.numberOfFlight) * 0.9
+        let numberOfFlight = self.numberOfFlight.results
         let numberOfDrivesPerWeek = self.numberOfDrivesPerWeek.results
         
         return personalTransportation + mostUsedVechile + numberOfFlight + numberOfDrivesPerWeek
