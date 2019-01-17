@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4152896B21F106130028E573 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4152896A21F106130028E573 /* OnboardingPageViewController.swift */; };
 		41D89A7121EE8B9F00CFF725 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D89A7021EE8B9F00CFF725 /* AppDelegate.swift */; };
 		41D89A7621EE8B9F00CFF725 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D89A7421EE8B9F00CFF725 /* Main.storyboard */; };
 		41D89A7821EE8BB700CFF725 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41D89A7721EE8BB700CFF725 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4152896A21F106130028E573 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
 		41D89A6D21EE8B9F00CFF725 /* Conscious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Conscious.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41D89A7021EE8B9F00CFF725 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41D89A7521EE8B9F00CFF725 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 		41D89A6F21EE8B9F00CFF725 /* Conscious */ = {
 			isa = PBXGroup;
 			children = (
+				4152896A21F106130028E573 /* OnboardingPageViewController.swift */,
 				41D89A8521EE8BEF00CFF725 /* Model */,
 				41D89A8221EE8BDE00CFF725 /* Resorces */,
 			);
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4152896B21F106130028E573 /* OnboardingPageViewController.swift in Sources */,
 				41D89A7121EE8B9F00CFF725 /* AppDelegate.swift in Sources */,
 				7E0AA97621EF900E00AB9EEB /* GreenCalculator.swift in Sources */,
 			);
