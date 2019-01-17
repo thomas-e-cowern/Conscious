@@ -51,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4152896C21F13BE10028E573 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				41D89A7421EE8B9F00CFF725 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		41D89A6421EE8B9E00CFF725 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +78,7 @@
 		41D89A6F21EE8B9F00CFF725 /* Conscious */ = {
 			isa = PBXGroup;
 			children = (
+				4152896C21F13BE10028E573 /* Storyboards */,
 				41D89A8521EE8BEF00CFF725 /* Models */,
 				7ECE819321F122BD00F2F9DA /* ModelControllers */,
 				7ECE818821F1096400F2F9DA /* ViewControllers */,
@@ -83,7 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				41D89A7021EE8B9F00CFF725 /* AppDelegate.swift */,
-				41D89A7421EE8B9F00CFF725 /* Main.storyboard */,
 				41D89A7721EE8BB700CFF725 /* Assets.xcassets */,
 				41D89A7921EE8BB700CFF725 /* LaunchScreen.storyboard */,
 				41D89A7C21EE8BB700CFF725 /* Info.plist */,
