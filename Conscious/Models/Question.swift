@@ -10,6 +10,7 @@ import Foundation
 
 protocol Answer{
     static var possibleAnswers: [Answer] { get }
+    var rawValue: String { get }
 }
 
 struct Question {

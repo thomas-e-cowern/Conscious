@@ -17,7 +17,6 @@ struct Food {
 
  // MARK: - Answeres
 enum WastedFood: String, Answer {
-    
     case none = "None"
     case lessThan10Percent = "0% to 10%"
     case between10and30Percent = "11% to 30%"

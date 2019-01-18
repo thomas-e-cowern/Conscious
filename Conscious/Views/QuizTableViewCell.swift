@@ -10,12 +10,23 @@ import UIKit
 
 class QuizTableViewCell: UITableViewCell {
 
-    // MARK: - View Life Cycle
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    // MARK: - Properties
+    @IBOutlet weak var answerLabel: UILabel!
+    
+    var answer: Answer?{
+        didSet{
+            updateViwes()
+        }
     }
     
-    // MARK: - Properties
-    var answer: Answer?
+    // MARK: - Setup
+    func updateViwes() {
+        if let answer = answer {
+            answerLabel.text = answer.rawValue
+        }
+    }
 
+    // MARK: - Actions
+    @IBAction func checkboxButtonTapped(_ sender: Any) {
+    }
 }
