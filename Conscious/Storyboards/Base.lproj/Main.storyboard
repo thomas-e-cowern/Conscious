@@ -276,7 +276,7 @@
                                     <constraint firstAttribute="height" constant="100" id="4Vi-9R-Hr8"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="22" id="h4I-uZ-VnG">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="answerCell" rowHeight="22" id="h4I-uZ-VnG" customClass="QuizTableViewCell" customModule="Conscious" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="366" height="22"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h4I-uZ-VnG" id="Gm4-aX-2Ub">

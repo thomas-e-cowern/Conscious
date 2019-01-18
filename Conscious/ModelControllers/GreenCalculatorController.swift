@@ -18,14 +18,39 @@ class GreenCalculatorController {
     
     // MARK: - Questions
     // FOOD
-    let foodQuestions = [
-        "Of the food you buy how much is wasted and thrown away?", "How often do you buy locally produced food?", "How would you best describe your diet?"]
+    lazy var foodQuestions = [
+        Question(text: "Of the food you buy how much is wasted and thrown away?", category: .food, possibleAnswers: WastedFood.possibleAnswers),
+        Question(text: "How often do you buy locally produced food?", category: .food, possibleAnswers: LocallyProducedFood.possibleAnswers),
+        Question(text: "How would you best describe your diet?", category: .food, possibleAnswers: DietType.possibleAnswers)
+    ]
+    
+    // FOOD EXTRA QUESTIONS
+    //   "Of the food you buy how much is wasted and thrown away?
+    //   "How often do you buy locally produced food?"
+    
     
     // HOUSE
-    let householdQuestions = [" How many people live in the house above the age of 18?", "What temperature do you keep your house at in the winter?", "Do you regularly turn off lights and appliances when not used for long periods of time?", "What type of house do you live in?", "How do you heat your home", "Do you have any of these energy saving improvements in your home?", "Which of the following do you recycle?"]
+    let householdQuestions = [
+        Question(text: "What type of house do you live in", category: .house, possibleAnswers: TypeOfHouse.possibleAnswers),
+        Question(text: "How many people live in the house above the age of 18?", category: .house, possibleAnswers: NumberOfHouseHoldMembers.possibleAnswers),
+        Question(text: "What temperature do you keep your house at in the winter?", category: .house, possibleAnswers: HouseTempInWinter.possibleAnswers),
+        Question(text: "Do you regularly turn off lights and appliances when not used for long periods of time?", category: .house, possibleAnswers: TurnOffLights.possibleAnswers),
+        Question(text: "How do you heat your home", category: .house, possibleAnswers: HouseHeatingFuel.possibleAnswers),
+        Question(text: "Do you have any of these energy saving improvements in your home?", category: .house, possibleAnswers: EnergySavingImprovement.possibleAnswers),
+        Question(text: "Which of the following do you recycle?", category: .house, possibleAnswers: WasteRecycling.possibleAnswers)
+    ]
+    
     
     // TRAVEL
-    var travelQuestions = ["In the last year, how many round trip flights have you made?", "How many miles a week do you drive", "What kind of vehicle do you travel in most?", "What kind of vehicle do you travel in most?"]
+    var travelQuestions = [
+        Question(text: "In the last year, how many round trip flights have you made?", category: .travel, possibleAnswers: NumberOfFlight.possibleAnswers),
+        Question(text: "What kind of vehicle do you travel in most?", category: .house, possibleAnswers:MostUsedVechile.possibleAnswers),
+        Question(text: "How many miles a week do you drive?", category: .house, possibleAnswers: NumberOfDrivesPerWeek.possibleAnswers)
+    ]
+    
+    // TRAVEL EXTRA ANSWER
+    // var personalTransportation: PersonalTransportation
+    
     
     // MARK: - Calculators(Results)
     // FOOD
