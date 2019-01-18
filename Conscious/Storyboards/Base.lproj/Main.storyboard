@@ -203,7 +203,6 @@ save the quiz for later</string>
                                 <rect key="frame" x="334" y="35" width="33" height="30"/>
                                 <state key="normal" title="SKIP"/>
                                 <connections>
-                                    <action selector="skipButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k6H-iA-O5s"/>
                                     <segue destination="Sla-iL-btk" kind="show" identifier="scoreSegue" id="ehI-z5-4n8"/>
                                 </connections>
                             </button>
@@ -253,6 +252,9 @@ save the quiz for later</string>
                                                         <constraint firstItem="hH7-h4-kOJ" firstAttribute="top" secondItem="Gm4-aX-2Ub" secondAttribute="top" id="zGe-2l-yOw"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="answerLabel" destination="hH7-h4-kOJ" id="DVR-cV-eWj"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
@@ -592,13 +594,13 @@ Pledged</string>
                                         <state key="normal" title="Add To List"/>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="muR-qJ-K6V">
-                                        <rect key="frame" x="0.0" y="134" width="359" height="6.5"/>
+                                        <rect key="frame" x="0.0" y="134" width="359" height="194"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="194" id="9gw-yn-7ih"/>
                                         </constraints>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="x12-yP-gSZ">
-                                        <rect key="frame" x="0.0" y="160.5" width="326" height="178"/>
+                                        <rect key="frame" x="0.0" y="348" width="326" height="11"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="326" id="3Ye-Bl-y6m"/>
@@ -609,7 +611,7 @@ Pledged</string>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Benefits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="799-PF-ODN">
-                                        <rect key="frame" x="0.0" y="358.5" width="71.5" height="27"/>
+                                        <rect key="frame" x="0.0" y="379" width="71.5" height="27"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="27" id="m9I-No-1Yn"/>
                                         </constraints>
@@ -618,7 +620,7 @@ Pledged</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oa9-c0-E8o">
-                                        <rect key="frame" x="0.0" y="405.5" width="294" height="19"/>
+                                        <rect key="frame" x="0.0" y="426" width="294" height="19"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="19" id="rbM-BY-vIg"/>
                                         </constraints>
@@ -628,7 +630,7 @@ Pledged</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQp-6l-ize">
-                                        <rect key="frame" x="0.0" y="444.5" width="294" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="465" width="294" height="0.0"/>
                                         <string key="text">	• 	Reducing your carbon footprint</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>

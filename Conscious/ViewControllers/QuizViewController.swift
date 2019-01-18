@@ -46,11 +46,11 @@ class QuizViewController: UIViewController {
     // MARK: - Setup
     func updateViews() {
         let totalProgress = Float(questionIndex) / Float(allQs.count)
-        let currentQuestion = allQs[questionIndex]
-        // let currentAnswers = currentQuestion.answers
-        categoryLabel.text = question?.category.rawValue
-        questionLabel.text = currentQuestion.text
+       self.question = allQs[questionIndex]
+        categoryLabel.text = self.question?.category.rawValue
+        questionLabel.text = self.question?.text
         quizProgressView.setProgress(totalProgress, animated: true)
+        tableView.reloadData()
     }
     
     func nextQuestion() {
@@ -66,6 +66,8 @@ class QuizViewController: UIViewController {
         questionIndex -= 1
         if questionIndex < allQs.count {
             updateViews()
+        } else {
+            questionIndex = 0
         }
     }
     

@@ -44,9 +44,9 @@ extension NumberOfFlight: CaseIterable{
 }
 
 enum NumberOfDrivesPerWeek: String, Answer {
-    case lessThan100Miles
-    case between100And200
-    case greaterThan200
+    case lessThan100Miles = "Less than 100 Miles"
+    case between100And200 = "Between 100 and 200"
+    case greaterThan200 = "Greater than 200"
     
     var results: Double {
         switch self {
@@ -67,9 +67,9 @@ extension NumberOfDrivesPerWeek: CaseIterable{
 }
 
 enum PersonalTransportation: String, Answer {
-    case car
-    case motorBike
-    case none
+    case car = "Car"
+    case motorBike = "Motor Bike"
+    case none = "None"
     
     var results: Double {
         switch self {
@@ -90,11 +90,11 @@ extension PersonalTransportation: CaseIterable{
 }
 
 enum MostUsedVechile: String, Answer {
-    case electricCar
-    case hybridCar
-    case smallGasCar
-    case meduimGasCar
-    case largeGasCar
+    case electricCar = "Electric Car"
+    case hybridCar = "Hybrid Car"
+    case smallGasCar = "Small Car"
+    case mediumGasCar = "Medium Car"
+    case largeGasCar = "Large Car"
     
     var results: Double {
         switch self {
@@ -104,7 +104,7 @@ enum MostUsedVechile: String, Answer {
             return 2.77
         case .smallGasCar:
             return 3.46
-        case .meduimGasCar:
+        case .mediumGasCar:
             return 4.27
         case .largeGasCar:
             return 5.19
