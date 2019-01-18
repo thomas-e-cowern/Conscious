@@ -16,7 +16,6 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var quizProgressView: UIProgressView!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var previousButton: UIButton!
     
@@ -71,9 +70,6 @@ class QuizViewController: UIViewController {
     }
     
     // MARK: - Actions
-    @IBAction func skipButtonTapped(_ sender: Any) {
-    }
-    
     @IBAction func nextButtonTapped(_ sender: Any) {
         nextQuestion()
     }

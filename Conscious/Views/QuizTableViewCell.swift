@@ -21,10 +21,9 @@ class QuizTableViewCell: UITableViewCell {
     
     // MARK: - Setup
     func updateViwes() {
-        if let answer = answer {
-            answerLabel.text = answer.rawValue
+        guard let answer = answer else { return }
+            //answerLabel.text = answer.rawValue
         }
-    }
 
     // MARK: - Actions
     @IBAction func checkboxButtonTapped(_ sender: Any) {
