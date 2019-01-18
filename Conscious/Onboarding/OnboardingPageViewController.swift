@@ -25,8 +25,7 @@ class OnboardingPageViewController: UIPageViewController {
     // Setting up the view controllers for onboarding
     private(set) lazy var orderedViewControllers: [UIViewController] = {
         return [onboardingViewController(name: "onboardOne"),
-                onboardingViewController(name: "onboardTwo"),
-                onboardingViewController(name: "onboardThree")]
+                onboardingViewController(name: "onboardTwo")]
     }()
     // Setting up the view controller funtion
     private func onboardingViewController(name: String) -> UIViewController {
@@ -41,7 +40,7 @@ class OnboardingPageViewController: UIPageViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         if segue.description == "toQuiz" {
-            let destinationVC = segue.destination as UIViewController
+            _ = segue.destination as UIViewController
         
         }
     }
