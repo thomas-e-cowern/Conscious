@@ -178,61 +178,6 @@ save the quiz for later</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interneat Banner Advertising Most Reliable Forms of Web Advertising" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GL7-ah-8bf">
-                                <rect key="frame" x="24" y="404" width="366" height="81"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="81" id="tXm-Ty-COk"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n8K-z2-lVf">
-                                <rect key="frame" x="24" y="525" width="366" height="100"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="4Vi-9R-Hr8"/>
-                                </constraints>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="answerCell" rowHeight="22" id="h4I-uZ-VnG" customClass="QuizTableViewCell" customModule="Conscious" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="366" height="22"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h4I-uZ-VnG" id="Gm4-aX-2Ub">
-                                            <rect key="frame" x="0.0" y="0.0" width="366" height="21.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phi-TQ-J1X">
-                                                    <rect key="frame" x="0.0" y="0.0" width="17" height="21.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="17" id="IEQ-qC-A3b"/>
-                                                    </constraints>
-                                                    <connections>
-                                                        <action selector="checkboxButtonTapped:" destination="h4I-uZ-VnG" eventType="touchUpInside" id="nRr-U9-Hoi"/>
-                                                    </connections>
-                                                </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Amazing Hubble" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hH7-h4-kOJ">
-                                                    <rect key="frame" x="25" y="0.0" width="341" height="21.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="phi-TQ-J1X" secondAttribute="bottom" id="2cM-Kj-mxW"/>
-                                                <constraint firstItem="phi-TQ-J1X" firstAttribute="leading" secondItem="Gm4-aX-2Ub" secondAttribute="leading" id="NTh-d2-6J0"/>
-                                                <constraint firstAttribute="trailing" secondItem="hH7-h4-kOJ" secondAttribute="trailing" id="Prg-KC-0Ux"/>
-                                                <constraint firstAttribute="bottom" secondItem="hH7-h4-kOJ" secondAttribute="bottom" id="S2m-LC-wiU"/>
-                                                <constraint firstItem="phi-TQ-J1X" firstAttribute="top" secondItem="Gm4-aX-2Ub" secondAttribute="top" id="oND-Hm-lDB"/>
-                                                <constraint firstItem="hH7-h4-kOJ" firstAttribute="leading" secondItem="phi-TQ-J1X" secondAttribute="trailing" constant="8" id="ofO-p4-x5S"/>
-                                                <constraint firstItem="hH7-h4-kOJ" firstAttribute="top" secondItem="Gm4-aX-2Ub" secondAttribute="top" id="zGe-2l-yOw"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="answerLabel" destination="hH7-h4-kOJ" id="Ooo-fr-dOl"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="5sL-ax-aDU">
                                 <rect key="frame" x="116" y="792" width="182" height="30"/>
                                 <subviews>
