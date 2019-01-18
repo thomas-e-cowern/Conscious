@@ -12,6 +12,7 @@
 		41D89A7621EE8B9F00CFF725 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D89A7421EE8B9F00CFF725 /* Main.storyboard */; };
 		41D89A7821EE8BB700CFF725 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41D89A7721EE8BB700CFF725 /* Assets.xcassets */; };
 		41D89A7B21EE8BB700CFF725 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D89A7921EE8BB700CFF725 /* LaunchScreen.storyboard */; };
+		7E92676721F23B8000A5B396 /* QuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E92676621F23B8000A5B396 /* QuizTableViewCell.swift */; };
 		7ECE818721F0F71B00F2F9DA /* ActionPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE818621F0F71B00F2F9DA /* ActionPlan.swift */; };
 		7ECE818E21F120D600F2F9DA /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE818D21F120D600F2F9DA /* Food.swift */; };
 		7ECE819021F120F100F2F9DA /* Travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE818F21F120F000F2F9DA /* Travel.swift */; };
@@ -30,6 +31,7 @@
 		41D89A7721EE8BB700CFF725 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41D89A7A21EE8BB700CFF725 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41D89A7C21EE8BB700CFF725 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E92676621F23B8000A5B396 /* QuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTableViewCell.swift; sourceTree = "<group>"; };
 		7ECE818621F0F71B00F2F9DA /* ActionPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPlan.swift; sourceTree = "<group>"; };
 		7ECE818D21F120D600F2F9DA /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		7ECE818F21F120F000F2F9DA /* Travel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 		7ECE81A021F13F2F00F2F9DA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7E92676621F23B8000A5B396 /* QuizTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				7ECE819221F120FD00F2F9DA /* House.swift in Sources */,
 				4152896B21F106130028E573 /* OnboardingPageViewController.swift in Sources */,
 				41D89A7121EE8B9F00CFF725 /* AppDelegate.swift in Sources */,
+				7E92676721F23B8000A5B396 /* QuizTableViewCell.swift in Sources */,
 				7ECE819F21F136CD00F2F9DA /* QuizViewController.swift in Sources */,
 				7ECE818721F0F71B00F2F9DA /* ActionPlan.swift in Sources */,
 				7ECE81A421F14D3B00F2F9DA /* Question.swift in Sources */,
@@ -371,7 +375,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 56F54J4H3N;
+				DEVELOPMENT_TEAM = BZ8P5FXMNA;
 				INFOPLIST_FILE = "$(SRCROOT)/Conscious/Resorces/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -389,7 +393,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 56F54J4H3N;
+				DEVELOPMENT_TEAM = BZ8P5FXMNA;
 				INFOPLIST_FILE = "$(SRCROOT)/Conscious/Resorces/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

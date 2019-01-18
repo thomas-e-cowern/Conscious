@@ -8,11 +8,18 @@
 
 import Foundation
 
-protocol Answer{}
+protocol Answer{
+    static var possibleAnswers: [Answer] { get }
+}
 
 struct Question {
-    
-    var question: [String]
-    var category: [String]
-    var answers: [Answer]
+    var text: String
+    var category: EmmissionCategory
+    var possibleAnswers: [Answer]
+}
+
+enum EmmissionCategory: String{
+    case food = "Food"
+    case house = "House"
+    case travel = "Travel"
 }

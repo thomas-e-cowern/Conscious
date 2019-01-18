@@ -40,6 +40,13 @@ enum NumberOfHouseHoldMembers: String, Answer  {
     }
 }
 
+extension NumberOfHouseHoldMembers: CaseIterable{
+    static var possibleAnswers: [Answer]{
+        return NumberOfHouseHoldMembers.allCases
+    }
+}
+
+
 enum HouseTempInWinter: String, Answer {
     case cool = "I keep my home cool"
     case warm = "I keep my home warm"
@@ -57,6 +64,12 @@ enum HouseTempInWinter: String, Answer {
     }
 }
 
+extension HouseTempInWinter: CaseIterable{
+    static var possibleAnswers: [Answer]{
+        return HouseTempInWinter.allCases
+    }
+}
+
 enum TurnOffLights: String, Answer {
     case yes = "Yes"
     case no = "No"
@@ -68,6 +81,12 @@ enum TurnOffLights: String, Answer {
         case .no:
             return 0.0
         }
+    }
+}
+
+extension TurnOffLights: CaseIterable{
+    static var possibleAnswers: [Answer]{
+        return TurnOffLights.allCases
     }
 }
 
@@ -91,6 +110,12 @@ enum TypeOfHouse: String, Answer {
     }
 }
 
+extension TypeOfHouse: CaseIterable{
+    static var possibleAnswers: [Answer]{
+        return TypeOfHouse.allCases
+    }
+}
+
 enum HouseHeatingFuel: String, Answer {
     case gas = "Natural Gas"
     case oil = "Oil"
@@ -111,6 +136,12 @@ enum HouseHeatingFuel: String, Answer {
     }
 }
 
+extension HouseHeatingFuel: CaseIterable{
+    static var possibleAnswers: [Answer]{
+        return HouseHeatingFuel.allCases
+    }
+}
+
 enum EnergySavingImprovement: String, Answer {
     case energySavingLightBulbs = "Energy Saving Lightbulbs"
     case efficientInsullation = "Efficient Insulation"
@@ -125,6 +156,12 @@ enum EnergySavingImprovement: String, Answer {
         case .solarPanels:
             return 2.61
         }
+    }
+}
+
+extension EnergySavingImprovement: CaseIterable{
+    static var possibleAnswers: [Answer]{
+        return EnergySavingImprovement.allCases
     }
 }
 
@@ -148,3 +185,8 @@ enum WasteRecycling: String, Answer {
     }
 }
 
+extension WasteRecycling: CaseIterable{
+    static var possibleAnswers: [Answer]{
+        return WasteRecycling.allCases
+    }
+}

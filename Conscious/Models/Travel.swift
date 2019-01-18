@@ -37,7 +37,13 @@ enum NumberOfFlight: String, Answer {
     }
 }
 
-enum NumberOfDrivesPerWeek {
+extension NumberOfFlight: CaseIterable{
+    static var possibleAnswers: [Answer]{
+        return NumberOfFlight.allCases
+    }
+}
+
+enum NumberOfDrivesPerWeek: String, Answer {
     case lessThan100Miles
     case between100And200
     case greaterThan200
@@ -54,7 +60,13 @@ enum NumberOfDrivesPerWeek {
     }
 }
 
-enum PersonalTransportation {
+extension NumberOfDrivesPerWeek: CaseIterable{
+    static var possibleAnswers: [Answer]{
+        return NumberOfDrivesPerWeek.allCases
+    }
+}
+
+enum PersonalTransportation: String, Answer {
     case car
     case motorBike
     case none
@@ -71,7 +83,13 @@ enum PersonalTransportation {
     }
 }
 
-enum MostUsedVechile {
+extension PersonalTransportation: CaseIterable{
+    static var possibleAnswers: [Answer]{
+        return PersonalTransportation.allCases
+    }
+}
+
+enum MostUsedVechile: String, Answer {
     case electricCar
     case hybridCar
     case smallGasCar
@@ -94,3 +112,8 @@ enum MostUsedVechile {
     }
 }
 
+extension MostUsedVechile: CaseIterable{
+    static var possibleAnswers: [Answer]{
+        return MostUsedVechile.allCases
+    }
+}

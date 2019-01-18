@@ -17,6 +17,7 @@ struct Food {
 
  // MARK: - Answeres
 enum WastedFood: String, Answer {
+    
     case none = "None"
     case lessThan10Percent = "0% to 10%"
     case between10and30Percent = "11% to 30%"
@@ -36,6 +37,12 @@ enum WastedFood: String, Answer {
     }
 }
 
+extension WastedFood: CaseIterable{
+    static var possibleAnswers: [Answer]{
+        return WastedFood.allCases
+    }
+}
+
 enum LocallyProducedFood: String, Answer {
     case alot = "A lot of the food I buy is locally sourced"
     case some = "Some of the food I buy is locally sourced"
@@ -50,6 +57,12 @@ enum LocallyProducedFood: String, Answer {
         case .none:
             return 0
         }
+    }
+}
+
+extension LocallyProducedFood: CaseIterable{
+    static var possibleAnswers: [Answer]{
+        return LocallyProducedFood.allCases
     }
 }
 
@@ -73,5 +86,11 @@ enum DietType: String, Answer {
         case .vegan:
             return 1.36
         }
+    }
+}
+
+extension DietType: CaseIterable {
+    static var possibleAnswers: [Answer] {
+        return DietType.allCases
     }
 }
