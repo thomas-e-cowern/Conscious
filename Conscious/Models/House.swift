@@ -46,7 +46,6 @@ extension NumberOfHouseHoldMembers: CaseIterable{
     }
 }
 
-
 enum HouseTempInWinter: String, Answer {
     case cool = "I keep my home cool"
     case warm = "I keep my home warm"
