@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41021B6721F24631009DA0D9 /* OnboardingPage3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41021B6621F24631009DA0D9 /* OnboardingPage3ViewController.swift */; };
+		41021B6921F24CD7009DA0D9 /* OnboardingQuizIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41021B6821F24CD7009DA0D9 /* OnboardingQuizIntroViewController.swift */; };
 		4152896B21F106130028E573 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4152896A21F106130028E573 /* OnboardingPageViewController.swift */; };
 		41D89A7121EE8B9F00CFF725 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D89A7021EE8B9F00CFF725 /* AppDelegate.swift */; };
 		41D89A7621EE8B9F00CFF725 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D89A7421EE8B9F00CFF725 /* Main.storyboard */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41021B6621F24631009DA0D9 /* OnboardingPage3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage3ViewController.swift; sourceTree = "<group>"; };
+		41021B6821F24CD7009DA0D9 /* OnboardingQuizIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingQuizIntroViewController.swift; sourceTree = "<group>"; };
 		4152896A21F106130028E573 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
 		41D89A6D21EE8B9F00CFF725 /* Conscious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Conscious.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41D89A7021EE8B9F00CFF725 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 		7ECE818821F1096400F2F9DA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				41021B6821F24CD7009DA0D9 /* OnboardingQuizIntroViewController.swift */,
+				41021B6621F24631009DA0D9 /* OnboardingPage3ViewController.swift */,
 				7ECE819E21F136CD00F2F9DA /* QuizViewController.swift */,
 			);
 			path = ViewControllers;
@@ -219,7 +225,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7ECE819021F120F100F2F9DA /* Travel.swift in Sources */,
+				41021B6921F24CD7009DA0D9 /* OnboardingQuizIntroViewController.swift in Sources */,
 				7ECE819B21F1234F00F2F9DA /* ActionPlanController.swift in Sources */,
+				41021B6721F24631009DA0D9 /* OnboardingPage3ViewController.swift in Sources */,
 				7ECE819D21F12FBB00F2F9DA /* GreenCalculatorController.swift in Sources */,
 				7ECE819221F120FD00F2F9DA /* House.swift in Sources */,
 				4152896B21F106130028E573 /* OnboardingPageViewController.swift in Sources */,
