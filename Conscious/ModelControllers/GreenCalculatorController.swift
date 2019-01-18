@@ -13,7 +13,21 @@ class GreenCalculatorController {
     // Shared Instance
     static let shared = GreenCalculatorController()
     
-    // MARK: - Calculators
+    // Source of Truth
+    var userAnswers: [Answer] = []
+    
+    // MARK: - Questions
+    // FOOD
+    let foodQuestions = [
+        "Of the food you buy how much is wasted and thrown away?", "How often do you buy locally produced food?", "How would you best describe your diet?"]
+    
+    // HOUSE
+    let householdQuestions = [" How many people live in the house above the age of 18?", "What temperature do you keep your house at in the winter?", "Do you regularly turn off lights and appliances when not used for long periods of time?", "What type of house do you live in?", "How do you heat your home", "Do you have any of these energy saving improvements in your home?", "Which of the following do you recycle?"]
+    
+    // TRAVEL
+    var travelQuestions = ["In the last year, how many round trip flights have you made?", "How many miles a week do you drive", "What kind of vehicle do you travel in most?", "What kind of vehicle do you travel in most?"]
+    
+    // MARK: - Calculators(Results)
     // FOOD
     func foodCalculator(for food: Food) -> Double {
         let locallyProducedFood = food.locallyProducedFood.results
