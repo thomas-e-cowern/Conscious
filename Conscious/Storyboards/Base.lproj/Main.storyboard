@@ -204,14 +204,14 @@ save the quiz for later</string>
                                 <state key="normal" title="SKIP"/>
                                 <connections>
                                     <action selector="skipButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k6H-iA-O5s"/>
-                                    <segue destination="Sla-iL-btk" kind="show" identifier="scoreSegue" id="Iq1-C1-Lfp"/>
+                                    <segue destination="Sla-iL-btk" kind="show" identifier="scoreSegue" id="ehI-z5-4n8"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="BrU-JP-1EH">
                                 <rect key="frame" x="8" y="337" width="359" height="276"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How would you best describe your diet?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GL7-ah-8bf">
-                                        <rect key="frame" x="0.0" y="0.0" width="359" height="276"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -223,7 +223,7 @@ save the quiz for later</string>
                                             <constraint firstAttribute="height" constant="200" id="4Vi-9R-Hr8"/>
                                         </constraints>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="answerCell" rowHeight="22" id="h4I-uZ-VnG">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="answerCell" rowHeight="22" id="h4I-uZ-VnG" customClass="QuizTableViewCell" customModule="Conscious" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="359" height="22"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h4I-uZ-VnG" id="Gm4-aX-2Ub">
@@ -290,7 +290,6 @@ save the quiz for later</string>
                         <outlet property="previousButton" destination="JD4-oO-Hc6" id="nzO-jD-oLa"/>
                         <outlet property="questionLabel" destination="GL7-ah-8bf" id="Vks-Hd-MFX"/>
                         <outlet property="quizProgressView" destination="DPD-g7-IKh" id="sqo-Pb-yI9"/>
-                        <outlet property="skipButton" destination="GKp-3T-7eh" id="Gws-ai-XRN"/>
                         <outlet property="tableView" destination="n8K-z2-lVf" id="Ka5-v5-Psi"/>
                     </connections>
                 </viewController>
@@ -574,7 +573,7 @@ Pledged</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xEv-ti-hrN">
-                                <rect key="frame" x="8" y="8" width="346" height="839"/>
+                                <rect key="frame" x="8" y="8" width="359" height="651"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meatless Monday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ed-Pm-daR">
                                         <rect key="frame" x="0.0" y="0.0" width="258.5" height="46"/>
@@ -586,20 +585,20 @@ Pledged</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izI-j2-i5z">
-                                        <rect key="frame" x="0.0" y="66" width="77" height="48.5"/>
+                                        <rect key="frame" x="0.0" y="66" width="77" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="YoU-FN-0di"/>
                                         </constraints>
                                         <state key="normal" title="Add To List"/>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="muR-qJ-K6V">
-                                        <rect key="frame" x="0.0" y="134.5" width="346" height="194"/>
+                                        <rect key="frame" x="0.0" y="134" width="359" height="6.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="194" id="9gw-yn-7ih"/>
                                         </constraints>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="x12-yP-gSZ">
-                                        <rect key="frame" x="0.0" y="348.5" width="326" height="178"/>
+                                        <rect key="frame" x="0.0" y="160.5" width="326" height="178"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="326" id="3Ye-Bl-y6m"/>
@@ -610,7 +609,7 @@ Pledged</string>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Benefits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="799-PF-ODN">
-                                        <rect key="frame" x="0.0" y="546.5" width="71.5" height="27"/>
+                                        <rect key="frame" x="0.0" y="358.5" width="71.5" height="27"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="27" id="m9I-No-1Yn"/>
                                         </constraints>
@@ -619,7 +618,7 @@ Pledged</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oa9-c0-E8o">
-                                        <rect key="frame" x="0.0" y="593.5" width="294" height="19"/>
+                                        <rect key="frame" x="0.0" y="405.5" width="294" height="19"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="19" id="rbM-BY-vIg"/>
                                         </constraints>
@@ -629,14 +628,14 @@ Pledged</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQp-6l-ize">
-                                        <rect key="frame" x="0.0" y="632.5" width="294" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="444.5" width="294" height="20.5"/>
                                         <string key="text">	• 	Reducing your carbon footprint</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68B-IQ-b9h">
-                                        <rect key="frame" x="0.0" y="673" width="249.5" height="19"/>
+                                        <rect key="frame" x="0.0" y="485" width="249.5" height="19"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="19" id="NhO-2C-Clm"/>
                                         </constraints>
@@ -646,7 +645,7 @@ Pledged</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Effect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOU-kD-U0N">
-                                        <rect key="frame" x="0.0" y="712" width="51.5" height="27"/>
+                                        <rect key="frame" x="0.0" y="524" width="51.5" height="27"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="27" id="7cm-Yb-nlH"/>
                                         </constraints>
@@ -655,7 +654,7 @@ Pledged</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HY2-dR-0i6">
-                                        <rect key="frame" x="0.0" y="759" width="346" height="80"/>
+                                        <rect key="frame" x="0.0" y="571" width="359" height="80"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v60-di-6Ok">
                                                 <rect key="frame" x="0.0" y="0.0" width="162" height="80"/>
@@ -684,17 +683,17 @@ Pledged</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JhG-P2-BV3">
-                                                <rect key="frame" x="170" y="0.0" width="176" height="80"/>
+                                                <rect key="frame" x="170" y="0.0" width="189" height="80"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="001-grapes-with-leaf-and-stem" translatesAutoresizingMaskIntoConstraints="NO" id="3bY-jP-5fs">
-                                                        <rect key="frame" x="68" y="8" width="40" height="40"/>
+                                                        <rect key="frame" x="74.5" y="8" width="40" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="dUC-pd-DPi"/>
                                                             <constraint firstAttribute="width" secondItem="3bY-jP-5fs" secondAttribute="height" multiplier="1:1" id="oyE-fL-efS"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$58.00 Saved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYS-I1-rXQ">
-                                                        <rect key="frame" x="43" y="56" width="90" height="17"/>
+                                                        <rect key="frame" x="49.5" y="56" width="90" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
