@@ -26,35 +26,47 @@ class QuizViewController: UIViewController {
     var travel: Travel?
     var question: Question?
     var questionIndex = 0
-    var foodQs = GreenCalculatorController.shared.foodQuestions
-    var houseQs = GreenCalculatorController.shared.householdQuestions
-    var travelQs = GreenCalculatorController.shared.travelQuestions
+    var allQs = GreenCalculatorController.shared.allQuestions
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.reloadData()
-        self.question = foodQs[0]
+        self.question = allQs[questionIndex]
         updateViews()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.question = allQs[questionIndex]
+        updateViews()
+        tableView.reloadData()
     }
     
     // MARK: - Setup
     func updateViews() {
-        let totalProgress = Float(questionIndex) / Float(foodQs.count)
-        let currentQuestion = question
+        let totalProgress = Float(questionIndex) / Float(allQs.count)
+        let currentQuestion = allQs[questionIndex]
+        // let currentAnswers = currentQuestion.answers
         categoryLabel.text = question?.category.rawValue
-        questionLabel.text = question?.text
-        questionLabel.text = currentQuestion?.text
+        questionLabel.text = currentQuestion.text
         quizProgressView.setProgress(totalProgress, animated: true)
     }
     
     func nextQuestion() {
         questionIndex += 1
-        if questionIndex < foodQs.count {
+        if questionIndex < allQs.count {
             updateViews()
         } else {
             performSegue(withIdentifier: "scoreSegue", sender: nil)
+        }
+    }
+    
+    func previousQuestion() {
+        questionIndex -= 1
+        if questionIndex < allQs.count {
+            updateViews()
         }
     }
     
@@ -62,15 +74,13 @@ class QuizViewController: UIViewController {
     @IBAction func skipButtonTapped(_ sender: Any) {
     }
     
-    
     @IBAction func nextButtonTapped(_ sender: Any) {
         nextQuestion()
     }
     
-    
     @IBAction func previousButtonTapped(_ sender: Any) {
+        previousQuestion()
     }
-    
 }
 
 extension QuizViewController: UITableViewDataSource{
