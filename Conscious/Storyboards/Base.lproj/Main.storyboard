@@ -288,6 +288,9 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="17" id="IEQ-qC-A3b"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <action selector="checkboxButtonTapped:" destination="h4I-uZ-VnG" eventType="touchUpInside" id="nRr-U9-Hoi"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Amazing Hubble" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hH7-h4-kOJ">
                                                     <rect key="frame" x="25" y="0.0" width="341" height="21.5"/>
@@ -306,6 +309,9 @@
                                                 <constraint firstItem="hH7-h4-kOJ" firstAttribute="top" secondItem="Gm4-aX-2Ub" secondAttribute="top" id="zGe-2l-yOw"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="answerLabel" destination="hH7-h4-kOJ" id="Ooo-fr-dOl"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

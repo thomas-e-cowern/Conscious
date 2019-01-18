@@ -25,19 +25,37 @@ class QuizViewController: UIViewController {
     var house: House?
     var travel: Travel?
     var question: Question?
+    var questionIndex = 0
+    var foodQs = GreenCalculatorController.shared.foodQuestions
+    var houseQs = GreenCalculatorController.shared.householdQuestions
+    var travelQs = GreenCalculatorController.shared.travelQuestions
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.reloadData()
+        self.question = foodQs[0]
         updateViews()
     }
     
     // MARK: - Setup
     func updateViews() {
+        let totalProgress = Float(questionIndex) / Float(foodQs.count)
+        let currentQuestion = question
         categoryLabel.text = question?.category.rawValue
         questionLabel.text = question?.text
-        
+        questionLabel.text = currentQuestion?.text
+        quizProgressView.setProgress(totalProgress, animated: true)
+    }
+    
+    func nextQuestion() {
+        questionIndex += 1
+        if questionIndex < foodQs.count {
+            updateViews()
+        } else {
+            performSegue(withIdentifier: "scoreSegue", sender: nil)
+        }
     }
     
     // MARK: - Actions
@@ -46,6 +64,7 @@ class QuizViewController: UIViewController {
     
     
     @IBAction func nextButtonTapped(_ sender: Any) {
+        nextQuestion()
     }
     
     
