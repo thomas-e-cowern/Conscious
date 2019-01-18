@@ -9,11 +9,11 @@
 import UIKit
 
 class QuizTableViewCell: UITableViewCell {
-
+    
     // MARK: - Properties
     @IBOutlet weak var answerLabel: UILabel!
     
-    var answer: Answer?{
+    var answer: Answer? {
         didSet{
             updateViwes()
         }
@@ -21,11 +21,14 @@ class QuizTableViewCell: UITableViewCell {
     
     // MARK: - Setup
     func updateViwes() {
-        guard let answer = answer else { return }
-            //answerLabel.text = answer.rawValue
+        if let answer = answer {
+           answerLabel.text = answer.rawValue
         }
-
+        else { return }
+    }
+    
     // MARK: - Actions
     @IBAction func checkboxButtonTapped(_ sender: Any) {
+        
     }
 }
