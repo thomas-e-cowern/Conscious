@@ -13,6 +13,7 @@ struct Food {
     var wastedFood: WastedFood
     var locallyProducedFood: LocallyProducedFood
     var dietType: DietType
+    var thrownFood: ThrownFood
 }
 
  // MARK: - Answeres
@@ -93,3 +94,29 @@ extension DietType: CaseIterable {
         return DietType.allCases
     }
 }
+
+// NEEDS WORKING ON THE NUMBERS
+enum ThrownFood: String, Answer {
+    case zeroToTen = "0% - 10%"
+    case tenToThirty = "10% - 30%"
+    case moreThanThirty = "More than 30%"
+    
+    var results: Double {
+        switch self {
+        case .zeroToTen:
+            return 2.99
+        case .tenToThirty:
+            return 2.27
+        case .moreThanThirty:
+            return 1.72
+        }
+    }
+}
+
+extension ThrownFood: CaseIterable {
+    static var possibleAnswers: [Answer] {
+        return ThrownFood.allCases
+    }
+}
+
+

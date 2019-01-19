@@ -66,16 +66,17 @@ extension NumberOfDrivesPerWeek: CaseIterable{
     }
 }
 
+// NO QUESTION FOR THIS ANSWER
 enum PersonalTransportation: String, Answer {
     case car = "Car"
-    case motorBike = "Motor Bike"
+    case motorcycleOrScooter = "Motorcycle / Scooter"
     case none = "None"
     
     var results: Double {
         switch self {
         case .car:
             return 4.6
-        case .motorBike:
+        case .motorcycleOrScooter:
             return 0.54
         case .none:
             return 0
