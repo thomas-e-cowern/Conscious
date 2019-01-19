@@ -21,6 +21,7 @@ class GreenCalculatorController {
         Question(text: "Of the food you buy how much is wasted and thrown away?", category: .food, possibleAnswers: WastedFood.possibleAnswers),
         Question(text: "How often do you buy locally produced food?", category: .food, possibleAnswers: LocallyProducedFood.possibleAnswers),
         Question(text: "How would you best describe your diet?", category: .food, possibleAnswers: DietType.possibleAnswers),
+        Question(text: "Of the food you buy how much is wasted and thrown away?", category: .food, possibleAnswers: ThrownFood.possibleAnswers),
         Question(text: "What type of house do you live in?", category: .house, possibleAnswers: TypeOfHouse.possibleAnswers),
         Question(text: "How many people live in the house above the age of 18?", category: .house, possibleAnswers: NumberOfHouseHoldMembers.possibleAnswers),
         Question(text: "What temperature do you keep your house at in the winter?", category: .house, possibleAnswers: HouseTempInWinter.possibleAnswers),
@@ -33,19 +34,13 @@ class GreenCalculatorController {
         Question(text: "How many miles a week do you drive?", category: .travel, possibleAnswers: NumberOfDrivesPerWeek.possibleAnswers)
     ]
     
-    // FOOD EXTRA QUESTIONS
-    //   "Of the food you buy how much is wasted and thrown away?"
-    
-    // TRAVEL EXTRA ANSWER
-    // var personalTransportation: PersonalTransportation
-    
-    
     // MARK: - Calculators(Results)
     // FOOD
     func foodCalculator(for food: Food) -> Double {
         let locallyProducedFood = food.locallyProducedFood.results
         let dietType = food.dietType.results
         let wastedFood = food.wastedFood.results
+        let thrownFood = food.thrownFood.results
         
         return dietType - (dietType * locallyProducedFood) + wastedFood
     }
