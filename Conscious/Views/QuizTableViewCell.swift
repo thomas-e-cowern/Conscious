@@ -8,10 +8,17 @@
 
 import UIKit
 
+protocol QuizTableViewCellDelegate: class {
+    func cellButtonTapped(_ cell: QuizTableViewCell)
+}
+
 class QuizTableViewCell: UITableViewCell {
     
     // MARK: - Properties
     @IBOutlet weak var answerLabel: UILabel!
+    
+    // Delegate
+    weak var delegate: QuizTableViewCellDelegate?
     
     var answer: Answer? {
         didSet{
@@ -24,11 +31,10 @@ class QuizTableViewCell: UITableViewCell {
         if let answer = answer {
            answerLabel.text = answer.rawValue
         }
-        else { return }
     }
     
     // MARK: - Actions
     @IBAction func checkboxButtonTapped(_ sender: Any) {
-        
+        delegate?.cellButtonTapped(self)
     }
 }

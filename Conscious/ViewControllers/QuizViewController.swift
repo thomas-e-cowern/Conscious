@@ -46,7 +46,7 @@ class QuizViewController: UIViewController {
     // MARK: - Setup
     func updateViews() {
         let totalProgress = Float(questionIndex) / Float(allQs.count)
-       self.question = allQs[questionIndex]
+        self.question = allQs[questionIndex]
         categoryLabel.text = self.question?.category.rawValue
         questionLabel.text = self.question?.text
         quizProgressView.setProgress(totalProgress, animated: true)
@@ -64,11 +64,9 @@ class QuizViewController: UIViewController {
     
     func previousQuestion() {
         questionIndex -= 1
-        if questionIndex < allQs.count {
+        if questionIndex <= allQs.count {
             updateViews()
-        } else {
-            questionIndex = 0
-        }
+        } 
     }
     
     // MARK: - Actions
@@ -90,7 +88,18 @@ extension QuizViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "answerCell", for: indexPath) as! QuizTableViewCell
         let answer = question?.possibleAnswers[indexPath.row]
+        tableView.delegate = self
         cell.answer = answer
         return cell
     }
+    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let selectedAnswer = question?.possibleAnswers[indexPath.row]
+//
+//        return cell
+//    }
+}
+
+extension QuizViewController: UITableViewDelegate {
+    
 }
