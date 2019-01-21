@@ -158,12 +158,14 @@ enum EnergySavingImprovement: String, Answer {
     }
 }
 
+// more than one
 extension EnergySavingImprovement: CaseIterable{
     static var possibleAnswers: [Answer]{
         return EnergySavingImprovement.allCases
     }
 }
 
+// more than one
 enum WasteRecycling: String, Answer {
     case paper = "Paper"
     case plastic = "Plastic"
