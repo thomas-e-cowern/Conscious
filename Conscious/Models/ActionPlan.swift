@@ -8,8 +8,7 @@
 
 import Foundation
 
-
-// properties
+// MARK: - Properties
 let isVegHead: Bool = false
 let buysLocally: Bool = false
 let composts: Bool = false
