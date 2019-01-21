@@ -9,13 +9,13 @@
 import Foundation
 
 protocol Answer{
-    static var possibleAnswers: [Answer] { get }
     var rawValue: String { get }
 }
 
 struct Question {
     var text: String
     var category: EmmissionCategory
+   // var selectedAnswer: Answer?
     var possibleAnswers: [Answer]
 }
 

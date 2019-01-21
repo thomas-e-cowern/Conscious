@@ -99,7 +99,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="999" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8FS-xc-heN">
-                                        <rect key="frame" x="6.6666666666666572" y="201.99999999999997" width="401" height="298.33333333333326"/>
+                                        <rect key="frame" x="6.6666666666666572" y="202" width="401" height="238"/>
                                         <string key="text">Before we get started, we need to know a little more about your lifestyle
 
 Take the quiz to find out your carbon footprint!</string>
@@ -108,7 +108,7 @@ Take the quiz to find out your carbon footprint!</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7f-n0-I8j">
-                                        <rect key="frame" x="157.66666666666666" y="527.33333333333337" width="98.999999999999972" height="30"/>
+                                        <rect key="frame" x="157.66666666666666" y="467" width="98.999999999999972" height="30"/>
                                         <color key="backgroundColor" red="0.84699350595474243" green="0.84709560871124268" blue="0.8469586968421936" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="    Take Quiz    ">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -118,14 +118,24 @@ Take the quiz to find out your carbon footprint!</string>
                                             <segue destination="BYZ-38-t0r" kind="show" id="Gmu-da-slQ"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7e-BQ-3VT">
-                                        <rect key="frame" x="137.33333333333337" y="584.33333333333337" width="139.66666666666663" height="33.666666666666629"/>
-                                        <string key="text">or
-save the quiz for later</string>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="or" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7e-BQ-3VT">
+                                        <rect key="frame" x="200.33333333333334" y="524" width="13.333333333333343" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <color key="highlightedColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sw-b0-vC9">
+                                        <rect key="frame" x="133" y="568" width="148" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="flR-2G-53D"/>
+                                        </constraints>
+                                        <state key="normal" title="save the quiz for later">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="qfR-58-7Kt" kind="show" id="5dl-NR-FBy"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="8gR-ML-hdn" firstAttribute="width" secondItem="8gR-ML-hdn" secondAttribute="height" multiplier="1:1" id="Wl6-Nw-KYG"/>
@@ -229,11 +239,15 @@ save the quiz for later</string>
                                                     <rect key="frame" x="0.0" y="0.0" width="398" height="21.666666666666668"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phi-TQ-J1X">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phi-TQ-J1X">
                                                             <rect key="frame" x="0.0" y="0.0" width="17" height="21.666666666666668"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="17" id="IEQ-qC-A3b"/>
                                                             </constraints>
+                                                            <state key="normal" image="unSelectedAnswer"/>
+                                                            <connections>
+                                                                <action selector="checkboxButtonTapped:" destination="h4I-uZ-VnG" eventType="touchUpInside" id="int-SN-m4y"/>
+                                                            </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Amazing Hubble" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hH7-h4-kOJ">
                                                             <rect key="frame" x="25" y="0.0" width="373" height="21.666666666666668"/>
@@ -481,17 +495,20 @@ Pledged</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="UDh-hK-QP6">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="155"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="EUd-En-vdj">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="155"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FFC-PL-ifp">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="155"/>
                                             <subviews>
                                                 <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="icl-ht-Q6h">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="8Sp-tS-CHB"/>
+                                                    </constraints>
                                                     <items>
                                                         <navigationItem id="5rv-X5-Brb">
                                                             <barButtonItem key="rightBarButtonItem" image="icons8-gear-32" width="25" style="plain" id="ryh-mJ-Z5N">
@@ -503,24 +520,37 @@ Pledged</string>
                                                         </navigationItem>
                                                     </items>
                                                 </navigationBar>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LuD-yH-azp">
+                                                    <rect key="frame" x="0.0" y="50" width="414" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="XPF-p4-3p5"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="NSI-rl-blk">
-                                                    <rect key="frame" x="0.0" y="44" width="414" height="40"/>
+                                                    <rect key="frame" x="0.0" y="100" width="414" height="55"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7J-Ka-azK">
-                                                            <rect key="frame" x="0.0" y="0.0" width="138" height="40"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="138" height="55"/>
                                                             <state key="normal" title="Food"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGW-hI-H09">
-                                                            <rect key="frame" x="138" y="0.0" width="138" height="40"/>
+                                                            <rect key="frame" x="138" y="0.0" width="138" height="55"/>
                                                             <state key="normal" title="Home"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxa-w6-qfp">
-                                                            <rect key="frame" x="276" y="0.0" width="138" height="40"/>
+                                                            <rect key="frame" x="276" y="0.0" width="138" height="55"/>
                                                             <state key="normal" title="Travel"/>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="NSI-rl-blk" firstAttribute="top" secondItem="LuD-yH-azp" secondAttribute="bottom" id="Die-k2-zXP"/>
+                                                <constraint firstItem="LuD-yH-azp" firstAttribute="top" secondItem="icl-ht-Q6h" secondAttribute="bottom" id="Fmy-FQ-NSJ"/>
+                                            </constraints>
                                         </stackView>
                                     </subviews>
                                 </stackView>
@@ -535,7 +565,7 @@ Pledged</string>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="actionCell" rowHeight="48" id="6Gf-Za-SCv" userLabel="actionCell">
-                                <rect key="frame" x="0.0" y="112" width="414" height="48"/>
+                                <rect key="frame" x="0.0" y="183" width="414" height="48"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Gf-Za-SCv" id="l2J-vp-Bqa">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="47.666666666666664"/>
@@ -578,6 +608,11 @@ Pledged</string>
                                                         <rect key="frame" x="0.0" y="0.0" width="398" height="43.666666666666664"/>
                                                         <items>
                                                             <navigationItem id="HU3-ca-Ii3">
+                                                                <barButtonItem key="leftBarButtonItem" title="Back" style="plain" id="2GS-Ku-yoK">
+                                                                    <connections>
+                                                                        <segue destination="IuJ-Vj-Bg7" kind="show" id="3GO-gh-OVx"/>
+                                                                    </connections>
+                                                                </barButtonItem>
                                                                 <barButtonItem key="rightBarButtonItem" image="icons8-gear-32" width="25" style="plain" id="XrM-B2-Q7o">
                                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <connections>
@@ -857,7 +892,7 @@ Pledged</string>
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <navigationItem id="pC2-CK-Ki1">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="NHG-0S-E8d">
+                                        <barButtonItem key="rightBarButtonItem" title="X" id="NHG-0S-E8d">
                                             <connections>
                                                 <action selector="doneButtonTapped:" destination="Ow2-2x-ch1" id="af3-UY-DjR"/>
                                             </connections>
@@ -918,7 +953,7 @@ Pledged</string>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="0Cn-S7-TJk">
                                                         <rect key="frame" x="0.0" y="60.000000000000014" width="372.66666666666669" height="195.33333333333337"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3GJ-nz-2iw">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3GJ-nz-2iw">
                                                                 <rect key="frame" x="0.0" y="0.0" width="372.66666666666669" height="55"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="46"/>
                                                                 <nil key="textColor"/>
@@ -1270,12 +1305,15 @@ Pledged</string>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvI-0m-Yf3">
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PgR-IP-g5q">
                                                                                 <rect key="frame" x="221.66666666666669" y="0.0" width="151" height="30"/>
                                                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <state key="normal" title="Calculate Score">
-                                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 </state>
+                                                                                <connections>
+                                                                                    <segue destination="BYZ-38-t0r" kind="show" id="bLM-oZ-Tf6"/>
+                                                                                </connections>
                                                                             </button>
                                                                         </subviews>
                                                                     </stackView>
@@ -1515,10 +1553,13 @@ Pledged</string>
         <image name="icons8-gear-32" width="24" height="24"/>
         <image name="icons8-vegan-shoes-50" width="37.5" height="37.5"/>
         <image name="placeholder" width="1280" height="800"/>
+        <image name="unSelectedAnswer" width="19.666666030883789" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="4lq-oL-yv0"/>
-        <segue reference="WGA-z9-uV6"/>
-        <segue reference="uGX-NA-jzu"/>
+        <segue reference="Jxy-vd-MsM"/>
+        <segue reference="t5S-Wk-zVf"/>
+        <segue reference="3GO-gh-OVx"/>
+        <segue reference="bLM-oZ-Tf6"/>
     </inferredMetricsTieBreakers>
 </document>

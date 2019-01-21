@@ -92,14 +92,11 @@ extension QuizViewController: UITableViewDataSource{
         cell.answer = answer
         return cell
     }
-    
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let selectedAnswer = question?.possibleAnswers[indexPath.row]
-//
-//        return cell
-//    }
 }
 
 extension QuizViewController: UITableViewDelegate {
     
+    func userDidSelect(answer: Answer){
+        
+    }
 }
