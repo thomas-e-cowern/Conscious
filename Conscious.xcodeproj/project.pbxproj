@@ -14,6 +14,8 @@
 		414C721C21F2BE1F00C8687F /* ActionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414C721B21F2BE1F00C8687F /* ActionDetailViewController.swift */; };
 		4152896B21F106130028E573 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4152896A21F106130028E573 /* OnboardingPageViewController.swift */; };
 		4176753B21F3F87500CC4C07 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4176753A21F3F87500CC4C07 /* SettingsViewController.swift */; };
+		41A8BDCC21F67AAF001EB547 /* ActionsAlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A8BDCB21F67AAF001EB547 /* ActionsAlarmController.swift */; };
+		41A8BDCE21F67B40001EB547 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A8BDCD21F67B40001EB547 /* Alarm.swift */; };
 		41D89A7121EE8B9F00CFF725 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D89A7021EE8B9F00CFF725 /* AppDelegate.swift */; };
 		41D89A7621EE8B9F00CFF725 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D89A7421EE8B9F00CFF725 /* Main.storyboard */; };
 		41D89A7821EE8BB700CFF725 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41D89A7721EE8BB700CFF725 /* Assets.xcassets */; };
@@ -37,6 +39,8 @@
 		414C721B21F2BE1F00C8687F /* ActionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionDetailViewController.swift; sourceTree = "<group>"; };
 		4152896A21F106130028E573 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
 		4176753A21F3F87500CC4C07 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		41A8BDCB21F67AAF001EB547 /* ActionsAlarmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsAlarmController.swift; sourceTree = "<group>"; };
+		41A8BDCD21F67B40001EB547 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		41D89A6D21EE8B9F00CFF725 /* Conscious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Conscious.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41D89A7021EE8B9F00CFF725 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41D89A7521EE8B9F00CFF725 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 				7ECE819121F120FD00F2F9DA /* House.swift */,
 				7ECE818F21F120F000F2F9DA /* Travel.swift */,
 				7ECE818621F0F71B00F2F9DA /* ActionPlan.swift */,
+				41A8BDCD21F67B40001EB547 /* Alarm.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -143,6 +148,7 @@
 			children = (
 				7ECE819C21F12FBB00F2F9DA /* GreenCalculatorController.swift */,
 				7ECE819A21F1234F00F2F9DA /* ActionPlanController.swift */,
+				41A8BDCB21F67AAF001EB547 /* ActionsAlarmController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -248,7 +254,9 @@
 				7E92676721F23B8000A5B396 /* QuizTableViewCell.swift in Sources */,
 				7ECE819F21F136CD00F2F9DA /* QuizViewController.swift in Sources */,
 				7ECE818721F0F71B00F2F9DA /* ActionPlan.swift in Sources */,
+				41A8BDCE21F67B40001EB547 /* Alarm.swift in Sources */,
 				4176753B21F3F87500CC4C07 /* SettingsViewController.swift in Sources */,
+				41A8BDCC21F67AAF001EB547 /* ActionsAlarmController.swift in Sources */,
 				414C721621F2A9E800C8687F /* ActionListTableViewController.swift in Sources */,
 				7ECE81A421F14D3B00F2F9DA /* Question.swift in Sources */,
 				414C721A21F2B6E500C8687F /* MyActionsViewController.swift in Sources */,
