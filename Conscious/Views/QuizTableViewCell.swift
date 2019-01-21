@@ -9,7 +9,8 @@
 import UIKit
 
 protocol QuizTableViewCellDelegate: class {
-    func cellButtonTapped(_ cell: QuizTableViewCell)
+    func userDidSelect(answer: Answer)
+    func userDidDeselectAnswer()
 }
 
 class QuizTableViewCell: UITableViewCell {
@@ -18,8 +19,10 @@ class QuizTableViewCell: UITableViewCell {
     @IBOutlet weak var answerLabel: UILabel!
     @IBOutlet weak var checkboxButton: UIButton!
     
-    // DelegatecheckboxButton
+    // MARK: - Properties
+    // Delegate
     weak var delegate: QuizTableViewCellDelegate?
+    var answerSelected: Bool = false
     
     var answer: Answer? {
         didSet{
@@ -30,20 +33,23 @@ class QuizTableViewCell: UITableViewCell {
     // MARK: - Setup
     func updateViwes() {
         if let answer = answer {
-           answerLabel.text = answer.rawValue
+            answerLabel.text = answer.rawValue
+            switchCheckboxImage(for: answer)
         }
     }
     
-//    func toggleCell(with answer: Answer){
-//        if answer.rawValue {
-//            checkboxButton.setBackgroundImage(#imageLiteral(resourceName: "selectedAnswer"), for: .normal)
-//        } else {
-//            checkboxButton.setBackgroundImage(#imageLiteral(resourceName: "unSelectedAnswer"), for: .normal)
-//        }
-//    }
+    func toggleCell(with answer: Answer) {
+        answerSelected.toggle()
+        switchCheckboxImage(for: answer)
+    }
+    
+    func switchCheckboxImage(for answer: Answer) {
+        answerSelected ?  checkboxButton.setImage(#imageLiteral(resourceName: "selectedAnswer"), for: .normal) : checkboxButton.setImage(#imageLiteral(resourceName: "unSelectedAnswer"), for: .normal)
+    }
     
     // MARK: - Actions
     @IBAction func checkboxButtonTapped(_ sender: Any) {
-        delegate?.cellButtonTapped(self)
+        guard let answer = answer else { return }
+        toggleCell(with: answer)
     }
 }
