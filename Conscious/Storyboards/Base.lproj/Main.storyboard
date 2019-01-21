@@ -635,7 +635,7 @@ Pledged</string>
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="addToListTapped:" destination="IQN-JY-PQe" eventType="touchUpInside" id="SkV-b0-h8X"/>
+                                                            <action selector="addToActionListButtonTapped:" destination="IQN-JY-PQe" eventType="touchUpInside" id="SkV-b0-h8X"/>
                                                         </connections>
                                                     </button>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="68Y-Al-cSH">
@@ -769,6 +769,9 @@ Pledged</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1pc-rM-WWi"/>
                     </view>
+                    <connections>
+                        <outlet property="addToActionListButton" destination="BnT-Ma-zcz" id="oRA-EA-T6V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BMb-7t-83R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1339,13 +1342,13 @@ Pledged</string>
                                                                                 <rect key="frame" x="328" y="0.0" width="44.666666666666686" height="90"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="63" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TpE-eW-bem">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="20.666666666666668" height="90"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="21" height="90"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                         <nil key="textColor"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xk-ut-eYu">
-                                                                                        <rect key="frame" x="30.666666666666629" y="0.0" width="14" height="90"/>
+                                                                                        <rect key="frame" x="31.000000000000004" y="0.0" width="13.666666666666668" height="90"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                         <nil key="textColor"/>
                                                                                         <nil key="highlightedColor"/>
@@ -1365,13 +1368,13 @@ Pledged</string>
                                                                                 <rect key="frame" x="329.66666666666663" y="0.0" width="43" height="90"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="75" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPL-S8-hup">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="19" height="90"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="19.333333333333332" height="90"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                         <nil key="textColor"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCt-gQ-kzW">
-                                                                                        <rect key="frame" x="29" y="0.0" width="14" height="90"/>
+                                                                                        <rect key="frame" x="29.333333333333375" y="0.0" width="13.666666666666668" height="90"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                         <nil key="textColor"/>
                                                                                         <nil key="highlightedColor"/>

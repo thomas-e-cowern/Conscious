@@ -141,6 +141,7 @@ extension HouseHeatingFuel: CaseIterable{
     }
 }
 
+// User get to choose more than one answer for this Q
 enum EnergySavingImprovement: String, Answer {
     case energySavingLightBulbs = "Energy Saving Lightbulbs"
     case efficientInsullation = "Efficient Insulation"
@@ -158,14 +159,13 @@ enum EnergySavingImprovement: String, Answer {
     }
 }
 
-// more than one
 extension EnergySavingImprovement: CaseIterable{
     static var possibleAnswers: [Answer]{
         return EnergySavingImprovement.allCases
     }
 }
 
-// more than one
+// User get to choose more than one answer for this Q
 enum WasteRecycling: String, Answer {
     case paper = "Paper"
     case plastic = "Plastic"
