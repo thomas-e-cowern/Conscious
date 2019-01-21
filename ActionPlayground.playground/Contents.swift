@@ -1,13 +1,4 @@
-//
-//  ActionPlan.swift
-//  Conscious
-//
-//  Created by Hanadi AlOthman on 17/01/2019.
-//  Copyright © 2019 Thomas Cowern New. All rights reserved.
-//
-
-import Foundation
-
+import UIKit
 
 // properties
 let isVegHead: Bool = false
@@ -77,3 +68,12 @@ enum Categories: String {
         }
     }
 }
+
+let myFood = Categories.food.actionPlan
+let myHome = Categories.home.actionPlan
+let myTravel = Categories.travel.actionPlan
+
+//print(myFood)
+//print(myHome)
+print(myTravel)
+
