@@ -254,6 +254,7 @@ save the quiz for later</string>
                                                 </tableViewCellContentView>
                                                 <connections>
                                                     <outlet property="answerLabel" destination="hH7-h4-kOJ" id="DVR-cV-eWj"/>
+                                                    <outlet property="checkboxButton" destination="phi-TQ-J1X" id="r6W-tt-Bft"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -1516,7 +1517,7 @@ Pledged</string>
         <image name="placeholder" width="1280" height="800"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="06r-kr-FXf"/>
+        <segue reference="4lq-oL-yv0"/>
         <segue reference="t5S-Wk-zVf"/>
         <segue reference="uGX-NA-jzu"/>
     </inferredMetricsTieBreakers>

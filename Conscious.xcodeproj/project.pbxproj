@@ -131,8 +131,6 @@
 			children = (
 				4176753A21F3F87500CC4C07 /* SettingsViewController.swift */,
 				414C721921F2B6E500C8687F /* MyActionsViewController.swift */,
-				41021B6821F24CD7009DA0D9 /* OnboardingQuizIntroViewController.swift */,
-				41021B6621F24631009DA0D9 /* OnboardingPage3ViewController.swift */,
 				7ECE819E21F136CD00F2F9DA /* QuizViewController.swift */,
 				414C721521F2A9E800C8687F /* ActionListTableViewController.swift */,
 				414C721B21F2BE1F00C8687F /* ActionDetailViewController.swift */,
@@ -160,7 +158,9 @@
 		7ECE81A521F1501D00F2F9DA /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				41021B6821F24CD7009DA0D9 /* OnboardingQuizIntroViewController.swift */,
 				4152896A21F106130028E573 /* OnboardingPageViewController.swift */,
+				41021B6621F24631009DA0D9 /* OnboardingPage3ViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";

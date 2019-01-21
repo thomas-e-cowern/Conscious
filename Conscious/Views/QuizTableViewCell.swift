@@ -14,10 +14,11 @@ protocol QuizTableViewCellDelegate: class {
 
 class QuizTableViewCell: UITableViewCell {
     
-    // MARK: - Properties
+    // MARK: - Outlets
     @IBOutlet weak var answerLabel: UILabel!
+    @IBOutlet weak var checkboxButton: UIButton!
     
-    // Delegate
+    // DelegatecheckboxButton
     weak var delegate: QuizTableViewCellDelegate?
     
     var answer: Answer? {
@@ -32,6 +33,14 @@ class QuizTableViewCell: UITableViewCell {
            answerLabel.text = answer.rawValue
         }
     }
+    
+//    func toggleCell(with answer: Answer){
+//        if answer.rawValue {
+//            checkboxButton.setBackgroundImage(#imageLiteral(resourceName: "selectedAnswer"), for: .normal)
+//        } else {
+//            checkboxButton.setBackgroundImage(#imageLiteral(resourceName: "unSelectedAnswer"), for: .normal)
+//        }
+//    }
     
     // MARK: - Actions
     @IBAction func checkboxButtonTapped(_ sender: Any) {
