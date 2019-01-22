@@ -10,12 +10,17 @@ import UIKit
 
 class ActionListTableViewController: UITableViewController {
 
-    var actions: [String] = ["Meatless Monday", "Become Vegetarian", "Eat Seasonal", "Buy Local ", "Get a reusable water bottle", "Use reusable grocery bags", "Pack your lunches", "Try out a vegan recipe", "Compost", "Reduce food waste"]
+    var my = Categories.food
+    
+    var actions: [String] = []
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        actions += Categories.food.actionPlan
+        actions += Categories.home.actionPlan
+        actions += Categories.travel.actionPlan
     }
 
     
@@ -79,14 +84,19 @@ class ActionListTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "toActionDetail" {
+            let destinationVC = segue.destination as? ActionDetailViewController
+            let index = tableView.indexPathForSelectedRow
+            let action = actions[index?.row ?? 0]
+            destinationVC?.action = action
+        }
+        
     }
-    */
+    
 
 }
