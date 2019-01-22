@@ -10,12 +10,18 @@ import UIKit
 
 class ActionDetailViewController: UIViewController {
 
+    // MARK: - Properties
+    var action: String? = ""
+    
     // MARK: - Outlets
     @IBOutlet weak var addToActionListButton: UIButton!
+    @IBOutlet weak var actionTitleLabel: UILabel!
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        actionTitleLabel.text = action
     }
     
      // MARK: - Navigation
@@ -24,11 +30,9 @@ class ActionDetailViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func addToActionListButtonTapped(_ sender: Any) {
-        
+        guard let action = action else { return }
         addToActionListButton.setTitle("Added to Action List", for: .normal)
-        print("AddToActionListButton tapped")
-        ActionsAlarmController.shared.addAlarm(fireDate: Date(), name: "Test add action button clicked", message: "This is the alarm message", enabled: true, repeats: true)
-        
+        ActionsAlarmController.shared.addAlarm(fireDate: Date(), name: action, message: "This is the alarm message", enabled: true, repeats: true)
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
         

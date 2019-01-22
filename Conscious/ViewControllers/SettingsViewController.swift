@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import UserNotifications
 
 class SettingsViewController: UIViewController {
+    
+    func cancelUserNotifications(for alarm: Alarm) {
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+    }
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {

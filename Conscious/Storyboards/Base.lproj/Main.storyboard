@@ -572,7 +572,7 @@ Pledged</string>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="IQN-JY-PQe" kind="show" id="klc-Im-LDk"/>
+                                    <segue destination="IQN-JY-PQe" kind="show" identifier="toActionDetail" id="klc-Im-LDk"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -770,6 +770,7 @@ Pledged</string>
                         <viewLayoutGuide key="safeArea" id="1pc-rM-WWi"/>
                     </view>
                     <connections>
+                        <outlet property="actionTitleLabel" destination="3ZP-kS-Q5Y" id="u7J-p4-SvG"/>
                         <outlet property="addToActionListButton" destination="BnT-Ma-zcz" id="oRA-EA-T6V"/>
                     </connections>
                 </viewController>
@@ -1559,6 +1560,7 @@ Pledged</string>
         <image name="unSelectedAnswer" width="19.666666030883789" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="klc-Im-LDk"/>
         <segue reference="4lq-oL-yv0"/>
         <segue reference="Jxy-vd-MsM"/>
         <segue reference="t5S-Wk-zVf"/>
