@@ -27,7 +27,7 @@ class ActionDetailViewController: UIViewController {
         
         addToActionListButton.setTitle("Added to Action List", for: .normal)
         print("AddToActionListButton tapped")
-        ActionsAlarmController.shared.addAlarm(fireDate: Date(), name: "Test add action button clicked", enabled: true, repeats: true)
+        ActionsAlarmController.shared.addAlarm(fireDate: Date(), name: "Test add action button clicked", message: "This is the alarm message", enabled: true, repeats: true)
         
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)

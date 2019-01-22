@@ -12,6 +12,7 @@ class Alarm: Equatable, Codable {
     
     var fireDate: Date
     var name: String
+    var message: String
     var enabled: Bool
     var repeats: Bool
     let uuid: String
@@ -24,9 +25,10 @@ class Alarm: Equatable, Codable {
         }
     }
     
-    init(fireDate: Date, name: String, enabled: Bool, repeats: Bool) {
+    init(fireDate: Date, name: String, message: String, enabled: Bool, repeats: Bool) {
         self.fireDate = fireDate
         self.name = name
+        self.message = message
         self.enabled = enabled
         self.repeats = repeats
         self.uuid = UUID().uuidString
