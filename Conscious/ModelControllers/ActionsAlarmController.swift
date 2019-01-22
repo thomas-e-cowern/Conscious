@@ -14,15 +14,17 @@ protocol AlarmScheduler: class {
     func scheduleUserNotifications(for: Alarm)
 }
 
-class AlarmController: AlarmScheduler {
+class ActionsAlarmController: AlarmScheduler {
     
-    static let shared = AlarmController()
+    static let shared = ActionsAlarmController()
     
     var alarms: [Alarm] = []
     
     func addAlarm(fireDate: Date, name: String, enabled: Bool, repeats: Bool) {
         let newAlarm = Alarm(fireDate: fireDate, name: name, enabled: enabled, repeats: repeats)
         alarms.append(newAlarm)
+        print("Hit addAlarm")
+        print(alarms[0].fireDate)
 //        saveToPersistentStore()
     }
     

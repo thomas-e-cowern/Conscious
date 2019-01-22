@@ -24,6 +24,11 @@ class ActionDetailViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func addToActionListButtonTapped(_ sender: Any) {
+        
+        addToActionListButton.setTitle("Added to Action List", for: .normal)
+        print("AddToActionListButton tapped")
+        ActionsAlarmController.shared.addAlarm(fireDate: Date(), name: "Test add action button clicked", enabled: true, repeats: true)
+        
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
         
