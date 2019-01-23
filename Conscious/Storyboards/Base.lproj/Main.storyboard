@@ -535,14 +535,23 @@ Pledged</string>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7J-Ka-azK">
                                                             <rect key="frame" x="0.0" y="0.0" width="138" height="55"/>
                                                             <state key="normal" title="Food"/>
+                                                            <connections>
+                                                                <action selector="foorButtonTapped:" destination="IuJ-Vj-Bg7" eventType="touchUpInside" id="gvd-oi-G7a"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGW-hI-H09">
                                                             <rect key="frame" x="138" y="0.0" width="138" height="55"/>
                                                             <state key="normal" title="Home"/>
+                                                            <connections>
+                                                                <action selector="homeButtonTapped:" destination="IuJ-Vj-Bg7" eventType="touchUpInside" id="m2Y-6Y-PRg"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxa-w6-qfp">
                                                             <rect key="frame" x="276" y="0.0" width="138" height="55"/>
                                                             <state key="normal" title="Travel"/>
+                                                            <connections>
+                                                                <action selector="travelButtonTapped:" destination="IuJ-Vj-Bg7" eventType="touchUpInside" id="swu-Kb-4ue"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -572,7 +581,7 @@ Pledged</string>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="IQN-JY-PQe" kind="show" id="klc-Im-LDk"/>
+                                    <segue destination="IQN-JY-PQe" kind="show" identifier="toActionDetail" id="klc-Im-LDk"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -770,6 +779,7 @@ Pledged</string>
                         <viewLayoutGuide key="safeArea" id="1pc-rM-WWi"/>
                     </view>
                     <connections>
+                        <outlet property="actionTitleLabel" destination="3ZP-kS-Q5Y" id="u7J-p4-SvG"/>
                         <outlet property="addToActionListButton" destination="BnT-Ma-zcz" id="oRA-EA-T6V"/>
                     </connections>
                 </viewController>
@@ -1572,9 +1582,11 @@ Pledged</string>
         <image name="unSelectedAnswer" width="19.666666030883789" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
+
         <segue reference="06r-kr-FXf"/>
         <segue reference="Jxy-vd-MsM"/>
         <segue reference="WGA-z9-uV6"/>
+
         <segue reference="3GO-gh-OVx"/>
         <segue reference="bLM-oZ-Tf6"/>
     </inferredMetricsTieBreakers>

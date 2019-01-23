@@ -10,29 +10,54 @@ import UIKit
 
 class ActionListTableViewController: UITableViewController {
 
-    var actions: [String] = ["Meatless Monday", "Become Vegetarian", "Eat Seasonal", "Buy Local ", "Get a reusable water bottle", "Use reusable grocery bags", "Pack your lunches", "Try out a vegan recipe", "Compost", "Reduce food waste"]
+    var category: String = ""
+    var foodActions: [String] = ActionPlanController.shared.foodActions
+    var homeActions: [String] = ActionPlanController.shared.homeActions
+    var travelActions: [String] = ActionPlanController.shared.travelActions
+    var actions: [String] = []
+//    var pulledAction: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        setUpView()
     }
 
+    @IBAction func foorButtonTapped(_ sender: Any) {
+        category = "food"
+        actions = []
+        actions += foodActions
+        updateViews()
+    }
+    @IBAction func homeButtonTapped(_ sender: Any) {
+        category = "home"
+        actions = []
+        actions += homeActions
+        updateViews()
+    }
+    @IBAction func travelButtonTapped(_ sender: Any) {
+        category = "travel"
+        actions = []
+        actions = travelActions
+        updateViews()
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        print("viewWillAppear actions: \(actions)")
+        updateViews()
+        }
+    // MARK: - Table view data source
+    func setUpView() {
+        actions.append(contentsOf: foodActions)
+        actions.append(contentsOf: homeActions)
+        actions.append(contentsOf: travelActions)
+    }
+    
+    func updateViews() {
         tableView.reloadData()
     }
-    // MARK: - Table view data source
-
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return actions.count
     }
 
@@ -79,14 +104,19 @@ class ActionListTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "toActionDetail" {
+            let destinationVC = segue.destination as? ActionDetailViewController
+            let index = tableView.indexPathForSelectedRow
+            let action = actions[index?.row ?? 0]
+            destinationVC?.action = action
+        }
+        
     }
-    */
+    
 
 }

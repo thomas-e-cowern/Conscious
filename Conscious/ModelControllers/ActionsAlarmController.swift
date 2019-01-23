@@ -14,15 +14,19 @@ protocol AlarmScheduler: class {
     func scheduleUserNotifications(for: Alarm)
 }
 
-class AlarmController: AlarmScheduler {
+class ActionsAlarmController: AlarmScheduler {
     
-    static let shared = AlarmController()
+    static let shared = ActionsAlarmController()
     
     var alarms: [Alarm] = []
     
-    func addAlarm(fireDate: Date, name: String, enabled: Bool, repeats: Bool) {
-        let newAlarm = Alarm(fireDate: fireDate, name: name, enabled: enabled, repeats: repeats)
+    func addAlarm(fireDate: Date, name: String, message: String, enabled: Bool, repeats: Bool) {
+        let date = Date(timeIntervalSinceNow: 120)
+        let newAlarm = Alarm(fireDate: date, name: name, message: message, enabled: enabled, repeats: repeats)
+        scheduleUserNotifications(for: newAlarm)
         alarms.append(newAlarm)
+        print("Hit addAlarm")
+        print(alarms[0].fireDate)
 //        saveToPersistentStore()
     }
     
@@ -64,15 +68,29 @@ class AlarmController: AlarmScheduler {
 
 extension AlarmScheduler {
     func scheduleUserNotifications(for alarm: Alarm) {
+        print("Inside AlarmSheduler")
         let content = UNMutableNotificationContent()
-        content.title = "This is a test title"
-        content.body = "Your Timer is Done! On a side note, I can't begin to explain my hatred for how contraints work and how pointless it seems to be to understand them.  The reason this app looks like shit is because I don't know how to make it look better.   Take another look.... I rest my case...."
+        let center = UNUserNotificationCenter.current()
+        content.title = alarm.name
+        content.body = alarm.message
         content.sound = UNNotificationSound.default
-
+        
+        let options: UNAuthorizationOptions = [.alert, .sound, .badge]
+        center.requestAuthorization(options: options) { (allowed, error) in
+            if !allowed {
+                print("Notification authorization declined")
+            }
+        }
+        
         let fireDate = alarm.fireDate
-        let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: fireDate)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
-
+        
+//        let dateComponentsTwiceAYear = Calendar.current.dateComponents([.month, .day, .hour, .minute], from: fireDate)
+//        let dateComponentsMonthly = Calendar.current.dateComponents([.month, .day, .hour, .minute], from: fireDate)
+//        let dateComponentsTwiceAMonth = Calendar.current.dateComponents([.weekday, .day, .hour,. minute], from: fireDate)
+//        let dateComponentsWeekly = Calendar.current.dateComponents([.weekday, .day, .hour, .minute], from: fireDate)
+        let dateComponentsMinute = Calendar.current.dateComponents([.second], from: fireDate)
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponentsMinute, repeats: true)
         let request = UNNotificationRequest(identifier: alarm.uuid, content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request) { (error) in
             if let error = error {
@@ -81,8 +99,6 @@ extension AlarmScheduler {
         }
     }
 
-    func cancelUserNotifications(for alarm: Alarm) {
-        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [alarm.uuid])
-    }
+    
 }
 
