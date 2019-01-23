@@ -91,6 +91,11 @@ extension QuizViewController: UITableViewDataSource{
         cell.answer = answer
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        
+    }
+
 }
 
 extension QuizViewController: QuizTableViewCellDelegate {
