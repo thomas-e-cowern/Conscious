@@ -619,7 +619,7 @@ Pledged</string>
                                                             <navigationItem id="HU3-ca-Ii3">
                                                                 <barButtonItem key="leftBarButtonItem" title="Back" style="plain" id="2GS-Ku-yoK">
                                                                     <connections>
-                                                                        <segue destination="IuJ-Vj-Bg7" kind="show" id="3GO-gh-OVx"/>
+                                                                        <segue destination="Sla-iL-btk" kind="show" id="1KX-1a-yaP"/>
                                                                     </connections>
                                                                 </barButtonItem>
                                                                 <barButtonItem key="rightBarButtonItem" image="icons8-gear-32" width="25" style="plain" id="XrM-B2-Q7o">
@@ -1097,6 +1097,11 @@ Pledged</string>
                                                                         </subviews>
                                                                     </stackView>
                                                                 </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="bottom" secondItem="RTk-pg-RvI" secondAttribute="bottom" id="Xeh-W6-whV"/>
+                                                                    <constraint firstItem="RTk-pg-RvI" firstAttribute="top" secondItem="2Vo-37-IB4" secondAttribute="top" id="ew4-NB-3SM"/>
+                                                                    <constraint firstItem="RTk-pg-RvI" firstAttribute="leading" secondItem="2Vo-37-IB4" secondAttribute="leading" id="iT7-o9-iMm"/>
+                                                                </constraints>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="125" translatesAutoresizingMaskIntoConstraints="NO" id="gmd-fY-s1Z">
                                                                 <rect key="frame" x="0.0" y="93" width="372.66666666666669" height="90"/>
@@ -1248,6 +1253,7 @@ Pledged</string>
                     <size key="freeformSize" width="414" height="1400"/>
                     <connections>
                         <outlet property="foodGraph" destination="RTk-pg-RvI" id="s0Q-f5-0G6"/>
+                        <outlet property="foodLeadingConstraint" destination="iT7-o9-iMm" id="vll-Y0-EIC"/>
                         <outlet property="gasImageView" destination="aJT-B3-xkR" id="4tf-k2-0sR"/>
                         <outlet property="gasLabel" destination="1ck-Sv-bD9" id="6DK-t0-bW4"/>
                         <outlet property="homeGraph" destination="4X4-Z2-RWx" id="fjT-6v-pVU"/>
@@ -1588,10 +1594,11 @@ Pledged</string>
         <image name="unSelectedAnswer" width="19.666666030883789" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4lq-oL-yv0"/>
+
+        <segue reference="1KX-1a-yaP"/>
         <segue reference="Jxy-vd-MsM"/>
-        <segue reference="c9s-8p-LZf"/>
-        <segue reference="3GO-gh-OVx"/>
-        <segue reference="bLM-oZ-Tf6"/>
+        <segue reference="t5S-Wk-zVf"/>
+        <segue reference="uGX-NA-jzu"/>
+
     </inferredMetricsTieBreakers>
 </document>

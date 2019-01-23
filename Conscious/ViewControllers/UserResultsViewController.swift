@@ -22,6 +22,8 @@ class UserResultsViewController: UIViewController {
     @IBOutlet weak var gasLabel: UILabel!
     @IBOutlet weak var gasImageView: UIImageView!
     
+    @IBOutlet weak var foodLeadingConstraint: NSLayoutConstraint!
+    
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +34,7 @@ class UserResultsViewController: UIViewController {
     // FOOD
     func setFoodGraph(){
         UIView.animate(withDuration: 2.0) {
-//            self.foodViewHeightConstraint.constant =  GreenCalculatorController.shared.calculateFoodPercentage()
+            self.foodLeadingConstraint.constant =  CGFloat(GreenCalculatorController.shared.calculateFoodPercentage())
             self.view.layoutIfNeeded()
         }
     }
