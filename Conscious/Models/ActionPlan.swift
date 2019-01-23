@@ -15,8 +15,8 @@ let composts: Bool = false
 let lowTemp: Bool = false
 let lightBulbs: Bool = false
 let recycles: Bool = false
-let ownsCar: Bool = false
-let ridesTheBus: Bool = true
+let ownsCar: Bool = true
+let ridesTheBus: Bool = false
 
 var baseFoodPlan: [String] = ["Eat Seasonal", "Get a reusable water bottle", "Use reusable grocery bags", "Pack your lunches"]
 

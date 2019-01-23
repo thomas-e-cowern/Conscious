@@ -10,34 +10,54 @@ import UIKit
 
 class ActionListTableViewController: UITableViewController {
 
-    var my = Categories.food
-    
+    var category: String = ""
+    var foodActions: [String] = ActionPlanController.shared.foodActions
+    var homeActions: [String] = ActionPlanController.shared.homeActions
+    var travelActions: [String] = ActionPlanController.shared.travelActions
     var actions: [String] = []
-    
-
+//    var pulledAction: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        actions += Categories.food.actionPlan
-        actions += Categories.home.actionPlan
-        actions += Categories.travel.actionPlan
+        setUpView()
     }
 
+    @IBAction func foorButtonTapped(_ sender: Any) {
+        category = "food"
+        actions = []
+        actions += foodActions
+        updateViews()
+    }
+    @IBAction func homeButtonTapped(_ sender: Any) {
+        category = "home"
+        actions = []
+        actions += homeActions
+        updateViews()
+    }
+    @IBAction func travelButtonTapped(_ sender: Any) {
+        category = "travel"
+        actions = []
+        actions = travelActions
+        updateViews()
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        print("viewWillAppear actions: \(actions)")
+        updateViews()
+        }
+    // MARK: - Table view data source
+    func setUpView() {
+        actions.append(contentsOf: foodActions)
+        actions.append(contentsOf: homeActions)
+        actions.append(contentsOf: travelActions)
+    }
+    
+    func updateViews() {
         tableView.reloadData()
     }
-    // MARK: - Table view data source
-
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return actions.count
     }
 
