@@ -29,6 +29,7 @@ class ActionDetailViewController: UIViewController {
         guard let action = action else { return }
         addToActionListButton.setTitle("Added to Action List", for: .normal)
         ActionsAlarmController.shared.addAlarm(fireDate: Date(), name: action, message: "This is the alarm message", enabled: true, repeats: true)
+        ActionPlanController.shared.userActionList.append(action)
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
         

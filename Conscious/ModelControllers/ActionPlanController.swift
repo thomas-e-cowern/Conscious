@@ -16,6 +16,8 @@ class ActionPlanController {
     let homeActions: [String] = Categories.home.actionPlan
     let travelActions: [String] = Categories.travel.actionPlan
     
+    var userActionList: [String] = []
+    
 }
 
 
