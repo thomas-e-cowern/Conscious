@@ -11,13 +11,30 @@ import UserNotifications
 
 class SettingsViewController: UIViewController {
     
-    func cancelUserNotifications(for alarm: Alarm) {
-        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
-    }
+    @IBOutlet weak var notificationSwtich: UISwitch!
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    // MARK: - Methods
+    @IBAction func notificationsDidChange(_ sender: Any) {
+        print(notificationSwtich.isOn)
+        
+        if !notificationSwtich.isOn {
+            print("Should be turning notifications off")
+            func cancelUserNotifications(for alarm: Alarm) {
+                UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+            }
+            
+        }
+        //        var notificationRawStatus: Int = 1
+        //        UNUserNotificationCenter.current().getNotificationSettings { settings in
+        //            notificationRawStatus = Int(settings.authorizationStatus.rawValue)
+        //            print(notificationRawStatus)
+        //
+        //        }
     }
     
     // MARK: - Actions

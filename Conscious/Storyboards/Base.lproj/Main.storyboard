@@ -824,6 +824,9 @@ Pledged</string>
                                                             </label>
                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fAg-Er-CMb">
                                                                 <rect key="frame" x="294" y="0.0" width="74" height="50"/>
+                                                                <connections>
+                                                                    <action selector="notificationsDidChange:" destination="Ow2-2x-ch1" eventType="valueChanged" id="YSK-xd-d1V"/>
+                                                                </connections>
                                                             </switch>
                                                         </subviews>
                                                     </stackView>
@@ -928,6 +931,9 @@ Pledged</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LMP-JY-dFM"/>
                     </view>
+                    <connections>
+                        <outlet property="notificationSwtich" destination="fAg-Er-CMb" id="65A-I9-4lV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wqo-EI-23Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1569,7 +1575,6 @@ Pledged</string>
         <image name="unSelectedAnswer" width="19.666666030883789" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="klc-Im-LDk"/>
         <segue reference="4lq-oL-yv0"/>
         <segue reference="Jxy-vd-MsM"/>
         <segue reference="c9s-8p-LZf"/>
