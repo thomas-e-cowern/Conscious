@@ -12,22 +12,29 @@ class MyActionsViewController: UIViewController {
 
     @IBOutlet weak var myActionsTableview: UITableView!
     
-    var myActions: [String] = ["Meatless Monday", "Become Vegetarian", "Eat Seasonal", "Wash Clothes in Cold Water", "Consider Green Power", "Avoid Flying", "Take The Bus", "Carpool"]
+    var myActions: [String]  = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        myActions = ActionPlanController.shared.userActionList
         myActionsTableview.dataSource = self
-        myActionsTableview.reloadData()
+        
+        updateViews()
 
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        myActionsTableview.reloadData()
+        myActions = ActionPlanController.shared.userActionList
+        print(myActions.count)
+        updateViews()
     }
 
+    
+    func updateViews() {
+        myActions = ActionPlanController.shared.userActionList
+        myActionsTableview.reloadData()
+    }
     /*
     // MARK: - Navigation
 
