@@ -57,6 +57,11 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="Jzx-3p-gIh">
+                                <rect key="frame" x="188" y="793" width="39" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" red="0.35398227529999998" green="0.56197899799999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -532,22 +537,26 @@ Pledged</string>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="NSI-rl-blk">
                                                     <rect key="frame" x="0.0" y="100" width="414" height="55"/>
                                                     <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgG-tW-etB">
+                                                            <rect key="frame" x="0.0" y="0.0" width="103.66666666666667" height="55"/>
+                                                            <state key="normal" title="All"/>
+                                                        </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7J-Ka-azK">
-                                                            <rect key="frame" x="0.0" y="0.0" width="138" height="55"/>
+                                                            <rect key="frame" x="103.66666666666669" y="0.0" width="103.33333333333331" height="55"/>
                                                             <state key="normal" title="Food"/>
                                                             <connections>
                                                                 <action selector="foorButtonTapped:" destination="IuJ-Vj-Bg7" eventType="touchUpInside" id="gvd-oi-G7a"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGW-hI-H09">
-                                                            <rect key="frame" x="138" y="0.0" width="138" height="55"/>
+                                                            <rect key="frame" x="206.99999999999997" y="0.0" width="103.66666666666666" height="55"/>
                                                             <state key="normal" title="Home"/>
                                                             <connections>
                                                                 <action selector="homeButtonTapped:" destination="IuJ-Vj-Bg7" eventType="touchUpInside" id="m2Y-6Y-PRg"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxa-w6-qfp">
-                                                            <rect key="frame" x="276" y="0.0" width="138" height="55"/>
+                                                            <rect key="frame" x="310.66666666666669" y="0.0" width="103.33333333333331" height="55"/>
                                                             <state key="normal" title="Travel"/>
                                                             <connections>
                                                                 <action selector="travelButtonTapped:" destination="IuJ-Vj-Bg7" eventType="touchUpInside" id="swu-Kb-4ue"/>
@@ -1594,11 +1603,11 @@ Pledged</string>
         <image name="unSelectedAnswer" width="19.666666030883789" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-
+        <segue reference="klc-Im-LDk"/>
         <segue reference="1KX-1a-yaP"/>
-        <segue reference="Jxy-vd-MsM"/>
-        <segue reference="t5S-Wk-zVf"/>
-        <segue reference="uGX-NA-jzu"/>
+        <segue reference="5dl-NR-FBy"/>
+        <segue reference="c9s-8p-LZf"/>
+        <segue reference="Gmu-da-slQ"/>
 
     </inferredMetricsTieBreakers>
 </document>
