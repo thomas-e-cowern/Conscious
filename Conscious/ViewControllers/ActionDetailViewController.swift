@@ -23,11 +23,7 @@ class ActionDetailViewController: UIViewController {
         
         actionTitleLabel.text = action
     }
-    
-     // MARK: - Navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     }
-    
+ 
     // MARK: - Actions
     @IBAction func addToActionListButtonTapped(_ sender: Any) {
         guard let action = action else { return }
