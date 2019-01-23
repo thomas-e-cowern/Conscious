@@ -40,7 +40,7 @@ class MyActionsViewController: UIViewController {
 
 }
 
-extension MyActionsViewController: UITableViewDataSource{
+extension MyActionsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return myActions.count
