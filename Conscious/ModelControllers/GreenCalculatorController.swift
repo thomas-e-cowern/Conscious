@@ -16,8 +16,30 @@ class GreenCalculatorController {
     // Source of Truth
     var userAnswers: [Answer] = []
     
+    // MARK: - Properties
+    // FOOD
+    var wastedFood: WastedFood?
+    var locallyProducedFood: LocallyProducedFood?
+    var dietType: DietType?
+    var thrownFood: ThrownFood?
+    
+    // HOUSE
+    var numberOfHouseholdMembers: NumberOfHouseHoldMembers?
+    var houseTempInWinter: HouseTempInWinter?
+    var turnOffLights: TurnOffLights?
+    var typeOfHouse: TypeOfHouse?
+    var houseHeatingFuel: HouseHeatingFuel?
+    var energySavingImprovement: EnergySavingImprovement?
+    var wasteRecycling: WasteRecycling?
+    
+    // TRAVEL
+    var personalTransportation: PersonalTransportation?
+    var mostUsedVechile: MostUsedVechile?
+    var numberOfFlight: NumberOfFlight?
+    var numberOfDrivesPerWeek: NumberOfDrivesPerWeek?
+    
     // MARK: - Questions
-    lazy var allQuestions = [
+    lazy var allQuestions: [Question] = [
         Question(text: "Of the food you buy how much is wasted and thrown away?", category: .food, possibleAnswers: WastedFood.possibleAnswers),
         Question(text: "How often do you buy locally produced food?", category: .food, possibleAnswers: LocallyProducedFood.possibleAnswers),
         Question(text: "How would you best describe your diet?", category: .food, possibleAnswers: DietType.possibleAnswers),
@@ -36,45 +58,57 @@ class GreenCalculatorController {
     
     // MARK: - Calculators(Results)
     // FOOD
-    func foodCalculator(for food: Food) -> Double {
-        let locallyProducedFood = food.locallyProducedFood.results
-        let dietType = food.dietType.results
-        let wastedFood = food.wastedFood.results
-        let thrownFood = food.thrownFood.results
+    func calculateFoodScore() -> Double? {
+        guard let dietType = dietType?.results,
+            let localFood = locallyProducedFood?.results,
+            let wastedFood = wastedFood?.results,
+            let thrownFood = thrownFood?.results else { return nil }
         
-        return dietType - (dietType * locallyProducedFood) + wastedFood
+        return dietType - (dietType * localFood) + wastedFood + thrownFood
+    }
+    
+    func calculateFoodPercentage() -> Double{
+        return calculateFoodScore() ?? 0 / totalScoreCard()
     }
     
     // HOUSE
-    func houseCalculator(house: House) -> Double {
-        let numberOfHouseholdMembers = house.numberOfHouseHoldMembers.results
-        let houseTempInWinter = house.houseTempInWinter.results
-        let turnOffLights = house.turnOffLights.results
-        let typeOfHouse = house.typeOfHouse.results
-        let houseHeatingFuel = house.houseHeatingFuel.results
-        let energySavingImprovement = house.energySavingImprovement.results
-        let wasteRecycling = house.wasteRecycling.results
+    func calculateHouseScore() -> Double? {
+        guard let numberOfHouseholdMembers = numberOfHouseholdMembers?.results,
+            let houseTempInWinter = houseTempInWinter?.results,
+            let turnOffLights = turnOffLights?.results,
+            let typeOfHouse = typeOfHouse?.results,
+            let houseHeatingFuel = houseHeatingFuel?.results,
+            let energySavingImprovement = energySavingImprovement?.results,
+            let wasteRecycling = wasteRecycling?.results else { return nil }
         
         let totalHomeEmissions = numberOfHouseholdMembers + typeOfHouse + houseHeatingFuel
-        
         return ((totalHomeEmissions) - (totalHomeEmissions * houseTempInWinter)) - (turnOffLights + energySavingImprovement + wasteRecycling)
     }
     
+    func calculateHousePercentage() -> Double{
+        return calculateHouseScore() ?? 0 / totalScoreCard()
+    }
+    
     // TRAVEL
-    func travelCalculator(travel: Travel) -> Double {
-        let personalTransportation = travel.personalTransportation.results
-        let mostUsedVechile = travel.mostUsedVechile.results
-        let numberOfFlight = travel.numberOfFlight.results
-        let numberOfDrivesPerWeek = travel.numberOfDrivesPerWeek.results
+    func calculateTravelScore() -> Double? {
+        guard let personalTransportation = personalTransportation?.results,
+            let mostUsedVechile = mostUsedVechile?.results,
+            let numberOfFlight = numberOfFlight?.results,
+            let numberOfDrivesPerWeek = numberOfDrivesPerWeek?.results else { return nil }
         
         return personalTransportation + mostUsedVechile + numberOfFlight + numberOfDrivesPerWeek
     }
     
+    func calculateTravelPercentage() -> Double{
+        return calculateTravelScore() ?? 0 / totalScoreCard()
+    }
+    
     // GREEN
-    func greenCalculator(travel: Travel, food: Food, house: House) -> Double {
-        let foodCal = foodCalculator(for: food)
-        let houseCal = houseCalculator(house: house)
-        let travelCal = travelCalculator(travel: travel)
+    func totalScoreCard() -> Double {
+        guard let foodCal = calculateFoodScore(),
+            let houseCal = calculateHouseScore(),
+            let travelCal = calculateTravelScore() else { return 0 }
+        
         return houseCal + travelCal + foodCal
     }
 }

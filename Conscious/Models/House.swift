@@ -21,6 +21,8 @@ struct House {
 
 // MARK: - Answeres
 enum NumberOfHouseHoldMembers: String, Answer  {
+    var category: EmmissionCategory { return EmmissionCategory.house }
+    
     case oneToTwo = "1 or 2 household members"
     case threeToFour = "3 or 4 household members"
     case fiveToSeven = "5 to 7 household members"
@@ -47,6 +49,8 @@ extension NumberOfHouseHoldMembers: CaseIterable{
 }
 
 enum HouseTempInWinter: String, Answer {
+    var category: EmmissionCategory { return EmmissionCategory.house }
+    
     case cool = "I keep my home cool"
     case warm = "I keep my home warm"
     case hot = "I keep my home hot"
@@ -70,6 +74,8 @@ extension HouseTempInWinter: CaseIterable{
 }
 
 enum TurnOffLights: String, Answer {
+    var category: EmmissionCategory { return EmmissionCategory.house }
+    
     case yes = "Yes"
     case no = "No"
     
@@ -90,6 +96,8 @@ extension TurnOffLights: CaseIterable{
 }
 
 enum TypeOfHouse: String, Answer {
+    var category: EmmissionCategory { return EmmissionCategory.house }
+    
     case apartment = "Apartment"
     case tinyHouse = "Tiny House"
     case house = "House"
@@ -116,6 +124,8 @@ extension TypeOfHouse: CaseIterable{
 }
 
 enum HouseHeatingFuel: String, Answer {
+    var category: EmmissionCategory { return EmmissionCategory.house }
+    
     case gas = "Natural Gas"
     case oil = "Oil"
     case electric = "Electric"
@@ -143,6 +153,8 @@ extension HouseHeatingFuel: CaseIterable{
 
 // User get to choose more than one answer for this Q
 enum EnergySavingImprovement: String, Answer {
+    var category: EmmissionCategory { return EmmissionCategory.house }
+    
     case energySavingLightBulbs = "Energy Saving Lightbulbs"
     case efficientInsullation = "Efficient Insulation"
     case solarPanels = "Solar Panels"
@@ -167,6 +179,8 @@ extension EnergySavingImprovement: CaseIterable{
 
 // User get to choose more than one answer for this Q
 enum WasteRecycling: String, Answer {
+    var category: EmmissionCategory { return EmmissionCategory.house }
+    
     case paper = "Paper"
     case plastic = "Plastic"
     case glass = "Glass"
