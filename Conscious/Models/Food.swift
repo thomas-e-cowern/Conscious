@@ -17,7 +17,9 @@ struct Food {
 }
 
  // MARK: - Answeres
-enum WastedFood: String, Answer {    
+enum WastedFood: String, Answer {
+    var category: EmmissionCategory { return EmmissionCategory.food }
+    
     case none = "None"
     case lessThan10Percent = "0% to 10%"
     case between10and30Percent = "11% to 30%"
@@ -44,6 +46,8 @@ extension WastedFood: CaseIterable{
 }
 
 enum LocallyProducedFood: String, Answer {
+    var category: EmmissionCategory { return EmmissionCategory.food }
+    
     case alot = "A lot of the food I buy is locally sourced"
     case some = "Some of the food I buy is locally sourced"
     case none = "Local sourcing isn’t a top priority for me"
@@ -67,6 +71,8 @@ extension LocallyProducedFood: CaseIterable{
 }
 
 enum DietType: String, Answer {
+    var category: EmmissionCategory { return EmmissionCategory.food }
+    
     case mostlyMeat = "Meat in most meals"
     case someMeat = "Meat in some meals"
     case rarelyMeat = "Meat very rarely / just fish"
@@ -97,6 +103,8 @@ extension DietType: CaseIterable {
 
 // NEEDS WORKING ON THE NUMBERS
 enum ThrownFood: String, Answer {
+    var category: EmmissionCategory { return EmmissionCategory.food }
+    
     case zeroToTen = "0% - 10%"
     case tenToThirty = "10% - 30%"
     case moreThanThirty = "More than 30%"
@@ -104,11 +112,11 @@ enum ThrownFood: String, Answer {
     var results: Double {
         switch self {
         case .zeroToTen:
-            return 2.99
+            return 0.014
         case .tenToThirty:
-            return 2.27
+            return 0.039
         case .moreThanThirty:
-            return 1.72
+            return 0.056
         }
     }
 }
@@ -120,3 +128,9 @@ extension ThrownFood: CaseIterable {
 }
 
 
+enum FoodQuesitons{
+    case wastedFood(WastedFood)
+    case locallyProducedFood(LocallyProducedFood)
+    case dietType(DietType)
+    case thrownFood(ThrownFood)
+}

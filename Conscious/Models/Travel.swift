@@ -18,6 +18,8 @@ struct Travel {
 
 // MARK: - Answeres
 enum NumberOfFlight: String, Answer {
+    var category: EmmissionCategory { return EmmissionCategory.travel }
+    
     case oneToTwo = "1 or 2 flights per year"
     case threeToFour = "3 or 4 flights per year"
     case fiveToSeven = "5 to 7 flights per year"
@@ -44,6 +46,8 @@ extension NumberOfFlight: CaseIterable{
 }
 
 enum NumberOfDrivesPerWeek: String, Answer {
+    var category: EmmissionCategory { return EmmissionCategory.travel }
+    
     case lessThan100Miles = "Less than 100 Miles"
     case between100And200 = "Between 100 and 200"
     case greaterThan200 = "Greater than 200"
@@ -68,6 +72,8 @@ extension NumberOfDrivesPerWeek: CaseIterable{
 
 // NO QUESTION FOR THIS ANSWER
 enum PersonalTransportation: String, Answer {
+    var category: EmmissionCategory { return EmmissionCategory.travel }
+    
     case car = "Car"
     case motorcycleOrScooter = "Motorcycle / Scooter"
     case none = "None"
@@ -91,6 +97,8 @@ extension PersonalTransportation: CaseIterable{
 }
 
 enum MostUsedVechile: String, Answer {
+    var category: EmmissionCategory { return EmmissionCategory.travel }
+    
     case electricCar = "Electric Car"
     case hybridCar = "Hybrid Car"
     case smallGasCar = "Small Car"
