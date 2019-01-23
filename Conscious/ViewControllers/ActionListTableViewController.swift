@@ -43,7 +43,6 @@ class ActionListTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("viewWillAppear actions: \(actions)")
         updateViews()
         }
     // MARK: - Table view data source
