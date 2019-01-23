@@ -942,13 +942,13 @@ Pledged</string>
         <!--Title-->
         <scene sceneID="PWt-IL-6Bi">
             <objects>
-                <viewController id="RTw-xs-U11" sceneMemberID="viewController">
+                <viewController id="RTw-xs-U11" customClass="UserResultsViewController" customModule="Conscious" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G5C-Yw-S4Y">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U4Q-v8-g0K">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="1356"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q3D-ay-0bW">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1258.6666666666667"/>
@@ -1245,6 +1245,19 @@ Pledged</string>
                     <navigationItem key="navigationItem" title="Title" id="dyC-MX-PC2">
                         <barButtonItem key="rightBarButtonItem" systemItem="organize" id="xEI-ey-jSs"/>
                     </navigationItem>
+                    <size key="freeformSize" width="414" height="1400"/>
+                    <connections>
+                        <outlet property="foodGraph" destination="RTk-pg-RvI" id="s0Q-f5-0G6"/>
+                        <outlet property="gasImageView" destination="aJT-B3-xkR" id="4tf-k2-0sR"/>
+                        <outlet property="gasLabel" destination="1ck-Sv-bD9" id="6DK-t0-bW4"/>
+                        <outlet property="homeGraph" destination="4X4-Z2-RWx" id="fjT-6v-pVU"/>
+                        <outlet property="scoreLabel" destination="Jda-Fd-OeS" id="Kwq-1e-Nrg"/>
+                        <outlet property="trashImageView" destination="U7N-73-DkQ" id="55W-Wf-YyG"/>
+                        <outlet property="trashLabel" destination="p3o-RH-Lhw" id="gg8-KN-lm3"/>
+                        <outlet property="travelGraph" destination="Dkr-uj-56p" id="B0U-1Q-4bL"/>
+                        <outlet property="treesImageView" destination="Kit-xH-qfW" id="cXU-w6-v02"/>
+                        <outlet property="treesLabel" destination="qeu-Z0-E7q" id="2Io-NN-liQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cvz-i4-2FQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1576,8 +1589,10 @@ Pledged</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="4lq-oL-yv0"/>
+
         <segue reference="Jxy-vd-MsM"/>
-        <segue reference="c9s-8p-LZf"/>
+        <segue reference="WGA-z9-uV6"/>
+
         <segue reference="3GO-gh-OVx"/>
         <segue reference="bLM-oZ-Tf6"/>
     </inferredMetricsTieBreakers>

@@ -10,16 +10,28 @@ import Foundation
 
 protocol Answer{
     var rawValue: String { get }
+    var category: EmmissionCategory { get }
+    var results: Double { get }
+}
+
+extension Answer{
+    func index(in answers: [Answer]) -> Int?{
+        for (index, object) in answers.enumerated(){
+            if object.rawValue == self.rawValue{
+                return index
+            }
+        }
+        return nil
+    }
 }
 
 struct Question {
     var text: String
     var category: EmmissionCategory
-   // var selectedAnswer: Answer?
     var possibleAnswers: [Answer]
 }
 
-enum EmmissionCategory: String{
+enum EmmissionCategory: String {
     case food = "Food"
     case house = "House"
     case travel = "Travel"

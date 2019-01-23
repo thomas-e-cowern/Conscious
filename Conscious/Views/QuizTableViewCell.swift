@@ -10,7 +10,7 @@ import UIKit
 
 protocol QuizTableViewCellDelegate: class {
     func userDidSelect(answer: Answer)
-    func userDidDeselectAnswer()
+    func userDidDeselectAnswer(answer: Answer)
 }
 
 class QuizTableViewCell: UITableViewCell {
@@ -41,6 +41,7 @@ class QuizTableViewCell: UITableViewCell {
     func toggleCell(with answer: Answer) {
         answerSelected.toggle()
         switchCheckboxImage(for: answer)
+        delegate?.userDidSelect(answer: answer)
     }
     
     func switchCheckboxImage(for answer: Answer) {
