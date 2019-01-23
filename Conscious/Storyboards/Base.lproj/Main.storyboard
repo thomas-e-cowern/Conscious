@@ -603,7 +603,7 @@ Pledged</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qq9-JM-INF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4102.898550724638" y="10.044642857142856"/>
+            <point key="canvasLocation" x="4061" y="214"/>
         </scene>
         <!--Action Detail View Controller-->
         <scene sceneID="u1x-j1-ETO">
@@ -794,7 +794,7 @@ Pledged</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BMb-7t-83R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5081.1594202898559" y="13.392857142857142"/>
+            <point key="canvasLocation" x="5071" y="-219"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="Zq5-By-Yeg">
@@ -1608,5 +1608,6 @@ Pledged</string>
         <segue reference="5dl-NR-FBy"/>
         <segue reference="c9s-8p-LZf"/>
         <segue reference="Gmu-da-slQ"/>
+
     </inferredMetricsTieBreakers>
 </document>
