@@ -18,6 +18,8 @@ class ActionPlanController {
     
     var userActionList: [String] = []
     
+    var actionsComplete: Int = 0
+    
 }
 
 
