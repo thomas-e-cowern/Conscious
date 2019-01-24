@@ -18,8 +18,6 @@ let recycles: Bool = false
 let ownsCar: Bool = true
 let ridesTheBus: Bool = false
 
-
-
 var baseFoodPlan: [ActionPlanDetail] = [eatSeasonal, reusableWaterBottl, reusableGroceryBags, packYourLunch, reduceFoodWaste]
 
 var baseHomePlan: [ActionPlanDetail] = [waterHeaterTemp, replaceAcFilters, shorterShowers, powerStripIt, coldWaterWash, greenPower]

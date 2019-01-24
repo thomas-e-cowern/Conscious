@@ -835,8 +835,12 @@ Pledged</string>
                         <viewLayoutGuide key="safeArea" id="1pc-rM-WWi"/>
                     </view>
                     <connections>
+                        <outlet property="actionBenefitsLabel" destination="17v-eT-KMw" id="Atu-QJ-Zfo"/>
+                        <outlet property="actionSummaryLabel" destination="Kuq-G5-ySL" id="b1Y-Kl-le5"/>
                         <outlet property="actionTitleLabel" destination="3ZP-kS-Q5Y" id="u7J-p4-SvG"/>
                         <outlet property="addToActionListButton" destination="BnT-Ma-zcz" id="oRA-EA-T6V"/>
+                        <outlet property="co2ReductionLabel" destination="QPi-xl-X8i" id="QwU-ku-SMe"/>
+                        <outlet property="moneySavedLabel" destination="9ve-N5-f3w" id="msa-Be-MUj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BMb-7t-83R" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1665,10 +1669,10 @@ Pledged</string>
         <image name="placeholder" width="1280" height="800"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZCI-u8-BUJ"/>
+        <segue reference="1KX-1a-yaP"/>
         <segue reference="5dl-NR-FBy"/>
         <segue reference="Ygh-lv-35Y"/>
-        <segue reference="WGA-z9-uV6"/>
+        <segue reference="t5S-Wk-zVf"/>
         <segue reference="uGX-NA-jzu"/>
     </inferredMetricsTieBreakers>
 </document>
