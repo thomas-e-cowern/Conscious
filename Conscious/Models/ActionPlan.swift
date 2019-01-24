@@ -9,14 +9,14 @@
 import Foundation
 
 // MARK: - Properties
-let isVegHead: Bool = false
-let buysLocally: Bool = false
-let composts: Bool = false
-let lowTemp: Bool = false
-let lightBulbs: Bool = false
-let recycles: Bool = false
-let ownsCar: Bool = true
-let ridesTheBus: Bool = false
+var isVegetarian: Bool = false
+var buysLocally: Bool = false
+var composts: Bool = false
+var lowTemp: Bool = false
+var lightBulbs: Bool = false
+var recycles: Bool = false
+var ownsCar: Bool = true
+var ridesTheBus: Bool = false
 
 var baseFoodPlan: [ActionPlanDetail] = [eatSeasonal, reusableWaterBottl, reusableGroceryBags, packYourLunch, reduceFoodWaste]
 
@@ -42,7 +42,8 @@ enum Categories: String {
     var actionPlan: [ActionPlanDetail] {
         switch self {
         case .food:
-            if isVegHead == false {
+            if isVegetarian == false {
+                print("inside isVegetarian")
                 baseFoodPlan += [meatlessModay, becomeVegetarian, tryAVeganRecipe]
             }
             if buysLocally == false {

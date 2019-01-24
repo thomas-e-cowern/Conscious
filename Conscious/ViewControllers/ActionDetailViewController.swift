@@ -38,6 +38,8 @@ class ActionDetailViewController: UIViewController {
         addToActionListButton.setTitle("Added to Action List", for: .normal)
         ActionsAlarmController.shared.addAlarm(fireDate: Date(), name: action.action, message: action.actionSummry, enabled: true, repeats: true)
         ActionPlanController.shared.userActionList.append(action.action)
+        ActionPlanController.shared.reductionInCo2 += action.carbonReduction ?? 0.0
+        ActionPlanController.shared.reductionInCost += action.costSavings ?? 0.0
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
         
