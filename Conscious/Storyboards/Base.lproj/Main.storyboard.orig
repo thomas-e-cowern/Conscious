@@ -722,7 +722,9 @@ Pledged</string>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17v-eT-KMw">
                                                         <rect key="frame" x="0.0" y="664" width="398" height="67"/>
-                                                        <string key="text">	• 	Reducing your carbon footprint 	• 	High levels of meat consumption have been linked to higher risks of heart disease, cancer, and Alzheimer’s  	• 	Cows are, like, really cute</string>
+                                                        <string key="text">	• 	Reducing your carbon footprint
+	• 	High levels of meat consumption have been linked to higher risks of heart disease, cancer, and Alzheimer’s 
+	• 	Cows are, like, really cute</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1670,17 +1672,17 @@ Pledged</string>
     </resources>
     <inferredMetricsTieBreakers>
 <<<<<<< HEAD
-        <segue reference="klc-Im-LDk"/>
-        <segue reference="1KX-1a-yaP"/>
-        <segue reference="5dl-NR-FBy"/>
-        <segue reference="c9s-8p-LZf"/>
-        <segue reference="Gmu-da-slQ"/>
 =======
+
+>>>>>>> c879d03cf01e307a11df401bae5ddd6ca2d350cc
         <segue reference="ZCI-u8-BUJ"/>
         <segue reference="Jxy-vd-MsM"/>
         <segue reference="Ygh-lv-35Y"/>
         <segue reference="WGA-z9-uV6"/>
         <segue reference="uGX-NA-jzu"/>
->>>>>>> develop
+<<<<<<< HEAD
+=======
+
+>>>>>>> c879d03cf01e307a11df401bae5ddd6ca2d350cc
     </inferredMetricsTieBreakers>
 </document>

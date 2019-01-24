@@ -1671,10 +1671,12 @@ Pledged</string>
         <image name="placeholder" width="1280" height="800"/>
     </resources>
     <inferredMetricsTieBreakers>
+
         <segue reference="ZCI-u8-BUJ"/>
         <segue reference="Jxy-vd-MsM"/>
         <segue reference="Ygh-lv-35Y"/>
         <segue reference="WGA-z9-uV6"/>
         <segue reference="uGX-NA-jzu"/>
+
     </inferredMetricsTieBreakers>
 </document>
