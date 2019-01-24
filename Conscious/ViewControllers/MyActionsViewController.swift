@@ -14,8 +14,6 @@ class MyActionsViewController: UIViewController {
     @IBOutlet weak var actionsCompleteLabel: UILabel!
     @IBOutlet weak var actionsPledged: UILabel!
     
-    static let shared = MyActionsViewController()
-    
     var myActions: [String]  = []
     
     var actionsAvailable: Int = 0
@@ -34,14 +32,17 @@ class MyActionsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        updateViews()
     }
     
     func updateViews() {
         myActions = ActionPlanController.shared.userActionList
         actionsAvailable = myActions.count
-        actionsPledged.text = "\(actionsAvailable)"
+        actionsPledged.text = " / \(actionsAvailable)"
         myActionsTableview.reloadData()
     }
+    
+    
     /*
      // MARK: - Navigation
      
@@ -64,6 +65,17 @@ extension MyActionsViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myActionsCell", for: indexPath) as! ActionTableViewCell
         let action = myActions[indexPath.row]
         cell.actionViewCellLabel.text = action
+        cell.delegate = self
         return cell
+    }
+}
+
+extension MyActionsViewController: ActionTableViewCellDelegate{
+    func actionChecked(for cell: ActionTableViewCell){
+        actionsCompleted += 1
+    }
+    
+    func actionUnchecked(for cell: ActionTableViewCell){
+        actionsCompleted -= 1
     }
 }

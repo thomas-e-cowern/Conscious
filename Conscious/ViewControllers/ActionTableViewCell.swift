@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol ActionTableViewCellDelegate: class{
+    func actionChecked(for cell: ActionTableViewCell)
+    func actionUnchecked(for cell: ActionTableViewCell)
+}
+
 class ActionTableViewCell: UITableViewCell {
     
     @IBOutlet weak var actionViewCellButton: UIButton!
@@ -15,6 +20,7 @@ class ActionTableViewCell: UITableViewCell {
     
     var actionTitle: String?
     var actionComplete: Bool? = false
+    weak var delegate: ActionTableViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,19 +34,21 @@ class ActionTableViewCell: UITableViewCell {
     }
     
     func checkboxChanged() {
+        guard let testTitle = actionViewCellLabel.text else { return }
+        let attributedString = NSMutableAttributedString(string: testTitle)
         if actionComplete == false {
             actionComplete = true
             actionViewCellButton.setTitle("Done", for: .normal)
-            print(MyActionsViewController.shared.actionsCompleted)
-            MyActionsViewController.shared.actionsCompleted += 1
-//            MyActionsViewController.shared.actionsCompleteLabel.text = "\(MyActionsViewController.shared.actionsCompleted)"
+            delegate?.actionChecked(for: self)
+            attributedString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: NSUnderlineStyle.single.rawValue, range: NSRange(location: 0, length: attributedString.length))
+            actionViewCellLabel.attributedText = attributedString
         } else {
             actionComplete = false
             actionViewCellButton.setTitle("Do", for: .normal)
-            MyActionsViewController.shared.actionsCompleted -= 1
-//            MyActionsViewController.shared.actionsCompleteLabel.text = "\(MyActionsViewController.shared.actionsCompleted)"
+            delegate?.actionUnchecked(for: self)
+            attributedString.removeAttribute(NSAttributedString.Key.strikethroughStyle, range: NSRange(location: 0, length: attributedString.length))
+            actionViewCellLabel.attributedText = attributedString
         }
-        print("Actions Completed: \(MyActionsViewController.shared.actionsCompleted)")
     }
     
     @IBAction func actionViewCellButtonChecked(_ sender: Any) {
