@@ -29,8 +29,8 @@ class GreenCalculatorController {
     var turnOffLights: TurnOffLights?
     var typeOfHouse: TypeOfHouse?
     var houseHeatingFuel: HouseHeatingFuel?
-    var energySavingImprovement: EnergySavingImprovement?
-    var wasteRecycling: WasteRecycling?
+    var energySavingImprovement: [EnergySavingImprovement] = []
+    var wasteRecycling: [WasteRecycling] = []
     
     // TRAVEL
     var personalTransportation: PersonalTransportation?
@@ -40,21 +40,21 @@ class GreenCalculatorController {
     
     // MARK: - Questions
     lazy var allQuestions: [Question] = [
-        Question(text: "Of the food you buy how much is wasted and thrown away?", category: .food, possibleAnswers: WastedFood.possibleAnswers),
-        Question(text: "How often do you buy locally produced food?", category: .food, possibleAnswers: LocallyProducedFood.possibleAnswers),
-        Question(text: "How would you best describe your diet?", category: .food, possibleAnswers: DietType.possibleAnswers),
-        Question(text: "Of the food you buy how much is wasted and thrown away?", category: .food, possibleAnswers: ThrownFood.possibleAnswers),
-        Question(text: "What type of house do you live in?", category: .house, possibleAnswers: TypeOfHouse.possibleAnswers),
-        Question(text: "How many people live in the house above the age of 18?", category: .house, possibleAnswers: NumberOfHouseHoldMembers.possibleAnswers),
-        Question(text: "What temperature do you keep your house at in the winter?", category: .house, possibleAnswers: HouseTempInWinter.possibleAnswers),
-        Question(text: "Do you regularly turn off lights and appliances when not used for long periods of time?", category: .house, possibleAnswers: TurnOffLights.possibleAnswers),
-        Question(text: "How do you heat your home?", category: .house, possibleAnswers: HouseHeatingFuel.possibleAnswers),
-        Question(text: "Do you have any of these energy saving improvements in your home?", category: .house, possibleAnswers: EnergySavingImprovement.possibleAnswers),
-        Question(text: "Which of the following do you recycle?", category: .house, possibleAnswers: WasteRecycling.possibleAnswers),
-        Question(text: "In the last year, how many round trip flights have you made?", category: .travel, possibleAnswers: NumberOfFlight.possibleAnswers),
-        Question(text: "What kind of vehicle do you travel in most?", category: .travel, possibleAnswers:MostUsedVechile.possibleAnswers),
-        Question(text: "How many miles a week do you drive?", category: .travel, possibleAnswers: NumberOfDrivesPerWeek.possibleAnswers)
-    ]
+        Question(text: "Of the food you buy how much is wasted and thrown away?", category: .food, possibleAnswers: WastedFood.possibleAnswers, questionType: .mutuallyExclusive),
+        Question(text: "How often do you buy locally produced food?", category: .food, possibleAnswers: LocallyProducedFood.possibleAnswers, questionType: .mutuallyExclusive),
+        Question(text: "How would you best describe your diet?", category: .food, possibleAnswers: DietType.possibleAnswers, questionType: .mutuallyExclusive),
+        Question(text: "Of the food you buy how much is wasted and thrown away?", category: .food, possibleAnswers: ThrownFood.possibleAnswers, questionType: .mutuallyExclusive),
+        Question(text: "What type of house do you live in?", category: .house, possibleAnswers: TypeOfHouse.possibleAnswers, questionType: .mutuallyExclusive),
+        Question(text: "How many people live in the house above the age of 18?", category: .house, possibleAnswers: NumberOfHouseHoldMembers.possibleAnswers, questionType: .mutuallyExclusive),
+        Question(text: "What temperature do you keep your house at in the winter?", category: .house, possibleAnswers: HouseTempInWinter.possibleAnswers, questionType: .mutuallyExclusive),
+        Question(text: "Do you regularly turn off lights and appliances when not used for long periods of time?", category: .house, possibleAnswers: TurnOffLights.possibleAnswers, questionType: .mutuallyExclusive),
+        Question(text: "How do you heat your home?", category: .house, possibleAnswers: HouseHeatingFuel.possibleAnswers, questionType: .mutuallyExclusive),
+        Question(text: "Do you have any of these energy saving improvements in your home?", category: .house, possibleAnswers: EnergySavingImprovement.possibleAnswers, questionType: .multipleAnswer),
+        Question(text: "Which of the following do you recycle?", category: .house, possibleAnswers: WasteRecycling.possibleAnswers, questionType: .multipleAnswer),
+        Question(text: "In the last year, how many round trip flights have you made?", category: .travel, possibleAnswers: NumberOfFlight.possibleAnswers, questionType: .mutuallyExclusive),
+        Question(text: "What kind of vehicle do you travel in most?", category: .travel, possibleAnswers:MostUsedVechile.possibleAnswers, questionType: .mutuallyExclusive),
+        Question(text: "How many miles a week do you drive?", category: .travel, possibleAnswers: NumberOfDrivesPerWeek.possibleAnswers, questionType: .mutuallyExclusive),
+        ]
     
     // MARK: - Calculators(Results)
     // FOOD
@@ -67,7 +67,7 @@ class GreenCalculatorController {
         return dietType - (dietType * localFood) + wastedFood + thrownFood
     }
     
-    func calculateFoodPercentage() -> Double{
+    func calculateFoodPercentage() -> Double {
         return calculateFoodScore() ?? 0 / totalScoreCard()
     }
     
@@ -78,14 +78,14 @@ class GreenCalculatorController {
             let turnOffLights = turnOffLights?.results,
             let typeOfHouse = typeOfHouse?.results,
             let houseHeatingFuel = houseHeatingFuel?.results,
-            let energySavingImprovement = energySavingImprovement?.results,
-            let wasteRecycling = wasteRecycling?.results else { return nil }
+            let energySavingImprovement = energySavingImprovement.first?.results,
+            let wasteRecycling = wasteRecycling.first?.results else { return nil }
         
         let totalHomeEmissions = numberOfHouseholdMembers + typeOfHouse + houseHeatingFuel
         return ((totalHomeEmissions) - (totalHomeEmissions * houseTempInWinter)) - (turnOffLights + energySavingImprovement + wasteRecycling)
     }
     
-    func calculateHousePercentage() -> Double{
+    func calculateHousePercentage() -> Double {
         return calculateHouseScore() ?? 0 / totalScoreCard()
     }
     
@@ -99,16 +99,13 @@ class GreenCalculatorController {
         return personalTransportation + mostUsedVechile + numberOfFlight + numberOfDrivesPerWeek
     }
     
-    func calculateTravelPercentage() -> Double{
+    func calculateTravelPercentage() -> Double {
         return calculateTravelScore() ?? 0 / totalScoreCard()
     }
     
     // GREEN
     func totalScoreCard() -> Double {
-        guard let foodCal = calculateFoodScore(),
-            let houseCal = calculateHouseScore(),
-            let travelCal = calculateTravelScore() else { return 0 }
-        
-        return houseCal + travelCal + foodCal
+
+        return (calculateFoodScore() ?? 0) + (calculateHouseScore() ?? 0) + (calculateTravelScore() ?? 0)
     }
 }

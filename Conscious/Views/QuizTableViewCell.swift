@@ -8,21 +8,19 @@
 
 import UIKit
 
-protocol QuizTableViewCellDelegate: class {
-    func userDidSelect(answer: Answer)
-    func userDidDeselectAnswer(answer: Answer)
-}
-
 class QuizTableViewCell: UITableViewCell {
     
     // MARK: - Outlets
     @IBOutlet weak var answerLabel: UILabel!
-    @IBOutlet weak var checkboxButton: UIButton!
+    @IBOutlet weak var checkBoxImage: UIImageView!
     
     // MARK: - Properties
     // Delegate
-    weak var delegate: QuizTableViewCellDelegate?
-    var answerSelected: Bool = false
+    var answerSelected: Bool = false {
+        didSet{
+            switchCheckboxImage()
+        }
+    }
     
     var answer: Answer? {
         didSet{
@@ -34,23 +32,11 @@ class QuizTableViewCell: UITableViewCell {
     func updateViwes() {
         if let answer = answer {
             answerLabel.text = answer.rawValue
-            switchCheckboxImage(for: answer)
+            switchCheckboxImage()
         }
     }
     
-    func toggleCell(with answer: Answer) {
-        answerSelected.toggle()
-        switchCheckboxImage(for: answer)
-        delegate?.userDidSelect(answer: answer)
-    }
-    
-    func switchCheckboxImage(for answer: Answer) {
-        answerSelected ?  checkboxButton.setImage(#imageLiteral(resourceName: "selectedAnswer"), for: .normal) : checkboxButton.setImage(#imageLiteral(resourceName: "unSelectedAnswer"), for: .normal)
-    }
-    
-    // MARK: - Actions
-    @IBAction func checkboxButtonTapped(_ sender: Any) {
-        guard let answer = answer else { return }
-        toggleCell(with: answer)
+    func switchCheckboxImage() {
+        checkBoxImage.image = answerSelected ? #imageLiteral(resourceName: "selectedAnswer") : #imageLiteral(resourceName: "unSelectedAnswer")
     }
 }

@@ -12,8 +12,11 @@ class UserResultsViewController: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var foodScoreLabel: UILabel!
     @IBOutlet weak var foodGraph: UIView!
-    @IBOutlet weak var homeGraph: UIView!
+    @IBOutlet weak var houseScoreLabel: UILabel!
+    @IBOutlet weak var houseGraph: UIView!
+    @IBOutlet weak var travelScoreLabel: UILabel!
     @IBOutlet weak var travelGraph: UIView!
     @IBOutlet weak var treesLabel: UILabel!
     @IBOutlet weak var treesImageView: UIImageView!
@@ -57,6 +60,9 @@ class UserResultsViewController: UIViewController {
     
     // MARK: - Actions
     func updateViews() {
-        
+        scoreLabel.text = "\(GreenCalculatorController.shared.totalScoreCard())"
+        foodScoreLabel.text = "\(GreenCalculatorController.shared.calculateFoodScore() ?? 0)"
+        houseScoreLabel.text = "\(GreenCalculatorController.shared.calculateHouseScore() ?? 0)"
+        travelScoreLabel.text = "\(GreenCalculatorController.shared.calculateTravelScore() ?? 0)"
     }
 }
