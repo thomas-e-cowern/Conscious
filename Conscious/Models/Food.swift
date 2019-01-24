@@ -101,7 +101,6 @@ extension DietType: CaseIterable {
     }
 }
 
-// NEEDS WORKING ON THE NUMBERS
 enum ThrownFood: String, Answer {
     var category: EmmissionCategory { return EmmissionCategory.food }
     
