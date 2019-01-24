@@ -61,6 +61,17 @@ class QuizViewController: UIViewController {
         questionLabel.text = self.question?.text
         quizProgressView.setProgress(totalProgress, animated: true)
         tableView.reloadData()
+        updateImageView()
+    }
+    
+    func updateImageView() {
+        if question?.category.rawValue == "Food" {
+            categoryImageView.image = #imageLiteral(resourceName: "Cow")
+        } else if question?.category.rawValue == "House" {
+            categoryImageView.image = #imageLiteral(resourceName: "Home ")
+        } else if question?.category.rawValue == "Travel" {
+            categoryImageView.image = #imageLiteral(resourceName: "Travel Bus")
+        }
     }
     
     func nextQuestion() {
@@ -153,7 +164,7 @@ extension QuizViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension QuizViewController {
     func userDidDeselectAnswer(answer: Answer, cell: QuizTableViewCell) {
-            // FOOD
+        // FOOD
         if answer is WastedFood{
             GreenCalculatorController.shared.wastedFood = nil
         } else if answer is LocallyProducedFood {
@@ -193,7 +204,7 @@ extension QuizViewController {
     }
     
     func userDidSelect(answer: Answer, cell: QuizTableViewCell) {
-            // FOOD
+        // FOOD
         if let wastedFood = answer as? WastedFood {
             GreenCalculatorController.shared.wastedFood = wastedFood
         } else if let locallyProducedFood = answer as? LocallyProducedFood {

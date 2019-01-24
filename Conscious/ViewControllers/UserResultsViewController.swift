@@ -24,8 +24,10 @@ class UserResultsViewController: UIViewController {
     @IBOutlet weak var trashImageView: UIImageView!
     @IBOutlet weak var gasLabel: UILabel!
     @IBOutlet weak var gasImageView: UIImageView!
+    @IBOutlet weak var foodWidthGraph: NSLayoutConstraint!
+    @IBOutlet weak var houseWidthGraph: NSLayoutConstraint!
+    @IBOutlet weak var travelWidthGraph: NSLayoutConstraint!
     
-    @IBOutlet weak var foodLeadingConstraint: NSLayoutConstraint!
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -33,36 +35,60 @@ class UserResultsViewController: UIViewController {
         updateViews()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        setFoodGraph()
+        setHouseGraph()
+        setTravelGraph()
+    }
+    
     // MARK: - Graphs
     // FOOD
     func setFoodGraph(){
-        UIView.animate(withDuration: 2.0) {
-            self.foodLeadingConstraint.constant =  CGFloat(GreenCalculatorController.shared.calculateFoodPercentage())
+        UIView.animate(withDuration: 8) {
+            self.foodWidthGraph.constant =  CGFloat(GreenCalculatorController.shared.calculateFoodScore() ?? 0)
             self.view.layoutIfNeeded()
         }
     }
     
     // HOUSE
     func setHouseGraph(){
-        UIView.animate(withDuration: 2.0) {
-//            self.houseViewHeightConstraint.constant =  GreenCalculatorController.shared.calculateHousePercentage()
+        UIView.animate(withDuration: 8) {
+            self.houseWidthGraph.constant =  CGFloat(GreenCalculatorController.shared.calculateHouseScore() ?? 0)
             self.view.layoutIfNeeded()
         }
     }
     
     // TRAVEL
     func setTravelGraph(){
-        UIView.animate(withDuration: 2.0) {
-//            self.travelViewHeightConstraint.constant =  GreenCalculatorController.shared.calculateTravelPercentage()
+        UIView.animate(withDuration: 8) {
+            self.travelWidthGraph.constant =  CGFloat(GreenCalculatorController.shared.calculateTravelScore() ?? 0)
             self.view.layoutIfNeeded()
         }
     }
     
+    
+    // Images
+    // Trees
+    func setScoreImage() {
+        if GreenCalculatorController.shared.totalScoreCard() > 50 {
+            treesImageView.image = #imageLiteral(resourceName: "4trees")
+        } else if GreenCalculatorController.shared.totalScoreCard() < 100 {
+            treesImageView.image = #imageLiteral(resourceName: "alltrees")
+        }
+        
+        // Trash
+        
+        // Gas
+    }
+    
+
     // MARK: - Actions
     func updateViews() {
         scoreLabel.text = "\(GreenCalculatorController.shared.totalScoreCard())"
         foodScoreLabel.text = "\(GreenCalculatorController.shared.calculateFoodScore() ?? 0)"
         houseScoreLabel.text = "\(GreenCalculatorController.shared.calculateHouseScore() ?? 0)"
         travelScoreLabel.text = "\(GreenCalculatorController.shared.calculateTravelScore() ?? 0)"
+        setScoreImage()
     }
 }
