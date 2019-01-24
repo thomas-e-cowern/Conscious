@@ -11,25 +11,33 @@ import UIKit
 class ActionDetailViewController: UIViewController {
 
     // MARK: - Properties
-    var action: String? = ""
+    var action: ActionPlanDetail?
     
     // MARK: - Outlets
     @IBOutlet weak var addToActionListButton: UIButton!
     @IBOutlet weak var actionTitleLabel: UILabel!
+    @IBOutlet weak var actionSummaryLabel: UILabel!
+    @IBOutlet weak var actionBenefitsLabel: UILabel!
+    @IBOutlet weak var co2ReductionLabel: UILabel!
+    @IBOutlet weak var moneySavedLabel: UILabel!
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        actionTitleLabel.text = action
+        actionTitleLabel.text = action?.action
+        actionSummaryLabel.text = action?.actionSummry
+        actionBenefitsLabel.text = action?.benefits
+        co2ReductionLabel.text = "\(action?.carbonReduction ?? 0.0)"
+        moneySavedLabel.text = "\(action?.costSavings ?? 0.0)"
     }
  
-    // MARK: - Actions
+    // MARK: - Actions")
     @IBAction func addToActionListButtonTapped(_ sender: Any) {
         guard let action = action else { return }
         addToActionListButton.setTitle("Added to Action List", for: .normal)
-        ActionsAlarmController.shared.addAlarm(fireDate: Date(), name: action, message: "This is the alarm message", enabled: true, repeats: true)
-        ActionPlanController.shared.userActionList.append(action)
+        ActionsAlarmController.shared.addAlarm(fireDate: Date(), name: action.action, message: action.actionSummry, enabled: true, repeats: true)
+        ActionPlanController.shared.userActionList.append(action.action)
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
         
