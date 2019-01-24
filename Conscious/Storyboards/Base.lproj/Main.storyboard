@@ -1320,7 +1320,7 @@ Pledged</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nNA-wY-Yx1"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="HND-Tr-1p9"/>
+                    <tabBarItem key="tabBarItem" title="My Footprint" id="HND-Tr-1p9"/>
                     <navigationItem key="navigationItem" title="Title" id="dyC-MX-PC2">
                         <barButtonItem key="rightBarButtonItem" systemItem="organize" id="xEI-ey-jSs"/>
                     </navigationItem>
@@ -1454,13 +1454,13 @@ Pledged</string>
                                                                                 <rect key="frame" x="328" y="0.0" width="44.666666666666686" height="90"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="63" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TpE-eW-bem">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="21" height="90"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="20.666666666666668" height="90"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                         <nil key="textColor"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xk-ut-eYu">
-                                                                                        <rect key="frame" x="31.000000000000004" y="0.0" width="13.666666666666668" height="90"/>
+                                                                                        <rect key="frame" x="30.666666666666629" y="0.0" width="14" height="90"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                         <nil key="textColor"/>
                                                                                         <nil key="highlightedColor"/>
@@ -1480,13 +1480,13 @@ Pledged</string>
                                                                                 <rect key="frame" x="329.66666666666663" y="0.0" width="43" height="90"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="75" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPL-S8-hup">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="19.333333333333332" height="90"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="19" height="90"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                         <nil key="textColor"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCt-gQ-kzW">
-                                                                                        <rect key="frame" x="29.333333333333375" y="0.0" width="13.666666666666668" height="90"/>
+                                                                                        <rect key="frame" x="29" y="0.0" width="14" height="90"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                         <nil key="textColor"/>
                                                                                         <nil key="highlightedColor"/>
