@@ -107,12 +107,14 @@ class GreenCalculatorController {
     
     // TRAVEL
     func calculateTravelScore() -> Double? {
-        guard let personalTransportation = personalTransportation?.results,
-            let mostUsedVechile = mostUsedVechile?.results,
+//        guard let personalTransportation = personalTransportation?.results,
+            guard let mostUsedVechile = mostUsedVechile?.results,
             let numberOfFlight = numberOfFlight?.results,
             let numberOfDrivesPerWeek = numberOfDrivesPerWeek?.results else { return nil }
-        
-        return personalTransportation + mostUsedVechile + numberOfFlight + numberOfDrivesPerWeek
+        if mostUsedVechile == 0.0 {
+            ownsCar = false
+        }
+        return mostUsedVechile + numberOfFlight + numberOfDrivesPerWeek
     }
     
     func calculateTravelPercentage() -> Double {
