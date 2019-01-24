@@ -18,11 +18,13 @@ let recycles: Bool = false
 let ownsCar: Bool = true
 let ridesTheBus: Bool = false
 
-var baseFoodPlan: [String] = ["Eat Seasonal", "Get a reusable water bottle", "Use reusable grocery bags", "Pack your lunches"]
 
-var baseHomePlan: [String] = ["Check Your Water Heater","Replace A/C Filters Regularly", "Shorter Showers", "Power Strip It", "Wash Clothes in Cold Water", "Consider Green Power", "Look for the Energy Star", "Switch To Online Billing"]
 
-var baseTravelPlan: [String] = ["Walk or Bike", "Avoid Flying"]
+var baseFoodPlan: [ActionPlanDetail] = [eatSeasonal, reusableWaterBottl, reusableGroceryBags, packYourLunch, reduceFoodWaste]
+
+var baseHomePlan: [ActionPlanDetail] = [waterHeaterTemp, replaceAcFilters, shorterShowers, powerStripIt, coldWaterWash, greenPower]
+
+var baseTravelPlan: [ActionPlanDetail] = [walkOrBike, avoidFlying]
 
 struct ActionPlan {
     var text: String
@@ -37,42 +39,40 @@ struct ScoreCard {
 }
 
 enum Categories: String {
-    case food = "Food", home = "Home", travel = "Travel", stuff = "Stuff"
+    case food = "Food", home = "Home", travel = "Travel"
     
-    var actionPlan: [String] {
+    var actionPlan: [ActionPlanDetail] {
         switch self {
         case .food:
             if isVegHead == false {
-                baseFoodPlan += ["Meatless Monday", "Become Vegetarian", "Try out a vegan recipe"]
+                baseFoodPlan += [meatlessModay, becomeVegetarian, tryAVeganRecipe]
             }
             if buysLocally == false {
-                baseFoodPlan += ["Buy Local"]
+                baseFoodPlan += [buyLocal]
             }
             if composts == false {
-                baseFoodPlan += ["Compost"]
+                baseFoodPlan += [compost]
             }
             return baseFoodPlan
         case .home:
             if lowTemp == false {
-                baseHomePlan += ["Adjust your thermostat 2 degrees"]
+                baseHomePlan += [thermostatTemps]
             }
             if lightBulbs == false {
-                baseHomePlan += ["Switch to Energy Efficient Light Bulbs"]
+                baseHomePlan += [energyEfficientLights]
             }
             if recycles == false {
-                baseHomePlan += ["Recycle"]
+                baseHomePlan += [recycle]
             }
             return baseHomePlan
         case .travel:
             if ownsCar == true {
-                baseTravelPlan += ["Keep Your Car Breathing", "Tire Pressure", "Idling Less", "Don’t Speed", "Carpool"]
+                baseTravelPlan += [checkYourSpeed, keepYourCarBreathing, tirePressure, reduceIdling, carpool]
             }
             if ridesTheBus == false {
-                baseTravelPlan += ["Take The Bus"]
+                baseTravelPlan += [takeTheBus]
             }
             return baseTravelPlan
-        case .stuff:
-            return ["Wait To Upgrade", "Thrift Shop", "Avoid Fast Fashion", "Recycle Your Clothes", "Rechargeable Batteries", "Support Eco-Friendly Businesses"]
         }
     }
 }
