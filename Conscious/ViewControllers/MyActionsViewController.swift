@@ -9,47 +9,73 @@
 import UIKit
 
 class MyActionsViewController: UIViewController {
-
-    @IBOutlet weak var myActionsTableview: UITableView!
     
-    var myActions: [String] = ["Meatless Monday", "Become Vegetarian", "Eat Seasonal", "Wash Clothes in Cold Water", "Consider Green Power", "Avoid Flying", "Take The Bus", "Carpool"]
+    @IBOutlet weak var myActionsTableview: UITableView!
+    @IBOutlet weak var actionsCompleteLabel: UILabel!
+    @IBOutlet weak var actionsPledged: UILabel!
+    
+    var myActions: [String]  = []
+    
+    var actionsAvailable: Int = 0
+    var actionsCompleted: Int = 0 {
+        didSet {
+            actionsCompleteLabel.text = "\(actionsCompleted)"
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         myActionsTableview.dataSource = self
-        myActionsTableview.reloadData()
-
+        updateViews()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        updateViews()
+    }
+    
+    func updateViews() {
+        myActions = ActionPlanController.shared.userActionList
+        actionsAvailable = myActions.count
+        actionsPledged.text = " / \(actionsAvailable)"
         myActionsTableview.reloadData()
     }
-
+    
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 
 extension MyActionsViewController: UITableViewDataSource {
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return myActions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myActionsCell", for: indexPath)
-        cell.textLabel?.text = myActions[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myActionsCell", for: indexPath) as! ActionTableViewCell
+        let action = myActions[indexPath.row]
+        cell.actionViewCellLabel.text = action
+        cell.delegate = self
         return cell
     }
+}
+
+extension MyActionsViewController: ActionTableViewCellDelegate{
+    func actionChecked(for cell: ActionTableViewCell){
+        actionsCompleted += 1
+    }
     
+    func actionUnchecked(for cell: ActionTableViewCell){
+        actionsCompleted -= 1
+    }
 }
