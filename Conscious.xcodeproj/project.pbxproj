@@ -12,6 +12,7 @@
 		414C721621F2A9E800C8687F /* ActionListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414C721521F2A9E800C8687F /* ActionListTableViewController.swift */; };
 		414C721A21F2B6E500C8687F /* MyActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414C721921F2B6E500C8687F /* MyActionsViewController.swift */; };
 		414C721C21F2BE1F00C8687F /* ActionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414C721B21F2BE1F00C8687F /* ActionDetailViewController.swift */; };
+		414FF5AE21FA2A3300D9DA48 /* ActionPlanDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414FF5AD21FA2A3300D9DA48 /* ActionPlanDetail.swift */; };
 		4152896B21F106130028E573 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4152896A21F106130028E573 /* OnboardingPageViewController.swift */; };
 		416EFA2A21F8F00D00972AB0 /* ActionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416EFA2921F8F00C00972AB0 /* ActionTableViewCell.swift */; };
 		4176753B21F3F87500CC4C07 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4176753A21F3F87500CC4C07 /* SettingsViewController.swift */; };
@@ -39,6 +40,7 @@
 		414C721521F2A9E800C8687F /* ActionListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionListTableViewController.swift; sourceTree = "<group>"; };
 		414C721921F2B6E500C8687F /* MyActionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyActionsViewController.swift; sourceTree = "<group>"; };
 		414C721B21F2BE1F00C8687F /* ActionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionDetailViewController.swift; sourceTree = "<group>"; };
+		414FF5AD21FA2A3300D9DA48 /* ActionPlanDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPlanDetail.swift; sourceTree = "<group>"; };
 		4152896A21F106130028E573 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
 		416EFA2921F8F00C00972AB0 /* ActionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionTableViewCell.swift; sourceTree = "<group>"; };
 		4176753A21F3F87500CC4C07 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				7ECE818F21F120F000F2F9DA /* Travel.swift */,
 				7ECE818621F0F71B00F2F9DA /* ActionPlan.swift */,
 				41A8BDCD21F67B40001EB547 /* Alarm.swift */,
+				414FF5AD21FA2A3300D9DA48 /* ActionPlanDetail.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				416EFA2A21F8F00D00972AB0 /* ActionTableViewCell.swift in Sources */,
 				4152896B21F106130028E573 /* OnboardingPageViewController.swift in Sources */,
 				41D89A7121EE8B9F00CFF725 /* AppDelegate.swift in Sources */,
+				414FF5AE21FA2A3300D9DA48 /* ActionPlanDetail.swift in Sources */,
 				7E92676721F23B8000A5B396 /* QuizTableViewCell.swift in Sources */,
 				7ECE819F21F136CD00F2F9DA /* QuizViewController.swift in Sources */,
 				7ECE818721F0F71B00F2F9DA /* ActionPlan.swift in Sources */,
