@@ -28,15 +28,14 @@ class UserResultsViewController: UIViewController {
     @IBOutlet weak var houseWidthGraph: NSLayoutConstraint!
     @IBOutlet weak var travelWidthGraph: NSLayoutConstraint!
     
-    
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         setFoodGraph()
         setHouseGraph()
         setTravelGraph()
@@ -45,7 +44,7 @@ class UserResultsViewController: UIViewController {
     // MARK: - Graphs
     // FOOD
     func setFoodGraph(){
-        UIView.animate(withDuration: 8) {
+        UIView.animate(withDuration: 2.5) {
             self.foodWidthGraph.constant =  CGFloat(GreenCalculatorController.shared.calculateFoodScore() ?? 0)
             self.view.layoutIfNeeded()
         }
@@ -53,7 +52,7 @@ class UserResultsViewController: UIViewController {
     
     // HOUSE
     func setHouseGraph(){
-        UIView.animate(withDuration: 8) {
+        UIView.animate(withDuration: 2.5) {
             self.houseWidthGraph.constant =  CGFloat(GreenCalculatorController.shared.calculateHouseScore() ?? 0)
             self.view.layoutIfNeeded()
         }
@@ -61,14 +60,13 @@ class UserResultsViewController: UIViewController {
     
     // TRAVEL
     func setTravelGraph(){
-        UIView.animate(withDuration: 8) {
+        UIView.animate(withDuration: 2.5) {
             self.travelWidthGraph.constant =  CGFloat(GreenCalculatorController.shared.calculateTravelScore() ?? 0)
             self.view.layoutIfNeeded()
         }
     }
     
-    
-    // Images
+    // MARK: - Images
     // Trees
     func setScoreImage() {
         if GreenCalculatorController.shared.totalScoreCard() > 50 {

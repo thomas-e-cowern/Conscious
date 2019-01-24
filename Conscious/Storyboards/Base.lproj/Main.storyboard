@@ -1112,24 +1112,13 @@ Pledged</string>
                                                             </stackView>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wXY-ER-fcP">
-                                                        <rect key="frame" x="0.0" y="271.33333333333331" width="372.66666666666669" height="28"/>
-                                                        <subviews>
-                                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1ay-Mp-yiy">
-                                                                <rect key="frame" x="0.0" y="0.0" width="372.66666666666669" height="29"/>
-                                                                <segments>
-                                                                    <segment title="Breakdown "/>
-                                                                    <segment title="History"/>
-                                                                </segments>
-                                                            </segmentedControl>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstItem="1ay-Mp-yiy" firstAttribute="top" secondItem="wXY-ER-fcP" secondAttribute="top" id="88c-Ck-bV8"/>
-                                                            <constraint firstItem="1ay-Mp-yiy" firstAttribute="leading" secondItem="wXY-ER-fcP" secondAttribute="leading" id="GYS-vq-zn8"/>
-                                                            <constraint firstAttribute="trailing" secondItem="1ay-Mp-yiy" secondAttribute="trailing" id="M1f-A3-bCG"/>
-                                                            <constraint firstAttribute="bottom" secondItem="1ay-Mp-yiy" secondAttribute="bottom" id="cgz-eA-TVc"/>
-                                                        </constraints>
-                                                    </stackView>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="751" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1ay-Mp-yiy">
+                                                        <rect key="frame" x="0.0" y="271.33333333333331" width="372.66666666666669" height="29"/>
+                                                        <segments>
+                                                            <segment title="Breakdown "/>
+                                                            <segment title="History"/>
+                                                        </segments>
+                                                    </segmentedControl>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Iql-Sh-YSk">
                                                         <rect key="frame" x="0.0" y="315.33333333333331" width="372.66666666666669" height="275.99999999999994"/>
                                                         <subviews>
@@ -1316,6 +1305,9 @@ Pledged</string>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="1ay-Mp-yiy" firstAttribute="width" secondItem="dHI-MX-89k" secondAttribute="width" id="eUt-AU-4yJ"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1355,25 +1347,25 @@ Pledged</string>
                     <connections>
                         <outlet property="foodGraph" destination="RTk-pg-RvI" id="s0Q-f5-0G6"/>
                         <outlet property="foodScoreLabel" destination="cQ4-EI-aMa" id="ZoY-1m-IHg"/>
-                        <outlet property="foodWidthGraph" destination="MZ1-ud-f8q" id="dmm-qF-RNP"/>
+                        <outlet property="foodWidthGraph" destination="MZ1-ud-f8q" id="TAt-WN-aKi"/>
                         <outlet property="gasImageView" destination="aJT-B3-xkR" id="4tf-k2-0sR"/>
                         <outlet property="gasLabel" destination="1ck-Sv-bD9" id="6DK-t0-bW4"/>
                         <outlet property="houseGraph" destination="4X4-Z2-RWx" id="fjT-6v-pVU"/>
                         <outlet property="houseScoreLabel" destination="Ya6-2D-cB6" id="lNb-4d-50U"/>
-                        <outlet property="houseWidthGraph" destination="U94-YQ-s5i" id="pqC-LS-ahN"/>
+                        <outlet property="houseWidthGraph" destination="U94-YQ-s5i" id="H3L-s2-Gy5"/>
                         <outlet property="scoreLabel" destination="Jda-Fd-OeS" id="Kwq-1e-Nrg"/>
                         <outlet property="trashImageView" destination="U7N-73-DkQ" id="55W-Wf-YyG"/>
                         <outlet property="trashLabel" destination="p3o-RH-Lhw" id="gg8-KN-lm3"/>
                         <outlet property="travelGraph" destination="Dkr-uj-56p" id="B0U-1Q-4bL"/>
                         <outlet property="travelScoreLabel" destination="SvX-N1-b0C" id="ey3-aD-52j"/>
-                        <outlet property="travelWidthGraph" destination="qhf-nU-I5L" id="2hn-pa-7x3"/>
+                        <outlet property="travelWidthGraph" destination="qhf-nU-I5L" id="jTy-2I-sEc"/>
                         <outlet property="treesImageView" destination="Kit-xH-qfW" id="cXU-w6-v02"/>
                         <outlet property="treesLabel" destination="qeu-Z0-E7q" id="2Io-NN-liQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cvz-i4-2FQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1257" y="-716"/>
+            <point key="canvasLocation" x="600" y="-1120"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="4LV-QI-GKh">
@@ -1670,7 +1662,7 @@ Pledged</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MrJ-m6-x6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2186" y="-644"/>
+            <point key="canvasLocation" x="1922" y="-919"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="bhI-jD-4cT">
@@ -1699,10 +1691,10 @@ Pledged</string>
         <image name="placeholder" width="1280" height="800"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1KX-1a-yaP"/>
+        <segue reference="ZCI-u8-BUJ"/>
         <segue reference="5dl-NR-FBy"/>
         <segue reference="Ygh-lv-35Y"/>
-        <segue reference="mW4-4u-Osa"/>
+        <segue reference="WGA-z9-uV6"/>
         <segue reference="uGX-NA-jzu"/>
     </inferredMetricsTieBreakers>
 </document>

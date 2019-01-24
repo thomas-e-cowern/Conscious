@@ -158,6 +158,7 @@ enum EnergySavingImprovement: String, Answer {
     case energySavingLightBulbs = "Energy Saving Lightbulbs"
     case efficientInsullation = "Efficient Insulation"
     case solarPanels = "Solar Panels"
+    case none = "None"
     
     var results: Double {
         switch self {
@@ -167,6 +168,8 @@ enum EnergySavingImprovement: String, Answer {
             return 1.92
         case .solarPanels:
             return 2.61
+        case .none:
+            return 0
         }
     }
 }
@@ -185,6 +188,7 @@ enum WasteRecycling: String, Answer {
     case plastic = "Plastic"
     case glass = "Glass"
     case food = "Food"
+    case none = "None"
     
     var results: Double {
         switch self {
@@ -196,6 +200,8 @@ enum WasteRecycling: String, Answer {
             return 0.08
         case . food:
             return 0.67
+        case . none:
+            return 0
         }
     }
 }
