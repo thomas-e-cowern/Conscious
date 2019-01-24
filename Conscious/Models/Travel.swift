@@ -104,6 +104,7 @@ enum MostUsedVechile: String, Answer {
     case smallGasCar = "Small Car"
     case mediumGasCar = "Medium Car"
     case largeGasCar = "Large Car"
+    case none = "None"
     
     var results: Double {
         switch self {
@@ -117,6 +118,8 @@ enum MostUsedVechile: String, Answer {
             return 4.27
         case .largeGasCar:
             return 5.19
+        case .none:
+            return 0
         }
     }
 }
