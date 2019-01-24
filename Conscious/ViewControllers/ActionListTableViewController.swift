@@ -11,10 +11,10 @@ import UIKit
 class ActionListTableViewController: UITableViewController {
 
     var category: String = ""
-    var foodActions: [String] = ActionPlanController.shared.foodActions
-    var homeActions: [String] = ActionPlanController.shared.homeActions
-    var travelActions: [String] = ActionPlanController.shared.travelActions
-    var actions: [String] = []
+    var foodActions: [ActionPlanDetail] = ActionPlanController.shared.foodActions
+    var homeActions: [ActionPlanDetail] = ActionPlanController.shared.homeActions
+    var travelActions: [ActionPlanDetail] = ActionPlanController.shared.travelActions
+    var actions: [ActionPlanDetail] = []
 //    var pulledAction: [String] = []
     
     override func viewDidLoad() {
@@ -30,13 +30,13 @@ class ActionListTableViewController: UITableViewController {
     @IBAction func foorButtonTapped(_ sender: Any) {
         category = "food"
         actions = []
-        actions += foodActions
+        actions = foodActions
         updateViews()
     }
     @IBAction func homeButtonTapped(_ sender: Any) {
         category = "home"
         actions = []
-        actions += homeActions
+        actions = homeActions
         updateViews()
     }
     @IBAction func travelButtonTapped(_ sender: Any) {
@@ -68,7 +68,7 @@ class ActionListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "actionCell", for: indexPath)
-        cell.textLabel?.text = actions[indexPath.row]
+        cell.textLabel?.text = actions[indexPath.row].action
         return cell
     }
     
@@ -115,12 +115,9 @@ class ActionListTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toActionDetail" {
             let destinationVC = segue.destination as? ActionDetailViewController
-            let index = tableView.indexPathForSelectedRow
-            let action = actions[index?.row ?? 0]
-            destinationVC?.action = action
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            let chosenAction = actions[indexPath.row]
+            destinationVC?.action = chosenAction
         }
-        
     }
-    
-
 }
