@@ -22,6 +22,11 @@ class ActionListTableViewController: UITableViewController {
         setUpView()
     }
 
+    @IBAction func allButtonTapped(_ sender: Any) {
+        actions = []
+        setUpView()
+        updateViews()
+    }
     @IBAction func foorButtonTapped(_ sender: Any) {
         category = "food"
         actions = []

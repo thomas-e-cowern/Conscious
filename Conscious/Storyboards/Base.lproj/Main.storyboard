@@ -585,6 +585,9 @@ Pledged</string>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgG-tW-etB">
                                                             <rect key="frame" x="0.0" y="0.0" width="103.66666666666667" height="55"/>
                                                             <state key="normal" title="All"/>
+                                                            <connections>
+                                                                <action selector="allButtonTapped:" destination="IuJ-Vj-Bg7" eventType="touchUpInside" id="gw0-oG-m1B"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7J-Ka-azK">
                                                             <rect key="frame" x="103.66666666666669" y="0.0" width="103.33333333333331" height="55"/>
@@ -1648,9 +1651,10 @@ Pledged</string>
         <image name="unSelectedAnswer" width="19.666666030883789" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="klc-Im-LDk"/>
         <segue reference="1KX-1a-yaP"/>
         <segue reference="5dl-NR-FBy"/>
-        <segue reference="mW4-4u-Osa"/>
+        <segue reference="c9s-8p-LZf"/>
         <segue reference="Gmu-da-slQ"/>
     </inferredMetricsTieBreakers>
 </document>
