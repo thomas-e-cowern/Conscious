@@ -69,6 +69,9 @@ class GreenCalculatorController {
         if localFood >= 0.15 {
             buysLocally = true
         }
+        if wastedFood < 0.039 {
+            composts = true
+        }
         return dietType - (dietType * localFood) + wastedFood + thrownFood
     }
     
@@ -85,7 +88,15 @@ class GreenCalculatorController {
             let houseHeatingFuel = houseHeatingFuel?.results,
             let energySavingImprovement = energySavingImprovement.first?.results,
             let wasteRecycling = wasteRecycling.first?.results else { return nil }
-        
+        if houseTempInWinter > 0.2 {
+            lowTemp = true
+        }
+        if energySavingImprovement > 0 {
+            lightBulbs = true
+        }
+        if wasteRecycling > 0 {
+            recycles = true
+        }
         let totalHomeEmissions = numberOfHouseholdMembers + typeOfHouse + houseHeatingFuel
         return ((totalHomeEmissions) - (totalHomeEmissions * houseTempInWinter)) - (turnOffLights + energySavingImprovement + wasteRecycling)
     }

@@ -36,7 +36,7 @@ class ActionDetailViewController: UIViewController {
     @IBAction func addToActionListButtonTapped(_ sender: Any) {
         guard let action = action else { return }
         addToActionListButton.setTitle("Added to Action List", for: .normal)
-        ActionsAlarmController.shared.addAlarm(fireDate: Date(), name: action.action, message: action.actionSummry, enabled: true, repeats: true)
+        ActionsAlarmController.shared.addAlarm(fireDate: Date(), name: action.action, message: action.actionSummry, enabled: true, frequency: action.frequency, repeats: true)
         ActionPlanController.shared.userActionList.append(action.action)
         ActionPlanController.shared.reductionInCo2 += action.carbonReduction ?? 0.0
         ActionPlanController.shared.reductionInCost += action.costSavings ?? 0.0
