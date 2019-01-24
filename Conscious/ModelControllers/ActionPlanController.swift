@@ -12,9 +12,9 @@ class ActionPlanController {
     
     static let shared = ActionPlanController()
     
-    let foodActions: [String] = Categories.food.actionPlan
-    let homeActions: [String] = Categories.home.actionPlan
-    let travelActions: [String] = Categories.travel.actionPlan
+    let foodActions: [ActionPlanDetail] = Categories.food.actionPlan
+    let homeActions: [ActionPlanDetail] = Categories.home.actionPlan
+    let travelActions: [ActionPlanDetail] = Categories.travel.actionPlan
     
     var userActionList: [String] = []
     
