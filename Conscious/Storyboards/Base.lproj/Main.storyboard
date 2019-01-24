@@ -198,7 +198,7 @@ Take the quiz to find out your carbon footprint!</string>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="5sL-ax-aDU">
                                 <rect key="frame" x="41.333333333333343" y="824" width="331.33333333333326" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JD4-oO-Hc6">
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JD4-oO-Hc6">
                                         <rect key="frame" x="0.0" y="0.0" width="142.33333333333334" height="30"/>
                                         <state key="normal" title="&lt;---"/>
                                         <connections>
@@ -244,36 +244,33 @@ Take the quiz to find out your carbon footprint!</string>
                                                     <rect key="frame" x="0.0" y="0.0" width="398" height="21.666666666666668"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phi-TQ-J1X">
-                                                            <rect key="frame" x="0.0" y="0.0" width="17" height="21.666666666666668"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kCJ-Pu-cbQ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="17" id="IEQ-qC-A3b"/>
+                                                                <constraint firstAttribute="width" constant="24" id="5iu-d0-j6w"/>
+                                                                <constraint firstAttribute="height" constant="24" id="MUk-wq-4fN"/>
                                                             </constraints>
-                                                            <state key="normal" image="unSelectedAnswer"/>
-                                                            <connections>
-                                                                <action selector="checkboxButtonTapped:" destination="h4I-uZ-VnG" eventType="touchUpInside" id="int-SN-m4y"/>
-                                                            </connections>
-                                                        </button>
+                                                        </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Amazing Hubble" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hH7-h4-kOJ">
-                                                            <rect key="frame" x="25" y="0.0" width="373" height="21.666666666666668"/>
+                                                            <rect key="frame" x="40" y="0.0" width="358" height="19.333333333333332"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="phi-TQ-J1X" secondAttribute="bottom" id="2cM-Kj-mxW"/>
-                                                        <constraint firstItem="phi-TQ-J1X" firstAttribute="leading" secondItem="Gm4-aX-2Ub" secondAttribute="leading" id="NTh-d2-6J0"/>
+                                                        <constraint firstItem="kCJ-Pu-cbQ" firstAttribute="leading" secondItem="Gm4-aX-2Ub" secondAttribute="leading" id="2Co-tM-Gaw"/>
+                                                        <constraint firstAttribute="bottom" secondItem="kCJ-Pu-cbQ" secondAttribute="bottom" id="9QM-dc-lMo"/>
+                                                        <constraint firstItem="hH7-h4-kOJ" firstAttribute="leading" secondItem="kCJ-Pu-cbQ" secondAttribute="trailing" constant="16" id="Kwr-eq-slO"/>
                                                         <constraint firstAttribute="trailing" secondItem="hH7-h4-kOJ" secondAttribute="trailing" id="Prg-KC-0Ux"/>
                                                         <constraint firstAttribute="bottom" secondItem="hH7-h4-kOJ" secondAttribute="bottom" id="S2m-LC-wiU"/>
-                                                        <constraint firstItem="phi-TQ-J1X" firstAttribute="top" secondItem="Gm4-aX-2Ub" secondAttribute="top" id="oND-Hm-lDB"/>
-                                                        <constraint firstItem="hH7-h4-kOJ" firstAttribute="leading" secondItem="phi-TQ-J1X" secondAttribute="trailing" constant="8" id="ofO-p4-x5S"/>
+                                                        <constraint firstItem="kCJ-Pu-cbQ" firstAttribute="top" secondItem="Gm4-aX-2Ub" secondAttribute="top" id="ay3-ZA-xgB"/>
                                                         <constraint firstItem="hH7-h4-kOJ" firstAttribute="top" secondItem="Gm4-aX-2Ub" secondAttribute="top" id="zGe-2l-yOw"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
                                                     <outlet property="answerLabel" destination="hH7-h4-kOJ" id="DVR-cV-eWj"/>
-                                                    <outlet property="checkboxButton" destination="phi-TQ-J1X" id="r6W-tt-Bft"/>
+                                                    <outlet property="checkBoxImage" destination="kCJ-Pu-cbQ" id="2FM-Vo-N4J"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -313,7 +310,7 @@ Take the quiz to find out your carbon footprint!</string>
                         <outlet property="questionLabel" destination="GL7-ah-8bf" id="Vks-Hd-MFX"/>
                         <outlet property="quizProgressView" destination="DPD-g7-IKh" id="sqo-Pb-yI9"/>
                         <outlet property="tableView" destination="n8K-z2-lVf" id="Ka5-v5-Psi"/>
-                        <segue destination="Sla-iL-btk" kind="show" identifier="scoreSegue" id="4lq-oL-yv0"/>
+                        <segue destination="RTw-xs-U11" kind="show" identifier="scoreSegue" id="jsw-PG-alW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -960,10 +957,10 @@ Pledged</string>
                                 <rect key="frame" x="0.0" y="44" width="414" height="1356"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q3D-ay-0bW">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1258.6666666666667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1333"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dHI-MX-89k">
-                                                <rect key="frame" x="20.666666666666657" y="8" width="372.66666666666674" height="1226.6666666666667"/>
+                                                <rect key="frame" x="20.666666666666657" y="8" width="372.66666666666674" height="1301"/>
                                                 <subviews>
                                                     <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fe7-qc-VxY">
                                                         <rect key="frame" x="0.0" y="0.0" width="372.66666666666669" height="44"/>
@@ -1223,6 +1220,24 @@ Pledged</string>
                                                             <constraint firstAttribute="width" secondItem="aJT-B3-xkR" secondAttribute="height" multiplier="3:1" id="DMW-IC-8Nt"/>
                                                         </constraints>
                                                     </imageView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JLg-3H-Oui">
+                                                        <rect key="frame" x="0.0" y="1242.6666666666667" width="372.66666666666669" height="58.333333333333258"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Want to see what you can do?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XrH-BB-1Es">
+                                                                <rect key="frame" x="0.0" y="0.0" width="372.66666666666669" height="20.333333333333332"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMD-HT-zdg">
+                                                                <rect key="frame" x="0.0" y="28.333333333333258" width="372.66666666666669" height="30"/>
+                                                                <state key="normal" title="Take Action"/>
+                                                                <connections>
+                                                                    <segue destination="Sla-iL-btk" kind="show" id="ZCI-u8-BUJ"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
@@ -1255,7 +1270,7 @@ Pledged</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nNA-wY-Yx1"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Footprint" id="HND-Tr-1p9"/>
+                    <tabBarItem key="tabBarItem" title="" id="HND-Tr-1p9"/>
                     <navigationItem key="navigationItem" title="Title" id="dyC-MX-PC2">
                         <barButtonItem key="rightBarButtonItem" systemItem="organize" id="xEI-ey-jSs"/>
                     </navigationItem>
@@ -1263,13 +1278,16 @@ Pledged</string>
                     <connections>
                         <outlet property="foodGraph" destination="RTk-pg-RvI" id="s0Q-f5-0G6"/>
                         <outlet property="foodLeadingConstraint" destination="iT7-o9-iMm" id="vll-Y0-EIC"/>
+                        <outlet property="foodScoreLabel" destination="cQ4-EI-aMa" id="ZoY-1m-IHg"/>
                         <outlet property="gasImageView" destination="aJT-B3-xkR" id="4tf-k2-0sR"/>
                         <outlet property="gasLabel" destination="1ck-Sv-bD9" id="6DK-t0-bW4"/>
-                        <outlet property="homeGraph" destination="4X4-Z2-RWx" id="fjT-6v-pVU"/>
+                        <outlet property="houseGraph" destination="4X4-Z2-RWx" id="fjT-6v-pVU"/>
+                        <outlet property="houseScoreLabel" destination="Ya6-2D-cB6" id="lNb-4d-50U"/>
                         <outlet property="scoreLabel" destination="Jda-Fd-OeS" id="Kwq-1e-Nrg"/>
                         <outlet property="trashImageView" destination="U7N-73-DkQ" id="55W-Wf-YyG"/>
                         <outlet property="trashLabel" destination="p3o-RH-Lhw" id="gg8-KN-lm3"/>
                         <outlet property="travelGraph" destination="Dkr-uj-56p" id="B0U-1Q-4bL"/>
+                        <outlet property="travelScoreLabel" destination="SvX-N1-b0C" id="ey3-aD-52j"/>
                         <outlet property="treesImageView" destination="Kit-xH-qfW" id="cXU-w6-v02"/>
                         <outlet property="treesLabel" destination="qeu-Z0-E7q" id="2Io-NN-liQ"/>
                     </connections>
@@ -1283,11 +1301,11 @@ Pledged</string>
             <objects>
                 <viewController id="qfR-58-7Kt" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="egb-iY-aln">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wAJ-of-qXb">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1yK-Kx-ZqU">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
@@ -1569,6 +1587,7 @@ Pledged</string>
                         <viewLayoutGuide key="safeArea" id="xJy-KN-5h5"/>
                     </view>
                     <navigationItem key="navigationItem" id="lY9-vG-Fun"/>
+                    <size key="freeformSize" width="414" height="2000"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MrJ-m6-x6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1600,14 +1619,12 @@ Pledged</string>
         <image name="icons8-gear-32" width="24" height="24"/>
         <image name="icons8-vegan-shoes-50" width="37.5" height="37.5"/>
         <image name="placeholder" width="1280" height="800"/>
-        <image name="unSelectedAnswer" width="19.666666030883789" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="klc-Im-LDk"/>
-        <segue reference="1KX-1a-yaP"/>
-        <segue reference="5dl-NR-FBy"/>
-        <segue reference="c9s-8p-LZf"/>
-        <segue reference="Gmu-da-slQ"/>
-
+        <segue reference="ZCI-u8-BUJ"/>
+        <segue reference="Jxy-vd-MsM"/>
+        <segue reference="Ygh-lv-35Y"/>
+        <segue reference="WGA-z9-uV6"/>
+        <segue reference="uGX-NA-jzu"/>
     </inferredMetricsTieBreakers>
 </document>
