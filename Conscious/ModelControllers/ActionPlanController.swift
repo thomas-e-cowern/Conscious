@@ -20,8 +20,8 @@ class ActionPlanController {
     
     var actionsComplete: Int = 0
     
-    
-    
+    var reductionInCo2: Double = 0.0
+    var reductionInCost: Double = 0.0
 }
 
 

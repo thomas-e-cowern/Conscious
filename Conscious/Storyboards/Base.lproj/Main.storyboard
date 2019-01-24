@@ -411,7 +411,7 @@ Pledged</string>
                                                             </stackView>
                                                         </subviews>
                                                     </stackView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(300) lbs. of CO2e lbs saved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwK-HV-TlZ">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(300) lbs. of CO2e lbs saved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwK-HV-TlZ">
                                                         <rect key="frame" x="0.0" y="297" width="398" height="15.666666666666686"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="210" id="etv-92-ysb"/>
@@ -526,6 +526,7 @@ Pledged</string>
                     <connections>
                         <outlet property="actionsCompleteLabel" destination="sPO-Lh-qRT" id="mqJ-3W-hWq"/>
                         <outlet property="actionsPledged" destination="cnI-rZ-Usq" id="PZF-7S-xHg"/>
+                        <outlet property="carbonSavedLabel" destination="jwK-HV-TlZ" id="PC4-g4-Vpf"/>
                         <outlet property="myActionsTableview" destination="Cdy-SF-mZR" id="dyj-yf-NjI"/>
                     </connections>
                 </viewController>
@@ -1698,10 +1699,10 @@ Pledged</string>
         <image name="placeholder" width="1280" height="800"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZCI-u8-BUJ"/>
-        <segue reference="Jxy-vd-MsM"/>
-        <segue reference="jsw-PG-alW"/>
-        <segue reference="WGA-z9-uV6"/>
+        <segue reference="1KX-1a-yaP"/>
+        <segue reference="5dl-NR-FBy"/>
+        <segue reference="Ygh-lv-35Y"/>
+        <segue reference="mW4-4u-Osa"/>
         <segue reference="uGX-NA-jzu"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -13,6 +13,7 @@ class MyActionsViewController: UIViewController {
     @IBOutlet weak var myActionsTableview: UITableView!
     @IBOutlet weak var actionsCompleteLabel: UILabel!
     @IBOutlet weak var actionsPledged: UILabel!
+    @IBOutlet weak var carbonSavedLabel: UILabel!
     
     var myActions: [String]  = []
     
@@ -39,6 +40,7 @@ class MyActionsViewController: UIViewController {
         myActions = ActionPlanController.shared.userActionList
         actionsAvailable = myActions.count
         actionsPledged.text = " / \(actionsAvailable)"
+        carbonSavedLabel.text = "\(ActionPlanController.shared.reductionInCo2)lbs of CO2e lbs saved!"
         myActionsTableview.reloadData()
     }
     

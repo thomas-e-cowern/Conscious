@@ -63,7 +63,12 @@ class GreenCalculatorController {
             let localFood = locallyProducedFood?.results,
             let wastedFood = wastedFood?.results,
             let thrownFood = thrownFood?.results else { return nil }
-        
+        if dietType < 1.6 {
+            isVegetarian = true
+        }
+        if localFood >= 0.15 {
+            buysLocally = true
+        }
         return dietType - (dietType * localFood) + wastedFood + thrownFood
     }
     
