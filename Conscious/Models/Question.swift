@@ -25,14 +25,28 @@ extension Answer{
     }
 }
 
-struct Question {
+class Question {
     var text: String
     var category: EmmissionCategory
     var possibleAnswers: [Answer]
+    var selectedAnswers: [Answer] = []
+    let questionType: QuestionType
+    
+    init(text: String, category: EmmissionCategory, possibleAnswers: [Answer], questionType: QuestionType){
+        self.text = text
+        self.category = category
+        self.possibleAnswers = possibleAnswers
+        self.questionType = questionType
+    }
 }
 
 enum EmmissionCategory: String {
     case food = "Food"
     case house = "House"
     case travel = "Travel"
+}
+
+enum QuestionType{
+    case mutuallyExclusive
+    case multipleAnswer
 }
