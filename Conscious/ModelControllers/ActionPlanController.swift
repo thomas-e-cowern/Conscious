@@ -16,7 +16,7 @@ class ActionPlanController {
     let homeActions: [ActionPlanDetail] = Categories.home.actionPlan
     let travelActions: [ActionPlanDetail] = Categories.travel.actionPlan
     
-    var userActionList: [String] = []
+    var userActionList: [ActionPlanDetail] = []
     
     var actionsComplete: Int = 0
     

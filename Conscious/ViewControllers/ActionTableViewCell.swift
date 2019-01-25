@@ -11,6 +11,8 @@ import UIKit
 protocol ActionTableViewCellDelegate: class{
     func actionChecked(for cell: ActionTableViewCell)
     func actionUnchecked(for cell: ActionTableViewCell)
+    func co2ReductionAdded(for cell: ActionTableViewCell, co2: Double)
+    func co2ReductionRemoved(for cell: ActionTableViewCell, co2: Double)
 }
 
 class ActionTableViewCell: UITableViewCell {
@@ -19,6 +21,7 @@ class ActionTableViewCell: UITableViewCell {
     @IBOutlet weak var actionViewCellLabel: UILabel!
     
     var actionTitle: String?
+    var co2Amount: Double?
     var actionComplete: Bool? = false
     weak var delegate: ActionTableViewCellDelegate?
     
@@ -34,18 +37,20 @@ class ActionTableViewCell: UITableViewCell {
     }
     
     func checkboxChanged() {
-        guard let testTitle = actionViewCellLabel.text else { return }
+        guard let testTitle = actionViewCellLabel.text, let co2Amount = co2Amount else { return }
         let attributedString = NSMutableAttributedString(string: testTitle)
         if actionComplete == false {
             actionComplete = true
             actionViewCellButton.setTitle("Done", for: .normal)
             delegate?.actionChecked(for: self)
+            delegate?.co2ReductionAdded(for: self, co2: co2Amount)
             attributedString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: NSUnderlineStyle.single.rawValue, range: NSRange(location: 0, length: attributedString.length))
             actionViewCellLabel.attributedText = attributedString
         } else {
             actionComplete = false
             actionViewCellButton.setTitle("Do", for: .normal)
             delegate?.actionUnchecked(for: self)
+            delegate?.co2ReductionRemoved(for: self, co2: co2Amount)
             attributedString.removeAttribute(NSAttributedString.Key.strikethroughStyle, range: NSRange(location: 0, length: attributedString.length))
             actionViewCellLabel.attributedText = attributedString
         }

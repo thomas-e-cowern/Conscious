@@ -40,5 +40,4 @@ class Alarm: Equatable, Codable {
         if lhs.uuid == rhs.uuid { return true }
         return false
     }
-    
 }
