@@ -20,13 +20,43 @@ class ActionsAlarmController: AlarmScheduler {
     
     var alarms: [Alarm] = []
     
-    func addAlarm(fireDate: Date, name: String, message: String, enabled: Bool, repeats: Bool) {
-        let date = Date(timeIntervalSinceNow: 120)
-        let newAlarm = Alarm(fireDate: date, name: name, message: message, enabled: enabled, repeats: repeats)
+    func addAlarm(fireDate: Date, name: String, message: String, enabled: Bool, frequency: String, repeats: Bool) {
+//        let date = Date(timeIntervalSinceNow: 120)
+        var daysToAdd = 0
+        var monthsToAdd = 0
+        var yearsToAdd = 0
+        switch frequency {
+        case "weekly":
+            daysToAdd = 7
+        case "twoWeeks":
+            daysToAdd = 14
+        case "monthly":
+            monthsToAdd = 1
+        case "twiceAYear":
+            monthsToAdd = 6
+        case "annually":
+            yearsToAdd = 1
+        case "once":
+            break
+        default:
+            daysToAdd = 7
+        }
+        
+        if yearsToAdd == 0 && monthsToAdd == 0 && daysToAdd == 0 {
+            return
+        }
+        
+        var dateComponent = DateComponents()
+        dateComponent.year = yearsToAdd
+        dateComponent.month = monthsToAdd
+        dateComponent.day = daysToAdd
+
+        guard let alarmFireDate = Calendar.current.date(byAdding: dateComponent, to: fireDate) else { return }
+        let newAlarm = Alarm(fireDate: alarmFireDate, name: name, message: message, enabled: enabled, frequency: frequency, repeats: repeats)
+        print(newAlarm.fireDate)
         scheduleUserNotifications(for: newAlarm)
         alarms.append(newAlarm)
-        print("Hit addAlarm")
-        print(alarms[0].fireDate)
+
 //        saveToPersistentStore()
     }
     

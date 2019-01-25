@@ -28,14 +28,23 @@ class UserResultsViewController: UIViewController {
     @IBOutlet weak var houseWidthGraph: NSLayoutConstraint!
     @IBOutlet weak var travelWidthGraph: NSLayoutConstraint!
     
+    var totalScore = 0.0
+    var foodPercentage: CGFloat = 0.0
+    var housePercentage: CGFloat = 0.0
+    var travelPercentage: CGFloat = 0.0
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        totalScore = GreenCalculatorController.shared.totalScoreCard()
+        setFoodGraph()
+        setHouseGraph()
+        setTravelGraph()
         updateViews()
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        totalScore = GreenCalculatorController.shared.totalScoreCard()
         setFoodGraph()
         setHouseGraph()
         setTravelGraph()
@@ -45,7 +54,13 @@ class UserResultsViewController: UIViewController {
     // FOOD
     func setFoodGraph(){
         UIView.animate(withDuration: 2.5) {
-            self.foodWidthGraph.constant =  CGFloat(GreenCalculatorController.shared.calculateFoodScore() ?? 0)
+            guard let foodScore = GreenCalculatorController.shared.calculateFoodScore() else {
+                print("Food score error")
+                return
+                
+            }
+            self.foodPercentage = CGFloat((foodScore/self.totalScore)*100)
+            self.foodWidthGraph.constant = self.foodPercentage
             self.view.layoutIfNeeded()
         }
     }
@@ -53,7 +68,12 @@ class UserResultsViewController: UIViewController {
     // HOUSE
     func setHouseGraph(){
         UIView.animate(withDuration: 2.5) {
-            self.houseWidthGraph.constant =  CGFloat(GreenCalculatorController.shared.calculateHouseScore() ?? 0)
+            guard let houseScore = GreenCalculatorController.shared.calculateHouseScore() else {
+                print("House score error")
+                return
+            }
+            self.housePercentage = CGFloat((houseScore/self.totalScore)*100)
+            self.houseWidthGraph.constant =  self.housePercentage
             self.view.layoutIfNeeded()
         }
     }
@@ -61,7 +81,12 @@ class UserResultsViewController: UIViewController {
     // TRAVEL
     func setTravelGraph(){
         UIView.animate(withDuration: 2.5) {
-            self.travelWidthGraph.constant =  CGFloat(GreenCalculatorController.shared.calculateTravelScore() ?? 0)
+            guard let travelScore = GreenCalculatorController.shared.calculateTravelScore() else {
+                print("Travel score error")
+                return
+            }
+            self.travelPercentage = CGFloat((travelScore/self.totalScore)*100)
+            self.travelWidthGraph.constant =  self.travelPercentage
             self.view.layoutIfNeeded()
         }
     }
@@ -83,10 +108,10 @@ class UserResultsViewController: UIViewController {
 
     // MARK: - Actions
     func updateViews() {
-        scoreLabel.text = "\(GreenCalculatorController.shared.totalScoreCard())"
-        foodScoreLabel.text = "\(GreenCalculatorController.shared.calculateFoodScore() ?? 0)"
-        houseScoreLabel.text = "\(GreenCalculatorController.shared.calculateHouseScore() ?? 0)"
-        travelScoreLabel.text = "\(GreenCalculatorController.shared.calculateTravelScore() ?? 0)"
+        scoreLabel.text = String(format: "%.2f", totalScore)
+        foodScoreLabel.text = String(format: "%.2f%%", foodPercentage)
+        houseScoreLabel.text = String(format: "%.2f%%", housePercentage)
+        travelScoreLabel.text = String(format: "%.2f%%", travelPercentage)
         setScoreImage()
     }
 }

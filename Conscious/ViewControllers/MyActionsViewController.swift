@@ -15,12 +15,19 @@ class MyActionsViewController: UIViewController {
     @IBOutlet weak var actionsPledged: UILabel!
     @IBOutlet weak var carbonSavedLabel: UILabel!
     
-    var myActions: [String]  = []
+    var myActions: [ActionPlanDetail]  = []
     
     var actionsAvailable: Int = 0
     var actionsCompleted: Int = 0 {
         didSet {
             actionsCompleteLabel.text = "\(actionsCompleted)"
+        }
+    }
+    var reductionInCo2: Double = 0 {
+        didSet {
+//            String(format: "%.2f", totalScore)
+            let totalCarbon = String(format: "%.2f", reductionInCo2/52)
+            carbonSavedLabel.text = totalCarbon + " lbs of CO2e lbs saved!"
         }
     }
     
@@ -40,7 +47,7 @@ class MyActionsViewController: UIViewController {
         myActions = ActionPlanController.shared.userActionList
         actionsAvailable = myActions.count
         actionsPledged.text = " / \(actionsAvailable)"
-        carbonSavedLabel.text = "\(ActionPlanController.shared.reductionInCo2)lbs of CO2e lbs saved!"
+        carbonSavedLabel.text = "0 lbs of CO2e lbs saved!"
         myActionsTableview.reloadData()
     }
     
@@ -66,13 +73,22 @@ extension MyActionsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myActionsCell", for: indexPath) as! ActionTableViewCell
         let action = myActions[indexPath.row]
-        cell.actionViewCellLabel.text = action
+        cell.actionViewCellLabel.text = action.action
+        cell.co2Amount = action.carbonReduction
         cell.delegate = self
         return cell
     }
 }
 
 extension MyActionsViewController: ActionTableViewCellDelegate{
+    func co2ReductionAdded(for cell: ActionTableViewCell, co2: Double) {
+        reductionInCo2 += co2
+    }
+    
+    func co2ReductionRemoved(for cell: ActionTableViewCell, co2: Double) {
+        reductionInCo2 -= co2
+    }
+ 
     func actionChecked(for cell: ActionTableViewCell){
         actionsCompleted += 1
     }
