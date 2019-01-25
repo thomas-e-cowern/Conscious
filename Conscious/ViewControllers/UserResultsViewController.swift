@@ -28,6 +28,7 @@ class UserResultsViewController: UIViewController {
     @IBOutlet weak var houseWidthGraph: NSLayoutConstraint!
     @IBOutlet weak var travelWidthGraph: NSLayoutConstraint!
     
+    // Green Scores
     var totalScore = 0.0
     var foodPercentage: CGFloat = 0.0
     var housePercentage: CGFloat = 0.0
@@ -46,6 +47,7 @@ class UserResultsViewController: UIViewController {
         setFoodGraph()
         setHouseGraph()
         setTravelGraph()
+        updateViews()
     }
     
     // MARK: - Graphs
@@ -103,8 +105,7 @@ class UserResultsViewController: UIViewController {
         // Gas
     }
     
-
-    // MARK: - Actions
+    // MARK: - Setup
     func updateViews() {
         scoreLabel.text = String(format: "%.2f", totalScore)
         foodScoreLabel.text = String(format: "%.2f%%", foodPercentage)

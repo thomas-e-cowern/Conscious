@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--User Results View Controller-->
         <scene sceneID="Z0G-81-HAa">
             <objects>
                 <viewController id="fiP-DC-Qcg" customClass="UserResultsViewController" customModule="Conscious" customModuleProvider="target" sceneMemberID="viewController">
@@ -277,7 +277,7 @@
                                                                 <rect key="frame" x="0.0" y="28.5" width="373" height="30"/>
                                                                 <state key="normal" title="Take Action"/>
                                                                 <connections>
-                                                                    <segue destination="JQW-Fe-5ux" kind="show" id="XnX-af-fAJ"/>
+                                                                    <segue destination="ovA-rz-whv" kind="show" id="zb5-Wu-STa"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -314,7 +314,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UGk-gG-ad1"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="lWG-kM-5bU">
+                    <navigationItem key="navigationItem" id="lWG-kM-5bU">
                         <barButtonItem key="rightBarButtonItem" image="icons8-gear-32" width="25" style="plain" id="bWl-Xh-ije">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -352,7 +352,7 @@
                 <viewControllerPlaceholder storyboardName="Settings" id="RaS-Mg-IJy" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K9K-fP-GYE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4825" y="-1491"/>
+            <point key="canvasLocation" x="4817" y="-1433"/>
         </scene>
         <!--Quiz-->
         <scene sceneID="OeQ-kx-Jrh">
@@ -360,15 +360,15 @@
                 <viewControllerPlaceholder storyboardName="Quiz" id="MmR-hZ-klD" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7m8-hu-Aft" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4843" y="-1265"/>
+            <point key="canvasLocation" x="4835" y="-1265"/>
         </scene>
         <!--Tabs-->
-        <scene sceneID="0VV-BX-Eko">
+        <scene sceneID="43w-Et-NpE">
             <objects>
-                <viewControllerPlaceholder storyboardName="Tabs" id="JQW-Fe-5ux" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uPF-eZ-kwO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Tabs" id="ovA-rz-whv" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vsC-ne-IDa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4825" y="-1025"/>
+            <point key="canvasLocation" x="4826" y="-1080"/>
         </scene>
         <!--My Footprint-->
         <scene sceneID="aOL-zx-NXv">

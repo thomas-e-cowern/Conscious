@@ -104,7 +104,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="999" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8FS-xc-heN">
-                                        <rect key="frame" x="6.6666666666666572" y="202" width="401" height="238"/>
+                                        <rect key="frame" x="6.6666666666666572" y="202" width="401" height="228"/>
                                         <string key="text">Before we get started, we need to know a little more about your lifestyle
 
 Take the quiz to find out your carbon footprint!</string>
@@ -113,8 +113,11 @@ Take the quiz to find out your carbon footprint!</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7f-n0-I8j">
-                                        <rect key="frame" x="157.66666666666666" y="467" width="98.999999999999972" height="30"/>
+                                        <rect key="frame" x="150" y="457" width="114" height="40"/>
                                         <color key="backgroundColor" red="0.84699350595474243" green="0.84709560871124268" blue="0.8469586968421936" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="D0C-6B-Y5f"/>
+                                        </constraints>
                                         <state key="normal" title="    Take Quiz    ">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -143,6 +146,8 @@ Take the quiz to find out your carbon footprint!</string>
                                     </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="A7f-n0-I8j" firstAttribute="leading" secondItem="zI3-uZ-L6m" secondAttribute="leading" constant="150" id="QoW-Ya-sxT"/>
+                                    <constraint firstAttribute="trailing" secondItem="A7f-n0-I8j" secondAttribute="trailing" constant="150" id="QqC-Yv-4mb"/>
                                     <constraint firstItem="8gR-ML-hdn" firstAttribute="width" secondItem="8gR-ML-hdn" secondAttribute="height" multiplier="1:1" id="Wl6-Nw-KYG"/>
                                 </constraints>
                             </stackView>
