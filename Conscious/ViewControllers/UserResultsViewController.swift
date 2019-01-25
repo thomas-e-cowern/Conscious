@@ -60,7 +60,7 @@ class UserResultsViewController: UIViewController {
                 
             }
             self.foodPercentage = CGFloat((foodScore/self.totalScore)*100)
-            self.foodWidthGraph.constant =  CGFloat(self.foodPercentage)
+            self.foodWidthGraph.constant = self.foodPercentage
             self.view.layoutIfNeeded()
         }
     }
@@ -73,7 +73,7 @@ class UserResultsViewController: UIViewController {
                 return
             }
             self.housePercentage = CGFloat((houseScore/self.totalScore)*100)
-            self.houseWidthGraph.constant =  CGFloat(self.housePercentage)
+            self.houseWidthGraph.constant =  self.housePercentage
             self.view.layoutIfNeeded()
         }
     }
@@ -86,7 +86,7 @@ class UserResultsViewController: UIViewController {
                 return
             }
             self.travelPercentage = CGFloat((travelScore/self.totalScore)*100)
-            self.travelWidthGraph.constant =  CGFloat(self.travelPercentage)
+            self.travelWidthGraph.constant =  self.travelPercentage
             self.view.layoutIfNeeded()
         }
     }
