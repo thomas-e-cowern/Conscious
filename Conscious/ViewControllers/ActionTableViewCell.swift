@@ -40,15 +40,15 @@ class ActionTableViewCell: UITableViewCell {
         guard let testTitle = actionViewCellLabel.text, let co2Amount = co2Amount else { return }
         let attributedString = NSMutableAttributedString(string: testTitle)
         if actionComplete == false {
-            actionComplete = true
-            actionViewCellButton.setTitle("Done", for: .normal)
+            
+            
             delegate?.actionChecked(for: self)
             delegate?.co2ReductionAdded(for: self, co2: co2Amount)
             attributedString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: NSUnderlineStyle.single.rawValue, range: NSRange(location: 0, length: attributedString.length))
             actionViewCellLabel.attributedText = attributedString
         } else {
-            actionComplete = false
-            actionViewCellButton.setTitle("Do", for: .normal)
+            
+            
             delegate?.actionUnchecked(for: self)
             delegate?.co2ReductionRemoved(for: self, co2: co2Amount)
             attributedString.removeAttribute(NSAttributedString.Key.strikethroughStyle, range: NSRange(location: 0, length: attributedString.length))
@@ -56,6 +56,17 @@ class ActionTableViewCell: UITableViewCell {
         }
     }
     // change button status
+    
+    func changeButtonImage() {
+        if actionComplete == true {
+            actionComplete = true
+            actionViewCellButton.setTitle("Done", for: .normal)
+        } else {
+            actionComplete = false
+            actionViewCellButton.setTitle("Do", for: .normal)
+        }
+        
+    }
     // change attributedString
     
     @IBAction func actionViewCellButtonChecked(_ sender: Any) {

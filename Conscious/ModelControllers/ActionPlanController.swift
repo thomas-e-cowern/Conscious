@@ -18,7 +18,7 @@ class ActionPlanController {
     
     var userActionList: [ActionPlanDetail] = []
     
-    var actionsComplete: Int = 0
+    var actionsComplete: [ActionPlanDetail] = []
     
     var reductionInCo2: Double = 0.0
     var reductionInCost: Double = 0.0
