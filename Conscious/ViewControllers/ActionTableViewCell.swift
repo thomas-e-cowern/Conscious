@@ -55,6 +55,8 @@ class ActionTableViewCell: UITableViewCell {
             actionViewCellLabel.attributedText = attributedString
         }
     }
+    // change button status
+    // change attributedString
     
     @IBAction func actionViewCellButtonChecked(_ sender: Any) {
         checkboxChanged()
