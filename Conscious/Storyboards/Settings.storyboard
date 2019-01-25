@@ -15,11 +15,22 @@
             <objects>
                 <viewController id="cfU-47-5nM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JaK-bj-bYi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPy-pt-xq5">
-                                <rect key="frame" x="8" y="72" width="359" height="587"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPy-pt-xq5">
+                                <rect key="frame" x="8" y="72" width="359" height="820"/>
+                                <mutableString key="text">Please read these Terms of Service carefully before using the Conscious mobile application operated by Conscious.
+Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service.
+By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service.
+
+Our Service may contain links to third-party web sites or services that are not owned or controlled by Conscious.
+
+Conscious has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that Conscious shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services.
+
+We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will try to provide at least 30  days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
+
+</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -34,6 +45,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TwZ-Il-70C"/>
                     </view>
+                    <size key="freeformSize" width="375" height="900"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DFS-Vr-v8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -79,7 +91,6 @@
         <!--Settings View Controller-->
         <scene sceneID="5PH-6e-kdh">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jsu-E1-BFR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="JkB-De-YDg" customClass="SettingsViewController" customModule="Conscious" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L7u-yP-HL4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -92,7 +103,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="iyG-fi-IUu">
-                                <rect key="frame" x="24" y="189" width="327" height="238"/>
+                                <rect key="frame" x="24" y="189" width="327" height="241"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3WZ-oq-whv">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="50"/>
@@ -132,41 +143,41 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="esY-L4-k9l">
-                                        <rect key="frame" x="0.0" y="75" width="327" height="163"/>
+                                        <rect key="frame" x="0.0" y="75" width="327" height="166"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d0P-oK-AUN">
-                                                <rect key="frame" x="0.0" y="0.0" width="327" height="80"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6v6-Jh-dzm">
+                                                <rect key="frame" x="0.0" y="0.0" width="327" height="83"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms of Service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DEI-DD-Mt0">
-                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="80"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="80" id="a52-tP-PYf"/>
-                                                        </constraints>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms of Service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myW-Hc-mNM">
+                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="83"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4F8-Yb-3ir">
-                                                        <rect key="frame" x="0.0" y="2" width="327" height="79"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPm-jP-YN5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="83"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="83" id="QXW-pa-nM0"/>
+                                                        </constraints>
                                                         <connections>
-                                                            <segue destination="cfU-47-5nM" kind="show" id="d81-a5-3If"/>
+                                                            <segue destination="cfU-47-5nM" kind="show" id="Va4-dQ-KxT"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="DEI-DD-Mt0" firstAttribute="leading" secondItem="d0P-oK-AUN" secondAttribute="leading" id="4Fh-ij-PoU"/>
-                                                    <constraint firstItem="DEI-DD-Mt0" firstAttribute="top" secondItem="d0P-oK-AUN" secondAttribute="top" id="AkQ-aC-2ir"/>
-                                                    <constraint firstAttribute="trailing" secondItem="4F8-Yb-3ir" secondAttribute="trailing" id="O5i-39-cS5"/>
-                                                    <constraint firstItem="4F8-Yb-3ir" firstAttribute="top" secondItem="DEI-DD-Mt0" secondAttribute="bottom" id="SeZ-Ms-agj"/>
-                                                    <constraint firstItem="4F8-Yb-3ir" firstAttribute="leading" secondItem="d0P-oK-AUN" secondAttribute="leading" id="Vju-Fu-4V1"/>
-                                                    <constraint firstAttribute="bottom" secondItem="4F8-Yb-3ir" secondAttribute="bottom" id="kq6-5R-aOq"/>
-                                                    <constraint firstAttribute="trailing" secondItem="DEI-DD-Mt0" secondAttribute="trailing" id="tSN-4l-2KQ"/>
-                                                    <constraint firstAttribute="bottom" secondItem="DEI-DD-Mt0" secondAttribute="bottom" id="uZC-2o-hrV"/>
+                                                    <constraint firstAttribute="bottom" secondItem="myW-Hc-mNM" secondAttribute="bottom" id="FMY-ch-FFR"/>
+                                                    <constraint firstItem="myW-Hc-mNM" firstAttribute="top" secondItem="6v6-Jh-dzm" secondAttribute="top" id="L4V-45-Prc"/>
+                                                    <constraint firstAttribute="bottom" secondItem="cPm-jP-YN5" secondAttribute="bottom" id="RTf-37-Wsr"/>
+                                                    <constraint firstItem="cPm-jP-YN5" firstAttribute="leading" secondItem="6v6-Jh-dzm" secondAttribute="leading" id="Sef-N5-w6R"/>
+                                                    <constraint firstItem="myW-Hc-mNM" firstAttribute="leading" secondItem="6v6-Jh-dzm" secondAttribute="leading" id="fvl-Um-8PL"/>
+                                                    <constraint firstItem="cPm-jP-YN5" firstAttribute="top" secondItem="6v6-Jh-dzm" secondAttribute="top" id="ii7-aF-GRE"/>
+                                                    <constraint firstAttribute="trailing" secondItem="myW-Hc-mNM" secondAttribute="trailing" id="jV9-1X-fV3"/>
+                                                    <constraint firstAttribute="trailing" secondItem="cPm-jP-YN5" secondAttribute="trailing" id="py7-fE-OZR"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvJ-J5-d0M">
-                                                <rect key="frame" x="0.0" y="80" width="327" height="83"/>
+                                                <rect key="frame" x="0.0" y="83" width="327" height="83"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Citations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6p-Al-e6W">
                                                         <rect key="frame" x="0.0" y="0.0" width="327" height="83"/>
@@ -223,6 +234,7 @@
                         <outlet property="notificationSwtich" destination="cvn-r7-doX" id="zQU-hB-yD8"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jsu-E1-BFR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-68" y="321.58920539730138"/>
         </scene>
