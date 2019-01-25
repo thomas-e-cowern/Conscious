@@ -27,6 +27,7 @@
 		7E6CC7FA21FB7A50006C0E4A /* USAverage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E6CC7F921FB7A50006C0E4A /* USAverage.storyboard */; };
 		7E6CC7FC21FB7A5F006C0E4A /* UserResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E6CC7FB21FB7A5F006C0E4A /* UserResult.storyboard */; };
 		7E6CC7FE21FB7C8D006C0E4A /* Quiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E6CC7FD21FB7C8D006C0E4A /* Quiz.storyboard */; };
+		7E6CC80021FB8D51006C0E4A /* FootPrintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6CC7FF21FB8D51006C0E4A /* FootPrintViewController.swift */; };
 		7E92676721F23B8000A5B396 /* QuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E92676621F23B8000A5B396 /* QuizTableViewCell.swift */; };
 		7E94754F21F7E7710070F111 /* UserResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E94754E21F7E7710070F111 /* UserResultsViewController.swift */; };
 		7ECE818721F0F71B00F2F9DA /* ActionPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE818621F0F71B00F2F9DA /* ActionPlan.swift */; };
@@ -37,6 +38,7 @@
 		7ECE819D21F12FBB00F2F9DA /* GreenCalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE819C21F12FBB00F2F9DA /* GreenCalculatorController.swift */; };
 		7ECE819F21F136CD00F2F9DA /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE819E21F136CD00F2F9DA /* QuizViewController.swift */; };
 		7ECE81A421F14D3B00F2F9DA /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE81A321F14D3B00F2F9DA /* Question.swift */; };
+		9BEA98FE29B9D420841BD395 /* Pods_Conscious.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC5010AE7FC9AC10C85DB44 /* Pods_Conscious.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,7 @@
 		7E6CC7F921FB7A50006C0E4A /* USAverage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = USAverage.storyboard; sourceTree = "<group>"; };
 		7E6CC7FB21FB7A5F006C0E4A /* UserResult.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserResult.storyboard; sourceTree = "<group>"; };
 		7E6CC7FD21FB7C8D006C0E4A /* Quiz.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Quiz.storyboard; sourceTree = "<group>"; };
+		7E6CC7FF21FB8D51006C0E4A /* FootPrintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootPrintViewController.swift; sourceTree = "<group>"; };
 		7E92676621F23B8000A5B396 /* QuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTableViewCell.swift; sourceTree = "<group>"; };
 		7E94754E21F7E7710070F111 /* UserResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResultsViewController.swift; sourceTree = "<group>"; };
 		7ECE818621F0F71B00F2F9DA /* ActionPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPlan.swift; sourceTree = "<group>"; };
@@ -72,6 +75,9 @@
 		7ECE819C21F12FBB00F2F9DA /* GreenCalculatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenCalculatorController.swift; sourceTree = "<group>"; };
 		7ECE819E21F136CD00F2F9DA /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		7ECE81A321F14D3B00F2F9DA /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		AEC5010AE7FC9AC10C85DB44 /* Pods_Conscious.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Conscious.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC33AD44D62447E777BA75D6 /* Pods-Conscious.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Conscious.release.xcconfig"; path = "Pods/Target Support Files/Pods-Conscious/Pods-Conscious.release.xcconfig"; sourceTree = "<group>"; };
+		FF566A7DBB361551DA265DE9 /* Pods-Conscious.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Conscious.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Conscious/Pods-Conscious.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BEA98FE29B9D420841BD395 /* Pods_Conscious.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +111,8 @@
 			children = (
 				41D89A6F21EE8B9F00CFF725 /* Conscious */,
 				41D89A6E21EE8B9F00CFF725 /* Products */,
+				5652E499172779391B7CCC7E /* Pods */,
+				AAC744A3B37E9A02DE69C56A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,9 +162,19 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		5652E499172779391B7CCC7E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF566A7DBB361551DA265DE9 /* Pods-Conscious.debug.xcconfig */,
+				DC33AD44D62447E777BA75D6 /* Pods-Conscious.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7ECE818821F1096400F2F9DA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7E6CC7FF21FB8D51006C0E4A /* FootPrintViewController.swift */,
 				416EFA2921F8F00C00972AB0 /* ActionTableViewCell.swift */,
 				4176753A21F3F87500CC4C07 /* SettingsViewController.swift */,
 				414C721921F2B6E500C8687F /* MyActionsViewController.swift */,
@@ -195,6 +214,14 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		AAC744A3B37E9A02DE69C56A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AEC5010AE7FC9AC10C85DB44 /* Pods_Conscious.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -202,9 +229,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 41D89A7F21EE8BB700CFF725 /* Build configuration list for PBXNativeTarget "Conscious" */;
 			buildPhases = (
+				8B37AD578448C42384C570AF /* [CP] Check Pods Manifest.lock */,
 				41D89A6921EE8B9E00CFF725 /* Sources */,
 				41D89A6A21EE8B9E00CFF725 /* Frameworks */,
 				41D89A6B21EE8B9E00CFF725 /* Resources */,
+				1DF7E1559141419A02A837C7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -266,6 +295,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1DF7E1559141419A02A837C7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Conscious/Pods-Conscious-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Conscious/Pods-Conscious-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B37AD578448C42384C570AF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Conscious-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		41D89A6921EE8B9E00CFF725 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -273,6 +349,7 @@
 			files = (
 				7ECE819021F120F100F2F9DA /* Travel.swift in Sources */,
 				41021B6921F24CD7009DA0D9 /* OnboardingQuizIntroViewController.swift in Sources */,
+				7E6CC80021FB8D51006C0E4A /* FootPrintViewController.swift in Sources */,
 				7E94754F21F7E7710070F111 /* UserResultsViewController.swift in Sources */,
 				7ECE819B21F1234F00F2F9DA /* ActionPlanController.swift in Sources */,
 				41021B6721F24631009DA0D9 /* OnboardingPage3ViewController.swift in Sources */,
@@ -436,6 +513,7 @@
 		};
 		41D89A8021EE8BB700CFF725 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF566A7DBB361551DA265DE9 /* Pods-Conscious.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -455,6 +533,7 @@
 		};
 		41D89A8121EE8BB700CFF725 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC33AD44D62447E777BA75D6 /* Pods-Conscious.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
