@@ -22,6 +22,11 @@
 		41D89A7621EE8B9F00CFF725 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D89A7421EE8B9F00CFF725 /* Main.storyboard */; };
 		41D89A7821EE8BB700CFF725 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41D89A7721EE8BB700CFF725 /* Assets.xcassets */; };
 		41D89A7B21EE8BB700CFF725 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D89A7921EE8BB700CFF725 /* LaunchScreen.storyboard */; };
+		7E6CC7F421FB6BFB006C0E4A /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E6CC7F321FB6BFB006C0E4A /* Settings.storyboard */; };
+		7E6CC7F821FB770D006C0E4A /* Tabs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E6CC7F721FB770D006C0E4A /* Tabs.storyboard */; };
+		7E6CC7FA21FB7A50006C0E4A /* USAverage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E6CC7F921FB7A50006C0E4A /* USAverage.storyboard */; };
+		7E6CC7FC21FB7A5F006C0E4A /* UserResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E6CC7FB21FB7A5F006C0E4A /* UserResult.storyboard */; };
+		7E6CC7FE21FB7C8D006C0E4A /* Quiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E6CC7FD21FB7C8D006C0E4A /* Quiz.storyboard */; };
 		7E92676721F23B8000A5B396 /* QuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E92676621F23B8000A5B396 /* QuizTableViewCell.swift */; };
 		7E94754F21F7E7710070F111 /* UserResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E94754E21F7E7710070F111 /* UserResultsViewController.swift */; };
 		7ECE818721F0F71B00F2F9DA /* ActionPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE818621F0F71B00F2F9DA /* ActionPlan.swift */; };
@@ -52,6 +57,11 @@
 		41D89A7721EE8BB700CFF725 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41D89A7A21EE8BB700CFF725 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41D89A7C21EE8BB700CFF725 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E6CC7F321FB6BFB006C0E4A /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		7E6CC7F721FB770D006C0E4A /* Tabs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabs.storyboard; sourceTree = "<group>"; };
+		7E6CC7F921FB7A50006C0E4A /* USAverage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = USAverage.storyboard; sourceTree = "<group>"; };
+		7E6CC7FB21FB7A5F006C0E4A /* UserResult.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserResult.storyboard; sourceTree = "<group>"; };
+		7E6CC7FD21FB7C8D006C0E4A /* Quiz.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Quiz.storyboard; sourceTree = "<group>"; };
 		7E92676621F23B8000A5B396 /* QuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTableViewCell.swift; sourceTree = "<group>"; };
 		7E94754E21F7E7710070F111 /* UserResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResultsViewController.swift; sourceTree = "<group>"; };
 		7ECE818621F0F71B00F2F9DA /* ActionPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPlan.swift; sourceTree = "<group>"; };
@@ -79,6 +89,11 @@
 			isa = PBXGroup;
 			children = (
 				41D89A7421EE8B9F00CFF725 /* Main.storyboard */,
+				7E6CC7F921FB7A50006C0E4A /* USAverage.storyboard */,
+				7E6CC7FD21FB7C8D006C0E4A /* Quiz.storyboard */,
+				7E6CC7FB21FB7A5F006C0E4A /* UserResult.storyboard */,
+				7E6CC7F721FB770D006C0E4A /* Tabs.storyboard */,
+				7E6CC7F321FB6BFB006C0E4A /* Settings.storyboard */,
 				41D89A7921EE8BB700CFF725 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -239,8 +254,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				41D89A7B21EE8BB700CFF725 /* LaunchScreen.storyboard in Resources */,
+				7E6CC7FC21FB7A5F006C0E4A /* UserResult.storyboard in Resources */,
+				7E6CC7FA21FB7A50006C0E4A /* USAverage.storyboard in Resources */,
 				41D89A7821EE8BB700CFF725 /* Assets.xcassets in Resources */,
 				41D89A7621EE8B9F00CFF725 /* Main.storyboard in Resources */,
+				7E6CC7F821FB770D006C0E4A /* Tabs.storyboard in Resources */,
+				7E6CC7F421FB6BFB006C0E4A /* Settings.storyboard in Resources */,
+				7E6CC7FE21FB7C8D006C0E4A /* Quiz.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
