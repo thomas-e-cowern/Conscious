@@ -32,13 +32,11 @@ class UserResultsViewController: UIViewController {
     var foodPercentage: CGFloat = 0.0
     var housePercentage: CGFloat = 0.0
     var travelPercentage: CGFloat = 0.0
+    
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         totalScore = GreenCalculatorController.shared.totalScoreCard()
-        setFoodGraph()
-        setHouseGraph()
-        setTravelGraph()
         updateViews()
     }
 

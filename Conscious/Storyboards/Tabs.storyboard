@@ -364,23 +364,14 @@ Pledged</string>
         <!--My Footprint-->
         <scene sceneID="1bM-QD-F3F">
             <objects>
-                <viewController id="m5D-ge-21F" sceneMemberID="viewController">
+                <viewController id="m5D-ge-21F" customClass="FootPrintViewController" customModule="Conscious" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Un-Xq-5Dj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Van-sr-ROu">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Van-sr-ROu" customClass="LineChartView" customModule="Charts">
                                 <rect key="frame" x="26" y="319" width="322" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Graph" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xj1-ub-Zx6">
-                                        <rect key="frame" x="140" y="54" width="48" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uyz-Pn-UuM">
@@ -467,6 +458,9 @@ Pledged</string>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Footprint" id="fC4-8m-TdU"/>
                     <navigationItem key="navigationItem" id="SVC-2f-dOm"/>
+                    <connections>
+                        <outlet property="progressChartView" destination="Van-sr-ROu" id="PxM-Bi-7l7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CQI-0l-Pa1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
