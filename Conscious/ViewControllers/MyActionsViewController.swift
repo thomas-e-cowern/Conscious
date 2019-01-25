@@ -16,13 +16,12 @@ class MyActionsViewController: UIViewController {
     @IBOutlet weak var carbonSavedLabel: UILabel!
     
     var myActions: [ActionPlanDetail]  = []
-    
-    var actionsAvailable: Int = 0
-    var actionsCompleted: Int = 0 {
-        didSet {
-            actionsCompleteLabel.text = "\(actionsCompleted)"
-        }
-    }
+    var actionsCompleted: [ActionPlanDetail]  = []
+//    var actionsCompleted: Int = 0 {
+//        didSet {
+//            actionsCompleteLabel.text = "\(actionsCompleted)"
+//        }
+//    }
     var reductionInCo2: Double = 0 {
         didSet {
 //            String(format: "%.2f", totalScore)
@@ -45,8 +44,7 @@ class MyActionsViewController: UIViewController {
     
     func updateViews() {
         myActions = ActionPlanController.shared.userActionList
-        actionsAvailable = myActions.count
-        actionsPledged.text = " / \(actionsAvailable)"
+        actionsPledged.text = " / \(myActions.count)"
         carbonSavedLabel.text = "0 lbs of CO2e lbs saved!"
         myActionsTableview.reloadData()
     }
@@ -90,10 +88,10 @@ extension MyActionsViewController: ActionTableViewCellDelegate{
     }
  
     func actionChecked(for cell: ActionTableViewCell){
-        actionsCompleted += 1
+        actionsCompleted = myActions.filter{ $0.completed == true }
     }
     
     func actionUnchecked(for cell: ActionTableViewCell){
-        actionsCompleted -= 1
+//        actionsCompleted -= 1
     }
 }
