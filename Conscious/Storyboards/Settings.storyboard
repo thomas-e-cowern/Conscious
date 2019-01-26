@@ -20,7 +20,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPy-pt-xq5">
                                 <rect key="frame" x="8" y="72" width="359" height="820"/>
-                                <mutableString key="text">Please read these Terms of Service carefully before using the Conscious mobile application operated by Conscious.
+                                <string key="text">Please read these Terms of Service carefully before using the Conscious mobile application operated by Conscious.
 Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service.
 By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service.
 
@@ -30,7 +30,7 @@ Conscious has no control over, and assumes no responsibility for, the content, p
 
 We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will try to provide at least 30  days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
 
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -102,48 +102,40 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="iyG-fi-IUu">
-                                <rect key="frame" x="24" y="189" width="327" height="241"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="iyG-fi-IUu">
+                                <rect key="frame" x="24" y="189" width="327" height="249"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3WZ-oq-whv">
-                                        <rect key="frame" x="0.0" y="0.0" width="327" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="83"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="r62-UQ-Vhk">
-                                                <rect key="frame" x="0.0" y="0.0" width="327" height="50"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="144" translatesAutoresizingMaskIntoConstraints="NO" id="uMj-Jp-bQv">
-                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="50"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P0J-V7-lNm">
-                                                                <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="Mvp-gy-aJE"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cvn-r7-doX">
-                                                                <rect key="frame" x="294" y="0.0" width="35" height="50"/>
-                                                                <connections>
-                                                                    <action selector="notificationsDidChange:" destination="JkB-De-YDg" eventType="valueChanged" id="IDj-O8-uZG"/>
-                                                                </connections>
-                                                            </switch>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QxG-aZ-Vom">
+                                                <rect key="frame" x="0.0" y="0.0" width="327" height="83"/>
+                                                <connections>
+                                                    <action selector="notificationButtonTapped:" destination="JkB-De-YDg" eventType="touchUpInside" id="qsz-Zo-Zkq"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPu-do-oT8" userLabel="Notifications">
+                                                <rect key="frame" x="0.0" y="0.0" width="327" height="83"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="r62-UQ-Vhk" secondAttribute="bottom" id="Gwq-nz-9Hi"/>
-                                            <constraint firstItem="r62-UQ-Vhk" firstAttribute="top" secondItem="3WZ-oq-whv" secondAttribute="top" id="IFp-EK-off"/>
-                                            <constraint firstAttribute="trailing" secondItem="r62-UQ-Vhk" secondAttribute="trailing" id="iR6-Tb-Bx2"/>
-                                            <constraint firstItem="r62-UQ-Vhk" firstAttribute="leading" secondItem="3WZ-oq-whv" secondAttribute="leading" id="jV1-oO-pYe"/>
+                                            <constraint firstAttribute="trailing" secondItem="DPu-do-oT8" secondAttribute="trailing" id="3Lu-fH-79W"/>
+                                            <constraint firstAttribute="bottom" secondItem="QxG-aZ-Vom" secondAttribute="bottom" id="Al2-fk-tSN"/>
+                                            <constraint firstItem="DPu-do-oT8" firstAttribute="top" secondItem="3WZ-oq-whv" secondAttribute="top" id="Jbh-LO-CQD"/>
+                                            <constraint firstAttribute="bottom" secondItem="DPu-do-oT8" secondAttribute="bottom" id="U9L-yc-G5e"/>
+                                            <constraint firstAttribute="height" constant="83" id="YRQ-GB-8Gd"/>
+                                            <constraint firstAttribute="trailing" secondItem="QxG-aZ-Vom" secondAttribute="trailing" id="agf-Aq-G7Z"/>
+                                            <constraint firstItem="DPu-do-oT8" firstAttribute="leading" secondItem="3WZ-oq-whv" secondAttribute="leading" id="g9f-b4-YFY"/>
+                                            <constraint firstItem="QxG-aZ-Vom" firstAttribute="leading" secondItem="3WZ-oq-whv" secondAttribute="leading" id="gr7-28-aGI"/>
+                                            <constraint firstItem="QxG-aZ-Vom" firstAttribute="top" secondItem="3WZ-oq-whv" secondAttribute="top" id="seP-2n-Uni"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="esY-L4-k9l">
-                                        <rect key="frame" x="0.0" y="75" width="327" height="166"/>
+                                        <rect key="frame" x="0.0" y="83" width="327" height="166"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6v6-Jh-dzm">
                                                 <rect key="frame" x="0.0" y="0.0" width="327" height="83"/>
@@ -230,9 +222,6 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="notificationSwtich" destination="cvn-r7-doX" id="zQU-hB-yD8"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jsu-E1-BFR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

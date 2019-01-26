@@ -28,13 +28,13 @@ enum NumberOfFlight: String, Answer {
     var results: Double {
         switch self {
         case .oneToTwo:
-            return 2.0 * 0.9
+            return 2.0 * 1984.16
         case .threeToFour:
-            return 4.0 * 0.9
+            return 4.0 * 1984.16
         case .fiveToSeven:
-            return 7.0 * 0.9
+            return 7.0 * 1984.16
         case .aboveSeven:
-            return 10.0 * 0.9
+            return 10.0 * 1984.16
         }
     }
 }
@@ -55,11 +55,11 @@ enum NumberOfDrivesPerWeek: String, Answer {
     var results: Double {
         switch self {
         case .lessThan100Miles:
-            return 2.36
+            return 99.00
         case .between100And200:
-            return 4.72
+            return 195.00
         case .greaterThan200:
-            return 6.58
+            return 295.00
         }
     }
 }

@@ -82,15 +82,15 @@ enum DietType: String, Answer {
     var results: Double {
         switch self {
         case .mostlyMeat:
-            return 2.99
+            return 6591.82
         case .someMeat:
-            return 2.27
+            return 5004.49
         case .rarelyMeat:
-            return 1.72
+            return 3791.95
         case .vegetarian:
-            return 1.54
+            return 3395.12
         case .vegan:
-            return 1.36
+            return 2998.29
         }
     }
 }

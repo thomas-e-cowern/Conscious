@@ -107,7 +107,7 @@ class UserResultsViewController: UIViewController {
     
     // MARK: - Setup
     func updateViews() {
-        scoreLabel.text = String(format: "%.2f", totalScore)
+        scoreLabel.text = String(format: "%.2f", totalScore/12)
         foodScoreLabel.text = String(format: "%.2f%%", foodPercentage)
         houseScoreLabel.text = String(format: "%.2f%%", housePercentage)
         travelScoreLabel.text = String(format: "%.2f%%", travelPercentage)
