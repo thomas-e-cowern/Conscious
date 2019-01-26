@@ -13,6 +13,7 @@
 		414FF5AE21FA2A3300D9DA48 /* ActionPlanDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414FF5AD21FA2A3300D9DA48 /* ActionPlanDetail.swift */; };
 		416EFA2A21F8F00D00972AB0 /* ActionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416EFA2921F8F00C00972AB0 /* ActionTableViewCell.swift */; };
 		41749E5821FCF43D00DBCA06 /* SavedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41749E5721FCF43D00DBCA06 /* SavedData.swift */; };
+		41749E5C21FD167D00DBCA06 /* LocalStorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41749E5B21FD167D00DBCA06 /* LocalStorageController.swift */; };
 		4176753B21F3F87500CC4C07 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4176753A21F3F87500CC4C07 /* SettingsViewController.swift */; };
 		41A8BDCC21F67AAF001EB547 /* ActionsAlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A8BDCB21F67AAF001EB547 /* ActionsAlarmController.swift */; };
 		41A8BDCE21F67B40001EB547 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A8BDCD21F67B40001EB547 /* Alarm.swift */; };
@@ -47,6 +48,7 @@
 		414FF5AD21FA2A3300D9DA48 /* ActionPlanDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPlanDetail.swift; sourceTree = "<group>"; };
 		416EFA2921F8F00C00972AB0 /* ActionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionTableViewCell.swift; sourceTree = "<group>"; };
 		41749E5721FCF43D00DBCA06 /* SavedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedData.swift; sourceTree = "<group>"; };
+		41749E5B21FD167D00DBCA06 /* LocalStorageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageController.swift; sourceTree = "<group>"; };
 		4176753A21F3F87500CC4C07 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		41A8BDCB21F67AAF001EB547 /* ActionsAlarmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsAlarmController.swift; sourceTree = "<group>"; };
 		41A8BDCD21F67B40001EB547 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
@@ -191,7 +193,7 @@
 				7ECE819C21F12FBB00F2F9DA /* GreenCalculatorController.swift */,
 				7ECE819A21F1234F00F2F9DA /* ActionPlanController.swift */,
 				41A8BDCB21F67AAF001EB547 /* ActionsAlarmController.swift */,
-				41FDCFA821FB9C0000A39684 /* LocalStorageController.swift */,
+				41749E5B21FD167D00DBCA06 /* LocalStorageController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -347,7 +349,6 @@
 			files = (
 				7ECE819021F120F100F2F9DA /* Travel.swift in Sources */,
 				7E6CC80021FB8D51006C0E4A /* FootPrintViewController.swift in Sources */,
-				41FDCFA921FB9C0000A39684 /* LocalStorageController.swift in Sources */,
 				7E94754F21F7E7710070F111 /* UserResultsViewController.swift in Sources */,
 				7ECE819B21F1234F00F2F9DA /* ActionPlanController.swift in Sources */,
 				7ECE819D21F12FBB00F2F9DA /* GreenCalculatorController.swift in Sources */,
@@ -366,6 +367,7 @@
 				41A8BDCC21F67AAF001EB547 /* ActionsAlarmController.swift in Sources */,
 				414C721621F2A9E800C8687F /* ActionListTableViewController.swift in Sources */,
 				7ECE81A421F14D3B00F2F9DA /* Question.swift in Sources */,
+				41749E5C21FD167D00DBCA06 /* LocalStorageController.swift in Sources */,
 				414C721A21F2B6E500C8687F /* MyActionsViewController.swift in Sources */,
 				7ECE818E21F120D600F2F9DA /* Food.swift in Sources */,
 			);
