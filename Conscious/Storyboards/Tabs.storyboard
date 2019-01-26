@@ -327,11 +327,8 @@ Pledged</string>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="dqb-wS-Vo1">
-                        <barButtonItem key="rightBarButtonItem" image="icons8-gear-32" width="25" style="plain" id="tYt-G9-tDG">
+                        <barButtonItem key="rightBarButtonItem" image="icons8-gear-32" width="25" style="plain" id="h6Y-lD-Foj">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <segue destination="gyk-ja-Izl" kind="show" id="o44-sk-dj3"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
@@ -435,11 +432,8 @@ Pledged</string>
                         <viewLayoutGuide key="safeArea" id="asn-Rb-8EY"/>
                     </view>
                     <navigationItem key="navigationItem" id="SVC-2f-dOm">
-                        <barButtonItem key="rightBarButtonItem" image="icons8-gear-32" width="25" style="plain" id="Oc6-nb-i2B">
+                        <barButtonItem key="rightBarButtonItem" image="icons8-gear-32" width="25" style="plain" id="jP3-Fw-C8b">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <segue destination="gyk-ja-Izl" kind="show" id="wbb-y8-ZN7"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -653,6 +647,7 @@ Pledged</string>
         <!--Take Actions-->
         <scene sceneID="3FG-Uh-bas">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b2S-d7-ln5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sAV-Lx-pgF" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Take Actions" id="RvB-8b-xAZ"/>
                     <toolbarItems/>
@@ -665,13 +660,13 @@ Pledged</string>
                         <segue destination="ykf-oU-BYa" kind="relationship" relationship="rootViewController" id="Ya7-Ck-mxh"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b2S-d7-ln5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2263.1999999999998" y="1047.5262368815593"/>
         </scene>
         <!--My Footprint-->
         <scene sceneID="DaQ-wK-Wyz">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZGe-KQ-tj9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4dU-pV-nQW" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="My Footprint" id="fC4-8m-TdU"/>
                     <toolbarItems/>
@@ -684,13 +679,13 @@ Pledged</string>
                         <segue destination="m5D-ge-21F" kind="relationship" relationship="rootViewController" id="WQu-ql-KFb"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZGe-KQ-tj9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2263.1999999999998" y="199.25037481259372"/>
         </scene>
         <!--My Actions-->
         <scene sceneID="lDq-x1-Kh6">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Aa-vh-7EQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q9z-ja-Fha" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="My Actions" id="MDk-1W-EVm"/>
                     <toolbarItems/>
@@ -703,7 +698,6 @@ Pledged</string>
                         <segue destination="sqo-jx-Ig6" kind="relationship" relationship="rootViewController" id="v0c-3x-PyF"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0Aa-vh-7EQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4154.3999999999996" y="2010.9445277361322"/>
         </scene>
@@ -713,7 +707,4 @@ Pledged</string>
         <image name="icons8-gear-32" width="24" height="24"/>
         <image name="placeholder" width="1280" height="800"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="wbb-y8-ZN7"/>
-    </inferredMetricsTieBreakers>
 </document>
