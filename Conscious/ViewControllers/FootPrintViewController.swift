@@ -16,7 +16,7 @@ class FootPrintViewController: UIViewController {
     @IBOutlet weak var progressChartView: LineChartView!
     
     // MARK: - Properties
-    let months = ["0", "1", "2", "3", "4"]
+    let weeks = ["0", "1", "2", "3", "4"]
     let completionPercent: [Double] = [0.0, 50.0, 80.0, 90.0, 100.0]
     
     // MARK: - ViewLifeCycle
@@ -24,7 +24,7 @@ class FootPrintViewController: UIViewController {
         super.viewDidLoad()
         self.progressChartView.delegate = self
         setUpLineChart()
-        setChartData(months: months)
+        setChartData(weeks: weeks)
     }
     
     // MARK: - Setup
@@ -34,7 +34,7 @@ class FootPrintViewController: UIViewController {
         lXAxis.lineWidth = 5
         lXAxis.labelPosition = .rightBottom
         lXAxis.valueFont = .systemFont(ofSize: 10)
-        progressChartView.xAxis.drawGridLinesEnabled = true
+        progressChartView.xAxis.drawGridLinesEnabled = false
         progressChartView.xAxis.labelPosition = .bottom
         progressChartView.xAxis.setLabelCount(4, force: false)
         let leftAxis = progressChartView.leftAxis
@@ -46,19 +46,19 @@ class FootPrintViewController: UIViewController {
     }
     
     
-    func setChartData(months: [String]) {
-        let values = (0..<months.count).map { (i) -> ChartDataEntry in
+    func setChartData(weeks: [String]) {
+        let values = (0..<weeks.count).map { (i) -> ChartDataEntry in
             let val = completionPercent
             return ChartDataEntry(x: Double(i), y: val[i])
         }
         let set1: LineChartDataSet = LineChartDataSet(values: values, label: "TEST")
         set1.axisDependency = .left
-        set1.setColor(UIColor.red, alpha: 0.5)
-        set1.setCircleColor(UIColor.red)
+        set1.setColor(UIColor.orange, alpha: 0.5)
+        set1.setCircleColor(UIColor.orange)
         set1.lineWidth = 2.0
         set1.circleRadius = 6.0
-        set1.fillColor = UIColor.red
-        set1.circleHoleColor = UIColor.red
+        set1.fillColor = UIColor.orange
+        set1.circleHoleColor = UIColor.white
         
         let data = LineChartData(dataSet: set1)
         self.progressChartView.data = data

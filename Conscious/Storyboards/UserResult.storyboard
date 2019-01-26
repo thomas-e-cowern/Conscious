@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -123,7 +124,7 @@
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bB3-gc-jv2">
                                                                         <rect key="frame" x="0.0" y="0.0" width="1" height="90"/>
-                                                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <color key="backgroundColor" name="Red"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="90" id="BO3-sQ-gK2"/>
                                                                             <constraint firstAttribute="width" constant="1" id="BeK-Vb-MZN"/>
@@ -152,7 +153,7 @@
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A5z-S3-HuE">
                                                                         <rect key="frame" x="0.0" y="0.0" width="1" height="90"/>
-                                                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <color key="backgroundColor" name="DarkGreen"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="90" id="7gE-9x-Kle"/>
                                                                             <constraint firstAttribute="width" constant="1" id="Knx-Ft-GCM"/>
@@ -181,7 +182,7 @@
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zoj-OC-SG8">
                                                                         <rect key="frame" x="0.0" y="0.0" width="1" height="90"/>
-                                                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <color key="backgroundColor" name="Orange"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="1" id="4GX-Bc-LWY"/>
                                                                             <constraint firstAttribute="height" constant="90" id="vm0-sC-zPQ"/>
@@ -393,5 +394,14 @@
     <resources>
         <image name="icons8-gear-32" width="24" height="24"/>
         <image name="placeholder" width="1280" height="800"/>
+        <namedColor name="DarkGreen">
+            <color red="0.49000000953674316" green="0.82999998331069946" blue="0.68999999761581421" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Orange">
+            <color red="1" green="0.75999999046325684" blue="0.029999999329447746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Red">
+            <color red="0.93999999761581421" green="0.41999998688697815" blue="0.34000000357627869" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

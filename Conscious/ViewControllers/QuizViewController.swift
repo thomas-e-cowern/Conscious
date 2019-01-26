@@ -68,9 +68,9 @@ class QuizViewController: UIViewController {
         if question?.category.rawValue == "Food" {
             categoryImageView.image = #imageLiteral(resourceName: "Cow")
         } else if question?.category.rawValue == "House" {
-            categoryImageView.image = #imageLiteral(resourceName: "Home ")
+            categoryImageView.image = #imageLiteral(resourceName: "House")
         } else if question?.category.rawValue == "Travel" {
-            categoryImageView.image = #imageLiteral(resourceName: "Travel Bus")
+            categoryImageView.image = #imageLiteral(resourceName: "Travel")
         }
     }
     

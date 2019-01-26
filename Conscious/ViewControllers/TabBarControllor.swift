@@ -14,6 +14,7 @@ class TabBarControllor: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.selectedIndex = 1
-        navigationItem.setHidesBackButton(true, animated: false)
+        //navigationItem.setHidesBackButton(true, animated: false)
+        //self.navigationItem.leftBarButtonItem = nil
     }
 }
