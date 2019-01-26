@@ -9,12 +9,24 @@
 import Foundation
 
 struct SavedData: Codable, Equatable {
+    
+    // Properties
     let overallScore: Double
     let foodScore: Double
     let houseScore: Double
     let travelScore:   Double
-    let actionPlan: [ActionPlanDetail]
+    let actionPlan: [ActionPlanDetail]?
     
+    // Initializer
+    init(overallScore: Double, foodScore: Double, houseScore: Double, travelScore: Double, actionPlan: [ActionPlanDetail] = []) {
+        self.overallScore = overallScore
+        self.foodScore = foodScore
+        self.houseScore = houseScore
+        self.travelScore = travelScore
+        self.actionPlan = actionPlan
+    }
+    
+    // MARK: - equatable
     static func == (lhs: SavedData, rhs: SavedData) -> Bool {
         if lhs.overallScore == rhs.overallScore &&
         lhs.foodScore == rhs.foodScore &&
