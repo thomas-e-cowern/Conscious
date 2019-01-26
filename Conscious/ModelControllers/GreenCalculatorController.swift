@@ -123,7 +123,7 @@ class GreenCalculatorController {
     
     // GREEN
     func totalScoreCard() -> Double {
-
+        LocalStorageController.shared.isNewQuiz = true
         return (calculateFoodScore() ?? 0) + (calculateHouseScore() ?? 0) + (calculateTravelScore() ?? 0)
     }
     
