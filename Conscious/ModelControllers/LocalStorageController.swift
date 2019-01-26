@@ -12,12 +12,16 @@ class LocalStorageController {
     
     static let shared = LocalStorageController()
     
-    var saveddata: [SavedData] = []
+    var hasBeenHereBefore: Bool = false
+    
+    var isNewQuiz: Bool = false
+    
+    var savedData: [SavedData] = []
     
     func fileURL() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let documentsDirectory = paths[0]
-        let fileName = "saveddata.json"
+        let fileName = "savedData.json"
         let fullURL = documentsDirectory.appendingPathComponent(fileName)
         
         print(fullURL)
@@ -28,7 +32,7 @@ class LocalStorageController {
     func saveToPersistentStore() {
         let encoder = JSONEncoder()
         do {
-            let data = try encoder.encode(saveddata)
+            let data = try encoder.encode(savedData)
             try data.write(to: fileURL())
         } catch {
             print("Error: \(#function): \(error) : \(error.localizedDescription)")

@@ -126,4 +126,6 @@ class GreenCalculatorController {
 
         return (calculateFoodScore() ?? 0) + (calculateHouseScore() ?? 0) + (calculateTravelScore() ?? 0)
     }
+    
+    
 }
