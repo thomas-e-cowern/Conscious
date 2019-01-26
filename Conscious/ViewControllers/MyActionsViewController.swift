@@ -17,26 +17,26 @@ class MyActionsViewController: UIViewController {
     
     var myActions: [ActionPlanDetail]  = []
     var actionsCompleted: [ActionPlanDetail]  = []
+    var totalCarbonSavings: Double = 0
+    var actionsCompletedCount: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         myActionsTableview.dataSource = self
-        actionsCompleted = ActionPlanController.shared.userActionList.filter{ $0.completed == true }
         updateViews()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        actionsCompleted = ActionPlanController.shared.userActionList.filter{ $0.completed == true }
         updateViews()
     }
     
     func updateViews() {
         myActions = ActionPlanController.shared.userActionList
-        actionsCompleted = ActionPlanController.shared.userActionList.filter{ $0.completed == true }
+        actionsCompleteLabel.text = "\(actionsCompletedCount)"
         actionsPledged.text = " of \(myActions.count)"
-        carbonSavedLabel.text = "\(actionsCompleted.count) lbs of CO2e lbs saved!"
+        let carbonSavingString = String(format: "%.2f", totalCarbonSavings/52)
+        carbonSavedLabel.text = "\(carbonSavingString) lbs of CO2e lbs saved!"
         myActionsTableview.reloadData()
     }
 }
@@ -44,14 +44,13 @@ class MyActionsViewController: UIViewController {
 extension MyActionsViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("myActions.count: \(myActions.count)")
         return myActions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myActionsCell", for: indexPath) as! ActionTableViewCell
-        let action = myActions[indexPath.row]
-        cell.actionViewCellLabel.text = action.action
+        cell.action = myActions[indexPath.row]
+        cell.actionViewCellLabel.text = myActions[indexPath.row].action
         cell.delegate = self
         return cell
     }
@@ -59,10 +58,23 @@ extension MyActionsViewController: UITableViewDataSource {
 
 extension MyActionsViewController: ActionTableViewCellDelegate{
     func actionChecked(for cell: ActionTableViewCell){
-        
+        guard let action = cell.action else { return }
+        cell.action?.completed = true
+        actionsCompleted = myActions.filter{ $0.completed == true }
+        actionsCompletedCount += 1
+        let carbonReduction = (action.carbonReduction ?? 0)
+        totalCarbonSavings += carbonReduction
+        actionsCompleted.append(action)
+        updateViews()
     }
     
     func actionUnchecked(for cell: ActionTableViewCell){
-
+        guard let action = cell.action else { return }
+        cell.action?.completed = false
+        actionsCompleted = myActions.filter{ $0.completed == true }
+        actionsCompletedCount -= 1
+        let carbonReduction = (action.carbonReduction ?? 0)
+        totalCarbonSavings -= carbonReduction
+        updateViews()
     }
 }

@@ -18,6 +18,7 @@ class ActionTableViewCell: UITableViewCell {
     @IBOutlet weak var actionViewCellButton: UIButton!
     @IBOutlet weak var actionViewCellLabel: UILabel!
     
+    var action: ActionPlanDetail?
     var actionTitle: String?
     var actionComplete: Bool? = false
     weak var delegate: ActionTableViewCellDelegate?
@@ -33,25 +34,24 @@ class ActionTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func checkboxChanged() {
-        changeButtonImage()
-        changeString()
-    }
     // change button status
     
     func changeButtonImage() {
-        if actionComplete == true {
+        if actionComplete == false {
+            actionComplete = true
             actionViewCellButton.setTitle("Done", for: .normal)
         } else {
+            actionComplete = false
             actionViewCellButton.setTitle("Do", for: .normal)
         }
     }
     
     // change attributedString
     func changeString() {
-        guard let testTitle = actionViewCellLabel.text else { return }
+        guard let action = action else { return }
+        let testTitle = action.action
         let attributedString = NSMutableAttributedString(string: testTitle)
-        if actionComplete == false {
+        if actionComplete == true {
             delegate?.actionChecked(for: self)
             attributedString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: NSUnderlineStyle.single.rawValue, range: NSRange(location: 0, length: attributedString.length))
             actionViewCellLabel.attributedText = attributedString
@@ -64,7 +64,8 @@ class ActionTableViewCell: UITableViewCell {
     
     
     @IBAction func actionViewCellButtonChecked(_ sender: Any) {
-        checkboxChanged()
+        changeButtonImage()
+        changeString()
     }
     
 }

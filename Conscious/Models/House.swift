@@ -31,13 +31,13 @@ enum NumberOfHouseHoldMembers: String, Answer  {
     var results: Double {
         switch self {
         case .oneToTwo:
-            return 2.0
+            return 4409.25
         case .threeToFour:
-            return 4.0
+            return 8818.49
         case .fiveToSeven:
-            return 7.0
+            return 15432.40
         case .aboveSeven:
-            return 10.0
+            return 22046.20
         }
     }
 }

@@ -16,18 +16,7 @@ struct ActionPlanDetail: Codable {
     let challenge: String
     let carbonReduction: Double?
     let costSavings: Double?
-    let completed: Bool
-    
-    enum CodingKeys: String, CodingKey {
-        case action
-        case actionSummry
-        case benefits
-        case frequency
-        case challenge
-        case carbonReduction
-        case costSavings
-        case completed
-    }
+    var completed: Bool
 }
 
 
