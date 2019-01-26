@@ -34,21 +34,33 @@ class UserResultsViewController: UIViewController {
     var housePercentage: CGFloat = 0.0
     var travelPercentage: CGFloat = 0.0
     
+    // Local storage
+    var savedData: [SavedData] = []
+    var savedOverallScore: Double = 0.0
+    var savedFoodScore: Double = 0.0
+    var savedHouseScore: Double = 0.0
+    var savedTravelScore:   Double = 0.0
+    var loadPreviousScore: Bool = false
+    
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         totalScore = GreenCalculatorController.shared.totalScoreCard()
+        savedOverallScore = totalScore
         updateViews()
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        setUpPersistence()
         totalScore = GreenCalculatorController.shared.totalScoreCard()
         setFoodGraph()
         setHouseGraph()
         setTravelGraph()
         updateViews()
     }
+    
+    
     
     // MARK: - Graphs
     // FOOD
@@ -59,6 +71,7 @@ class UserResultsViewController: UIViewController {
                 return
                 
             }
+            self.savedFoodScore = foodScore
             self.foodPercentage = CGFloat((foodScore/self.totalScore)*100)
             self.foodWidthGraph.constant = self.foodPercentage
             self.view.layoutIfNeeded()
@@ -72,6 +85,7 @@ class UserResultsViewController: UIViewController {
                 print("House score error")
                 return
             }
+            self.savedHouseScore = houseScore
             self.housePercentage = CGFloat((houseScore/self.totalScore)*100)
             self.houseWidthGraph.constant =  self.housePercentage
             self.view.layoutIfNeeded()
@@ -85,11 +99,14 @@ class UserResultsViewController: UIViewController {
                 print("Travel score error")
                 return
             }
+            self.savedTravelScore = travelScore
             self.travelPercentage = CGFloat((travelScore/self.totalScore)*100)
             self.travelWidthGraph.constant =  self.travelPercentage
             self.view.layoutIfNeeded()
         }
     }
+    
+    
     
     // MARK: - Images
     // Trees
@@ -105,12 +122,28 @@ class UserResultsViewController: UIViewController {
         // Gas
     }
     
+    // MARK: Setup Persistence
+    func setUpPersistence() {
+        if LocalStorageController.shared.hasBeenHereBefore == false {
+            let newScore = SavedData(overallScore: savedOverallScore, foodScore: savedFoodScore, houseScore: savedHouseScore, travelScore: savedTravelScore, actionPlan: [])
+            LocalStorageController.shared.savedData.append(newScore)
+            LocalStorageController.shared.saveToPersistentStore()
+        } else {
+            savedData = LocalStorageController.shared.loadFromPersistenceStore()
+            loadPreviousScore = true
+        }
+        
+    }
+    
     // MARK: - Setup
     func updateViews() {
-        scoreLabel.text = String(format: "%.2f", totalScore)
+        print(LocalStorageController.shared.hasBeenHereBefore)
+        print(savedData)
+        scoreLabel.text = String(format: "%.2f", totalScore/12)
         foodScoreLabel.text = String(format: "%.2f%%", foodPercentage)
         houseScoreLabel.text = String(format: "%.2f%%", housePercentage)
         travelScoreLabel.text = String(format: "%.2f%%", travelPercentage)
         setScoreImage()
+        LocalStorageController.shared.hasBeenHereBefore = true
     }
 }

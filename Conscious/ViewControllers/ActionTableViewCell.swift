@@ -11,8 +11,6 @@ import UIKit
 protocol ActionTableViewCellDelegate: class{
     func actionChecked(for cell: ActionTableViewCell)
     func actionUnchecked(for cell: ActionTableViewCell)
-    func co2ReductionAdded(for cell: ActionTableViewCell, co2: Double)
-    func co2ReductionRemoved(for cell: ActionTableViewCell, co2: Double)
 }
 
 class ActionTableViewCell: UITableViewCell {
@@ -20,8 +18,8 @@ class ActionTableViewCell: UITableViewCell {
     @IBOutlet weak var actionViewCellButton: UIButton!
     @IBOutlet weak var actionViewCellLabel: UILabel!
     
+    var action: ActionPlanDetail?
     var actionTitle: String?
-    var co2Amount: Double?
     var actionComplete: Bool? = false
     weak var delegate: ActionTableViewCellDelegate?
     
@@ -36,41 +34,38 @@ class ActionTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func checkboxChanged() {
-        guard let testTitle = actionViewCellLabel.text, let co2Amount = co2Amount else { return }
-        let attributedString = NSMutableAttributedString(string: testTitle)
-        if actionComplete == false {
-            
-            
-            delegate?.actionChecked(for: self)
-            delegate?.co2ReductionAdded(for: self, co2: co2Amount)
-            attributedString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: NSUnderlineStyle.single.rawValue, range: NSRange(location: 0, length: attributedString.length))
-            actionViewCellLabel.attributedText = attributedString
-        } else {
-            
-            
-            delegate?.actionUnchecked(for: self)
-            delegate?.co2ReductionRemoved(for: self, co2: co2Amount)
-            attributedString.removeAttribute(NSAttributedString.Key.strikethroughStyle, range: NSRange(location: 0, length: attributedString.length))
-            actionViewCellLabel.attributedText = attributedString
-        }
-    }
     // change button status
     
     func changeButtonImage() {
-        if actionComplete == true {
+        if actionComplete == false {
             actionComplete = true
             actionViewCellButton.setTitle("Done", for: .normal)
         } else {
             actionComplete = false
             actionViewCellButton.setTitle("Do", for: .normal)
         }
-        
     }
+    
     // change attributedString
+    func changeString() {
+        guard let action = action else { return }
+        let testTitle = action.action
+        let attributedString = NSMutableAttributedString(string: testTitle)
+        if actionComplete == true {
+            delegate?.actionChecked(for: self)
+            attributedString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: NSUnderlineStyle.single.rawValue, range: NSRange(location: 0, length: attributedString.length))
+            actionViewCellLabel.attributedText = attributedString
+        } else {
+            delegate?.actionUnchecked(for: self)
+            attributedString.removeAttribute(NSAttributedString.Key.strikethroughStyle, range: NSRange(location: 0, length: attributedString.length))
+            actionViewCellLabel.attributedText = attributedString
+        }
+    }
+    
     
     @IBAction func actionViewCellButtonChecked(_ sender: Any) {
-        checkboxChanged()
+        changeButtonImage()
+        changeString()
     }
     
 }

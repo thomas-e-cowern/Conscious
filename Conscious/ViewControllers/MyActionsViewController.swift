@@ -17,24 +17,13 @@ class MyActionsViewController: UIViewController {
     
     var myActions: [ActionPlanDetail]  = []
     var actionsCompleted: [ActionPlanDetail]  = []
-//    var actionsCompleted: Int = 0 {
-//        didSet {
-//            actionsCompleteLabel.text = "\(actionsCompleted)"
-//        }
-//    }
-    var reductionInCo2: Double = 0 {
-        didSet {
-//            String(format: "%.2f", totalScore)
-            let totalCarbon = String(format: "%.2f", reductionInCo2/52)
-            carbonSavedLabel.text = totalCarbon + " lbs of CO2e lbs saved!"
-        }
-    }
+    var totalCarbonSavings: Double = 0
+    var actionsCompletedCount: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         myActionsTableview.dataSource = self
         updateViews()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,22 +33,12 @@ class MyActionsViewController: UIViewController {
     
     func updateViews() {
         myActions = ActionPlanController.shared.userActionList
-        actionsPledged.text = " / \(myActions.count)"
-        carbonSavedLabel.text = "0 lbs of CO2e lbs saved!"
+        actionsCompleteLabel.text = "\(actionsCompletedCount)"
+        actionsPledged.text = " of \(myActions.count)"
+        let carbonSavingString = String(format: "%.2f", totalCarbonSavings/52)
+        carbonSavedLabel.text = "\(carbonSavingString) lbs of CO2e lbs saved!"
         myActionsTableview.reloadData()
     }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
 
 extension MyActionsViewController: UITableViewDataSource {
@@ -70,28 +49,32 @@ extension MyActionsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myActionsCell", for: indexPath) as! ActionTableViewCell
-        let action = myActions[indexPath.row]
-        cell.actionViewCellLabel.text = action.action
-        cell.co2Amount = action.carbonReduction
+        cell.action = myActions[indexPath.row]
+        cell.actionViewCellLabel.text = myActions[indexPath.row].action
         cell.delegate = self
         return cell
     }
 }
 
 extension MyActionsViewController: ActionTableViewCellDelegate{
-    func co2ReductionAdded(for cell: ActionTableViewCell, co2: Double) {
-        reductionInCo2 += co2
-    }
-    
-    func co2ReductionRemoved(for cell: ActionTableViewCell, co2: Double) {
-        reductionInCo2 -= co2
-    }
- 
     func actionChecked(for cell: ActionTableViewCell){
+        guard let action = cell.action else { return }
+        cell.action?.completed = true
         actionsCompleted = myActions.filter{ $0.completed == true }
+        actionsCompletedCount += 1
+        let carbonReduction = (action.carbonReduction ?? 0)
+        totalCarbonSavings += carbonReduction
+        actionsCompleted.append(action)
+        updateViews()
     }
     
     func actionUnchecked(for cell: ActionTableViewCell){
-//        actionsCompleted -= 1
+        guard let action = cell.action else { return }
+        cell.action?.completed = false
+        actionsCompleted = myActions.filter{ $0.completed == true }
+        actionsCompletedCount -= 1
+        let carbonReduction = (action.carbonReduction ?? 0)
+        totalCarbonSavings -= carbonReduction
+        updateViews()
     }
 }

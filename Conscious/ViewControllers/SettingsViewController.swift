@@ -11,7 +11,6 @@ import UserNotifications
 
 class SettingsViewController: UIViewController {
     
-    @IBOutlet weak var notificationSwtich: UISwitch!
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -19,22 +18,18 @@ class SettingsViewController: UIViewController {
     }
     
     // MARK: - Methods
-    @IBAction func notificationsDidChange(_ sender: Any) {
-        print(notificationSwtich.isOn)
-        
-        if !notificationSwtich.isOn {
-            print("Should be turning notifications off")
-            func cancelUserNotifications(for alarm: Alarm) {
-                UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+    @IBAction func notificationButtonTapped(_ sender: Any) {
+        print("notificationButtonTapped")
+            guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+                return
             }
             
-        }
-        //        var notificationRawStatus: Int = 1
-        //        UNUserNotificationCenter.current().getNotificationSettings { settings in
-        //            notificationRawStatus = Int(settings.authorizationStatus.rawValue)
-        //            print(notificationRawStatus)
-        //
-        //        }
+            if UIApplication.shared.canOpenURL(settingsUrl) {
+                UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+                    print("Settings opened: \(success)") // Prints true
+                })
+            }
+        
     }
     
     // MARK: - Actions
