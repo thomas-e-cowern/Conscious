@@ -617,6 +617,7 @@ Pledged</string>
                     </navigationItem>
                     <connections>
                         <outlet property="actionBenefitsLabel" destination="CmW-v4-5oL" id="nHo-Sa-qO8"/>
+                        <outlet property="actionImageView" destination="5LX-xw-oec" id="dAl-yC-38g"/>
                         <outlet property="actionSummaryLabel" destination="5HN-Za-Jhn" id="n8w-ud-yo5"/>
                         <outlet property="actionTitleLabel" destination="eWa-bd-yzF" id="oPH-F4-JDK"/>
                         <outlet property="addToActionListButton" destination="VQ1-dP-tiT" id="ehb-sc-Oob"/>
@@ -647,7 +648,6 @@ Pledged</string>
         <!--Take Actions-->
         <scene sceneID="3FG-Uh-bas">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b2S-d7-ln5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sAV-Lx-pgF" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Take Actions" id="RvB-8b-xAZ"/>
                     <toolbarItems/>
@@ -660,13 +660,13 @@ Pledged</string>
                         <segue destination="ykf-oU-BYa" kind="relationship" relationship="rootViewController" id="Ya7-Ck-mxh"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b2S-d7-ln5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2263.1999999999998" y="1047.5262368815593"/>
         </scene>
         <!--My Footprint-->
         <scene sceneID="DaQ-wK-Wyz">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZGe-KQ-tj9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4dU-pV-nQW" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="My Footprint" id="fC4-8m-TdU"/>
                     <toolbarItems/>
@@ -679,13 +679,13 @@ Pledged</string>
                         <segue destination="m5D-ge-21F" kind="relationship" relationship="rootViewController" id="WQu-ql-KFb"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZGe-KQ-tj9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2263.1999999999998" y="199.25037481259372"/>
         </scene>
         <!--My Actions-->
         <scene sceneID="lDq-x1-Kh6">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0Aa-vh-7EQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q9z-ja-Fha" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="My Actions" id="MDk-1W-EVm"/>
                     <toolbarItems/>
@@ -698,6 +698,7 @@ Pledged</string>
                         <segue destination="sqo-jx-Ig6" kind="relationship" relationship="rootViewController" id="v0c-3x-PyF"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Aa-vh-7EQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4154.3999999999996" y="2010.9445277361322"/>
         </scene>
