@@ -28,118 +28,123 @@ class UserResultsViewController: UIViewController {
     @IBOutlet weak var houseWidthGraph: NSLayoutConstraint!
     @IBOutlet weak var travelWidthGraph: NSLayoutConstraint!
     
+    // Raw scores
+    var totalScore: Double = 1.0
+    var foodScore: Double = 1.0
+    var houseScore: Double = 1.0
+    var travelScore: Double = 1.0
+    
     // Green Scores
-    var totalScore = 0.0
     var foodPercentage: CGFloat = 0.0
     var housePercentage: CGFloat = 0.0
     var travelPercentage: CGFloat = 0.0
     
     // Local storage
     var savedData: [SavedData] = []
-    var savedOverallScore: Double = 0.0
-    var savedFoodScore: Double = 0.0
-    var savedHouseScore: Double = 0.0
-    var savedTravelScore:   Double = 0.0
-    var loadPreviousScore: Bool = false
+    var isNewQuiz: Bool = false
     
     // MARK: - View Life Cycle
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        savedData = LocalStorageController.shared.loadFromPersistenceStore()
+        
         if LocalStorageController.shared.isNewQuiz == true {
             print("New Quiz")
-            totalScore = GreenCalculatorController.shared.totalScoreCard()
-            savedOverallScore = totalScore
-            checkNewQuiz()
+            getNewResults()
+            updateViews()
         } else {
-            print("Saved Data: \(savedData)")
-            guard let overallScore = savedData.last?.overallScore else { return }
-            totalScore = overallScore
-            savedOverallScore = totalScore
-            checkNewQuiz()
+            print("Saved Data")
+            getSavedData()
+            updateViews()
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        checkNewQuiz()
-        //        setUpPersistence()
-        //        totalScore = GreenCalculatorController.shared.totalScoreCard()
-        //        setFoodGraph()
-        //        setHouseGraph()
-        //        setTravelGraph()
-        //        updateViews()
+        
     }
     
+    func getNewResults () {
+        totalScore = GreenCalculatorController.shared.totalScoreCard()
+        
+        if totalScore == 0 {
+            totalScore = 1.0
+        }
+        
+        foodScore = GreenCalculatorController.shared.calculateFoodScore() ?? 1.0
+        
+        houseScore = GreenCalculatorController.shared.calculateHouseScore() ?? 1.0
+        
+        travelScore = GreenCalculatorController.shared.calculateTravelScore() ?? 1.0
+        
+        setFoodGraph(foodScore, totalScore)
+        setHouseGraph(houseScore, totalScore)
+        setTravelGraph(travelScore, totalScore)
+        
+        LocalStorageController.shared.addNewResults(overallScore: totalScore, foodScore: foodScore, houseScore: houseScore, travelScore: travelScore, actionPlan: [])
+    }
     
+    func getSavedData () {
+        let savedData = LocalStorageController.shared.loadFromPersistenceStore()
+        print("👑👑👑👑👑👑👑👑\(savedData)👑👑👑👑👑👑👑👑👑")
+        guard let savedDataLast = savedData.last else {
+            print("⛑⛑⛑⛑⛑⛑⛑⛑Problem getting saved data⛑⛑⛑⛑⛑⛑⛑⛑⛑⛑")
+            return
+        }
+        print("↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️\(savedData)↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️")
+        totalScore = savedDataLast.overallScore == 0 ? 1.0 : savedDataLast.overallScore
+        foodScore = savedDataLast.foodScore == 0 ? 1.0 : savedDataLast.foodScore
+        houseScore = savedDataLast.houseScore == 0 ? 1.0 : savedDataLast.houseScore
+        travelScore = savedDataLast.travelScore == 0 ? 1.0 : savedDataLast.travelScore
+        print("🔥🔥🔥🔥🔥🔥🔥🔥🔥savedData Count: \(savedData.count)🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥")
+        print("\(totalScore)")
+        print("\(foodScore)")
+        print("\(houseScore)")
+        print("\(travelScore)")
+        print("\(savedDataLast.actionPlan)")
+        
+        setFoodGraph(foodScore, totalScore)
+        setHouseGraph(houseScore, totalScore)
+        setTravelGraph(travelScore, totalScore)
+    }
     
     // MARK: - Graphs
     // FOOD
-    func setFoodGraph(_ new: Bool){
+    func setFoodGraph(_ foodScore: Double, _ totalScore: Double){
+        
         UIView.animate(withDuration: 2.5) {
-            if new == true {
-                guard let foodScore = GreenCalculatorController.shared.calculateFoodScore() else {
-                    print("Food score error")
-                    return
-                }
-                self.savedFoodScore = foodScore
-                self.foodPercentage = CGFloat((foodScore/self.totalScore)*100)
-                self.foodWidthGraph.constant = self.foodPercentage
-                self.view.layoutIfNeeded()
-            } else {
-                guard let foodScore = self.savedData.last?.foodScore else { return }
-                self.foodPercentage = CGFloat((foodScore/self.totalScore)*100)
-                self.foodWidthGraph.constant = self.foodPercentage
-                self.view.layoutIfNeeded()
-            }
+            self.foodPercentage = CGFloat((foodScore/totalScore)*100)
+            print(self.foodPercentage)
+            self.foodWidthGraph.constant = self.foodPercentage
+            self.view.layoutIfNeeded()
         }
     }
     
     // HOUSE
-    func setHouseGraph(_ new: Bool){
+    func setHouseGraph(_ houseScore: Double, _ totalScore: Double){
         UIView.animate(withDuration: 2.5) {
-            if new == true {
-                guard let houseScore = GreenCalculatorController.shared.calculateHouseScore() else {
-                    print("House score error")
-                    return
-                }
-                self.savedHouseScore = houseScore
-                self.housePercentage = CGFloat((houseScore/self.totalScore)*100)
-                self.houseWidthGraph.constant =  self.housePercentage
-                self.view.layoutIfNeeded()
-            } else {
-                guard let houseScore = self.savedData.last?.houseScore else { return }
-                self.housePercentage = CGFloat((houseScore/self.totalScore)*100)
-                self.houseWidthGraph.constant =  self.housePercentage
-                self.view.layoutIfNeeded()
-            }
-            
+            self.housePercentage = CGFloat((houseScore/totalScore)*100)
+            print(self.housePercentage)
+            self.houseWidthGraph.constant =  self.housePercentage
+            self.view.layoutIfNeeded()
         }
     }
     
     // TRAVEL
-    func setTravelGraph(_ new: Bool){
+    func setTravelGraph(_ travelScore: Double, _ totalScore: Double){
         UIView.animate(withDuration: 2.5) {
-            if new == true {
-                guard let travelScore = GreenCalculatorController.shared.calculateTravelScore() else {
-                    print("Travel score error")
-                    return
-                }
-                self.savedTravelScore = travelScore
-                self.travelPercentage = CGFloat((travelScore/self.totalScore)*100)
-                self.travelWidthGraph.constant =  self.travelPercentage
-                self.view.layoutIfNeeded()
-            } else {
-                guard let travelScore = self.savedData.last?.travelScore else { return }
-                self.travelPercentage = CGFloat((travelScore/self.totalScore)*100)
-                self.travelWidthGraph.constant =  self.travelPercentage
-                self.view.layoutIfNeeded()
-            }
-            
+            self.travelPercentage = CGFloat((travelScore/totalScore)*100)
+            print(self.travelPercentage)
+            self.travelWidthGraph.constant =  self.travelPercentage
+            self.view.layoutIfNeeded()
         }
     }
-    
-    
     
     // MARK: - Images
     // Trees
@@ -149,53 +154,18 @@ class UserResultsViewController: UIViewController {
         } else if GreenCalculatorController.shared.totalScoreCard() < 100 {
             treesImageView.image = #imageLiteral(resourceName: "alltrees")
         }
-        
-        // Trash
-        
-        // Gas
     }
     
-    // MARK: Setup Persistence
-    func setUpPersistence() {
-        if LocalStorageController.shared.hasBeenHereBefore == false {
-            let newScore = SavedData(overallScore: savedOverallScore, foodScore: savedFoodScore, houseScore: savedHouseScore, travelScore: savedTravelScore, actionPlan: [])
-            LocalStorageController.shared.savedData.append(newScore)
-            LocalStorageController.shared.saveToPersistentStore()
-        } else {
-            savedData = LocalStorageController.shared.loadFromPersistenceStore()
-            loadPreviousScore = true
-        }
+    @IBAction func retakeQuizButtonTapped(_ sender: Any) {
         
-    }
-    
-    func checkNewQuiz() {
-        print("❤️❤️❤️❤️❤️❤️❤️❤️❤️Inside New Quiz❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️")
-        if LocalStorageController.shared.isNewQuiz == true {
-            setUpPersistence()
-            totalScore = GreenCalculatorController.shared.totalScoreCard()
-            setFoodGraph(true)
-            setHouseGraph(true)
-            setTravelGraph(true)
-            updateViews()
-        } else {
-            setUpPersistence()
-            totalScore = GreenCalculatorController.shared.totalScoreCard()
-            setFoodGraph(false)
-            setHouseGraph(false)
-            setTravelGraph(false)
-            updateViews()
-        }
     }
     
     // MARK: - Setup
     func updateViews() {
-        print(LocalStorageController.shared.hasBeenHereBefore)
-        print(savedData)
         scoreLabel.text = String(format: "%.2f", totalScore/12)
         foodScoreLabel.text = String(format: "%.2f%%", foodPercentage)
         houseScoreLabel.text = String(format: "%.2f%%", housePercentage)
         travelScoreLabel.text = String(format: "%.2f%%", travelPercentage)
         setScoreImage()
-        LocalStorageController.shared.hasBeenHereBefore = true
     }
 }

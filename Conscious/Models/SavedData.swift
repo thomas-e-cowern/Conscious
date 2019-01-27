@@ -15,7 +15,7 @@ struct SavedData: Codable, Equatable {
     let foodScore: Double
     let houseScore: Double
     let travelScore:   Double
-    let actionPlan: [ActionPlanDetail]?
+    var actionPlan: [ActionPlanDetail]?
     
     // Initializer
     init(overallScore: Double, foodScore: Double, houseScore: Double, travelScore: Double, actionPlan: [ActionPlanDetail] = []) {

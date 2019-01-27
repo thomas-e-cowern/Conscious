@@ -83,6 +83,7 @@ class QuizViewController: UIViewController {
             updateViews()
         } else {
             performSegue(withIdentifier: "scoreSegue", sender: nil)
+            LocalStorageController.shared.isNewQuiz = true
         }
     }
     

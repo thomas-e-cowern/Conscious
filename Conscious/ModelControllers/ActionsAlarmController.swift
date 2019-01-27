@@ -113,11 +113,7 @@ extension AlarmScheduler {
         }
         
         let fireDate = alarm.fireDate
-        
-//        let dateComponentsTwiceAYear = Calendar.current.dateComponents([.month, .day, .hour, .minute], from: fireDate)
-//        let dateComponentsMonthly = Calendar.current.dateComponents([.month, .day, .hour, .minute], from: fireDate)
-//        let dateComponentsTwiceAMonth = Calendar.current.dateComponents([.weekday, .day, .hour,. minute], from: fireDate)
-//        let dateComponentsWeekly = Calendar.current.dateComponents([.weekday, .day, .hour, .minute], from: fireDate)
+
         let dateComponentsMinute = Calendar.current.dateComponents([.second], from: fireDate)
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponentsMinute, repeats: true)

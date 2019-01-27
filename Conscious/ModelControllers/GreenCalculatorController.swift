@@ -16,6 +16,8 @@ class GreenCalculatorController {
     // Source of Truth
     var userAnswers: [Answer] = []
     
+    var isNewQuiz = true
+    
     // MARK: - Properties
     // FOOD
     var wastedFood: WastedFood?
@@ -123,9 +125,6 @@ class GreenCalculatorController {
     
     // GREEN
     func totalScoreCard() -> Double {
-        LocalStorageController.shared.isNewQuiz = true
         return (calculateFoodScore() ?? 0) + (calculateHouseScore() ?? 0) + (calculateTravelScore() ?? 0)
     }
-    
-    
 }
