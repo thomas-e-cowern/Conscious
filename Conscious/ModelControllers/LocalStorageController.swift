@@ -18,6 +18,21 @@ class LocalStorageController {
     
     var savedData: [SavedData] = []
     
+    func addNewResults(overallScore: Double, foodScore: Double, houseScore: Double, travelScore: Double, actionPlan: [ActionPlanDetail] = []) {
+        let newResults = SavedData(overallScore: overallScore, foodScore: foodScore, houseScore: houseScore, travelScore: travelScore, actionPlan: [])
+        savedData.append(newResults)
+        self.saveToPersistentStore()
+    }
+    
+    func updateActionList(savedData: SavedData, actionPlan: ActionPlanDetail) {
+        var savedData = savedData
+        let actionPlanItem = actionPlan
+        savedData.actionPlan?.append(actionPlanItem)
+        print("savedData in LSC: \(savedData)")
+        print("actionplan in LSC: \(savedData.actionPlan)")
+        self.saveToPersistentStore()
+    }
+    
     func fileURL() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let documentsDirectory = paths[0]
@@ -32,7 +47,7 @@ class LocalStorageController {
     func saveToPersistentStore() {
         let encoder = JSONEncoder()
         do {
-            let data = try encoder.encode(savedData)
+            let data = try encoder.encode(self.savedData)
             try data.write(to: fileURL())
         } catch {
             print("Error: \(#function): \(error) : \(error.localizedDescription)")
@@ -52,6 +67,4 @@ class LocalStorageController {
         return []
     }
 }
-
-
 

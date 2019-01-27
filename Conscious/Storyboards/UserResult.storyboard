@@ -224,6 +224,7 @@
                                                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <connections>
+                                                                    <action selector="retakeQuizButtonTapped:" destination="fiP-DC-Qcg" eventType="touchUpInside" id="1HI-xx-Wad"/>
                                                                     <segue destination="MmR-hZ-klD" kind="show" id="8Jv-bB-Ko4"/>
                                                                 </connections>
                                                             </button>

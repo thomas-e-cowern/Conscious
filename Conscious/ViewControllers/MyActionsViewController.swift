@@ -22,7 +22,10 @@ class MyActionsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let savedData = LocalStorageController.shared.loadFromPersistenceStore().last else { return }
+        myActions = savedData.actionPlan ?? []
         myActionsTableview.dataSource = self
+        
         updateViews()
     }
     
