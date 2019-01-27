@@ -10,9 +10,6 @@ import UIKit
 
 class ActionDetailViewController: UIViewController {
 
-    // MARK: - Properties
-    var action: ActionPlanDetail?
-    
     // MARK: - Outlets
     @IBOutlet weak var addToActionListButton: UIButton!
     @IBOutlet weak var actionTitleLabel: UILabel!
@@ -20,19 +17,27 @@ class ActionDetailViewController: UIViewController {
     @IBOutlet weak var actionBenefitsLabel: UILabel!
     @IBOutlet weak var co2ReductionLabel: UILabel!
     @IBOutlet weak var moneySavedLabel: UILabel!
+    @IBOutlet weak var actionImageView: UIImageView!
+    
+    // MARK: - Properties
+    var action: ActionPlanDetail?
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        updateViews()
+    }
+    
+    // MARK: - Setup
+    func updateViews() {
         actionTitleLabel.text = action?.action
         actionSummaryLabel.text = action?.actionSummry
         actionBenefitsLabel.text = action?.benefits
         co2ReductionLabel.text = "\(action?.carbonReduction ?? 0.0) lbs CO2e Saved"
         moneySavedLabel.text = "$\(action?.costSavings ?? 0.0) Saved"
     }
- 
-    // MARK: - Actions")
+    
+    // MARK: - Actions
     @IBAction func addToActionListButtonTapped(_ sender: Any) {
         guard let action = action else { return }
         addToActionListButton.setTitle("Added to Action List", for: .normal)
@@ -41,6 +46,5 @@ class ActionDetailViewController: UIViewController {
         ActionPlanController.shared.reductionInCost += action.costSavings ?? 0.0
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
-        
     }
 }

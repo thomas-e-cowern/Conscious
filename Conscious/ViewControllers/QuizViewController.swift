@@ -67,10 +67,13 @@ class QuizViewController: UIViewController {
     func updateImageView() {
         if question?.category.rawValue == "Food" {
             categoryImageView.image = #imageLiteral(resourceName: "Cow")
+            categoryLabel.backgroundColor = #colorLiteral(red: 0.9399999976, green: 0.4199999869, blue: 0.3400000036, alpha: 1)
         } else if question?.category.rawValue == "House" {
             categoryImageView.image = #imageLiteral(resourceName: "House")
+            categoryLabel.backgroundColor = #colorLiteral(red: 0.4900000095, green: 0.8299999833, blue: 0.6899999976, alpha: 1)
         } else if question?.category.rawValue == "Travel" {
             categoryImageView.image = #imageLiteral(resourceName: "Travel")
+            categoryLabel.backgroundColor = #colorLiteral(red: 1, green: 0.7599999905, blue: 0.02999999933, alpha: 1)
         }
     }
     

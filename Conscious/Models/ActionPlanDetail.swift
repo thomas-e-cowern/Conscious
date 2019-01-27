@@ -6,7 +6,7 @@
 //  Copyright © 2019 Thomas Cowern New. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct ActionPlanDetail: Codable {
     let action: String

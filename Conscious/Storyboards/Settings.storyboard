@@ -53,41 +53,158 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
             <point key="canvasLocation" x="865" y="-146"/>
         </scene>
         <!--Citation-->
-        <scene sceneID="uW2-wF-nfc">
+        <scene sceneID="J0X-2m-c13">
             <objects>
-                <tableViewController title="Citation" id="teX-6A-W5C" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ixj-NT-ban">
+                <viewController title="Citation" id="ZWG-lL-bd3" customClass="CitationViewController" customModule="Conscious" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Ln-fX-iPL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="vVi-ig-Ql5">
+                                <rect key="frame" x="16" y="138" width="343" height="472"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60k-19-vUl">
+                                        <rect key="frame" x="0.0" y="0.0" width="229" height="30"/>
+                                        <state key="normal" title="fruitsandveggiesmorematters.org">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="fruitsAndVeggies:" destination="ZWG-lL-bd3" eventType="touchUpInside" id="w6G-No-QKU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQF-Cw-FcW">
+                                        <rect key="frame" x="0.0" y="34" width="142" height="30"/>
+                                        <state key="normal" title="snaped.fns.usda.gov">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="snaped:" destination="ZWG-lL-bd3" eventType="touchUpInside" id="dKg-PQ-dDi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWT-fp-B94">
+                                        <rect key="frame" x="0.0" y="68" width="68" height="30"/>
+                                        <state key="normal" title="ucanr.edu">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="ucanr:" destination="ZWG-lL-bd3" eventType="touchUpInside" id="ycR-PV-3ll"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAk-1F-ADv">
+                                        <rect key="frame" x="0.0" y="102" width="143" height="30"/>
+                                        <state key="normal" title="dailyinfographic.com">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dailyInfoGraphic:" destination="ZWG-lL-bd3" eventType="touchUpInside" id="Rd2-VN-zXf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pw-fe-7pd">
+                                        <rect key="frame" x="0.0" y="136" width="114" height="30"/>
+                                        <state key="normal" title="banthebottle.net">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="banTheBottle:" destination="ZWG-lL-bd3" eventType="touchUpInside" id="bsu-5f-QIK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndN-CA-4Yv">
+                                        <rect key="frame" x="0.0" y="170" width="84" height="30"/>
+                                        <state key="normal" title="gogreen.org">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goGreen:" destination="ZWG-lL-bd3" eventType="touchUpInside" id="ISI-5P-oxD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Acc-sR-eat">
+                                        <rect key="frame" x="0.0" y="204" width="99" height="30"/>
+                                        <state key="normal" title="sciencing.com">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sciencing:" destination="ZWG-lL-bd3" eventType="touchUpInside" id="qTj-bW-6VX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTz-4c-2p4">
+                                        <rect key="frame" x="0.0" y="238" width="125" height="30"/>
+                                        <state key="normal" title="valuepenguin.com">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="valuePenguin:" destination="ZWG-lL-bd3" eventType="touchUpInside" id="QQz-52-YXs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fer-3x-1Y4">
+                                        <rect key="frame" x="0.0" y="272" width="130" height="30"/>
+                                        <state key="normal" title="ourstreetsmpls.org">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="ourStreetSmpls:" destination="ZWG-lL-bd3" eventType="touchUpInside" id="TQ7-cb-qIC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24j-3c-dsH">
+                                        <rect key="frame" x="0.0" y="306" width="138" height="30"/>
+                                        <state key="normal" title="powerscorecard.org">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="powerScoreCard:" destination="ZWG-lL-bd3" eventType="touchUpInside" id="v33-1o-rja"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ifz-SS-EhY">
+                                        <rect key="frame" x="0.0" y="340" width="70" height="30"/>
+                                        <state key="normal" title="tc.pbs.org">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tc:" destination="ZWG-lL-bd3" eventType="touchUpInside" id="Zms-HU-n3v"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVb-8S-TOu">
+                                        <rect key="frame" x="0.0" y="374" width="117" height="30"/>
+                                        <state key="normal" title="researchgate.net">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="researchGate:" destination="ZWG-lL-bd3" eventType="touchUpInside" id="mx0-Xw-XTt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofg-71-uZu">
+                                        <rect key="frame" x="0.0" y="408" width="55" height="30"/>
+                                        <state key="normal" title="epa.gov">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="epa:" destination="ZWG-lL-bd3" eventType="touchUpInside" id="9ie-kj-I3d"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9h-Ve-pFQ">
+                                        <rect key="frame" x="0.0" y="442" width="161" height="30"/>
+                                        <state key="normal" title="carbonindependent.org">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="carbonIndependent:" destination="ZWG-lL-bd3" eventType="touchUpInside" id="fXn-Zm-kgh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="2bH-Hk-Rzn" style="IBUITableViewCellStyleDefault" id="Iyw-gu-fBr">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Iyw-gu-fBr" id="4Gj-oB-pKE">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2bH-Hk-Rzn">
-                                            <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="teX-6A-W5C" id="fOU-mj-EDs"/>
-                            <outlet property="delegate" destination="teX-6A-W5C" id="9MY-5K-Xng"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9FY-lh-TFJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="pdn-bf-UJl" firstAttribute="trailing" secondItem="vVi-ig-Ql5" secondAttribute="trailing" constant="16" id="9kd-iA-sit"/>
+                            <constraint firstItem="pdn-bf-UJl" firstAttribute="bottom" secondItem="vVi-ig-Ql5" secondAttribute="bottom" constant="13" id="Hm3-4s-YFO"/>
+                            <constraint firstItem="vVi-ig-Ql5" firstAttribute="leading" secondItem="pdn-bf-UJl" secondAttribute="leading" constant="16" id="PaC-G2-ZBv"/>
+                            <constraint firstItem="vVi-ig-Ql5" firstAttribute="top" secondItem="pdn-bf-UJl" secondAttribute="top" constant="22" id="m5c-V6-kfK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pdn-bf-UJl"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NYk-fO-cM7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="865" y="642"/>
+            <point key="canvasLocation" x="865" y="656"/>
         </scene>
         <!--Settings-->
         <scene sceneID="5PH-6e-kdh">
@@ -98,7 +215,7 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="iyG-fi-IUu">
-                                <rect key="frame" x="24" y="160" width="327" height="241"/>
+                                <rect key="frame" x="24" y="160" width="327" height="274"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3WZ-oq-whv">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="83"/>
@@ -130,7 +247,7 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="esY-L4-k9l">
-                                        <rect key="frame" x="0.0" y="83" width="327" height="166"/>
+                                        <rect key="frame" x="0.0" y="108" width="327" height="166"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6v6-Jh-dzm">
                                                 <rect key="frame" x="0.0" y="0.0" width="327" height="83"/>
@@ -178,7 +295,7 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
                                                             <constraint firstAttribute="height" constant="83" id="eIX-j8-qR9"/>
                                                         </constraints>
                                                         <connections>
-                                                            <segue destination="teX-6A-W5C" kind="show" id="Aid-zT-ekw"/>
+                                                            <segue destination="ZWG-lL-bd3" kind="show" id="c8f-P4-0hn"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
