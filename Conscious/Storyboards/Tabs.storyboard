@@ -689,7 +689,7 @@ Pledged</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b2S-d7-ln5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2263.1999999999998" y="1047.5262368815593"/>
+            <point key="canvasLocation" x="-2545" y="1048"/>
         </scene>
         <!--My Footprint-->
         <scene sceneID="DaQ-wK-Wyz">
@@ -703,7 +703,7 @@ Pledged</string>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="m5D-ge-21F" kind="relationship" relationship="rootViewController" id="WQu-ql-KFb"/>
+                        <segue destination="m5D-ge-21F" kind="relationship" relationship="rootViewController" id="yVV-dF-aIz"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZGe-KQ-tj9" userLabel="First Responder" sceneMemberID="firstResponder"/>
