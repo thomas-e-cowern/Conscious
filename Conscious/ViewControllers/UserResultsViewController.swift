@@ -46,13 +46,14 @@ class UserResultsViewController: UIViewController {
     // MARK: - View Life Cycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
         if LocalStorageController.shared.isNewQuiz == true {
             print("New Quiz")
@@ -63,11 +64,6 @@ class UserResultsViewController: UIViewController {
             getSavedData()
             updateViews()
         }
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
     }
     
     func getNewResults () {

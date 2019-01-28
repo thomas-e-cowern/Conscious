@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,18 +19,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Conscious Logo" translatesAutoresizingMaskIntoConstraints="NO" id="GXA-KF-wFT">
-                                <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="aGn-5H-alR"/>
-                                    <constraint firstAttribute="width" constant="200" id="aer-qI-PS2"/>
-                                </constraints>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ekg-jf-yTC">
+                                <rect key="frame" x="87.5" y="212.5" width="200" height="242"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Conscious Logo" translatesAutoresizingMaskIntoConstraints="NO" id="GXA-KF-wFT">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="aGn-5H-alR"/>
+                                            <constraint firstAttribute="width" constant="200" id="aer-qI-PS2"/>
+                                            <constraint firstAttribute="width" secondItem="GXA-KF-wFT" secondAttribute="height" multiplier="1:1" id="op8-On-tsx"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conscious" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ni4-09-vAZ">
+                                        <rect key="frame" x="20.5" y="200" width="159" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <color key="textColor" name="LightGreen"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="GXA-KF-wFT" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="4at-Em-EYt"/>
-                            <constraint firstItem="GXA-KF-wFT" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="cxy-o9-j9t"/>
+                            <constraint firstItem="Ekg-jf-yTC" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Cac-77-kNs"/>
+                            <constraint firstItem="Ekg-jf-yTC" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="dsf-9c-OZD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -41,5 +54,8 @@
     </scenes>
     <resources>
         <image name="Conscious Logo" width="372" height="372"/>
+        <namedColor name="LightGreen">
+            <color red="0.68999999761581421" green="0.77999997138977051" blue="0.5899999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
