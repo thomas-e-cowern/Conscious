@@ -15,6 +15,7 @@ class ActionDetailViewController: UIViewController {
     @IBOutlet weak var actionTitleLabel: UILabel!
     @IBOutlet weak var actionSummaryLabel: UILabel!
     @IBOutlet weak var actionBenefitsLabel: UILabel!
+    @IBOutlet weak var chllengeDetail: UILabel!
     @IBOutlet weak var co2ReductionLabel: UILabel!
     @IBOutlet weak var moneySavedLabel: UILabel!
     @IBOutlet weak var actionImageView: UIImageView!
@@ -30,11 +31,15 @@ class ActionDetailViewController: UIViewController {
     
     // MARK: - Setup
     func updateViews() {
-        actionTitleLabel.text = action?.action
-        actionSummaryLabel.text = action?.actionSummry
-        actionBenefitsLabel.text = action?.benefits
-        co2ReductionLabel.text = "\(action?.carbonReduction ?? 0.0) lbs CO2e Saved"
-        moneySavedLabel.text = "$\(action?.costSavings ?? 0.0) Saved"
+        guard let action = action else { return }
+        let imageTitle = "\(action.action)"
+        actionTitleLabel.text = action.action
+        actionSummaryLabel.text = action.actionSummry
+        chllengeDetail.text = action.challenge
+        actionBenefitsLabel.text = action.benefits
+        co2ReductionLabel.text = "\(action.carbonReduction ?? 0.0) lbs CO2e Saved"
+        moneySavedLabel.text = "$\(action.costSavings ?? 0.0) Saved"
+        actionImageView.image = UIImage(named: imageTitle)
     }
     
     // MARK: - Actions
@@ -47,7 +52,7 @@ class ActionDetailViewController: UIViewController {
         ActionPlanController.shared.userActionList.append(action)
         let newActionItem = action
         ActionPlanController.shared.reductionInCost += action.costSavings ?? 0.0
-//        LocalStorageController.shared.updateActionList(savedData: savedData, actionPlan: newActionItem)
+        LocalStorageController.shared.updateActionList(savedData: savedData, actionPlan: newActionItem)
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }

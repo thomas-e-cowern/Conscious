@@ -29,7 +29,7 @@ struct ActionPlan {
     var type: Categories
 }
 
-struct ScoreCard {
+struct ScoreCard: Codable {
     var foodScore: Double
     var houseScore: Double
     var travelScore: Double
