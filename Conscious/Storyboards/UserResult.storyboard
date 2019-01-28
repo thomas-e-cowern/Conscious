@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lLq-gx-p8b">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fiP-DC-Qcg">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bMn-tb-Nvw">
-                                <rect key="frame" x="0.0" y="64" width="414" height="1336"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="1380"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ygi-cb-3zb">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1272"/>
@@ -279,7 +279,7 @@
                                                                 <rect key="frame" x="0.0" y="28.5" width="373" height="30"/>
                                                                 <state key="normal" title="Take Action"/>
                                                                 <connections>
-                                                                    <segue destination="ovA-rz-whv" kind="show" id="zb5-Wu-STa"/>
+                                                                    <segue destination="ovA-rz-whv" kind="presentation" id="SDQ-H2-IW2"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -320,7 +320,7 @@
                         <barButtonItem key="rightBarButtonItem" image="icons8-gear-32" width="25" style="plain" id="bWl-Xh-ije">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="RaS-Mg-IJy" kind="show" id="Jgz-ZU-YjQ"/>
+                                <segue destination="RaS-Mg-IJy" kind="modal" id="Jgz-ZU-YjQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -371,25 +371,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vsC-ne-IDa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4826" y="-1080"/>
-        </scene>
-        <!--My Footprint-->
-        <scene sceneID="aOL-zx-NXv">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lLq-gx-p8b" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Footprint" id="wgh-OD-hjA"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="M5C-ru-God">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="fiP-DC-Qcg" kind="relationship" relationship="rootViewController" id="Qed-yZ-HUW"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nTP-iE-gGy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3052" y="-1264.3178410794603"/>
         </scene>
     </scenes>
     <resources>

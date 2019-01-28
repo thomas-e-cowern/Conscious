@@ -58,6 +58,8 @@ class QuizViewController: UIViewController {
         let totalProgress = Float(questionIndex) / Float(allQs.count)
         self.question = allQs[questionIndex]
         categoryLabel.text = self.question?.category.rawValue
+//        categoryLabel.layer.cornerRadius = 4
+//        categoryLabel.layer.masksToBounds = true
         questionLabel.text = self.question?.text
         quizProgressView.setProgress(totalProgress, animated: true)
         tableView.reloadData()
@@ -68,12 +70,18 @@ class QuizViewController: UIViewController {
         if question?.category.rawValue == "Food" {
             categoryImageView.image = #imageLiteral(resourceName: "Cow")
             categoryLabel.backgroundColor = #colorLiteral(red: 0.9399999976, green: 0.4199999869, blue: 0.3400000036, alpha: 1)
+            nextButton.setImage(#imageLiteral(resourceName: "Next"), for: .normal)
+            previousButton.setImage(#imageLiteral(resourceName: "Previous"), for: .normal)
         } else if question?.category.rawValue == "House" {
             categoryImageView.image = #imageLiteral(resourceName: "House")
             categoryLabel.backgroundColor = #colorLiteral(red: 0.4900000095, green: 0.8299999833, blue: 0.6899999976, alpha: 1)
+            nextButton.setImage(#imageLiteral(resourceName: "NextGreen"), for: .normal)
+            previousButton.setImage(#imageLiteral(resourceName: "PreviousGreen"), for: .normal)
         } else if question?.category.rawValue == "Travel" {
             categoryImageView.image = #imageLiteral(resourceName: "Travel")
             categoryLabel.backgroundColor = #colorLiteral(red: 1, green: 0.7599999905, blue: 0.02999999933, alpha: 1)
+            nextButton.setImage(#imageLiteral(resourceName: "NextOrange"), for: .normal)
+            previousButton.setImage(#imageLiteral(resourceName: "PreviousOrange"), for: .normal)
         }
     }
     
@@ -121,6 +129,7 @@ class QuizViewController: UIViewController {
     }
 }
 
+// MARK: - DataSource
 extension QuizViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -136,6 +145,11 @@ extension QuizViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 45
+    }
+    
+    // MARK: - Delegate
     func toggleAnswerSelected(for cell: QuizTableViewCell) {
         guard let answer = cell.answer else { return }
         cell.answerSelected ? userDidDeselectAnswer(answer: answer, cell: cell) : userDidSelect(answer: answer, cell: cell)
@@ -189,10 +203,7 @@ extension QuizViewController {
         } else if answer is HouseHeatingFuel {
             GreenCalculatorController.shared.houseHeatingFuel = nil
         } else if answer is EnergySavingImprovement {
-            //            GreenCalculatorController.shared.energySavingImprovement = nil
         } else if answer is WasteRecycling {
-            //GreenCalculatorController.shared.wasteRecycling = nil
-            // TRAVEL
         } else if answer is PersonalTransportation {
             GreenCalculatorController.shared.personalTransportation = nil
         } else if answer is MostUsedVechile {
