@@ -449,11 +449,11 @@ Pledged</string>
             <objects>
                 <viewController id="9Fz-9x-3ei" customClass="ActionDetailViewController" customModule="Conscious" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" id="HmQ-7D-qip">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uYE-qZ-7hf">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="1087"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ME-Zg-Dnf">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="970"/>
@@ -461,43 +461,63 @@ Pledged</string>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="fNx-9G-Gch">
                                                 <rect key="frame" x="8" y="36" width="359" height="926"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meatless Monday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWa-bd-yzF">
-                                                        <rect key="frame" x="0.0" y="0.0" width="258.5" height="41"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQ1-dP-tiT">
-                                                        <rect key="frame" x="0.0" y="65" width="101" height="79.5"/>
-                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="   Add To List   ">
-                                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="addToActionListButtonTapped:" destination="9Fz-9x-3ei" eventType="touchUpInside" id="ZM2-EF-2sh"/>
-                                                        </connections>
-                                                    </button>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="5LX-xw-oec">
-                                                        <rect key="frame" x="0.0" y="168.5" width="359" height="179.5"/>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bri-dC-gao">
+                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="623"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="5LX-xw-oec">
+                                                                <rect key="frame" x="0.0" y="0.0" width="359" height="551"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="551" id="ulz-lx-kMQ"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="120" translatesAutoresizingMaskIntoConstraints="NO" id="eEX-j4-1gI">
+                                                                <rect key="frame" x="8" y="349" width="258.5" height="202"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meatless Monday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWa-bd-yzF">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="258.5" height="41"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQ1-dP-tiT">
+                                                                        <rect key="frame" x="0.0" y="161" width="258.5" height="41"/>
+                                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <state key="normal" title="   Add To List   ">
+                                                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="addToActionListButtonTapped:" destination="9Fz-9x-3ei" eventType="touchUpInside" id="ZM2-EF-2sh"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="eWa-bd-yzF" firstAttribute="top" secondItem="VQ1-dP-tiT" secondAttribute="bottom" constant="-24" id="X2a-2L-TWg"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" secondItem="5LX-xw-oec" secondAttribute="height" multiplier="2:1" id="FI2-IK-zi6"/>
+                                                            <constraint firstAttribute="trailing" secondItem="5LX-xw-oec" secondAttribute="trailing" id="DGW-hF-eHG"/>
+                                                            <constraint firstItem="5LX-xw-oec" firstAttribute="leading" secondItem="Bri-dC-gao" secondAttribute="leading" id="Lfx-7a-p1U"/>
+                                                            <constraint firstItem="5LX-xw-oec" firstAttribute="top" secondItem="Bri-dC-gao" secondAttribute="top" id="ezN-50-FD2"/>
                                                         </constraints>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5HN-Za-Jhn">
-                                                        <rect key="frame" x="0.0" y="372" width="359" height="203"/>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5HN-Za-Jhn">
+                                                        <rect key="frame" x="0.0" y="647" width="359" height="0.0"/>
                                                         <string key="text">	Eating less meat is a great way to reduce your impact on the Earth! Animal farming is the second biggest contributor to greenhouse gas emissions and a leading cause of deforestation, air pollution, and water pollution. Replacing your meat with veggies or beans just one day a week could save up to 730 pounds of carbon emissions a year. (That’s the equivalent to not burning 37 gallons of gas or not driving 810 miles!)  </string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Benefits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Hf-yU-iaH">
-                                                        <rect key="frame" x="0.0" y="599" width="71.5" height="24"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Benefits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Hf-yU-iaH">
+                                                        <rect key="frame" x="0.0" y="671" width="71.5" height="0.0"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CmW-v4-5oL">
-                                                        <rect key="frame" x="0.0" y="647" width="359" height="84"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CmW-v4-5oL">
+                                                        <rect key="frame" x="0.0" y="695" width="359" height="84"/>
                                                         <string key="text">	• 	Reducing your carbon footprint
 	• 	High levels of meat consumption have been linked to higher risks of heart disease, cancer, and Alzheimer’s 
 	• 	Cows are, like, really cute</string>
@@ -505,17 +525,20 @@ Pledged</string>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Effect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDY-yf-eeG">
-                                                        <rect key="frame" x="0.0" y="755" width="51.5" height="24"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Effect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDY-yf-eeG">
+                                                        <rect key="frame" x="0.0" y="803" width="51.5" height="0.0"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" id="1sV-hj-tpV"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PzV-pH-tQE">
-                                                        <rect key="frame" x="0.0" y="803" width="359" height="123"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PzV-pH-tQE">
+                                                        <rect key="frame" x="0.0" y="827" width="359" height="99"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cMb-js-R09">
-                                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="123"/>
+                                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cMb-js-R09">
+                                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="99"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="A0J-u9-iC6">
                                                                         <rect key="frame" x="27" y="24" width="114.5" height="76"/>
@@ -539,8 +562,8 @@ Pledged</string>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eaW-1W-MOc">
-                                                                <rect key="frame" x="179.5" y="0.0" width="179.5" height="123"/>
+                                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eaW-1W-MOc">
+                                                                <rect key="frame" x="179.5" y="0.0" width="179.5" height="99"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7xN-iE-WWf">
                                                                         <rect key="frame" x="69" y="23" width="68" height="77"/>
@@ -571,6 +594,8 @@ Pledged</string>
                                                     <constraint firstItem="PzV-pH-tQE" firstAttribute="top" secondItem="mDY-yf-eeG" secondAttribute="bottom" constant="24" id="0Or-ih-5dJ"/>
                                                     <constraint firstItem="PzV-pH-tQE" firstAttribute="top" secondItem="mDY-yf-eeG" secondAttribute="bottom" constant="24" id="96r-gM-k7O"/>
                                                     <constraint firstItem="PzV-pH-tQE" firstAttribute="top" secondItem="mDY-yf-eeG" secondAttribute="bottom" constant="24" id="HZd-fa-77y"/>
+                                                    <constraint firstItem="5HN-Za-Jhn" firstAttribute="top" secondItem="8Hf-yU-iaH" secondAttribute="bottom" constant="-24" id="Twd-Np-c1T"/>
+                                                    <constraint firstItem="5HN-Za-Jhn" firstAttribute="trailing" secondItem="CmW-v4-5oL" secondAttribute="trailing" id="dW1-Lj-khP"/>
                                                     <constraint firstItem="PzV-pH-tQE" firstAttribute="top" secondItem="mDY-yf-eeG" secondAttribute="bottom" constant="24" id="dWG-Je-5oT"/>
                                                     <constraint firstItem="PzV-pH-tQE" firstAttribute="trailing" secondItem="CmW-v4-5oL" secondAttribute="trailing" id="khE-MK-kc3"/>
                                                 </constraints>
@@ -615,6 +640,7 @@ Pledged</string>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <size key="freeformSize" width="375" height="1200"/>
                     <connections>
                         <outlet property="actionBenefitsLabel" destination="CmW-v4-5oL" id="nHo-Sa-qO8"/>
                         <outlet property="actionImageView" destination="5LX-xw-oec" id="dAl-yC-38g"/>
@@ -627,7 +653,7 @@ Pledged</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z2R-xt-fnj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-388" y="1047.5262368815593"/>
+            <point key="canvasLocation" x="-388" y="1047.0764617691154"/>
         </scene>
         <!--UserResult-->
         <scene sceneID="d76-Uy-D3K">
