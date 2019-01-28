@@ -25,6 +25,7 @@ class MyActionsViewController: UIViewController {
         guard let savedData = LocalStorageController.shared.loadFromPersistenceStore().last else { return }
         print("👠👠👠👠👠👠👠👠\(savedData)👠👠👠👠👠👠👠👠👠👠👠")
         myActions = savedData.actionPlan ?? []
+        print("🥼🥼🥼🥼🥼🥼🥼🥼🥼🥼\(myActions)🥼🥼🥼🥼🥼🥼🥼🥼🥼🥼")
         myActionsTableview.dataSource = self
         
         updateViews()
