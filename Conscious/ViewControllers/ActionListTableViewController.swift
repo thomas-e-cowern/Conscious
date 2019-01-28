@@ -115,7 +115,9 @@ class ActionListTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toActionDetail" {
             let destinationVC = segue.destination as? ActionDetailViewController
-            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            guard let indexPath = tableView.indexPathForSelectedRow else { print("Problem in actionListTableViewController prepare")
+                return
+            }
             let chosenAction = actions[indexPath.row]
             destinationVC?.action = chosenAction
         }
