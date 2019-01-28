@@ -329,6 +329,9 @@ Pledged</string>
                     <navigationItem key="navigationItem" id="dqb-wS-Vo1">
                         <barButtonItem key="rightBarButtonItem" image="icons8-gear-32" width="25" style="plain" id="h6Y-lD-Foj">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="gyk-ja-Izl" kind="show" id="r73-Si-QMQ"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
@@ -432,8 +435,11 @@ Pledged</string>
                         <viewLayoutGuide key="safeArea" id="asn-Rb-8EY"/>
                     </view>
                     <navigationItem key="navigationItem" id="SVC-2f-dOm">
-                        <barButtonItem key="rightBarButtonItem" image="icons8-gear-32" width="25" style="plain" id="jP3-Fw-C8b">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-gear-32" width="25" style="plain" id="jP3-Fw-C8b">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="gyk-ja-Izl" kind="show" id="rgG-gT-cor"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -675,7 +681,7 @@ Pledged</string>
                 <viewControllerPlaceholder storyboardName="Settings" id="gyk-ja-Izl" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m1r-Kr-buD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="726" y="413"/>
+            <point key="canvasLocation" x="-860" y="2051"/>
         </scene>
         <!--Take Actions-->
         <scene sceneID="3FG-Uh-bas">
@@ -740,4 +746,7 @@ Pledged</string>
         <image name="icons8-gear-32" width="24" height="24"/>
         <image name="placeholder" width="1280" height="800"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="rgG-gT-cor"/>
+    </inferredMetricsTieBreakers>
 </document>

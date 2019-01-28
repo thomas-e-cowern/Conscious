@@ -58,8 +58,8 @@ class QuizViewController: UIViewController {
         let totalProgress = Float(questionIndex) / Float(allQs.count)
         self.question = allQs[questionIndex]
         categoryLabel.text = self.question?.category.rawValue
-//        categoryLabel.layer.cornerRadius = 4
-//        categoryLabel.layer.masksToBounds = true
+        categoryLabel.layer.cornerRadius = 4
+        categoryLabel.layer.masksToBounds = true
         questionLabel.text = self.question?.text
         quizProgressView.setProgress(totalProgress, animated: true)
         tableView.reloadData()
@@ -146,7 +146,8 @@ extension QuizViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 45
+        return 35
+        
     }
     
     // MARK: - Delegate

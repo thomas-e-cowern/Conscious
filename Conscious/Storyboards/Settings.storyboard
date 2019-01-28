@@ -16,12 +16,13 @@
             <objects>
                 <viewController title="Terms of Service" id="cfU-47-5nM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JaK-bj-bYi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPy-pt-xq5">
-                                <rect key="frame" x="8" y="124" width="359" height="724"/>
-                                <string key="text">Please read these Terms of Service carefully before using the Conscious mobile application operated by Conscious.
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xvd-Ki-9Ik">
+                                <rect key="frame" x="8" y="124" width="359" height="491"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Please read these Terms of Service carefully before using the Conscious mobile application operated by Conscious.
 Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service.
 By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service.
 
@@ -31,22 +32,20 @@ Conscious has no control over, and assumes no responsibility for, the content, p
 
 We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will try to provide at least 30  days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
 
-</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="VPy-pt-xq5" firstAttribute="top" secondItem="TwZ-Il-70C" secondAttribute="top" constant="8" id="Bfl-YZ-dHw"/>
-                            <constraint firstItem="VPy-pt-xq5" firstAttribute="leading" secondItem="TwZ-Il-70C" secondAttribute="leading" constant="8" id="EVj-3e-Pn7"/>
-                            <constraint firstItem="TwZ-Il-70C" firstAttribute="trailing" secondItem="VPy-pt-xq5" secondAttribute="trailing" constant="8" id="J3n-Bk-oMn"/>
-                            <constraint firstItem="TwZ-Il-70C" firstAttribute="bottom" secondItem="VPy-pt-xq5" secondAttribute="bottom" constant="8" id="bJf-1O-ggf"/>
+                            <constraint firstItem="TwZ-Il-70C" firstAttribute="bottom" secondItem="xvd-Ki-9Ik" secondAttribute="bottom" constant="8" id="Ctj-OT-Br1"/>
+                            <constraint firstItem="TwZ-Il-70C" firstAttribute="trailing" secondItem="xvd-Ki-9Ik" secondAttribute="trailing" constant="8" id="hJe-YQ-P98"/>
+                            <constraint firstItem="xvd-Ki-9Ik" firstAttribute="top" secondItem="TwZ-Il-70C" secondAttribute="top" constant="8" id="uvf-nm-Qut"/>
+                            <constraint firstItem="xvd-Ki-9Ik" firstAttribute="leading" secondItem="TwZ-Il-70C" secondAttribute="leading" constant="8" id="x8k-Hh-aPc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TwZ-Il-70C"/>
                     </view>
-                    <size key="freeformSize" width="375" height="900"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DFS-Vr-v8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -193,6 +192,7 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pdn-bf-UJl" firstAttribute="trailing" secondItem="vVi-ig-Ql5" secondAttribute="trailing" constant="16" id="9kd-iA-sit"/>
                             <constraint firstItem="pdn-bf-UJl" firstAttribute="bottom" secondItem="vVi-ig-Ql5" secondAttribute="bottom" constant="13" id="Hm3-4s-YFO"/>
@@ -204,18 +204,19 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NYk-fO-cM7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="865" y="656"/>
+            <point key="canvasLocation" x="865" y="720"/>
         </scene>
         <!--Settings-->
         <scene sceneID="5PH-6e-kdh">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jsu-E1-BFR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="JkB-De-YDg" customClass="SettingsViewController" customModule="Conscious" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L7u-yP-HL4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="iyG-fi-IUu">
-                                <rect key="frame" x="24" y="160" width="327" height="274"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="iyG-fi-IUu">
+                                <rect key="frame" x="24" y="160" width="327" height="249"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3WZ-oq-whv">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="83"/>
@@ -232,22 +233,31 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="See More Icon" translatesAutoresizingMaskIntoConstraints="NO" id="79X-aj-XdG">
+                                                <rect key="frame" x="299" y="31.5" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="Szw-lT-iWv"/>
+                                                    <constraint firstAttribute="width" constant="20" id="got-to-Jhj"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="DPu-do-oT8" secondAttribute="trailing" id="3Lu-fH-79W"/>
                                             <constraint firstAttribute="bottom" secondItem="QxG-aZ-Vom" secondAttribute="bottom" id="Al2-fk-tSN"/>
                                             <constraint firstItem="DPu-do-oT8" firstAttribute="top" secondItem="3WZ-oq-whv" secondAttribute="top" id="Jbh-LO-CQD"/>
+                                            <constraint firstItem="79X-aj-XdG" firstAttribute="centerY" secondItem="3WZ-oq-whv" secondAttribute="centerY" id="M4A-lT-2l3"/>
                                             <constraint firstAttribute="bottom" secondItem="DPu-do-oT8" secondAttribute="bottom" id="U9L-yc-G5e"/>
                                             <constraint firstAttribute="height" constant="83" id="YRQ-GB-8Gd"/>
                                             <constraint firstAttribute="trailing" secondItem="QxG-aZ-Vom" secondAttribute="trailing" id="agf-Aq-G7Z"/>
                                             <constraint firstItem="DPu-do-oT8" firstAttribute="leading" secondItem="3WZ-oq-whv" secondAttribute="leading" id="g9f-b4-YFY"/>
                                             <constraint firstItem="QxG-aZ-Vom" firstAttribute="leading" secondItem="3WZ-oq-whv" secondAttribute="leading" id="gr7-28-aGI"/>
                                             <constraint firstItem="QxG-aZ-Vom" firstAttribute="top" secondItem="3WZ-oq-whv" secondAttribute="top" id="seP-2n-Uni"/>
+                                            <constraint firstAttribute="trailing" secondItem="79X-aj-XdG" secondAttribute="trailing" constant="8" id="xIa-rx-IVz"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="esY-L4-k9l">
-                                        <rect key="frame" x="0.0" y="108" width="327" height="166"/>
+                                        <rect key="frame" x="0.0" y="83" width="327" height="166"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6v6-Jh-dzm">
                                                 <rect key="frame" x="0.0" y="0.0" width="327" height="83"/>
@@ -267,13 +277,22 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
                                                             <segue destination="cfU-47-5nM" kind="show" id="Va4-dQ-KxT"/>
                                                         </connections>
                                                     </button>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="See More Icon" translatesAutoresizingMaskIntoConstraints="NO" id="sbA-A7-O94">
+                                                        <rect key="frame" x="299" y="31.5" width="20" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="HSe-pT-OUH"/>
+                                                            <constraint firstAttribute="width" constant="20" id="fmY-8A-Fdm"/>
+                                                        </constraints>
+                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="sbA-A7-O94" secondAttribute="trailing" constant="8" id="0xT-mV-mC6"/>
                                                     <constraint firstAttribute="bottom" secondItem="myW-Hc-mNM" secondAttribute="bottom" id="FMY-ch-FFR"/>
                                                     <constraint firstItem="myW-Hc-mNM" firstAttribute="top" secondItem="6v6-Jh-dzm" secondAttribute="top" id="L4V-45-Prc"/>
                                                     <constraint firstAttribute="bottom" secondItem="cPm-jP-YN5" secondAttribute="bottom" id="RTf-37-Wsr"/>
                                                     <constraint firstItem="cPm-jP-YN5" firstAttribute="leading" secondItem="6v6-Jh-dzm" secondAttribute="leading" id="Sef-N5-w6R"/>
+                                                    <constraint firstItem="sbA-A7-O94" firstAttribute="centerY" secondItem="6v6-Jh-dzm" secondAttribute="centerY" id="WRg-rN-KRt"/>
                                                     <constraint firstItem="myW-Hc-mNM" firstAttribute="leading" secondItem="6v6-Jh-dzm" secondAttribute="leading" id="fvl-Um-8PL"/>
                                                     <constraint firstItem="cPm-jP-YN5" firstAttribute="top" secondItem="6v6-Jh-dzm" secondAttribute="top" id="ii7-aF-GRE"/>
                                                     <constraint firstAttribute="trailing" secondItem="myW-Hc-mNM" secondAttribute="trailing" id="jV9-1X-fV3"/>
@@ -298,6 +317,13 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
                                                             <segue destination="ZWG-lL-bd3" kind="show" id="c8f-P4-0hn"/>
                                                         </connections>
                                                     </button>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="See More Icon" translatesAutoresizingMaskIntoConstraints="NO" id="HX4-Lo-IxH">
+                                                        <rect key="frame" x="299" y="31.5" width="20" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="1fU-d1-LxY"/>
+                                                            <constraint firstAttribute="width" constant="20" id="U1L-fI-hNf"/>
+                                                        </constraints>
+                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -308,6 +334,8 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
                                                     <constraint firstAttribute="bottom" secondItem="hcj-if-FQz" secondAttribute="bottom" id="TgI-sW-OGY"/>
                                                     <constraint firstItem="hcj-if-FQz" firstAttribute="leading" secondItem="nvJ-J5-d0M" secondAttribute="leading" id="Vnu-iR-mpm"/>
                                                     <constraint firstItem="hcj-if-FQz" firstAttribute="top" secondItem="nvJ-J5-d0M" secondAttribute="top" id="aWs-pn-oke"/>
+                                                    <constraint firstAttribute="trailing" secondItem="HX4-Lo-IxH" secondAttribute="trailing" constant="8" id="ktR-VF-HWY"/>
+                                                    <constraint firstItem="HX4-Lo-IxH" firstAttribute="centerY" secondItem="nvJ-J5-d0M" secondAttribute="centerY" id="xgO-9r-Nz2"/>
                                                     <constraint firstItem="Z6p-Al-e6W" firstAttribute="leading" secondItem="nvJ-J5-d0M" secondAttribute="leading" id="y6e-HC-8fC"/>
                                                 </constraints>
                                             </view>
@@ -324,28 +352,22 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PKX-7w-c8d"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Settings" id="UMf-Yh-58c">
-                        <barButtonItem key="rightBarButtonItem" title="X" id="82h-IG-mLP">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="doneButtonTapped:" destination="JkB-De-YDg" id="Y05-ID-r1V"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Settings" id="UMf-Yh-58c"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jsu-E1-BFR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-68" y="321.58920539730138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Vsy-Vf-atA">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iqH-vf-H20" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="Ki5-UQ-xmp" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" alpha="0.0" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="DK3-Xi-Ll0">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="LightGreen"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" name="LightGreen"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -359,12 +381,12 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
                         <segue destination="JkB-De-YDg" kind="relationship" relationship="rootViewController" id="AUa-7l-PO6"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iqH-vf-H20" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-874.39999999999998" y="322.48875562218893"/>
         </scene>
     </scenes>
     <resources>
+        <image name="See More Icon" width="16" height="24"/>
         <namedColor name="LightGreen">
             <color red="0.68999999761581421" green="0.77999997138977051" blue="0.5899999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
