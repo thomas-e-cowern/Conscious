@@ -458,13 +458,13 @@ Pledged</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ME-Zg-Dnf">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="970"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="fNx-9G-Gch">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fNx-9G-Gch">
                                                 <rect key="frame" x="8" y="36" width="359" height="926"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bri-dC-gao">
                                                         <rect key="frame" x="0.0" y="0.0" width="359" height="467"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="5LX-xw-oec">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5LX-xw-oec">
                                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="467"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="467" id="dYd-b9-NZO"/>
@@ -503,37 +503,48 @@ Pledged</string>
                                                             <constraint firstAttribute="bottom" secondItem="eEX-j4-1gI" secondAttribute="bottom" id="iFJ-wG-TPC"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5HN-Za-Jhn">
-                                                        <rect key="frame" x="0.0" y="491" width="359" height="0.0"/>
-                                                        <string key="text">	Eating less meat is a great way to reduce your impact on the Earth! Animal farming is the second biggest contributor to greenhouse gas emissions and a leading cause of deforestation, air pollution, and water pollution. Replacing your meat with veggies or beans just one day a week could save up to 730 pounds of carbon emissions a year. (That’s the equivalent to not burning 37 gallons of gas or not driving 810 miles!)  </string>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Benefits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Hf-yU-iaH">
-                                                        <rect key="frame" x="0.0" y="515" width="71.5" height="0.0"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CmW-v4-5oL">
-                                                        <rect key="frame" x="0.0" y="539" width="359" height="240"/>
-                                                        <string key="text">	• 	Reducing your carbon footprint
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="p7k-vn-hvF">
+                                                        <rect key="frame" x="0.0" y="483" width="359" height="328"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Challenge Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVg-bM-NlK" userLabel="Chalenge Detail">
+                                                                <rect key="frame" x="0.0" y="0.0" width="359" height="15"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5HN-Za-Jhn">
+                                                                <rect key="frame" x="0.0" y="39" width="359" height="147.5"/>
+                                                                <string key="text">	Eating less meat is a great way to reduce your impact on the Earth! Animal farming is the second biggest contributor to greenhouse gas emissions and a leading cause of deforestation, air pollution, and water pollution. Replacing your meat with veggies or beans just one day a week could save up to 730 pounds of carbon emissions a year. (That’s the equivalent to not burning 37 gallons of gas or not driving 810 miles!)  </string>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Benefits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Hf-yU-iaH">
+                                                                <rect key="frame" x="0.0" y="210.5" width="359" height="17.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CmW-v4-5oL">
+                                                                <rect key="frame" x="0.0" y="252" width="359" height="52"/>
+                                                                <string key="text">	• 	Reducing your carbon footprint
 	• 	High levels of meat consumption have been linked to higher risks of heart disease, cancer, and Alzheimer’s 
 	• 	Cows are, like, really cute</string>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Effect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDY-yf-eeG">
-                                                        <rect key="frame" x="0.0" y="803" width="51.5" height="0.0"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" id="1sV-hj-tpV"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Effect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDY-yf-eeG">
+                                                                <rect key="frame" x="0.0" y="328" width="359" height="0.0"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" id="1sV-hj-tpV"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PzV-pH-tQE">
                                                         <rect key="frame" x="0.0" y="827" width="359" height="99"/>
                                                         <subviews>
@@ -591,14 +602,7 @@ Pledged</string>
                                                     </stackView>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="PzV-pH-tQE" firstAttribute="top" secondItem="mDY-yf-eeG" secondAttribute="bottom" constant="24" id="0Or-ih-5dJ"/>
-                                                    <constraint firstItem="PzV-pH-tQE" firstAttribute="top" secondItem="mDY-yf-eeG" secondAttribute="bottom" constant="24" id="96r-gM-k7O"/>
-                                                    <constraint firstItem="PzV-pH-tQE" firstAttribute="top" secondItem="mDY-yf-eeG" secondAttribute="bottom" constant="24" id="HZd-fa-77y"/>
-                                                    <constraint firstItem="5HN-Za-Jhn" firstAttribute="top" secondItem="8Hf-yU-iaH" secondAttribute="bottom" constant="-24" id="Twd-Np-c1T"/>
                                                     <constraint firstItem="PzV-pH-tQE" firstAttribute="top" secondItem="fNx-9G-Gch" secondAttribute="top" constant="827" id="Ygc-SG-cJW"/>
-                                                    <constraint firstItem="5HN-Za-Jhn" firstAttribute="trailing" secondItem="CmW-v4-5oL" secondAttribute="trailing" id="dW1-Lj-khP"/>
-                                                    <constraint firstItem="PzV-pH-tQE" firstAttribute="top" secondItem="mDY-yf-eeG" secondAttribute="bottom" constant="24" id="dWG-Je-5oT"/>
-                                                    <constraint firstItem="PzV-pH-tQE" firstAttribute="trailing" secondItem="CmW-v4-5oL" secondAttribute="trailing" id="khE-MK-kc3"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
@@ -648,6 +652,7 @@ Pledged</string>
                         <outlet property="actionSummaryLabel" destination="5HN-Za-Jhn" id="n8w-ud-yo5"/>
                         <outlet property="actionTitleLabel" destination="eWa-bd-yzF" id="oPH-F4-JDK"/>
                         <outlet property="addToActionListButton" destination="VQ1-dP-tiT" id="ehb-sc-Oob"/>
+                        <outlet property="chllengeDetail" destination="XVg-bM-NlK" id="ea0-HN-XIe"/>
                         <outlet property="co2ReductionLabel" destination="TDR-zs-PgM" id="8MS-82-a97"/>
                         <outlet property="moneySavedLabel" destination="1jp-WY-dfF" id="zBL-6x-Lqg"/>
                     </connections>

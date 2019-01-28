@@ -30,6 +30,7 @@ class LocalStorageController {
         savedData.actionPlan?.append(actionPlanItem)
         print("savedData in LSC: \(savedData)")
         print("actionplan in LSC: \(savedData.actionPlan)")
+        self.savedData.append(savedData)
         self.saveToPersistentStore()
     }
     
