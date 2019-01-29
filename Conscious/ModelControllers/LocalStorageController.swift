@@ -25,8 +25,16 @@ class LocalStorageController {
     }
     
     func addNewActions(action: ActionPlanDetail) {
+        print("🧸🧸🧸🧸🧸\(action)🧸🧸🧸🧸🧸")
         let newAction = action
         savedActions.append(newAction)
+        print("🎈🎈🎈🎈🎈\(savedActions)🎈🎈🎈🎈🎈")
+        self.saveToPersistentStoreData(path: "action")
+    }
+    
+    func saveActions(actions: [ActionPlanDetail]) {
+        savedActions = actions
+        print("🎈🎈🎈🎈🎈\(savedActions[0].completed)🎈🎈🎈🎈🎈")
         self.saveToPersistentStoreData(path: "action")
     }
     
@@ -85,11 +93,12 @@ class LocalStorageController {
             
             let decoder = JSONDecoder()
             let returnData = try decoder.decode([T].self, from: data)
-            print("🧿🧿🧿🧿🧿returnData: \(returnData)🧿🧿🧿🧿🧿")
+            
             if T.self == SavedData.self{
                 savedData = returnData as! [SavedData]
             }else{
                 savedActions = returnData as! [ActionPlanDetail]
+                print("🧿🧿🧿🧿🧿returnData: \(savedActions[0].completed)🧿🧿🧿🧿🧿")
             }
             return returnData
         } catch  {
