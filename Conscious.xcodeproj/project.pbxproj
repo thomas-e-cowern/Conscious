@@ -21,7 +21,6 @@
 		41D89A7B21EE8BB700CFF725 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D89A7921EE8BB700CFF725 /* LaunchScreen.storyboard */; };
 		41E57C4F21FF8492008BE01D /* GreenCalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E57C4E21FF8488008BE01D /* GreenCalculatorController.swift */; };
 		7E3A5B7821FCF67A00BB4F16 /* PageOneViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E3A5B7721FCF67A00BB4F16 /* PageOneViewController.storyboard */; };
-		7E3A5B8321FD068C00BB4F16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E3A5B8221FD068C00BB4F16 /* Assets.xcassets */; };
 		7E3A5B8721FD230600BB4F16 /* CitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3A5B8621FD230600BB4F16 /* CitationViewController.swift */; };
 		7E3A5B8B21FD298200BB4F16 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3A5B8A21FD298200BB4F16 /* Colors.swift */; };
 		7E6CC7F421FB6BFB006C0E4A /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E6CC7F321FB6BFB006C0E4A /* Settings.storyboard */; };
@@ -40,6 +39,7 @@
 		7ECE819B21F1234F00F2F9DA /* ActionPlanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE819A21F1234F00F2F9DA /* ActionPlanController.swift */; };
 		7ECE819F21F136CD00F2F9DA /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE819E21F136CD00F2F9DA /* QuizViewController.swift */; };
 		7ECE81A421F14D3B00F2F9DA /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE81A321F14D3B00F2F9DA /* Question.swift */; };
+		7EF3D07F21FFC8750033217E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EF3D07E21FFC8750033217E /* Assets.xcassets */; };
 		9BEA98FE29B9D420841BD395 /* Pods_Conscious.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC5010AE7FC9AC10C85DB44 /* Pods_Conscious.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +60,6 @@
 		41D89A7C21EE8BB700CFF725 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41E57C4E21FF8488008BE01D /* GreenCalculatorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GreenCalculatorController.swift; path = Conscious/Views/GreenCalculatorController.swift; sourceTree = SOURCE_ROOT; };
 		7E3A5B7721FCF67A00BB4F16 /* PageOneViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PageOneViewController.storyboard; sourceTree = "<group>"; };
-		7E3A5B8221FD068C00BB4F16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E3A5B8621FD230600BB4F16 /* CitationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitationViewController.swift; sourceTree = "<group>"; };
 		7E3A5B8A21FD298200BB4F16 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		7E6CC7F321FB6BFB006C0E4A /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -79,6 +78,7 @@
 		7ECE819A21F1234F00F2F9DA /* ActionPlanController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPlanController.swift; sourceTree = "<group>"; };
 		7ECE819E21F136CD00F2F9DA /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		7ECE81A321F14D3B00F2F9DA /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		7EF3D07E21FFC8750033217E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEC5010AE7FC9AC10C85DB44 /* Pods_Conscious.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Conscious.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC33AD44D62447E777BA75D6 /* Pods-Conscious.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Conscious.release.xcconfig"; path = "Pods/Target Support Files/Pods-Conscious/Pods-Conscious.release.xcconfig"; sourceTree = "<group>"; };
 		FF566A7DBB361551DA265DE9 /* Pods-Conscious.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Conscious.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Conscious/Pods-Conscious.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 		41D89A8221EE8BDE00CFF725 /* Resorces */ = {
 			isa = PBXGroup;
 			children = (
-				7E3A5B8221FD068C00BB4F16 /* Assets.xcassets */,
+				7EF3D07E21FFC8750033217E /* Assets.xcassets */,
 				41D89A7021EE8B9F00CFF725 /* AppDelegate.swift */,
 				41D89A7C21EE8BB700CFF725 /* Info.plist */,
 			);
@@ -294,7 +294,7 @@
 				7E3A5B7821FCF67A00BB4F16 /* PageOneViewController.storyboard in Resources */,
 				7E6CC7F821FB770D006C0E4A /* Tabs.storyboard in Resources */,
 				7E6CC7F421FB6BFB006C0E4A /* Settings.storyboard in Resources */,
-				7E3A5B8321FD068C00BB4F16 /* Assets.xcassets in Resources */,
+				7EF3D07F21FFC8750033217E /* Assets.xcassets in Resources */,
 				7E6CC7FE21FB7C8D006C0E4A /* Quiz.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

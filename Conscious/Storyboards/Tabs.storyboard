@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -470,12 +471,6 @@ Pledged</string>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bri-dC-gao">
                                                         <rect key="frame" x="0.0" y="0.0" width="359" height="467"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5LX-xw-oec">
-                                                                <rect key="frame" x="0.0" y="0.0" width="359" height="467"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="467" id="dYd-b9-NZO"/>
-                                                                </constraints>
-                                                            </imageView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eEX-j4-1gI">
                                                                 <rect key="frame" x="8" y="376" width="343" height="91"/>
                                                                 <subviews>
@@ -497,8 +492,14 @@ Pledged</string>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="placeholder" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5LX-xw-oec">
+                                                                <rect key="frame" x="0.0" y="113" width="359" height="240"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="467" id="dYd-b9-NZO"/>
+                                                                </constraints>
+                                                            </imageView>
                                                         </subviews>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" name="Red"/>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="eEX-j4-1gI" secondAttribute="trailing" constant="8" id="6hP-Mc-iNq"/>
                                                             <constraint firstAttribute="trailing" secondItem="5LX-xw-oec" secondAttribute="trailing" id="DGW-hF-eHG"/>
@@ -745,8 +746,11 @@ Pledged</string>
         <image name="002-home" width="344.52337646484375" height="344.52337646484375"/>
         <image name="icons8-gear-32" width="24" height="24"/>
         <image name="placeholder" width="1280" height="800"/>
+        <namedColor name="Red">
+            <color red="0.93999999761581421" green="0.41999998688697815" blue="0.34000000357627869" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rgG-gT-cor"/>
+        <segue reference="zQu-fD-ziP"/>
     </inferredMetricsTieBreakers>
 </document>
