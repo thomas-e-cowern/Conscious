@@ -10,6 +10,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="CircularStd-Book.otf">
+            <string>CircularStd-Book</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Terms of Service-->
         <scene sceneID="jjd-iH-b6P">
@@ -22,7 +27,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xvd-Ki-9Ik">
                                 <rect key="frame" x="8" y="124" width="359" height="491"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <mutableString key="text">Please read these Terms of Service carefully before using the Conscious mobile application operated by Conscious.
+                                <string key="text">Please read these Terms of Service carefully before using the Conscious mobile application operated by Conscious.
 Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service.
 By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service.
 
@@ -32,16 +37,17 @@ Conscious has no control over, and assumes no responsibility for, the content, p
 
 We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will try to provide at least 30  days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
 
-</mutableString>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+</string>
+                                <color key="textColor" name="Brown"/>
+                                <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="TwZ-Il-70C" firstAttribute="bottom" secondItem="xvd-Ki-9Ik" secondAttribute="bottom" constant="8" id="Ctj-OT-Br1"/>
+                            <constraint firstItem="xvd-Ki-9Ik" firstAttribute="top" secondItem="TwZ-Il-70C" secondAttribute="top" constant="8" id="Kb4-A7-A3S"/>
                             <constraint firstItem="TwZ-Il-70C" firstAttribute="trailing" secondItem="xvd-Ki-9Ik" secondAttribute="trailing" constant="8" id="hJe-YQ-P98"/>
-                            <constraint firstItem="xvd-Ki-9Ik" firstAttribute="top" secondItem="TwZ-Il-70C" secondAttribute="top" constant="8" id="uvf-nm-Qut"/>
                             <constraint firstItem="xvd-Ki-9Ik" firstAttribute="leading" secondItem="TwZ-Il-70C" secondAttribute="leading" constant="8" id="x8k-Hh-aPc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TwZ-Il-70C"/>
@@ -49,7 +55,7 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DFS-Vr-v8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="865" y="-146"/>
+            <point key="canvasLocation" x="836" y="698.5007496251875"/>
         </scene>
         <!--Citation-->
         <scene sceneID="J0X-2m-c13">
@@ -59,130 +65,144 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="vVi-ig-Ql5">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="vVi-ig-Ql5">
                                 <rect key="frame" x="16" y="138" width="343" height="472"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60k-19-vUl">
-                                        <rect key="frame" x="0.0" y="0.0" width="229" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="210" height="33.5"/>
+                                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="14"/>
                                         <state key="normal" title="fruitsandveggiesmorematters.org">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" name="Brown"/>
                                         </state>
                                         <connections>
                                             <action selector="fruitsAndVeggies:" destination="ZWG-lL-bd3" eventType="touchUpInside" id="w6G-No-QKU"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQF-Cw-FcW">
-                                        <rect key="frame" x="0.0" y="34" width="142" height="30"/>
+                                        <rect key="frame" x="0.0" y="33.5" width="129" height="34"/>
+                                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="14"/>
                                         <state key="normal" title="snaped.fns.usda.gov">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" name="Brown"/>
                                         </state>
                                         <connections>
                                             <action selector="snaped:" destination="ZWG-lL-bd3" eventType="touchUpInside" id="dKg-PQ-dDi"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWT-fp-B94">
-                                        <rect key="frame" x="0.0" y="68" width="68" height="30"/>
+                                        <rect key="frame" x="0.0" y="67.5" width="62" height="33.5"/>
+                                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="14"/>
                                         <state key="normal" title="ucanr.edu">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" name="Brown"/>
                                         </state>
                                         <connections>
                                             <action selector="ucanr:" destination="ZWG-lL-bd3" eventType="touchUpInside" id="ycR-PV-3ll"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAk-1F-ADv">
-                                        <rect key="frame" x="0.0" y="102" width="143" height="30"/>
+                                        <rect key="frame" x="0.0" y="101" width="133" height="34"/>
+                                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="14"/>
                                         <state key="normal" title="dailyinfographic.com">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" name="Brown"/>
                                         </state>
                                         <connections>
                                             <action selector="dailyInfoGraphic:" destination="ZWG-lL-bd3" eventType="touchUpInside" id="Rd2-VN-zXf"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pw-fe-7pd">
-                                        <rect key="frame" x="0.0" y="136" width="114" height="30"/>
+                                        <rect key="frame" x="0.0" y="135" width="106" height="33.5"/>
+                                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="14"/>
                                         <state key="normal" title="banthebottle.net">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" name="Brown"/>
                                         </state>
                                         <connections>
                                             <action selector="banTheBottle:" destination="ZWG-lL-bd3" eventType="touchUpInside" id="bsu-5f-QIK"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndN-CA-4Yv">
-                                        <rect key="frame" x="0.0" y="170" width="84" height="30"/>
+                                        <rect key="frame" x="0.0" y="168.5" width="78" height="34"/>
+                                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="14"/>
                                         <state key="normal" title="gogreen.org">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" name="Brown"/>
                                         </state>
                                         <connections>
                                             <action selector="goGreen:" destination="ZWG-lL-bd3" eventType="touchUpInside" id="ISI-5P-oxD"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Acc-sR-eat">
-                                        <rect key="frame" x="0.0" y="204" width="99" height="30"/>
+                                        <rect key="frame" x="0.0" y="202.5" width="91" height="33.5"/>
+                                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="14"/>
                                         <state key="normal" title="sciencing.com">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" name="Brown"/>
                                         </state>
                                         <connections>
                                             <action selector="sciencing:" destination="ZWG-lL-bd3" eventType="touchUpInside" id="qTj-bW-6VX"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTz-4c-2p4">
-                                        <rect key="frame" x="0.0" y="238" width="125" height="30"/>
+                                        <rect key="frame" x="0.0" y="236" width="116" height="33.5"/>
+                                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="14"/>
                                         <state key="normal" title="valuepenguin.com">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" name="Brown"/>
                                         </state>
                                         <connections>
                                             <action selector="valuePenguin:" destination="ZWG-lL-bd3" eventType="touchUpInside" id="QQz-52-YXs"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fer-3x-1Y4">
-                                        <rect key="frame" x="0.0" y="272" width="130" height="30"/>
+                                        <rect key="frame" x="0.0" y="269.5" width="119" height="34"/>
+                                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="14"/>
                                         <state key="normal" title="ourstreetsmpls.org">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" name="Brown"/>
                                         </state>
                                         <connections>
                                             <action selector="ourStreetSmpls:" destination="ZWG-lL-bd3" eventType="touchUpInside" id="TQ7-cb-qIC"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24j-3c-dsH">
-                                        <rect key="frame" x="0.0" y="306" width="138" height="30"/>
+                                        <rect key="frame" x="0.0" y="303.5" width="127" height="33.5"/>
+                                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="14"/>
                                         <state key="normal" title="powerscorecard.org">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" name="Brown"/>
                                         </state>
                                         <connections>
                                             <action selector="powerScoreCard:" destination="ZWG-lL-bd3" eventType="touchUpInside" id="v33-1o-rja"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ifz-SS-EhY">
-                                        <rect key="frame" x="0.0" y="340" width="70" height="30"/>
+                                        <rect key="frame" x="0.0" y="337" width="65" height="34"/>
+                                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="14"/>
                                         <state key="normal" title="tc.pbs.org">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" name="Brown"/>
                                         </state>
                                         <connections>
                                             <action selector="tc:" destination="ZWG-lL-bd3" eventType="touchUpInside" id="Zms-HU-n3v"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVb-8S-TOu">
-                                        <rect key="frame" x="0.0" y="374" width="117" height="30"/>
+                                        <rect key="frame" x="0.0" y="371" width="107" height="33.5"/>
+                                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="14"/>
                                         <state key="normal" title="researchgate.net">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" name="Brown"/>
                                         </state>
                                         <connections>
                                             <action selector="researchGate:" destination="ZWG-lL-bd3" eventType="touchUpInside" id="mx0-Xw-XTt"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofg-71-uZu">
-                                        <rect key="frame" x="0.0" y="408" width="55" height="30"/>
+                                        <rect key="frame" x="0.0" y="404.5" width="50" height="34"/>
+                                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="14"/>
                                         <state key="normal" title="epa.gov">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" name="Brown"/>
                                         </state>
                                         <connections>
                                             <action selector="epa:" destination="ZWG-lL-bd3" eventType="touchUpInside" id="9ie-kj-I3d"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9h-Ve-pFQ">
-                                        <rect key="frame" x="0.0" y="442" width="161" height="30"/>
+                                        <rect key="frame" x="0.0" y="438.5" width="149" height="33.5"/>
+                                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="14"/>
                                         <state key="normal" title="carbonindependent.org">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" name="Brown"/>
                                         </state>
                                         <connections>
                                             <action selector="carbonIndependent:" destination="ZWG-lL-bd3" eventType="touchUpInside" id="fXn-Zm-kgh"/>
@@ -204,33 +224,29 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NYk-fO-cM7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="865" y="720"/>
+            <point key="canvasLocation" x="836" y="1415"/>
         </scene>
         <!--Settings-->
         <scene sceneID="5PH-6e-kdh">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jsu-E1-BFR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="JkB-De-YDg" customClass="SettingsViewController" customModule="Conscious" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L7u-yP-HL4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="iyG-fi-IUu">
-                                <rect key="frame" x="24" y="160" width="327" height="249"/>
+                                <rect key="frame" x="24" y="64" width="327" height="249"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3WZ-oq-whv">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="83"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QxG-aZ-Vom">
                                                 <rect key="frame" x="0.0" y="0.0" width="327" height="83"/>
-                                                <connections>
-                                                    <action selector="notificationButtonTapped:" destination="JkB-De-YDg" eventType="touchUpInside" id="qsz-Zo-Zkq"/>
-                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPu-do-oT8" userLabel="Notifications">
                                                 <rect key="frame" x="0.0" y="0.0" width="327" height="83"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="20"/>
+                                                <color key="textColor" name="Brown"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="See More Icon" translatesAutoresizingMaskIntoConstraints="NO" id="79X-aj-XdG">
@@ -273,9 +289,10 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="83" id="QXW-pa-nM0"/>
                                                         </constraints>
-                                                        <connections>
-                                                            <segue destination="cfU-47-5nM" kind="show" id="Va4-dQ-KxT"/>
-                                                        </connections>
+                                                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="20"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" name="Brown"/>
+                                                        </state>
                                                     </button>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="See More Icon" translatesAutoresizingMaskIntoConstraints="NO" id="sbA-A7-O94">
                                                         <rect key="frame" x="299" y="31.5" width="20" height="20"/>
@@ -313,9 +330,10 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="83" id="eIX-j8-qR9"/>
                                                         </constraints>
-                                                        <connections>
-                                                            <segue destination="ZWG-lL-bd3" kind="show" id="c8f-P4-0hn"/>
-                                                        </connections>
+                                                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="20"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" name="Brown"/>
+                                                        </state>
                                                     </button>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="See More Icon" translatesAutoresizingMaskIntoConstraints="NO" id="HX4-Lo-IxH">
                                                         <rect key="frame" x="299" y="31.5" width="20" height="20"/>
@@ -354,13 +372,121 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="UMf-Yh-58c"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jsu-E1-BFR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-68" y="321.58920539730138"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="3ou-ZU-JEE">
+            <objects>
+                <tableViewController id="3zT-sd-7Fr" customClass="SettingsTableViewController" customModule="Conscious" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ElY-PD-ncx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vOr-up-EO8" customClass="SettingsTableViewCell" customModule="Conscious" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vOr-up-EO8" id="O4S-sx-tzb">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IfG-u2-0ef">
+                                            <rect key="frame" x="8" y="8" width="116" height="27.5"/>
+                                            <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="20"/>
+                                            <color key="textColor" name="Brown"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbf-Ct-ucI">
+                                            <rect key="frame" x="343" y="10" width="16" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button" image="See More Icon"/>
+                                            <connections>
+                                                <action selector="notificationButtonTapped:" destination="3zT-sd-7Fr" eventType="touchUpInside" id="ErE-SC-wdI"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="IfG-u2-0ef" secondAttribute="bottom" constant="8" id="CLe-RG-2bL"/>
+                                        <constraint firstItem="IfG-u2-0ef" firstAttribute="leading" secondItem="O4S-sx-tzb" secondAttribute="leading" constant="8" id="TUR-FO-FeW"/>
+                                        <constraint firstItem="IfG-u2-0ef" firstAttribute="top" secondItem="O4S-sx-tzb" secondAttribute="top" constant="8" id="weD-Mu-jdw"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Ldt-EV-gx0">
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ldt-EV-gx0" id="eM1-O4-7xH">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKi-jh-utz">
+                                            <rect key="frame" x="343" y="11" width="16" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button" image="See More Icon"/>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms of Service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0NP-Zr-ZDK">
+                                            <rect key="frame" x="8" y="8" width="150" height="27.5"/>
+                                            <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="20"/>
+                                            <color key="textColor" name="Brown"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="0NP-Zr-ZDK" firstAttribute="leading" secondItem="eM1-O4-7xH" secondAttribute="leading" constant="8" id="GOF-0x-tq1"/>
+                                        <constraint firstItem="0NP-Zr-ZDK" firstAttribute="top" secondItem="eM1-O4-7xH" secondAttribute="top" constant="8" id="Jog-C5-UB5"/>
+                                        <constraint firstAttribute="bottom" secondItem="0NP-Zr-ZDK" secondAttribute="bottom" constant="8" id="M9U-wB-MkF"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="cfU-47-5nM" kind="show" id="x8X-Dj-az5"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="qt7-yw-3bk">
+                                <rect key="frame" x="0.0" y="116" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qt7-yw-3bk" id="q2f-ja-ODb">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Citations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJm-li-1dy">
+                                            <rect key="frame" x="8" y="8" width="82" height="27.5"/>
+                                            <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="20"/>
+                                            <color key="textColor" name="Brown"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dU7-2X-ERM">
+                                            <rect key="frame" x="343" y="10" width="16" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button" image="See More Icon"/>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="jJm-li-1dy" secondAttribute="bottom" constant="8" id="2LS-7B-IAa"/>
+                                        <constraint firstItem="jJm-li-1dy" firstAttribute="leading" secondItem="q2f-ja-ODb" secondAttribute="leading" constant="8" id="53k-A6-eG7"/>
+                                        <constraint firstItem="jJm-li-1dy" firstAttribute="top" secondItem="q2f-ja-ODb" secondAttribute="top" constant="8" id="RXz-2v-MyV"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ZWG-lL-bd3" kind="show" id="Ifp-lM-RB7"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3zT-sd-7Fr" id="yUp-y0-gAu"/>
+                            <outlet property="delegate" destination="3zT-sd-7Fr" id="yAw-UY-YM2"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Settings" id="jEG-CX-79d"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UkC-lZ-C9U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-68" y="1016.9415292353824"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Vsy-Vf-atA">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iqH-vf-H20" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="Ki5-UQ-xmp" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" alpha="0.0" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="DK3-Xi-Ll0">
@@ -378,15 +504,19 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="JkB-De-YDg" kind="relationship" relationship="rootViewController" id="AUa-7l-PO6"/>
+                        <segue destination="3zT-sd-7Fr" kind="relationship" relationship="rootViewController" id="yRe-FN-vlo"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iqH-vf-H20" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-874.39999999999998" y="322.48875562218893"/>
+            <point key="canvasLocation" x="-918" y="1017"/>
         </scene>
     </scenes>
     <resources>
         <image name="See More Icon" width="16" height="24"/>
+        <namedColor name="Brown">
+            <color red="0.29399999976158142" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <namedColor name="LightGreen">
             <color red="0.68999999761581421" green="0.77999997138977051" blue="0.5899999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

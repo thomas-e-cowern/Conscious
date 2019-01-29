@@ -7,12 +7,12 @@
     {
       "idiom" : "universal",
       "color" : {
-        "color-space" : "srgb",
+        "color-space" : "display-p3",
         "components" : {
-          "red" : "0.750",
+          "red" : "0.294",
           "alpha" : "1.000",
-          "blue" : "0.680",
-          "green" : "0.680"
+          "blue" : "0.267",
+          "green" : "0.267"
         }
       }
     }
