@@ -14,6 +14,9 @@
         <array key="CircularStd-Black.otf">
             <string>CircularStd-Black</string>
         </array>
+        <array key="CircularStd-Bold.otf">
+            <string>CircularStd-Bold</string>
+        </array>
         <array key="CircularStd-Book.otf">
             <string>CircularStd-Book</string>
         </array>
@@ -852,35 +855,47 @@ Pledged</string>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qR3-Jd-W91">
                                 <rect key="frame" x="16" y="428" width="343" height="600"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Challenge Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLy-eE-fQp" userLabel="Chalenge Detail">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="34.666666666666664"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Challenge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLy-eE-fQp" userLabel="Chalenge Detail">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="41.333333333333336"/>
+                                        <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="24"/>
+                                        <color key="textColor" name="Brown"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Eliminate meat from all of your meal choices on Monday." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Joj-LY-Ax1">
+                                        <rect key="frame" x="0.0" y="49.333333333333314" width="343" height="27.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eyp-XZ-2uB">
+                                        <rect key="frame" x="0.0" y="84.666666666666629" width="343" height="41.333333333333343"/>
+                                        <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="24"/>
+                                        <color key="textColor" name="Brown"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GyO-zP-jFJ">
-                                        <rect key="frame" x="0.0" y="42.666666666666686" width="343" height="342.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="133.99999999999997" width="343" height="269.33333333333326"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="fV6-KX-4aK"/>
                                         </constraints>
-                                        <string key="text">	Eating less meat is a great way to reduce your impact on the Earth! Animal farming is the second biggest contributor to greenhouse gas emissions and a leading cause of deforestation, air pollution, and water pollution. Replacing your meat with veggies or beans just one day a week could save up to 730 pounds of carbon emissions a year. (That’s the equivalent to not burning 37 gallons of gas or not driving 810 miles!)  </string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <string key="text">Eating less meat is a great way to reduce your impact on the Earth! Animal farming is the second biggest contributor to greenhouse gas emissions and a leading cause of deforestation, air pollution, and water pollution. Replacing your meat for veggies or beans just one day a week could save up to 730 pounds of carbon emissions a year. For context, that’s the equivalent to not burning 37 gallons of gas or not driving 810 miles.  </string>
+                                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Benefits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Slr-QF-SlA">
-                                        <rect key="frame" x="0.0" y="393" width="343" height="41"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="411.33333333333337" width="343" height="41.333333333333314"/>
+                                        <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="24"/>
+                                        <color key="textColor" name="Brown"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fL3-fJ-wO4">
-                                        <rect key="frame" x="0.0" y="442" width="343" height="150"/>
+                                        <rect key="frame" x="0.0" y="460.66666666666657" width="343" height="131.33333333333331"/>
                                         <string key="text">	• 	Reducing your carbon footprint
 	• 	High levels of meat consumption have been linked to higher risks of heart disease, cancer, and Alzheimer’s 
 	• 	Cows are, like, really cute</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
