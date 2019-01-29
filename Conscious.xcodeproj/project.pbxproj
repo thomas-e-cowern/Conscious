@@ -46,7 +46,7 @@
 
 /* Begin PBXFileReference section */
 		410CA388220000EE00D7BAC5 /* ActionListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionListTableViewCell.swift; sourceTree = "<group>"; };
-		414949CA2200D6380067AF95 /* ActionPlanDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActionPlanDetail.swift; path = ../../../../ActionPlanDetail.swift; sourceTree = "<group>"; };
+		414949CA2200D6380067AF95 /* ActionPlanDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionPlanDetail.swift; sourceTree = "<group>"; };
 		414C721521F2A9E800C8687F /* ActionListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionListTableViewController.swift; sourceTree = "<group>"; };
 		414C721921F2B6E500C8687F /* MyActionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyActionsViewController.swift; sourceTree = "<group>"; };
 		414C721B21F2BE1F00C8687F /* ActionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionDetailViewController.swift; sourceTree = "<group>"; };
