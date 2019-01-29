@@ -15,15 +15,14 @@ struct SavedData: Codable, Equatable {
     let foodScore: Double
     let houseScore: Double
     let travelScore:   Double
-    var actionPlan: [ActionPlanDetail]?
     
     // Initializer
-    init(overallScore: Double, foodScore: Double, houseScore: Double, travelScore: Double, actionPlan: [ActionPlanDetail] = []) {
+    init(overallScore: Double, foodScore: Double, houseScore: Double, travelScore: Double) {
         self.overallScore = overallScore
         self.foodScore = foodScore
         self.houseScore = houseScore
         self.travelScore = travelScore
-        self.actionPlan = actionPlan
+
     }
     
     // MARK: - equatable
