@@ -33,6 +33,9 @@
 		7E6CC80221FBB6E6006C0E4A /* TabBarControllor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6CC80121FBB6E6006C0E4A /* TabBarControllor.swift */; };
 		7E92676721F23B8000A5B396 /* QuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E92676621F23B8000A5B396 /* QuizTableViewCell.swift */; };
 		7E94754F21F7E7710070F111 /* UserResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E94754E21F7E7710070F111 /* UserResultsViewController.swift */; };
+		7ECD8C4C2200FEE700152D0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ECD8C4B2200FEE600152D0F /* Assets.xcassets */; };
+		7ECD8C572201097600152D0F /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD8C562201097600152D0F /* SettingsTableViewController.swift */; };
+		7ECD8C5922010AF000152D0F /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD8C5822010AF000152D0F /* SettingsTableViewCell.swift */; };
 		7ECE818721F0F71B00F2F9DA /* ActionPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE818621F0F71B00F2F9DA /* ActionPlan.swift */; };
 		7ECE818E21F120D600F2F9DA /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE818D21F120D600F2F9DA /* Food.swift */; };
 		7ECE819021F120F100F2F9DA /* Travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE818F21F120F000F2F9DA /* Travel.swift */; };
@@ -40,7 +43,6 @@
 		7ECE819B21F1234F00F2F9DA /* ActionPlanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE819A21F1234F00F2F9DA /* ActionPlanController.swift */; };
 		7ECE819F21F136CD00F2F9DA /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE819E21F136CD00F2F9DA /* QuizViewController.swift */; };
 		7ECE81A421F14D3B00F2F9DA /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE81A321F14D3B00F2F9DA /* Question.swift */; };
-		7EF3D07F21FFC8750033217E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EF3D07E21FFC8750033217E /* Assets.xcassets */; };
 		9BEA98FE29B9D420841BD395 /* Pods_Conscious.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC5010AE7FC9AC10C85DB44 /* Pods_Conscious.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +75,17 @@
 		7E6CC80121FBB6E6006C0E4A /* TabBarControllor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllor.swift; sourceTree = "<group>"; };
 		7E92676621F23B8000A5B396 /* QuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTableViewCell.swift; sourceTree = "<group>"; };
 		7E94754E21F7E7710070F111 /* UserResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResultsViewController.swift; sourceTree = "<group>"; };
+		7ECD8C4B2200FEE600152D0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7ECD8C4E2201002200152D0F /* CircularStd-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-MediumItalic.otf"; sourceTree = "<group>"; };
+		7ECD8C4F2201002200152D0F /* CircularStd-BookItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-BookItalic.otf"; sourceTree = "<group>"; };
+		7ECD8C502201002200152D0F /* CircularStd-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-BlackItalic.otf"; sourceTree = "<group>"; };
+		7ECD8C512201002200152D0F /* CircularStd-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-BoldItalic.otf"; sourceTree = "<group>"; };
+		7ECD8C522201002300152D0F /* CircularStd-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Black.otf"; sourceTree = "<group>"; };
+		7ECD8C532201002300152D0F /* CircularStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Bold.otf"; sourceTree = "<group>"; };
+		7ECD8C542201002300152D0F /* CircularStd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Book.otf"; sourceTree = "<group>"; };
+		7ECD8C552201002300152D0F /* CircularStd-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Medium.otf"; sourceTree = "<group>"; };
+		7ECD8C562201097600152D0F /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		7ECD8C5822010AF000152D0F /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		7ECE818621F0F71B00F2F9DA /* ActionPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPlan.swift; sourceTree = "<group>"; };
 		7ECE818D21F120D600F2F9DA /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		7ECE818F21F120F000F2F9DA /* Travel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel.swift; sourceTree = "<group>"; };
@@ -80,7 +93,6 @@
 		7ECE819A21F1234F00F2F9DA /* ActionPlanController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPlanController.swift; sourceTree = "<group>"; };
 		7ECE819E21F136CD00F2F9DA /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		7ECE81A321F14D3B00F2F9DA /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		7EF3D07E21FFC8750033217E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEC5010AE7FC9AC10C85DB44 /* Pods_Conscious.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Conscious.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC33AD44D62447E777BA75D6 /* Pods-Conscious.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Conscious.release.xcconfig"; path = "Pods/Target Support Files/Pods-Conscious/Pods-Conscious.release.xcconfig"; sourceTree = "<group>"; };
 		FF566A7DBB361551DA265DE9 /* Pods-Conscious.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Conscious.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Conscious/Pods-Conscious.debug.xcconfig"; sourceTree = "<group>"; };
@@ -106,7 +118,6 @@
 				7E6CC7FB21FB7A5F006C0E4A /* UserResult.storyboard */,
 				7E6CC7F721FB770D006C0E4A /* Tabs.storyboard */,
 				7E6CC7F321FB6BFB006C0E4A /* Settings.storyboard */,
-				41D89A7921EE8BB700CFF725 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -146,7 +157,8 @@
 		41D89A8221EE8BDE00CFF725 /* Resorces */ = {
 			isa = PBXGroup;
 			children = (
-				7EF3D07E21FFC8750033217E /* Assets.xcassets */,
+				7ECD8C4D2201000500152D0F /* Font */,
+				7ECD8C4B2200FEE600152D0F /* Assets.xcassets */,
 				41D89A7021EE8B9F00CFF725 /* AppDelegate.swift */,
 				41D89A7C21EE8BB700CFF725 /* Info.plist */,
 			);
@@ -178,6 +190,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7ECD8C4D2201000500152D0F /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				7ECD8C522201002300152D0F /* CircularStd-Black.otf */,
+				7ECD8C502201002200152D0F /* CircularStd-BlackItalic.otf */,
+				7ECD8C532201002300152D0F /* CircularStd-Bold.otf */,
+				7ECD8C512201002200152D0F /* CircularStd-BoldItalic.otf */,
+				7ECD8C542201002300152D0F /* CircularStd-Book.otf */,
+				7ECD8C4F2201002200152D0F /* CircularStd-BookItalic.otf */,
+				7ECD8C552201002300152D0F /* CircularStd-Medium.otf */,
+				7ECD8C4E2201002200152D0F /* CircularStd-MediumItalic.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		7ECE818821F1096400F2F9DA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +213,7 @@
 				7E6CC7FF21FB8D51006C0E4A /* FootPrintViewController.swift */,
 				416EFA2921F8F00C00972AB0 /* ActionTableViewCell.swift */,
 				4176753A21F3F87500CC4C07 /* SettingsViewController.swift */,
+				7ECD8C562201097600152D0F /* SettingsTableViewController.swift */,
 				414C721921F2B6E500C8687F /* MyActionsViewController.swift */,
 				7ECE819E21F136CD00F2F9DA /* QuizViewController.swift */,
 				7E94754E21F7E7710070F111 /* UserResultsViewController.swift */,
@@ -210,6 +238,7 @@
 		7ECE81A021F13F2F00F2F9DA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7ECD8C5822010AF000152D0F /* SettingsTableViewCell.swift */,
 				7E92676621F23B8000A5B396 /* QuizTableViewCell.swift */,
 			);
 			path = Views;
@@ -218,6 +247,7 @@
 		7ECE81A521F1501D00F2F9DA /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				41D89A7921EE8BB700CFF725 /* LaunchScreen.storyboard */,
 				7E3A5B7721FCF67A00BB4F16 /* PageOneViewController.storyboard */,
 			);
 			path = Onboarding;
@@ -297,7 +327,7 @@
 				7E3A5B7821FCF67A00BB4F16 /* PageOneViewController.storyboard in Resources */,
 				7E6CC7F821FB770D006C0E4A /* Tabs.storyboard in Resources */,
 				7E6CC7F421FB6BFB006C0E4A /* Settings.storyboard in Resources */,
-				7EF3D07F21FFC8750033217E /* Assets.xcassets in Resources */,
+				7ECD8C4C2200FEE700152D0F /* Assets.xcassets in Resources */,
 				7E6CC7FE21FB7C8D006C0E4A /* Quiz.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,6 +403,8 @@
 				410CA389220000EF00D7BAC5 /* ActionListTableViewCell.swift in Sources */,
 				7ECE819F21F136CD00F2F9DA /* QuizViewController.swift in Sources */,
 				41749E5821FCF43D00DBCA06 /* SavedData.swift in Sources */,
+				7ECD8C572201097600152D0F /* SettingsTableViewController.swift in Sources */,
+				7ECD8C5922010AF000152D0F /* SettingsTableViewCell.swift in Sources */,
 				7ECE818721F0F71B00F2F9DA /* ActionPlan.swift in Sources */,
 				41A8BDCE21F67B40001EB547 /* Alarm.swift in Sources */,
 				4176753B21F3F87500CC4C07 /* SettingsViewController.swift in Sources */,
