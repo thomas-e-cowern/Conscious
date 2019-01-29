@@ -21,7 +21,6 @@
 		41D89A7121EE8B9F00CFF725 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D89A7021EE8B9F00CFF725 /* AppDelegate.swift */; };
 		41D89A7B21EE8BB700CFF725 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D89A7921EE8BB700CFF725 /* LaunchScreen.storyboard */; };
 		41E57C4F21FF8492008BE01D /* GreenCalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E57C4E21FF8488008BE01D /* GreenCalculatorController.swift */; };
-		41E57C5121FF9E0C008BE01D /* SavedActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E57C5021FF9E0C008BE01D /* SavedActions.swift */; };
 		7E3A5B7821FCF67A00BB4F16 /* PageOneViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E3A5B7721FCF67A00BB4F16 /* PageOneViewController.storyboard */; };
 		7E3A5B8721FD230600BB4F16 /* CitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3A5B8621FD230600BB4F16 /* CitationViewController.swift */; };
 		7E3A5B8B21FD298200BB4F16 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3A5B8A21FD298200BB4F16 /* Colors.swift */; };
@@ -62,7 +61,6 @@
 		41D89A7A21EE8BB700CFF725 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41D89A7C21EE8BB700CFF725 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41E57C4E21FF8488008BE01D /* GreenCalculatorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GreenCalculatorController.swift; path = Conscious/Views/GreenCalculatorController.swift; sourceTree = SOURCE_ROOT; };
-		41E57C5021FF9E0C008BE01D /* SavedActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedActions.swift; sourceTree = "<group>"; };
 		7E3A5B7721FCF67A00BB4F16 /* PageOneViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PageOneViewController.storyboard; sourceTree = "<group>"; };
 		7E3A5B8621FD230600BB4F16 /* CitationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitationViewController.swift; sourceTree = "<group>"; };
 		7E3A5B8A21FD298200BB4F16 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -166,7 +164,6 @@
 				41A8BDCD21F67B40001EB547 /* Alarm.swift */,
 				414FF5AD21FA2A3300D9DA48 /* ActionPlanDetail.swift */,
 				41749E5721FCF43D00DBCA06 /* SavedData.swift */,
-				41E57C5021FF9E0C008BE01D /* SavedActions.swift */,
 				7E3A5B8A21FD298200BB4F16 /* Colors.swift */,
 			);
 			path = Models;
@@ -366,7 +363,6 @@
 				7E94754F21F7E7710070F111 /* UserResultsViewController.swift in Sources */,
 				7ECE819B21F1234F00F2F9DA /* ActionPlanController.swift in Sources */,
 				7E3A5B8B21FD298200BB4F16 /* Colors.swift in Sources */,
-				41E57C5121FF9E0C008BE01D /* SavedActions.swift in Sources */,
 				7ECE819221F120FD00F2F9DA /* House.swift in Sources */,
 				414C721C21F2BE1F00C8687F /* ActionDetailViewController.swift in Sources */,
 				416EFA2A21F8F00D00972AB0 /* ActionTableViewCell.swift in Sources */,

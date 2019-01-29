@@ -25,7 +25,8 @@ class LocalStorageController {
     }
     
     func addNewActions(action: ActionPlanDetail) {
-        savedActions.append(action)
+        let newAction = action
+        savedActions.append(newAction)
         self.saveToPersistentStoreData(path: "action")
     }
     
