@@ -19,7 +19,6 @@
 		41A8BDCC21F67AAF001EB547 /* ActionsAlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A8BDCB21F67AAF001EB547 /* ActionsAlarmController.swift */; };
 		41A8BDCE21F67B40001EB547 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A8BDCD21F67B40001EB547 /* Alarm.swift */; };
 		41D89A7121EE8B9F00CFF725 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D89A7021EE8B9F00CFF725 /* AppDelegate.swift */; };
-		41D89A7B21EE8BB700CFF725 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D89A7921EE8BB700CFF725 /* LaunchScreen.storyboard */; };
 		41E57C4F21FF8492008BE01D /* GreenCalculatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E57C4E21FF8488008BE01D /* GreenCalculatorController.swift */; };
 		7E3A5B7821FCF67A00BB4F16 /* PageOneViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E3A5B7721FCF67A00BB4F16 /* PageOneViewController.storyboard */; };
 		7E3A5B8721FD230600BB4F16 /* CitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3A5B8621FD230600BB4F16 /* CitationViewController.swift */; };
@@ -36,6 +35,7 @@
 		7ECD8C4C2200FEE700152D0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ECD8C4B2200FEE600152D0F /* Assets.xcassets */; };
 		7ECD8C572201097600152D0F /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD8C562201097600152D0F /* SettingsTableViewController.swift */; };
 		7ECD8C5922010AF000152D0F /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD8C5822010AF000152D0F /* SettingsTableViewCell.swift */; };
+		7ECD8C5B22011B7200152D0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ECD8C5A22011B7200152D0F /* LaunchScreen.storyboard */; };
 		7ECE818721F0F71B00F2F9DA /* ActionPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE818621F0F71B00F2F9DA /* ActionPlan.swift */; };
 		7ECE818E21F120D600F2F9DA /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE818D21F120D600F2F9DA /* Food.swift */; };
 		7ECE819021F120F100F2F9DA /* Travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE818F21F120F000F2F9DA /* Travel.swift */; };
@@ -60,7 +60,6 @@
 		41A8BDCD21F67B40001EB547 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		41D89A6D21EE8B9F00CFF725 /* Conscious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Conscious.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41D89A7021EE8B9F00CFF725 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		41D89A7A21EE8BB700CFF725 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41D89A7C21EE8BB700CFF725 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41E57C4E21FF8488008BE01D /* GreenCalculatorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GreenCalculatorController.swift; path = Conscious/Views/GreenCalculatorController.swift; sourceTree = SOURCE_ROOT; };
 		7E3A5B7721FCF67A00BB4F16 /* PageOneViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PageOneViewController.storyboard; sourceTree = "<group>"; };
@@ -86,6 +85,7 @@
 		7ECD8C552201002300152D0F /* CircularStd-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Medium.otf"; sourceTree = "<group>"; };
 		7ECD8C562201097600152D0F /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		7ECD8C5822010AF000152D0F /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		7ECD8C5A22011B7200152D0F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7ECE818621F0F71B00F2F9DA /* ActionPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPlan.swift; sourceTree = "<group>"; };
 		7ECE818D21F120D600F2F9DA /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		7ECE818F21F120F000F2F9DA /* Travel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel.swift; sourceTree = "<group>"; };
@@ -247,7 +247,7 @@
 		7ECE81A521F1501D00F2F9DA /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				41D89A7921EE8BB700CFF725 /* LaunchScreen.storyboard */,
+				7ECD8C5A22011B7200152D0F /* LaunchScreen.storyboard */,
 				7E3A5B7721FCF67A00BB4F16 /* PageOneViewController.storyboard */,
 			);
 			path = Onboarding;
@@ -321,8 +321,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41D89A7B21EE8BB700CFF725 /* LaunchScreen.storyboard in Resources */,
 				7E6CC7FC21FB7A5F006C0E4A /* UserResult.storyboard in Resources */,
+				7ECD8C5B22011B7200152D0F /* LaunchScreen.storyboard in Resources */,
 				7E6CC7FA21FB7A50006C0E4A /* USAverage.storyboard in Resources */,
 				7E3A5B7821FCF67A00BB4F16 /* PageOneViewController.storyboard in Resources */,
 				7E6CC7F821FB770D006C0E4A /* Tabs.storyboard in Resources */,
@@ -418,17 +418,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		41D89A7921EE8BB700CFF725 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				41D89A7A21EE8BB700CFF725 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		41D89A7D21EE8BB700CFF725 /* Debug */ = {
