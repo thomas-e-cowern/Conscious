@@ -16,7 +16,7 @@ class LocalStorageController {
     
     var isNewQuiz: Bool = false
     
-    private var savedData: [SavedData] = []
+    var savedData: [SavedData] = []
     
     var savedActions: [ActionPlanDetail] = []
     
