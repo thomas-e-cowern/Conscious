@@ -23,8 +23,9 @@ class MyActionsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        savedActions = LocalStorageController.shared.loadFromPersistenceStore(path: "action").last ?? []
-        print("👠👠👠👠👠👠👠👠\(savedActions)👠👠👠👠👠👠👠👠👠👠👠")
+        let loadedActions: [ActionPlanDetail] = LocalStorageController.shared.loadFromPersistenceStore(path: "action")
+        self.savedActions = loadedActions
+        print("👠👠👠👠👠👠👠👠\(savedActions[0].completed)👠👠👠👠👠👠👠👠👠👠👠")
         myActions = savedActions
         print("🥼🥼🥼🥼🥼🥼🥼🥼🥼🥼\(myActions)🥼🥼🥼🥼🥼🥼🥼🥼🥼🥼")
         myActionsTableview.dataSource = self
@@ -56,32 +57,39 @@ extension MyActionsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myActionsCell", for: indexPath) as! ActionTableViewCell
+        cell.tag = indexPath.row
         cell.action = myActions[indexPath.row]
         cell.actionViewCellLabel.text = myActions[indexPath.row].action
+        let buttonStatus = false
+        if myActions[indexPath.row].completed == true {
+            
+        }
+        let buttonStatus =
+        cell.buttonStatus = myActions[indexPath.row].completed
         cell.delegate = self
         return cell
     }
 }
 
-extension MyActionsViewController: ActionTableViewCellDelegate{
+extension MyActionsViewController: ActionTableViewCellDelegate {
     func actionChecked(for cell: ActionTableViewCell){
         guard let action = cell.action else { return }
         cell.action?.completed = true
-        LocalStorageController.shared.updateActionStatus(action: action, completed: true)
-        actionsCompleted = myActions.filter{ $0.completed == true }
+        print(cell.tag)
+        myActions[cell.tag].completed = true
+        LocalStorageController.shared.saveActions(actions: myActions)
         actionsCompletedCount += 1
         let carbonReduction = (action.carbonReduction ?? 0)
         totalCarbonSavings += carbonReduction
-        actionsCompleted.append(action)
-        
         updateViews()
     }
     
     func actionUnchecked(for cell: ActionTableViewCell){
         guard let action = cell.action else { return }
         cell.action?.completed = false
-        LocalStorageController.shared.updateActionStatus(action: action, completed: false)
-        actionsCompleted = myActions.filter{ $0.completed == true }
+        print(cell.tag)
+        myActions[cell.tag].completed = false
+        LocalStorageController.shared.saveActions(actions: myActions)
         actionsCompletedCount -= 1
         let carbonReduction = (action.carbonReduction ?? 0)
         totalCarbonSavings -= carbonReduction

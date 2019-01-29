@@ -21,11 +21,15 @@ class ActionTableViewCell: UITableViewCell {
     var action: ActionPlanDetail?
     var actionTitle: String?
     var actionComplete: Bool? = false
+    var buttonStatus: Bool = false
     weak var delegate: ActionTableViewCellDelegate?
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -37,6 +41,7 @@ class ActionTableViewCell: UITableViewCell {
     // change button status
     
     func changeButtonImage() {
+        print("Change button image")
         if actionComplete == false {
             actionComplete = true
             actionViewCellButton.setTitle("Done", for: .normal)
@@ -48,6 +53,7 @@ class ActionTableViewCell: UITableViewCell {
     
     // change attributedString
     func changeString() {
+        print("Change button string")
         guard let action = action else { return }
         let testTitle = action.action
         let attributedString = NSMutableAttributedString(string: testTitle)
