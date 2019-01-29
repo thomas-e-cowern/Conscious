@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		410CA389220000EF00D7BAC5 /* ActionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410CA388220000EE00D7BAC5 /* ActionListTableViewCell.swift */; };
+		414949CB2200D6380067AF95 /* ActionPlanDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414949CA2200D6380067AF95 /* ActionPlanDetail.swift */; };
 		414C721621F2A9E800C8687F /* ActionListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414C721521F2A9E800C8687F /* ActionListTableViewController.swift */; };
 		414C721A21F2B6E500C8687F /* MyActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414C721921F2B6E500C8687F /* MyActionsViewController.swift */; };
 		414C721C21F2BE1F00C8687F /* ActionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414C721B21F2BE1F00C8687F /* ActionDetailViewController.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		410CA388220000EE00D7BAC5 /* ActionListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionListTableViewCell.swift; sourceTree = "<group>"; };
+		414949CA2200D6380067AF95 /* ActionPlanDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActionPlanDetail.swift; path = ../../../../ActionPlanDetail.swift; sourceTree = "<group>"; };
 		414C721521F2A9E800C8687F /* ActionListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionListTableViewController.swift; sourceTree = "<group>"; };
 		414C721921F2B6E500C8687F /* MyActionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyActionsViewController.swift; sourceTree = "<group>"; };
 		414C721B21F2BE1F00C8687F /* ActionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionDetailViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				7ECE818621F0F71B00F2F9DA /* ActionPlan.swift */,
 				41A8BDCD21F67B40001EB547 /* Alarm.swift */,
 				414FF5AD21FA2A3300D9DA48 /* ActionPlanDetail.swift */,
+				414949CA2200D6380067AF95 /* ActionPlanDetail.swift */,
 				41749E5721FCF43D00DBCA06 /* SavedData.swift */,
 				7E3A5B8A21FD298200BB4F16 /* Colors.swift */,
 			);
@@ -360,6 +363,7 @@
 				7E3A5B8721FD230600BB4F16 /* CitationViewController.swift in Sources */,
 				7E6CC80021FB8D51006C0E4A /* FootPrintViewController.swift in Sources */,
 				41E57C4F21FF8492008BE01D /* GreenCalculatorController.swift in Sources */,
+				414949CB2200D6380067AF95 /* ActionPlanDetail.swift in Sources */,
 				7E94754F21F7E7710070F111 /* UserResultsViewController.swift in Sources */,
 				7ECE819B21F1234F00F2F9DA /* ActionPlanController.swift in Sources */,
 				7E3A5B8B21FD298200BB4F16 /* Colors.swift in Sources */,
