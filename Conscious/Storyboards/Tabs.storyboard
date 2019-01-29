@@ -310,14 +310,49 @@ Pledged</string>
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="actionCell" rowHeight="48" id="wBT-ZG-eB1" userLabel="actionCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="actionCell" rowHeight="48" id="wBT-ZG-eB1" userLabel="actionCell" customClass="ActionListTableViewCell" customModule="Conscious" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="183" width="375" height="48"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wBT-ZG-eB1" id="nCn-q4-fpS">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="47.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dw1-hb-goT">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="47.5"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Gm-bx-Egj">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="47.5"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJD-Yl-Bgo">
+                                                    <rect key="frame" x="90" y="0.0" width="252" height="47.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="PJD-Yl-Bgo" secondAttribute="trailing" constant="33" id="Bip-V5-zLP"/>
+                                                <constraint firstItem="8Gm-bx-Egj" firstAttribute="leading" secondItem="Dw1-hb-goT" secondAttribute="leading" id="E3f-3o-92r"/>
+                                                <constraint firstItem="8Gm-bx-Egj" firstAttribute="top" secondItem="Dw1-hb-goT" secondAttribute="top" id="L6u-g0-A6I"/>
+                                                <constraint firstItem="PJD-Yl-Bgo" firstAttribute="leading" secondItem="Dw1-hb-goT" secondAttribute="leading" constant="90" id="Si8-I0-VbM"/>
+                                                <constraint firstAttribute="bottom" secondItem="PJD-Yl-Bgo" secondAttribute="bottom" id="YfI-nh-6GS"/>
+                                                <constraint firstAttribute="trailing" secondItem="8Gm-bx-Egj" secondAttribute="trailing" id="jcU-3M-Bap"/>
+                                                <constraint firstItem="PJD-Yl-Bgo" firstAttribute="top" secondItem="Dw1-hb-goT" secondAttribute="top" id="tVC-B6-gNv"/>
+                                                <constraint firstAttribute="bottom" secondItem="8Gm-bx-Egj" secondAttribute="bottom" id="tVe-cD-3xn"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Dw1-hb-goT" firstAttribute="top" secondItem="nCn-q4-fpS" secondAttribute="top" id="10W-fw-Hi4"/>
+                                        <constraint firstAttribute="trailing" secondItem="Dw1-hb-goT" secondAttribute="trailing" id="6S2-Bh-7Kq"/>
+                                        <constraint firstAttribute="bottom" secondItem="Dw1-hb-goT" secondAttribute="bottom" id="8qC-WC-GJE"/>
+                                        <constraint firstItem="Dw1-hb-goT" firstAttribute="leading" secondItem="nCn-q4-fpS" secondAttribute="leading" id="qrN-Xq-5q2"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="listCellImage" destination="8Gm-bx-Egj" id="cQ2-sw-2zb"/>
+                                    <outlet property="listCellLabel" destination="PJD-Yl-Bgo" id="bKj-WF-y3h"/>
                                     <segue destination="9Fz-9x-3ei" kind="show" identifier="toActionDetail" id="mYw-nZ-B2a"/>
                                 </connections>
                             </tableViewCell>

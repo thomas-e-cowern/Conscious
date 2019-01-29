@@ -45,14 +45,10 @@ class ActionDetailViewController: UIViewController {
     // MARK: - Actions
     @IBAction func addToActionListButtonTapped(_ sender: Any) {
         guard let action = action else { return }
-        guard let savedData = LocalStorageController.shared.loadFromPersistenceStore().last else { return }
-        print("savedData in Actions: \(savedData)")
-        addToActionListButton.setTitle("Added to Action List", for: .normal)
         ActionsAlarmController.shared.addAlarm(fireDate: Date(), name: action.action, message: action.actionSummry, enabled: true, frequency: action.frequency, repeats: true)
         ActionPlanController.shared.userActionList.append(action)
-        let newActionItem = action
+        LocalStorageController.shared.addNewActions(action: action)
         ActionPlanController.shared.reductionInCost += action.costSavings ?? 0.0
-        LocalStorageController.shared.updateActionList(savedData: savedData, actionPlan: newActionItem)
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }

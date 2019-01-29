@@ -43,12 +43,14 @@ class QuizViewController: UIViewController {
         tableView.delegate = self
         tableView.reloadData()
         self.question = allQs[questionIndex]
+        LocalStorageController.shared.isNewQuiz = true
         updateViews()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.question = allQs[questionIndex]
+        LocalStorageController.shared.isNewQuiz = true
         updateViews()
         tableView.reloadData()
     }
@@ -91,7 +93,6 @@ class QuizViewController: UIViewController {
             updateViews()
         } else {
             performSegue(withIdentifier: "scoreSegue", sender: nil)
-            LocalStorageController.shared.isNewQuiz = true
         }
     }
     

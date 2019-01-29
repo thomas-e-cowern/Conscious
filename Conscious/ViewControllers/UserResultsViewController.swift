@@ -50,13 +50,15 @@ class UserResultsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getSavedData()
+        updateViews()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         if LocalStorageController.shared.isNewQuiz == true {
-            print("New Quiz")
+            print("💊💊💊💊💊💊New Quiz💊💊💊💊💊💊")
             getNewResults()
             updateViews()
         } else {
@@ -83,17 +85,19 @@ class UserResultsViewController: UIViewController {
         setHouseGraph(houseScore, totalScore)
         setTravelGraph(travelScore, totalScore)
         
-        LocalStorageController.shared.addNewResults(overallScore: totalScore, foodScore: foodScore, houseScore: houseScore, travelScore: travelScore, actionPlan: [])
+        LocalStorageController.shared.addNewResults(overallScore: totalScore, foodScore: foodScore, houseScore: houseScore, travelScore: travelScore)
+        
+        LocalStorageController.shared.isNewQuiz = false
     }
     
     func getSavedData () {
-        let savedData = LocalStorageController.shared.loadFromPersistenceStore()
+        let savedData: [SavedData] = LocalStorageController.shared.loadFromPersistenceStore(path: "data")
         print("👑👑👑👑👑👑👑👑\(savedData)👑👑👑👑👑👑👑👑👑")
         guard let savedDataLast = savedData.last else {
             print("⛑⛑⛑⛑⛑⛑⛑⛑Problem getting saved data⛑⛑⛑⛑⛑⛑⛑⛑⛑⛑")
             return
         }
-        print("↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️\(savedData)↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️")
+        print("↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️\(savedDataLast)↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️")
         totalScore = savedDataLast.overallScore == 0 ? 1.0 : savedDataLast.overallScore
         foodScore = savedDataLast.foodScore == 0 ? 1.0 : savedDataLast.foodScore
         houseScore = savedDataLast.houseScore == 0 ? 1.0 : savedDataLast.houseScore
@@ -103,7 +107,6 @@ class UserResultsViewController: UIViewController {
         print("\(foodScore)")
         print("\(houseScore)")
         print("\(travelScore)")
-        print("\(savedDataLast.actionPlan)")
         
         setFoodGraph(foodScore, totalScore)
         setHouseGraph(houseScore, totalScore)

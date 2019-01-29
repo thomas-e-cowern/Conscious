@@ -43,7 +43,6 @@ enum Categories: String {
         switch self {
         case .food:
             if isVegetarian == false {
-                print("inside isVegetarian")
                 baseFoodPlan += [meatlessModay, becomeVegetarian, tryAVeganRecipe]
             }
             if buysLocally == false {
