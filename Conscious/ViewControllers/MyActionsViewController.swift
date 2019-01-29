@@ -23,7 +23,7 @@ class MyActionsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        savedActions = LocalStorageController.shared.loadFromPersistenceStore(path: "action")
+        savedActions = LocalStorageController.shared.loadFromPersistenceStore(path: "action").last ?? []
         print("👠👠👠👠👠👠👠👠\(savedActions)👠👠👠👠👠👠👠👠👠👠👠")
         myActions = savedActions
         print("🥼🥼🥼🥼🥼🥼🥼🥼🥼🥼\(myActions)🥼🥼🥼🥼🥼🥼🥼🥼🥼🥼")

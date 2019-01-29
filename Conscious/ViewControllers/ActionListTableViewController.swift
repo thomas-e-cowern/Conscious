@@ -67,8 +67,19 @@ class ActionListTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "actionCell", for: indexPath)
-        cell.textLabel?.text = actions[indexPath.row].action
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "actionCell", for: indexPath) as? ActionListTableViewCell else { return UITableViewCell() }
+//        cell.textLabel?.text = actions[indexPath.row].action
+ 
+        cell.listCellLabel.text = actions[indexPath.row].action
+        
+        switch actions[indexPath.row].icon {
+        case "Food":
+            cell.listCellImage.image = UIImage(named: "Food")
+        case "house":
+            cell.listCellImage.image = UIImage(named: "home")
+        default:
+            cell.listCellImage.image = UIImage(named: "TravelIcon")
+        }
         return cell
     }
     

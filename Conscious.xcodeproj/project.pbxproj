@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		410CA389220000EF00D7BAC5 /* ActionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410CA388220000EE00D7BAC5 /* ActionListTableViewCell.swift */; };
 		414C721621F2A9E800C8687F /* ActionListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414C721521F2A9E800C8687F /* ActionListTableViewController.swift */; };
 		414C721A21F2B6E500C8687F /* MyActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414C721921F2B6E500C8687F /* MyActionsViewController.swift */; };
 		414C721C21F2BE1F00C8687F /* ActionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414C721B21F2BE1F00C8687F /* ActionDetailViewController.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		410CA388220000EE00D7BAC5 /* ActionListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionListTableViewCell.swift; sourceTree = "<group>"; };
 		414C721521F2A9E800C8687F /* ActionListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionListTableViewController.swift; sourceTree = "<group>"; };
 		414C721921F2B6E500C8687F /* MyActionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyActionsViewController.swift; sourceTree = "<group>"; };
 		414C721B21F2BE1F00C8687F /* ActionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionDetailViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				7ECE819E21F136CD00F2F9DA /* QuizViewController.swift */,
 				7E94754E21F7E7710070F111 /* UserResultsViewController.swift */,
 				414C721521F2A9E800C8687F /* ActionListTableViewController.swift */,
+				410CA388220000EE00D7BAC5 /* ActionListTableViewCell.swift */,
 				414C721B21F2BE1F00C8687F /* ActionDetailViewController.swift */,
 			);
 			path = ViewControllers;
@@ -371,6 +374,7 @@
 				41D89A7121EE8B9F00CFF725 /* AppDelegate.swift in Sources */,
 				414FF5AE21FA2A3300D9DA48 /* ActionPlanDetail.swift in Sources */,
 				7E92676721F23B8000A5B396 /* QuizTableViewCell.swift in Sources */,
+				410CA389220000EF00D7BAC5 /* ActionListTableViewCell.swift in Sources */,
 				7ECE819F21F136CD00F2F9DA /* QuizViewController.swift in Sources */,
 				41749E5821FCF43D00DBCA06 /* SavedData.swift in Sources */,
 				7ECE818721F0F71B00F2F9DA /* ActionPlan.swift in Sources */,

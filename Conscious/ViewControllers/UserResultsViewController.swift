@@ -56,7 +56,7 @@ class UserResultsViewController: UIViewController {
         super.viewDidAppear(animated)
         
         if LocalStorageController.shared.isNewQuiz == true {
-            print("New Quiz")
+            print("💊💊💊💊💊💊New Quiz💊💊💊💊💊💊")
             getNewResults()
             updateViews()
         } else {
@@ -84,6 +84,8 @@ class UserResultsViewController: UIViewController {
         setTravelGraph(travelScore, totalScore)
         
         LocalStorageController.shared.addNewResults(overallScore: totalScore, foodScore: foodScore, houseScore: houseScore, travelScore: travelScore)
+        
+        LocalStorageController.shared.isNewQuiz = false
     }
     
     func getSavedData () {
@@ -93,7 +95,7 @@ class UserResultsViewController: UIViewController {
             print("⛑⛑⛑⛑⛑⛑⛑⛑Problem getting saved data⛑⛑⛑⛑⛑⛑⛑⛑⛑⛑")
             return
         }
-        print("↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️\(savedData)↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️")
+        print("↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️\(savedDataLast)↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️↗️")
         totalScore = savedDataLast.overallScore == 0 ? 1.0 : savedDataLast.overallScore
         foodScore = savedDataLast.foodScore == 0 ? 1.0 : savedDataLast.foodScore
         houseScore = savedDataLast.houseScore == 0 ? 1.0 : savedDataLast.houseScore

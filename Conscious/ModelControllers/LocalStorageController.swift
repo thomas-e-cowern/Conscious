@@ -28,7 +28,7 @@ class LocalStorageController {
     
     func addNewActions(action: ActionPlanDetail) {
         savedActions.append(action)
-        self.saveToPersistentStoreData(path: "actions")
+        self.saveToPersistentStoreData(path: "action")
     }
     
     func updateActionStatus(action: ActionPlanDetail, completed: Bool) {
@@ -57,12 +57,27 @@ class LocalStorageController {
     
     func saveToPersistentStoreData(path: String) {
         let encoder = JSONEncoder()
-        do {
-            let data = try encoder.encode(self.savedData)
-            try data.write(to: fileURL(path: path))
-        } catch {
-            print("☎️☎️☎️☎️☎️Error: \(#function): \(error) : \(error.localizedDescription)☎️☎️☎️☎️☎️")
+        if path == "data" {
+            do {
+                let data = try encoder.encode(self.savedData)
+                try data.write(to: fileURL(path: path))
+            } catch {
+                print("☎️☎️☎️☎️☎️Error: \(#function): \(error) : \(error.localizedDescription)☎️☎️☎️☎️☎️")
+            }
+        } else {
+            do {
+                let data = try encoder.encode(self.savedActions)
+                try data.write(to: fileURL(path: path))
+            } catch {
+                print("☎️☎️☎️☎️☎️Error: \(#function): \(error) : \(error.localizedDescription)☎️☎️☎️☎️☎️")
+            }
         }
+//        do {
+//            let data = try encoder.encode(self.savedData)
+//            try data.write(to: fileURL(path: path))
+//        } catch {
+//            print("☎️☎️☎️☎️☎️Error: \(#function): \(error) : \(error.localizedDescription)☎️☎️☎️☎️☎️")
+//        }
     }
     
     func loadFromPersistenceStore<T: Codable>(path: String) -> [T] {
