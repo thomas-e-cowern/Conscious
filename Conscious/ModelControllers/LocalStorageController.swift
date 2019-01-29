@@ -16,28 +16,38 @@ class LocalStorageController {
     
     var isNewQuiz: Bool = false
     
-    var savedData: [SavedData] = []
+    private var savedData: [SavedData] = []
     
-    func addNewResults(overallScore: Double, foodScore: Double, houseScore: Double, travelScore: Double, actionPlan: [ActionPlanDetail] = []) {
-        let newResults = SavedData(overallScore: overallScore, foodScore: foodScore, houseScore: houseScore, travelScore: travelScore, actionPlan: [])
+    var savedActions: [ActionPlanDetail] = []
+    
+    func addNewResults(overallScore: Double, foodScore: Double, houseScore: Double, travelScore: Double) {
+        let newResults = SavedData(overallScore: overallScore, foodScore: foodScore, houseScore: houseScore, travelScore: travelScore)
         savedData.append(newResults)
-        self.saveToPersistentStore()
+        self.saveToPersistentStoreData(path: "data")
     }
     
-    func updateActionList(savedData: SavedData, actionPlan: ActionPlanDetail) {
-        var savedData = savedData
-        let actionPlanItem = actionPlan
-        savedData.actionPlan?.append(actionPlanItem)
-        print("savedData in LSC: \(savedData)")
-        print("actionplan in LSC: \(savedData.actionPlan)")
-        self.savedData.append(savedData)
-        self.saveToPersistentStore()
+    func addNewActions(action: ActionPlanDetail) {
+        savedActions.append(action)
+        self.saveToPersistentStoreData(path: "actions")
     }
     
-    func fileURL() -> URL {
+    func updateActionStatus(action: ActionPlanDetail, completed: Bool) {
+//        var savedActions = loadFromPersistenceStoreData(path: "actions")
+//        print("\(savedActions.count)")
+//        for i in 0..<savedActions.count {
+//            if savedActions[i].action == action.action {
+//                print("🧢🧢🧢🧢🧢🧢🧢🧢Matching🧢🧢🧢🧢🧢🧢🧢🧢🧢")
+//                savedActions[i].completed = completed
+//            }
+//        }
+//        self.saveToPersistentStoreData(path: "actions")
+    }
+    
+    // Saving data
+    func fileURL(path: String) -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let documentsDirectory = paths[0]
-        let fileName = "savedData.json"
+        let fileName = "\(path).json"
         let fullURL = documentsDirectory.appendingPathComponent(fileName)
         
         print(fullURL)
@@ -45,27 +55,31 @@ class LocalStorageController {
         return(fullURL)
     }
     
-    func saveToPersistentStore() {
+    func saveToPersistentStoreData(path: String) {
         let encoder = JSONEncoder()
         do {
             let data = try encoder.encode(self.savedData)
-            try data.write(to: fileURL())
+            try data.write(to: fileURL(path: path))
         } catch {
-            print("Error: \(#function): \(error) : \(error.localizedDescription)")
+            print("☎️☎️☎️☎️☎️Error: \(#function): \(error) : \(error.localizedDescription)☎️☎️☎️☎️☎️")
         }
     }
     
-    func loadFromPersistenceStore() -> [SavedData] {
+    func loadFromPersistenceStore<T: Codable>(path: String) -> [T] {
         do {
-            let data = try Data(contentsOf: fileURL())
+            let data = try Data(contentsOf: fileURL(path: path))
             let decoder = JSONDecoder()
-            let alarms = try decoder.decode([SavedData].self, from: data)
-            return alarms
+            let returnData = try decoder.decode([T].self, from: data)
+            if T.self == SavedData.self{
+                savedData = returnData as! [SavedData]
+            }else{
+                savedActions = returnData as! [ActionPlanDetail]
+            }
+            return returnData
         } catch  {
-            print("Error: \(#function): \(error) : \(error.localizedDescription)")
+            print("🔥🔥🔥🔥🔥Error: \(#function): \(error) : \(error.localizedDescription)🔥🔥🔥🔥🔥")
         }
         
         return []
     }
 }
-
