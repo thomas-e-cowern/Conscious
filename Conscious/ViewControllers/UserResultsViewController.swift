@@ -50,6 +50,8 @@ class UserResultsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getSavedData()
+        updateViews()
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -12,8 +12,6 @@ class LocalStorageController {
     
     static let shared = LocalStorageController()
     
-    var hasBeenHereBefore: Bool = false
-    
     var isNewQuiz: Bool = false
     
     var savedData: [SavedData] = []
@@ -83,8 +81,10 @@ class LocalStorageController {
     func loadFromPersistenceStore<T: Codable>(path: String) -> [T] {
         do {
             let data = try Data(contentsOf: fileURL(path: path))
+            
             let decoder = JSONDecoder()
             let returnData = try decoder.decode([T].self, from: data)
+            print("🧿🧿🧿🧿🧿returnData: \(returnData)🧿🧿🧿🧿🧿")
             if T.self == SavedData.self{
                 savedData = returnData as! [SavedData]
             }else{
