@@ -20,17 +20,16 @@ class ActionTableViewCell: UITableViewCell {
     @IBOutlet weak var actionViewCellLabel: UILabel!
     
     var action: ActionPlanDetail?
+    var actionImage: UIImage?
     var actionTitle: String?
     var actionComplete: Bool? = false
     var buttonStatus: Bool = false
     weak var delegate: ActionTableViewCellDelegate?
     
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -40,31 +39,32 @@ class ActionTableViewCell: UITableViewCell {
     }
     
     // change button status
-    
     func changeButtonImage() {
         print("Change button image")
         if actionComplete == false {
-            actionComplete = true
-            switch action?.icon {
+             actionComplete = true
+            switch self.action?.icon {
             case "Food":
-                actionTableViewImage.image = UIImage(named: "Foodchecked")
+                self.actionTableViewImage.image = UIImage(named: "FoodChecked")
             case "house":
-                actionTableViewImage.image = UIImage(named: "Homechecked")
+                self.actionTableViewImage.image = UIImage(named: "HomeChecked")
             default:
-                actionTableViewImage.image = UIImage(named: "Travelchecked")
+                self.actionTableViewImage.image = UIImage(named: "TravelChecked")
             }
         } else {
             actionComplete = false
-            switch action?.icon {
+            print("False")
+            switch self.action?.icon {
             case "Food":
-                actionTableViewImage.image = UIImage(named: "FoodUnchecked")
+                self.actionTableViewImage.image = UIImage(named: "FoodUnchecked")
             case "house":
-                actionTableViewImage.image = UIImage(named: "HomeUnchecked")
+                self.actionTableViewImage.image = UIImage(named: "HomeUnchecked")
             default:
-                actionTableViewImage.image = UIImage(named: "TravelUnchecked")
+                self.actionTableViewImage.image = UIImage(named: "TravelUnchecked")
             }
         }
     }
+    
     
     // change attributedString
     func changeString() {

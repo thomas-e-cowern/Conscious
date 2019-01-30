@@ -153,7 +153,7 @@ Pledged</string>
                                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hf1-nM-x71">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="359" height="104.66666666666667"/>
                                                                                     <subviews>
-                                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cxW-V4-MFW">
+                                                                                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cxW-V4-MFW">
                                                                                             <rect key="frame" x="0.0" y="0.0" width="359" height="104.66666666666667"/>
                                                                                         </imageView>
                                                                                         <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aj-n0-8Jv">
@@ -659,10 +659,8 @@ Pledged</string>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qf3-K6-k75">
                                 <rect key="frame" x="0.0" y="500" width="375" height="917"/>
                                 <subviews>
-
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="epb-8W-CcO">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="697"/>
-
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="8AZ-QW-TiS">
                                                 <rect key="frame" x="16" y="16" width="343" height="665"/>
