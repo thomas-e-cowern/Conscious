@@ -10,6 +10,7 @@ import UIKit
 
 class MyActionsViewController: UIViewController {
     
+
     @IBOutlet weak var myActionsTableview: UITableView!
     @IBOutlet weak var actionsCompleteLabel: UILabel!
     @IBOutlet weak var actionsPledged: UILabel!
@@ -20,6 +21,7 @@ class MyActionsViewController: UIViewController {
     var totalCarbonSavings: Double = 0
     var actionsCompletedCount: Int = 0
     var savedActions: [ActionPlanDetail] = []
+    var intialCount: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +31,9 @@ class MyActionsViewController: UIViewController {
         myActions = savedActions
         print("🥼🥼🥼🥼🥼🥼🥼🥼🥼🥼\(myActions)🥼🥼🥼🥼🥼🥼🥼🥼🥼🥼")
         myActionsTableview.dataSource = self
-        
-        updateViews()
+        myActionsTableview.reloadData()
+        print(actionsCompletedCount)
+//        updateViews()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -59,12 +62,29 @@ extension MyActionsViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myActionsCell", for: indexPath) as! ActionTableViewCell
         cell.tag = indexPath.row
         cell.action = myActions[indexPath.row]
+        let testTitle = myActions[indexPath.row].action
+        let attributedString = NSMutableAttributedString(string: testTitle)
         cell.actionViewCellLabel.text = myActions[indexPath.row].action
-        let buttonStatus = false
-        if myActions[indexPath.row].completed == true {
-            
+        switch myActions[indexPath.row].icon {
+        case "Food":
+            cell.actionTableViewImage.image = UIImage(named: "FoodUnchecked")
+        case "house":
+            cell.actionTableViewImage.image = UIImage(named: "HomeUnchecked")
+        default:
+            cell.actionTableViewImage.image = UIImage(named: "TravelUnchecked")
         }
-        let buttonStatus =
+        if myActions[indexPath.row].completed == true {
+
+
+            attributedString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: NSUnderlineStyle.single.rawValue, range: NSRange(location: 0, length: attributedString.length))
+            cell.actionViewCellLabel.attributedText = attributedString
+        } else {
+ 
+
+            attributedString.removeAttribute(NSAttributedString.Key.strikethroughStyle, range: NSRange(location: 0, length: attributedString.length))
+            cell.actionViewCellLabel.attributedText = attributedString
+        }
+
         cell.buttonStatus = myActions[indexPath.row].completed
         cell.delegate = self
         return cell
