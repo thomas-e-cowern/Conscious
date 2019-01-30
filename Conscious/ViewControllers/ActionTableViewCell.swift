@@ -15,6 +15,7 @@ protocol ActionTableViewCellDelegate: class{
 
 class ActionTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var actionTableViewImage: UIImageView!
     @IBOutlet weak var actionViewCellButton: UIButton!
     @IBOutlet weak var actionViewCellLabel: UILabel!
     
@@ -44,10 +45,24 @@ class ActionTableViewCell: UITableViewCell {
         print("Change button image")
         if actionComplete == false {
             actionComplete = true
-            actionViewCellButton.setTitle("Done", for: .normal)
+            switch action?.icon {
+            case "Food":
+                actionTableViewImage.image = UIImage(named: "Foodchecked")
+            case "house":
+                actionTableViewImage.image = UIImage(named: "Homechecked")
+            default:
+                actionTableViewImage.image = UIImage(named: "Travelchecked")
+            }
         } else {
             actionComplete = false
-            actionViewCellButton.setTitle("Do", for: .normal)
+            switch action?.icon {
+            case "Food":
+                actionTableViewImage.image = UIImage(named: "FoodUnchecked")
+            case "house":
+                actionTableViewImage.image = UIImage(named: "HomeUnchecked")
+            default:
+                actionTableViewImage.image = UIImage(named: "TravelUnchecked")
+            }
         }
     }
     
