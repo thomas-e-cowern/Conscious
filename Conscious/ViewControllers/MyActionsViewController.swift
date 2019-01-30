@@ -8,8 +8,7 @@
 
 import UIKit
 
-class MyActionsViewController: UIViewController {
-    
+class MyActionsViewController: UIViewController{
 
     @IBOutlet weak var myActionsTableview: UITableView!
     @IBOutlet weak var actionsCompleteLabel: UILabel!
@@ -23,17 +22,25 @@ class MyActionsViewController: UIViewController {
     var savedActions: [ActionPlanDetail] = []
     var intialCount: Int = 0
     
+    fileprivate func setUpCarbonReduction(int: Int) {
+        for i in 0..<int - 1 {
+            totalCarbonSavings += actionsCompleted[i].carbonReduction ?? 0
+            print("Tcc: \(totalCarbonSavings)")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        intialCount = 0
         let loadedActions: [ActionPlanDetail] = LocalStorageController.shared.loadFromPersistenceStore(path: "action")
         self.savedActions = loadedActions
         print("👠👠👠👠👠👠👠👠\(savedActions[0].completed)👠👠👠👠👠👠👠👠👠👠👠")
         myActions = savedActions
         print("🥼🥼🥼🥼🥼🥼🥼🥼🥼🥼\(myActions)🥼🥼🥼🥼🥼🥼🥼🥼🥼🥼")
         myActionsTableview.dataSource = self
-        myActionsTableview.reloadData()
-        print(actionsCompletedCount)
-//        updateViews()
+        actionsCompletedCount = myActions.filter { $0.completed == true }.count
+        print("Acc: \(actionsCompletedCount)")
+        setUpCarbonReduction(int: actionsCompletedCount)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -59,6 +66,7 @@ extension MyActionsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "myActionsCell", for: indexPath) as! ActionTableViewCell
         cell.tag = indexPath.row
         cell.action = myActions[indexPath.row]
@@ -74,28 +82,29 @@ extension MyActionsViewController: UITableViewDataSource {
             cell.actionTableViewImage.image = UIImage(named: "TravelUnchecked")
         }
         if myActions[indexPath.row].completed == true {
-
-
+            switch myActions[indexPath.row].icon {
+            case "Food":
+                cell.actionTableViewImage.image = UIImage(named: "FoodChecked")
+            case "house":
+                cell.actionTableViewImage.image = UIImage(named: "HomeChecked")
+            default:
+                cell.actionTableViewImage.image = UIImage(named: "TravelChecked")
+            }
             attributedString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: NSUnderlineStyle.single.rawValue, range: NSRange(location: 0, length: attributedString.length))
             cell.actionViewCellLabel.attributedText = attributedString
         } else {
- 
-
             attributedString.removeAttribute(NSAttributedString.Key.strikethroughStyle, range: NSRange(location: 0, length: attributedString.length))
             cell.actionViewCellLabel.attributedText = attributedString
         }
-
-        cell.buttonStatus = myActions[indexPath.row].completed
         cell.delegate = self
         return cell
     }
 }
 
 extension MyActionsViewController: ActionTableViewCellDelegate {
+
     func actionChecked(for cell: ActionTableViewCell){
         guard let action = cell.action else { return }
-        cell.action?.completed = true
-        print(cell.tag)
         myActions[cell.tag].completed = true
         LocalStorageController.shared.saveActions(actions: myActions)
         actionsCompletedCount += 1
@@ -106,8 +115,6 @@ extension MyActionsViewController: ActionTableViewCellDelegate {
     
     func actionUnchecked(for cell: ActionTableViewCell){
         guard let action = cell.action else { return }
-        cell.action?.completed = false
-        print(cell.tag)
         myActions[cell.tag].completed = false
         LocalStorageController.shared.saveActions(actions: myActions)
         actionsCompletedCount -= 1
