@@ -9,7 +9,7 @@
 import UIKit
 
 class ActionDetailViewController: UIViewController {
-
+    
     // MARK: - Outlets
     @IBOutlet weak var addToActionListButton: UIButton!
     @IBOutlet weak var actionTitleLabel: UILabel!
@@ -19,6 +19,7 @@ class ActionDetailViewController: UIViewController {
     @IBOutlet weak var co2ReductionLabel: UILabel!
     @IBOutlet weak var moneySavedLabel: UILabel!
     @IBOutlet weak var actionImageView: UIImageView!
+    @IBOutlet weak var backgroundView: UIView!
     
     // MARK: - Properties
     var action: ActionPlanDetail?
@@ -40,16 +41,25 @@ class ActionDetailViewController: UIViewController {
         co2ReductionLabel.text = "\(action.carbonReduction ?? 0.0) lbs CO2e Saved"
         moneySavedLabel.text = "$\(action.costSavings ?? 0.0) Saved"
         actionImageView.image = UIImage(named: imageTitle)
+        
+        // Needs Work
+        if action.icon == "Food" {
+            backgroundView.backgroundColor = #colorLiteral(red: 0.9399999976, green: 0.4199999869, blue: 0.3400000036, alpha: 1)
+        } else if action.icon == "house" {
+            backgroundView.backgroundColor = #colorLiteral(red: 0.4900000095, green: 0.8299999833, blue: 0.6899999976, alpha: 1)
+        } else if action.icon == "Travel" {
+            backgroundView.backgroundColor = #colorLiteral(red: 1, green: 0.7599999905, blue: 0.02999999933, alpha: 1)
+        }
     }
-    
-    // MARK: - Actions
-    @IBAction func addToActionListButtonTapped(_ sender: Any) {
-        guard let action = action else { return }
-        ActionsAlarmController.shared.addAlarm(fireDate: Date(), name: action.action, message: action.actionSummry, enabled: true, frequency: action.frequency, repeats: true)
-        ActionPlanController.shared.userActionList.append(action)
-        LocalStorageController.shared.addNewActions(action: action)
-        ActionPlanController.shared.reductionInCost += action.costSavings ?? 0.0
-        navigationController?.popViewController(animated: true)
-        dismiss(animated: true, completion: nil)
-    }
+        
+        // MARK: - Actions
+        @IBAction func addToActionListButtonTapped(_ sender: Any) {
+            guard let action = action else { return }
+            ActionsAlarmController.shared.addAlarm(fireDate: Date(), name: action.action, message: action.actionSummry, enabled: true, frequency: action.frequency, repeats: true)
+            ActionPlanController.shared.userActionList.append(action)
+            LocalStorageController.shared.addNewActions(action: action)
+            ActionPlanController.shared.reductionInCost += action.costSavings ?? 0.0
+            navigationController?.popViewController(animated: true)
+            dismiss(animated: true, completion: nil)
+        }
 }
