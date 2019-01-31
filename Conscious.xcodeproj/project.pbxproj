@@ -27,8 +27,10 @@
 		4176753B21F3F87500CC4C07 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4176753A21F3F87500CC4C07 /* SettingsViewController.swift */; };
 		41A8BDCC21F67AAF001EB547 /* ActionsAlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A8BDCB21F67AAF001EB547 /* ActionsAlarmController.swift */; };
 		41D89A7121EE8B9F00CFF725 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D89A7021EE8B9F00CFF725 /* AppDelegate.swift */; };
+		7E04541B220398D10084AC95 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E04541A220398D10084AC95 /* TermsViewController.swift */; };
 		7E3A5B7821FCF67A00BB4F16 /* PageOneViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E3A5B7721FCF67A00BB4F16 /* PageOneViewController.storyboard */; };
 		7E3A5B8721FD230600BB4F16 /* CitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3A5B8621FD230600BB4F16 /* CitationViewController.swift */; };
+		7E52EB5A22038FF700BC4D85 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E52EB5922038FF700BC4D85 /* TableViewController.swift */; };
 		7E6CC7F421FB6BFB006C0E4A /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E6CC7F321FB6BFB006C0E4A /* Settings.storyboard */; };
 		7E6CC7F821FB770D006C0E4A /* Tabs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E6CC7F721FB770D006C0E4A /* Tabs.storyboard */; };
 		7E6CC7FA21FB7A50006C0E4A /* USAverage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E6CC7F921FB7A50006C0E4A /* USAverage.storyboard */; };
@@ -69,8 +71,10 @@
 		41D89A6D21EE8B9F00CFF725 /* Conscious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Conscious.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41D89A7021EE8B9F00CFF725 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41D89A7C21EE8BB700CFF725 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E04541A220398D10084AC95 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		7E3A5B7721FCF67A00BB4F16 /* PageOneViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PageOneViewController.storyboard; sourceTree = "<group>"; };
 		7E3A5B8621FD230600BB4F16 /* CitationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitationViewController.swift; sourceTree = "<group>"; };
+		7E52EB5922038FF700BC4D85 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		7E6CC7F321FB6BFB006C0E4A /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		7E6CC7F721FB770D006C0E4A /* Tabs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabs.storyboard; sourceTree = "<group>"; };
 		7E6CC7F921FB7A50006C0E4A /* USAverage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = USAverage.storyboard; sourceTree = "<group>"; };
@@ -208,6 +212,8 @@
 		7ECE818821F1096400F2F9DA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7E04541A220398D10084AC95 /* TermsViewController.swift */,
+				7E52EB5922038FF700BC4D85 /* TableViewController.swift */,
 				7E3A5B8621FD230600BB4F16 /* CitationViewController.swift */,
 				7E6CC80121FBB6E6006C0E4A /* TabBarControllor.swift */,
 				7E6CC7FF21FB8D51006C0E4A /* FootPrintViewController.swift */,
@@ -390,6 +396,7 @@
 				41228B5022023F7600AFA468 /* ActionPlanDetail.swift in Sources */,
 				41228B5622023F7600AFA468 /* House.swift in Sources */,
 				7E6CC80021FB8D51006C0E4A /* FootPrintViewController.swift in Sources */,
+				7E04541B220398D10084AC95 /* TermsViewController.swift in Sources */,
 				41228B5422023F7600AFA468 /* ActionPlan.swift in Sources */,
 				416C50C52202437E00E5A056 /* Question.swift in Sources */,
 				7E94754F21F7E7710070F111 /* UserResultsViewController.swift in Sources */,
@@ -399,6 +406,7 @@
 				416EFA2A21F8F00D00972AB0 /* ActionTableViewCell.swift in Sources */,
 				7E6CC80221FBB6E6006C0E4A /* TabBarControllor.swift in Sources */,
 				41D89A7121EE8B9F00CFF725 /* AppDelegate.swift in Sources */,
+				7E52EB5A22038FF700BC4D85 /* TableViewController.swift in Sources */,
 				41228B5122023F7600AFA468 /* Colors.swift in Sources */,
 				7E92676721F23B8000A5B396 /* QuizTableViewCell.swift in Sources */,
 				410CA389220000EF00D7BAC5 /* ActionListTableViewCell.swift in Sources */,
