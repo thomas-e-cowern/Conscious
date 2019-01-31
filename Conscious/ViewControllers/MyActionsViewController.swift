@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class MyActionsViewController: UIViewController{
     
@@ -33,6 +34,7 @@ class MyActionsViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIApplication.willEnterForegroundNotification
         let loadedActions: [ActionPlanDetail] = ActionPlanController.shared.loadFromPersistenceStore(path: "action")
         self.savedActions = loadedActions
         //        print("👠👠👠👠👠👠👠👠\(savedActions[0].completed)👠👠👠👠👠👠👠👠👠👠👠")
@@ -51,6 +53,21 @@ class MyActionsViewController: UIViewController{
         super.viewWillAppear(animated)
         myActions = ActionPlanController.shared.loadFromPersistenceStore(path: "action")
         updateViews()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        let now = Date()
+        print("N: \(now)")
+        let date = dateFormatter.string(from: now)
+        print("D: \(date)")
+        let weekday = getDayOfWeek(date)
+        print("WD: \(weekday)")
+        if weekday == 4 {
+            print("Holy cow it's wednesday")
+            for i in 0..<myActions.count {
+                myActions[i].completed = false
+            }
+            ActionPlanController.shared.saveToPersistentStoreData(path: "action")
+        }
     }
     
     func updateViews() {
@@ -60,6 +77,15 @@ class MyActionsViewController: UIViewController{
         let carbonSavingString = String(format: "%.2f", totalCarbonSavings/52)
         carbonSavedLabel.text = "\(carbonSavingString) lbs of CO2e lbs saved!"
         myActionsTableview.reloadData()
+    }
+    
+    func getDayOfWeek(_ today:String) -> Int? {
+        let formatter  = DateFormatter()
+        formatter.dateFormat = "MMM/dd/yyyy"
+        guard let todayDate = formatter.date(from: today) else { return nil }
+        let myCalendar = Calendar(identifier: .gregorian)
+        let weekDay = myCalendar.component(.weekday, from: todayDate)
+        return weekDay
     }
 }
 
