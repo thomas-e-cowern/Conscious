@@ -10,6 +10,13 @@ import UIKit
 
 class ActionListTableViewController: UITableViewController {
 
+    
+    // MARK: - Outlets
+    @IBOutlet weak var travelUnderlineView: UIView!
+    @IBOutlet weak var homeUnderlineView: UIView!
+    @IBOutlet weak var allUnderlineView: UIView!
+    @IBOutlet weak var foodUnderlineView: UIView!
+    
     // MARK: - Properties
     var category: String = ""
     var foodActions: [ActionPlanDetail] = ActionPlanController.shared.foodActions
@@ -28,12 +35,21 @@ class ActionListTableViewController: UITableViewController {
     @IBAction func allButtonTapped(_ sender: Any) {
         actions = []
         setUpView()
+        allUnderlineView.backgroundColor = #colorLiteral(red: 0.6899999976, green: 0.7799999714, blue: 0.5899999738, alpha: 1)
+        foodUnderlineView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
+        homeUnderlineView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
+        travelUnderlineView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
         updateViews()
+        
     }
     @IBAction func foodButtonTapped(_ sender: Any) {
         category = "food"
         actions = []
         actions = foodActions
+        allUnderlineView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
+        foodUnderlineView.backgroundColor = #colorLiteral(red: 0.9399999976, green: 0.4199999869, blue: 0.3400000036, alpha: 1)
+        homeUnderlineView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
+        travelUnderlineView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
         updateViews()
     }
     
@@ -41,6 +57,10 @@ class ActionListTableViewController: UITableViewController {
         category = "home"
         actions = []
         actions = homeActions
+        allUnderlineView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
+        foodUnderlineView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
+        homeUnderlineView.backgroundColor = #colorLiteral(red: 0.4900000095, green: 0.8299999833, blue: 0.6899999976, alpha: 1)
+        travelUnderlineView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
         updateViews()
     }
     
@@ -48,6 +68,10 @@ class ActionListTableViewController: UITableViewController {
         category = "travel"
         actions = []
         actions = travelActions
+        allUnderlineView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
+        foodUnderlineView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
+        homeUnderlineView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
+        travelUnderlineView.backgroundColor = #colorLiteral(red: 1, green: 0.7599999905, blue: 0.02999999933, alpha: 1)
         updateViews()
     }
     
