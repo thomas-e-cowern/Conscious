@@ -85,13 +85,13 @@ class UserResultsViewController: UIViewController {
         setHouseGraph(houseScore, totalScore)
         setTravelGraph(travelScore, totalScore)
         
-        LocalStorageController.shared.addNewResults(overallScore: totalScore, foodScore: foodScore, houseScore: houseScore, travelScore: travelScore)
+        ActionPlanController.shared.addNewResults(overallScore: totalScore, foodScore: foodScore, houseScore: houseScore, travelScore: travelScore)
         
         LocalStorageController.shared.isNewQuiz = false
     }
     
     func getSavedData () {
-        let savedData: [SavedData] = LocalStorageController.shared.loadFromPersistenceStore(path: "data")
+        let savedData: [SavedData] = ActionPlanController.shared.loadFromPersistenceStore(path: "data")
         print("👑👑👑👑👑👑👑👑\(savedData)👑👑👑👑👑👑👑👑👑")
         guard let savedDataLast = savedData.last else {
             print("⛑⛑⛑⛑⛑⛑⛑⛑Problem getting saved data⛑⛑⛑⛑⛑⛑⛑⛑⛑⛑")

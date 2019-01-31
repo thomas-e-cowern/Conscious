@@ -19,6 +19,7 @@ class SettingsTableViewController: UITableViewController {
     // MARK: - Methods
     @IBAction func notificationButtonTapped(_ sender: Any) {
         print("notificationButtonTapped")
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
         guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
             return
         }

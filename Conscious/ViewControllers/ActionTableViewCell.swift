@@ -23,7 +23,7 @@ class ActionTableViewCell: UITableViewCell {
     var actionImage: UIImage?
     var actionTitle: String?
     var actionComplete: Bool? = false
-    var buttonStatus: Bool = false
+    var buttonStatus: Bool?
     weak var delegate: ActionTableViewCellDelegate?
     
     override func awakeFromNib() {
@@ -41,6 +41,8 @@ class ActionTableViewCell: UITableViewCell {
     // change button status
     func changeButtonImage() {
         print("Change button image")
+        print("AC: \(actionComplete)")
+        actionComplete = action?.completed
         if actionComplete == false {
              actionComplete = true
             switch self.action?.icon {
