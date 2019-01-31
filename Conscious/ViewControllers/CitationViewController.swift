@@ -65,4 +65,8 @@ class CitationViewController: UIViewController {
     @IBAction func carbonIndependent(_ sender: Any) {
         openUrl(urlStr: "https://www.carbonindependent.org/sources_aviation.html")
     }
+    
+    @IBAction func doneButtonTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }
