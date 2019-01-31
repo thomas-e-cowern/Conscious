@@ -60,6 +60,6 @@ class ActionDetailViewController: UIViewController {
             ActionPlanController.shared.addNewActions(action: action)
             ActionPlanController.shared.reductionInCost += action.costSavings ?? 0.0
             navigationController?.popViewController(animated: true)
-            dismiss(animated: true, completion: nil)
+            dismiss(animated: true, completion: nil)            
         }
 }
