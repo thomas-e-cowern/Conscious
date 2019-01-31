@@ -39,7 +39,7 @@ class MyActionsViewController: UIViewController{
         myActions = savedActions
         print("🥼🥼🥼🥼🥼🥼🥼🥼🥼🥼\(myActions)🥼🥼🥼🥼🥼🥼🥼🥼🥼🥼")
         myActionsTableview.dataSource = self
-        actionsPledged.text = " of \(myActions.count)"
+        actionsPledged.text = "\(myActions.count)"
         actionsCompleted = myActions.filter { $0.completed == true }
         actionsCompletedCount = actionsCompleted.count
         print("Acc: \(actionsCompletedCount)")
@@ -56,7 +56,7 @@ class MyActionsViewController: UIViewController{
     func updateViews() {
         myActions = ActionPlanController.shared.loadFromPersistenceStore(path: "action")
         actionsCompleteLabel.text = "\(actionsCompletedCount)"
-        actionsPledged.text = " of \(myActions.count)"
+        actionsPledged.text = "\(myActions.count)"
         let carbonSavingString = String(format: "%.2f", totalCarbonSavings/52)
         carbonSavedLabel.text = "\(carbonSavingString) lbs of CO2e lbs saved!"
         myActionsTableview.reloadData()
