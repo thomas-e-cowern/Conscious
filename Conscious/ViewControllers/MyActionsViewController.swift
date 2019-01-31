@@ -61,8 +61,8 @@ class MyActionsViewController: UIViewController{
         print("D: \(date)")
         let weekday = getDayOfWeek(date)
         print("WD: \(weekday)")
-        if weekday == 4 {
-            print("Holy cow it's wednesday")
+        if weekday == 1 {
+            print("Holy cow it's Sunday, time to reset the task list")
             for i in 0..<myActions.count {
                 myActions[i].completed = false
             }
