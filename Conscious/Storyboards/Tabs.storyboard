@@ -256,6 +256,7 @@
                                                     <outlet property="actionTableViewImage" destination="cxW-V4-MFW" id="xYz-ea-UbT"/>
                                                     <outlet property="actionViewCellButton" destination="2aj-n0-8Jv" id="DHy-2a-8ET"/>
                                                     <outlet property="actionViewCellLabel" destination="dqM-xe-cu4" id="yJQ-Vk-yv7"/>
+                                                    <segue destination="DuF-PE-N8Z" kind="presentation" id="HmS-N8-bWJ"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -526,7 +527,7 @@
                                                 <fragment content="view breakdown">
                                                     <attributes>
                                                         <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <font key="NSFont" size="12" name="CircularStd-Medium"/>
+                                                        <font key="NSFont" metaFont="cellTitle"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         <integer key="NSUnderline" value="1"/>
                                                     </attributes>
@@ -1009,5 +1010,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="QFq-uC-ueq"/>
+        <segue reference="HmS-N8-bWJ"/>
     </inferredMetricsTieBreakers>
 </document>
