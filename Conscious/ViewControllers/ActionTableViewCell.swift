@@ -15,17 +15,21 @@ protocol ActionTableViewCellDelegate: class{
 
 class ActionTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var actionTableViewImage: UIImageView!
     @IBOutlet weak var actionViewCellButton: UIButton!
     @IBOutlet weak var actionViewCellLabel: UILabel!
     
     var action: ActionPlanDetail?
+    var actionImage: UIImage?
     var actionTitle: String?
     var actionComplete: Bool? = false
+    var buttonStatus: Bool?
     weak var delegate: ActionTableViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -35,19 +39,38 @@ class ActionTableViewCell: UITableViewCell {
     }
     
     // change button status
-    
     func changeButtonImage() {
+        print("Change button image")
+        print("AC: \(actionComplete)")
+        actionComplete = action?.completed
         if actionComplete == false {
-            actionComplete = true
-            actionViewCellButton.setTitle("Done", for: .normal)
+             actionComplete = true
+            switch self.action?.icon {
+            case "Food":
+                self.actionTableViewImage.image = UIImage(named: "FoodChecked")
+            case "house":
+                self.actionTableViewImage.image = UIImage(named: "HomeChecked")
+            default:
+                self.actionTableViewImage.image = UIImage(named: "TravelChecked")
+            }
         } else {
             actionComplete = false
-            actionViewCellButton.setTitle("Do", for: .normal)
+            print("False")
+            switch self.action?.icon {
+            case "Food":
+                self.actionTableViewImage.image = UIImage(named: "FoodUnchecked")
+            case "house":
+                self.actionTableViewImage.image = UIImage(named: "HomeUnchecked")
+            default:
+                self.actionTableViewImage.image = UIImage(named: "TravelUnchecked")
+            }
         }
     }
     
+    
     // change attributedString
     func changeString() {
+        print("Change button string")
         guard let action = action else { return }
         let testTitle = action.action
         let attributedString = NSMutableAttributedString(string: testTitle)

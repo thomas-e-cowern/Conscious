@@ -150,16 +150,19 @@ Pledged</string>
                                                                             <rect key="frame" x="0.0" y="0.0" width="359" height="104.66666666666667"/>
                                                                             <autoresizingMask key="autoresizingMask"/>
                                                                             <subviews>
-                                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="oqG-XW-hcc">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="398" height="104.66666666666667"/>
+                                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hf1-nM-x71">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="104.66666666666667"/>
                                                                                     <subviews>
+                                                                                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cxW-V4-MFW">
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="104.66666666666667"/>
+                                                                                        </imageView>
                                                                                         <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aj-n0-8Jv">
                                                                                             <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="104.66666666666667"/>
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="width" secondItem="2aj-n0-8Jv" secondAttribute="height" multiplier="1:1" id="l5k-Wk-Stf"/>
                                                                                             </constraints>
                                                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                                            <state key="normal" title="Do">
+                                                                                            <state key="normal">
                                                                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             </state>
                                                                                             <connections>
@@ -167,27 +170,37 @@ Pledged</string>
                                                                                             </connections>
                                                                                         </button>
                                                                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqM-xe-cu4">
-                                                                                            <rect key="frame" x="120.66666666666666" y="0.0" width="277.33333333333337" height="104.66666666666667"/>
+                                                                                            <rect key="frame" x="120.66666666666667" y="0.0" width="238.33333333333331" height="104.66666666666667"/>
                                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                             <nil key="textColor"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
                                                                                     </subviews>
+                                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     <constraints>
-                                                                                        <constraint firstItem="2aj-n0-8Jv" firstAttribute="top" secondItem="oqG-XW-hcc" secondAttribute="top" id="BPW-pX-KeU"/>
-                                                                                        <constraint firstAttribute="width" constant="398" id="aB2-0m-BDn"/>
-                                                                                        <constraint firstItem="2aj-n0-8Jv" firstAttribute="leading" secondItem="oqG-XW-hcc" secondAttribute="leading" id="aVp-OB-XMj"/>
+                                                                                        <constraint firstAttribute="bottom" secondItem="dqM-xe-cu4" secondAttribute="bottom" id="JAC-Iy-54G"/>
+                                                                                        <constraint firstAttribute="trailing" secondItem="dqM-xe-cu4" secondAttribute="trailing" id="P6C-h5-G2j"/>
+                                                                                        <constraint firstItem="cxW-V4-MFW" firstAttribute="top" secondItem="hf1-nM-x71" secondAttribute="top" id="PEh-7r-mYm"/>
+                                                                                        <constraint firstItem="dqM-xe-cu4" firstAttribute="top" secondItem="hf1-nM-x71" secondAttribute="top" id="WIM-jd-G7W"/>
+                                                                                        <constraint firstAttribute="trailing" secondItem="cxW-V4-MFW" secondAttribute="trailing" id="Wgs-7T-S4s"/>
+                                                                                        <constraint firstItem="2aj-n0-8Jv" firstAttribute="top" secondItem="hf1-nM-x71" secondAttribute="top" id="XmK-Ui-fRJ"/>
+                                                                                        <constraint firstItem="cxW-V4-MFW" firstAttribute="leading" secondItem="hf1-nM-x71" secondAttribute="leading" id="evF-jv-X9K"/>
+                                                                                        <constraint firstItem="dqM-xe-cu4" firstAttribute="leading" secondItem="2aj-n0-8Jv" secondAttribute="trailing" constant="16" id="h7d-8R-X6F"/>
+                                                                                        <constraint firstItem="2aj-n0-8Jv" firstAttribute="leading" secondItem="hf1-nM-x71" secondAttribute="leading" id="mZd-pi-cPI"/>
+                                                                                        <constraint firstAttribute="bottom" secondItem="2aj-n0-8Jv" secondAttribute="bottom" id="sNQ-ZL-HV0"/>
+                                                                                        <constraint firstAttribute="bottom" secondItem="cxW-V4-MFW" secondAttribute="bottom" id="wwV-ug-QLa"/>
                                                                                     </constraints>
-                                                                                </stackView>
+                                                                                </view>
                                                                             </subviews>
                                                                             <constraints>
-                                                                                <constraint firstAttribute="bottom" secondItem="oqG-XW-hcc" secondAttribute="bottom" id="27D-s5-dwE"/>
-                                                                                <constraint firstItem="oqG-XW-hcc" firstAttribute="top" secondItem="hly-55-XJy" secondAttribute="top" id="4rr-4o-fJC"/>
-                                                                                <constraint firstItem="oqG-XW-hcc" firstAttribute="leading" secondItem="hly-55-XJy" secondAttribute="leading" id="J1S-Cg-dxW"/>
-                                                                                <constraint firstAttribute="trailing" secondItem="oqG-XW-hcc" secondAttribute="trailing" id="heu-CL-une"/>
+                                                                                <constraint firstItem="hf1-nM-x71" firstAttribute="leading" secondItem="hly-55-XJy" secondAttribute="leading" id="ISn-Q8-Byk"/>
+                                                                                <constraint firstItem="hf1-nM-x71" firstAttribute="top" secondItem="hly-55-XJy" secondAttribute="top" id="nrb-5i-290"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="hf1-nM-x71" secondAttribute="trailing" id="ucC-kz-IpZ"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="hf1-nM-x71" secondAttribute="bottom" id="vYZ-Ks-g6D"/>
                                                                             </constraints>
                                                                         </tableViewCellContentView>
                                                                         <connections>
+                                                                            <outlet property="actionTableViewImage" destination="cxW-V4-MFW" id="xYz-ea-UbT"/>
                                                                             <outlet property="actionViewCellButton" destination="2aj-n0-8Jv" id="DHy-2a-8ET"/>
                                                                             <outlet property="actionViewCellLabel" destination="dqM-xe-cu4" id="yJQ-Vk-yv7"/>
                                                                         </connections>

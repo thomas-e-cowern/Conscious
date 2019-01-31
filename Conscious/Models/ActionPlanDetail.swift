@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct ActionPlanDetail: Codable {
+class ActionPlanDetail: Codable {
     let action: String
     let actionSummry: String
     let benefits: String
@@ -18,6 +18,18 @@ struct ActionPlanDetail: Codable {
     let costSavings: Double?
     let icon: String
     var completed: Bool
+    
+    init(action: String, actionSummry: String, benefits: String, frequency: String, challenge: String, carbonReduction: Double?, costSavings: Double?, icon: String, completed: Bool) {
+        self.action = action
+        self.actionSummry = actionSummry
+        self.benefits = benefits
+        self.frequency = frequency
+        self.challenge = challenge
+        self.carbonReduction = carbonReduction
+        self.costSavings = costSavings
+        self.icon = icon
+        self.completed = completed
+    }
 }
 
 
