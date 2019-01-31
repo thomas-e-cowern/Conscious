@@ -9,7 +9,7 @@
 import UIKit
 import UserNotifications
 
-class MyActionsViewController: UIViewController{
+class MyActionsViewController: UIViewController {
     
     @IBOutlet weak var myActionsTableview: UITableView!
     @IBOutlet weak var actionsCompleteLabel: UILabel!
@@ -178,6 +178,15 @@ extension MyActionsViewController: UITableViewDataSource {
             deleteActionItem(indexPath, tableView)
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as? ActionDetailViewController
+        guard let indexPath = myActionsTableview.indexPathForSelectedRow else { print("Problem in actionListTableViewController prepare")
+            return
+        }
+        let chosenAction = myActions[indexPath.row]
+        destinationVC?.action = chosenAction
+    }
 }
 
 extension MyActionsViewController: ActionTableViewCellDelegate {
@@ -202,3 +211,4 @@ extension MyActionsViewController: ActionTableViewCellDelegate {
         updateViews()
     }
 }
+
