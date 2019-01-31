@@ -37,9 +37,9 @@
                         <color key="selectedImageTintColor" name="LightGreen"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ioa-4Z-8bP" kind="relationship" relationship="viewControllers" id="FST-hU-Hdn"/>
-                        <segue destination="5e7-fn-6jv" kind="relationship" relationship="viewControllers" id="1YB-2n-6WR"/>
-                        <segue destination="NTz-B0-YDe" kind="relationship" relationship="viewControllers" id="PPk-h0-Tog"/>
+                        <segue destination="Zc7-Xe-s7i" kind="relationship" relationship="viewControllers" id="Non-xx-Hff"/>
+                        <segue destination="W17-s5-Eki" kind="relationship" relationship="viewControllers" id="xK8-Xz-60Z"/>
+                        <segue destination="FZd-Lb-TuD" kind="relationship" relationship="viewControllers" id="vCJ-FI-8Yc"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gc9-Uf-gOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -287,12 +287,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="aVq-Le-6OR">
+                        <view key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="aVq-Le-6OR">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="73"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VM8-CF-hyp">
-                                    <rect key="frame" x="16" y="20" width="343" height="30"/>
+                                    <rect key="frame" x="16" y="-53" width="343" height="30"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ZBI-iJ-Sqx">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
@@ -347,7 +347,7 @@
                                     </subviews>
                                 </stackView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ert-69-uK1">
-                                    <rect key="frame" x="29" y="50" width="60" height="5"/>
+                                    <rect key="frame" x="29" y="-23" width="60" height="5"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="5" id="EhA-Je-vIM"/>
@@ -355,7 +355,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wNw-wi-whD">
-                                    <rect key="frame" x="114.66666666666669" y="50" width="60" height="5"/>
+                                    <rect key="frame" x="114.66666666666669" y="-23" width="60" height="5"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="5" id="IPt-n2-ugv"/>
@@ -363,7 +363,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahI-LK-tCp">
-                                    <rect key="frame" x="200.33333333333334" y="50" width="60.000000000000028" height="5"/>
+                                    <rect key="frame" x="200.33333333333334" y="-23" width="60.000000000000028" height="5"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="60" id="7YS-2w-TQf"/>
@@ -371,7 +371,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CVe-CY-wvV">
-                                    <rect key="frame" x="286" y="50" width="60" height="5"/>
+                                    <rect key="frame" x="286" y="-23" width="60" height="5"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="60" id="4ZZ-QV-QuJ"/>
@@ -379,7 +379,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OO2-dj-7xf">
-                                    <rect key="frame" x="16" y="63" width="343" height="2"/>
+                                    <rect key="frame" x="16" y="-10" width="343" height="2"/>
                                     <color key="backgroundColor" name="Brown"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="2" id="c8d-7q-VnO"/>
@@ -677,7 +677,7 @@
             <objects>
                 <viewController id="DuF-PE-N8Z" customClass="ActionDetailViewController" customModule="Conscious" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LM0-5V-Xlx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1137"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1220"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k9W-kh-H1U">
@@ -916,92 +916,63 @@
             </objects>
             <point key="canvasLocation" x="-3833" y="696"/>
         </scene>
-        <!--MY FOOTPRINT-->
-        <scene sceneID="U5K-ud-5L2">
+        <!--Item-->
+        <scene sceneID="OQl-Op-mvQ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ioa-4Z-8bP" customClass="NavigationViewController" customModule="Conscious" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="MY FOOTPRINT" image="Not Active My Footprint" selectedImage="Active My Footprint Icon" id="CcU-vo-PZQ"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="k9B-qb-WLo" customClass="Navigation">
-                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                <navigationController id="W17-s5-Eki" customClass="TransparentNavigationController" customModule="Conscious" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Lgw-QV-X89"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="j8o-H0-wRV">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <color key="textShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
                     </navigationBar>
-                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="m5D-ge-21F" kind="relationship" relationship="rootViewController" id="GU2-51-HDc"/>
+                        <segue destination="ykf-oU-BYa" kind="relationship" relationship="rootViewController" id="WTS-dX-4b9"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nn9-xm-iug" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Og-dC-9q6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2975.1999999999998" y="273.39901477832512"/>
+            <point key="canvasLocation" x="-4388" y="1029"/>
         </scene>
-        <!--TAKE ACTION-->
-        <scene sceneID="1B7-C3-WMb">
+        <!--Item-->
+        <scene sceneID="kgm-Mw-vNx">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5e7-fn-6jv" customClass="NavigationViewController" customModule="Conscious" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="TAKE ACTION" image="Not Active Take Action" selectedImage="Active Take Action" id="RZ1-eK-Pon"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="FCH-25-tUy" customClass="Navigation">
-                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                <navigationController id="FZd-Lb-TuD" customClass="TransparentNavigationController" customModule="Conscious" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="cal-1q-XTq"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qmw-06-GlR">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" name="Brown"/>
-                        </textAttributes>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" name="Brown"/>
-                        </textAttributes>
                     </navigationBar>
-                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="ykf-oU-BYa" kind="relationship" relationship="rootViewController" id="pa9-Wg-NoG"/>
+                        <segue destination="sqo-jx-Ig6" kind="relationship" relationship="rootViewController" id="F3F-51-0D0"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tKa-li-ul2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jCa-tn-qjm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2975.1999999999998" y="1036.6995073891626"/>
+            <point key="canvasLocation" x="-4388" y="1850"/>
         </scene>
-        <!--MY ACTIONS-->
-        <scene sceneID="nOs-Kh-AMz">
+        <!--Item-->
+        <scene sceneID="PCy-5P-pwg">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NTz-B0-YDe" customClass="NavigationViewController" customModule="Conscious" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="MY ACTIONS" image="Not Active My Actions" selectedImage="Active My Actions" id="ehp-Dr-ayg"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="r8o-3o-8eC" customClass="Navigation">
-                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                <navigationController id="Zc7-Xe-s7i" customClass="TransparentNavigationController" customModule="Conscious" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="5GO-9E-7pv"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Rd-Ml-aBa">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
                     </navigationBar>
-                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="sqo-jx-Ig6" kind="relationship" relationship="rootViewController" id="ibx-if-qGU"/>
+                        <segue destination="m5D-ge-21F" kind="relationship" relationship="rootViewController" id="OhB-hW-PzO"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1Zl-Ma-Ev6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MeF-eA-xud" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2975.1999999999998" y="1849.5073891625616"/>
+            <point key="canvasLocation" x="-4388" y="264"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Active My Actions" width="25" height="31"/>
-        <image name="Active My Footprint Icon" width="31" height="29"/>
-        <image name="Active Take Action" width="28" height="30"/>
         <image name="Co2" width="61" height="39"/>
         <image name="Meatless Monday" width="238" height="238"/>
         <image name="MoneyBox" width="47" height="45"/>
-        <image name="Not Active My Actions" width="25" height="31"/>
-        <image name="Not Active My Footprint" width="28" height="28"/>
-        <image name="Not Active Take Action" width="28" height="30"/>
         <image name="gear" width="1200" height="1200"/>
-        <namedColor name="Brown">
-            <color red="0.29399999976158142" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
         <namedColor name="Brown">
             <color red="0.29399999976158142" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
@@ -1013,6 +984,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Mqa-Br-Gvx"/>
+        <segue reference="HmS-N8-bWJ"/>
     </inferredMetricsTieBreakers>
 </document>
