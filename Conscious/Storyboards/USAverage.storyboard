@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="saf-Hn-9m1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oR0-Kv-7dC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -25,7 +25,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--U.S. Average-->
         <scene sceneID="vw3-pf-jdd">
             <objects>
                 <viewController id="saf-Hn-9m1" sceneMemberID="viewController">
@@ -36,13 +36,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVO-v9-uD3">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="U.S. Average" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ml-mf-Ict">
-                                        <rect key="frame" x="16" y="62" width="343" height="43.5"/>
-                                        <fontDescription key="fontDescription" name="CircularStd-Medium" family="Circular Std" pointSize="34"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="highlightedColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <size key="shadowOffset" width="0.0" height="-2"/>
-                                    </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YKb-Cn-fde">
                                         <rect key="frame" x="109" y="121.5" width="157" height="91.5"/>
                                         <subviews>
@@ -83,29 +76,13 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2L-zb-ixP">
-                                        <rect key="frame" x="337" y="39" width="22" height="23"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="23" id="S4p-wY-RJc"/>
-                                            <constraint firstAttribute="width" constant="22" id="feP-jB-71u"/>
-                                        </constraints>
-                                        <state key="normal" image="Settings Icon"/>
-                                        <connections>
-                                            <segue destination="V55-cq-gXd" kind="show" id="fGs-4r-79j"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" name="LightGreen"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="lQZ-H7-EEF" secondAttribute="trailing" constant="16" id="12I-aW-5Wp"/>
-                                    <constraint firstItem="YKb-Cn-fde" firstAttribute="top" secondItem="8ml-mf-Ict" secondAttribute="bottom" constant="16" id="2H1-fQ-0VW"/>
-                                    <constraint firstItem="8ml-mf-Ict" firstAttribute="top" secondItem="m2L-zb-ixP" secondAttribute="bottom" id="CjM-B6-Fm9"/>
                                     <constraint firstItem="lQZ-H7-EEF" firstAttribute="top" secondItem="aVO-v9-uD3" secondAttribute="top" constant="229" id="FNN-8D-DDT"/>
                                     <constraint firstItem="YKb-Cn-fde" firstAttribute="centerX" secondItem="aVO-v9-uD3" secondAttribute="centerX" id="Hgu-vT-Pww"/>
-                                    <constraint firstAttribute="trailing" secondItem="m2L-zb-ixP" secondAttribute="trailing" constant="16" id="Qeg-Zw-gYa"/>
-                                    <constraint firstAttribute="trailing" secondItem="8ml-mf-Ict" secondAttribute="trailing" constant="16" id="e3R-dp-Wvi"/>
                                     <constraint firstItem="lQZ-H7-EEF" firstAttribute="top" secondItem="YKb-Cn-fde" secondAttribute="bottom" constant="16" id="iij-Wy-M3V"/>
-                                    <constraint firstItem="8ml-mf-Ict" firstAttribute="leading" secondItem="aVO-v9-uD3" secondAttribute="leading" constant="16" id="oA2-6r-R77"/>
                                     <constraint firstAttribute="bottom" secondItem="lQZ-H7-EEF" secondAttribute="bottom" constant="16" id="tTR-YW-MRS"/>
                                     <constraint firstAttribute="height" constant="300" id="uwW-JK-uMi"/>
                                 </constraints>
@@ -447,11 +424,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dOh-QV-42D"/>
                     </view>
+                    <navigationItem key="navigationItem" title="U.S. Average" id="Iqf-6m-kIK"/>
                     <size key="freeformSize" width="375" height="1400"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uMo-Zj-Vgy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3696.8000000000002" y="-1421.2893553223389"/>
+            <point key="canvasLocation" x="4636" y="-1421.2893553223389"/>
         </scene>
         <!--Quiz-->
         <scene sceneID="G3V-IR-vOJ">
@@ -459,7 +437,7 @@
                 <viewControllerPlaceholder storyboardName="Quiz" id="Zun-Gi-6VB" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0q2-g8-dAA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4690" y="-1554"/>
+            <point key="canvasLocation" x="5628.8000000000002" y="-1554.4227886056972"/>
         </scene>
         <!--Tabs-->
         <scene sceneID="fFi-Mp-ENp">
@@ -467,7 +445,7 @@
                 <viewControllerPlaceholder storyboardName="Tabs" id="t3N-An-wGo" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JXq-XW-zJG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4690" y="-1396"/>
+            <point key="canvasLocation" x="5628" y="-1396.1019490254873"/>
         </scene>
         <!--Settings-->
         <scene sceneID="YxB-iQ-19B">
@@ -475,12 +453,36 @@
                 <viewControllerPlaceholder storyboardName="Settings" id="V55-cq-gXd" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mze-61-ITg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4671" y="-1272"/>
+            <point key="canvasLocation" x="5608.8000000000002" y="-1272.8635682158922"/>
+        </scene>
+        <!--Navigation View Controller-->
+        <scene sceneID="uFf-Un-oqL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oR0-Kv-7dC" customClass="NavigationViewController" customModule="Conscious" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="vQ5-9O-Cz0">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="saf-Hn-9m1" kind="relationship" relationship="rootViewController" id="kMi-JO-oYE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="swU-eX-qMx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3696.8000000000002" y="-1421.7391304347827"/>
         </scene>
     </scenes>
     <resources>
         <image name="Gas-US" width="316" height="58"/>
-        <image name="Settings Icon" width="46" height="48"/>
         <image name="Trash-US" width="327" height="100"/>
         <image name="Tree-US" width="327" height="58"/>
         <namedColor name="Brown">
