@@ -56,7 +56,7 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
                                         <size key="shadowOffset" width="0.0" height="-2"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBH-8P-YNq">
-                                        <rect key="frame" x="16" y="46.5" width="25" height="15"/>
+                                        <rect key="frame" x="16" y="30.5" width="25" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="15" id="fJV-Zz-oYR"/>
                                             <constraint firstAttribute="width" constant="25" id="jUg-ZZ-3Lw"/>
@@ -73,7 +73,7 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
                                     <constraint firstItem="tBH-8P-YNq" firstAttribute="leading" secondItem="Gdy-X9-sl8" secondAttribute="leading" constant="16" id="Bg3-Jw-Qqa"/>
                                     <constraint firstAttribute="height" constant="140" id="X0y-3d-hob"/>
                                     <constraint firstItem="JCc-hB-6rW" firstAttribute="leading" secondItem="Gdy-X9-sl8" secondAttribute="leading" constant="16" id="Zet-H5-i3f"/>
-                                    <constraint firstItem="JCc-hB-6rW" firstAttribute="top" secondItem="tBH-8P-YNq" secondAttribute="bottom" id="mWd-vP-EkK"/>
+                                    <constraint firstItem="JCc-hB-6rW" firstAttribute="top" secondItem="tBH-8P-YNq" secondAttribute="bottom" constant="16" id="mWd-vP-EkK"/>
                                     <constraint firstAttribute="bottom" secondItem="JCc-hB-6rW" secondAttribute="bottom" constant="35" id="nQU-ge-AfQ"/>
                                 </constraints>
                             </view>
@@ -114,7 +114,7 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
                                         <size key="shadowOffset" width="0.0" height="-2"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLq-gV-xzo">
-                                        <rect key="frame" x="16" y="46.5" width="25" height="15"/>
+                                        <rect key="frame" x="16" y="30.5" width="25" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="15" id="Yoq-1u-xil"/>
                                             <constraint firstAttribute="width" constant="25" id="kGz-gg-UOD"/>
@@ -127,7 +127,7 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
                                 </subviews>
                                 <color key="backgroundColor" name="LightGreen"/>
                                 <constraints>
-                                    <constraint firstItem="Grh-RQ-jGn" firstAttribute="top" secondItem="wLq-gV-xzo" secondAttribute="bottom" id="9jX-zy-39g"/>
+                                    <constraint firstItem="Grh-RQ-jGn" firstAttribute="top" secondItem="wLq-gV-xzo" secondAttribute="bottom" constant="16" id="9jX-zy-39g"/>
                                     <constraint firstItem="wLq-gV-xzo" firstAttribute="leading" secondItem="tIJ-E9-XaN" secondAttribute="leading" constant="16" id="Dke-FB-ohI"/>
                                     <constraint firstAttribute="height" constant="140" id="KQn-KB-gKa"/>
                                     <constraint firstItem="Grh-RQ-jGn" firstAttribute="leading" secondItem="tIJ-E9-XaN" secondAttribute="leading" constant="16" id="e7x-Iy-UYw"/>
@@ -478,14 +478,14 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Settings" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1By-ay-lbI">
-                                    <rect key="frame" x="16" y="61.5" width="343" height="43.5"/>
+                                    <rect key="frame" x="16" y="56.5" width="343" height="43.5"/>
                                     <fontDescription key="fontDescription" name="CircularStd-Medium" family="Circular Std" pointSize="34"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="highlightedColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <size key="shadowOffset" width="0.0" height="-2"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Slk-YG-iOj">
-                                    <rect key="frame" x="344" y="46.5" width="15" height="15"/>
+                                    <rect key="frame" x="344" y="25.5" width="15" height="15"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="15" id="Dcw-lr-Pcc"/>
                                         <constraint firstAttribute="height" constant="15" id="jLl-RA-Xhn"/>
@@ -499,10 +499,10 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
                             <color key="backgroundColor" name="LightGreen"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="1By-ay-lbI" secondAttribute="trailing" constant="16" id="3Oz-Gk-rip"/>
-                                <constraint firstAttribute="bottom" secondItem="1By-ay-lbI" secondAttribute="bottom" constant="35" id="ILV-iv-CB0"/>
+                                <constraint firstAttribute="bottom" secondItem="1By-ay-lbI" secondAttribute="bottom" constant="40" id="ILV-iv-CB0"/>
                                 <constraint firstAttribute="trailing" secondItem="Slk-YG-iOj" secondAttribute="trailing" constant="16" id="KWy-5k-2q7"/>
                                 <constraint firstItem="1By-ay-lbI" firstAttribute="leading" secondItem="bnX-eU-WnO" secondAttribute="leading" constant="16" id="TZD-4B-R2t"/>
-                                <constraint firstItem="1By-ay-lbI" firstAttribute="top" secondItem="Slk-YG-iOj" secondAttribute="bottom" id="YfG-EI-Zx5"/>
+                                <constraint firstItem="1By-ay-lbI" firstAttribute="top" secondItem="Slk-YG-iOj" secondAttribute="bottom" constant="16" id="YfG-EI-Zx5"/>
                                 <constraint firstAttribute="height" constant="140" id="aH8-34-6Xd"/>
                             </constraints>
                         </view>
@@ -595,7 +595,7 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UkC-lZ-C9U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-414" y="1016"/>
+            <point key="canvasLocation" x="-415.19999999999999" y="1015.1424287856073"/>
         </scene>
     </scenes>
     <resources>

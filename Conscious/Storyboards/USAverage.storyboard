@@ -280,37 +280,37 @@
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="At this rate..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vec-5T-CAA">
-                                                <rect key="frame" x="16" y="317.5" width="338" height="30.5"/>
+                                                <rect key="frame" x="16" y="317.5" width="338" height="10.5"/>
                                                 <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="24"/>
                                                 <color key="textColor" name="Brown"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="755" text="3,392 trees will need to be planted to offset your carbon emission" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9i-0F-cxj">
-                                                <rect key="frame" x="16" y="364" width="338" height="51"/>
+                                                <rect key="frame" x="16" y="344" width="338" height="51"/>
                                                 <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="20"/>
                                                 <color key="textColor" name="Brown"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Tree-US" translatesAutoresizingMaskIntoConstraints="NO" id="AGZ-YQ-mnN">
-                                                <rect key="frame" x="16" y="423" width="338" height="100"/>
+                                                <rect key="frame" x="16" y="403" width="338" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="yrk-gQ-yZv"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="1 tree = 1,000 trees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzw-2d-Vd9">
-                                                <rect key="frame" x="16" y="527" width="338" height="13"/>
+                                                <rect key="frame" x="16" y="507" width="338" height="13"/>
                                                 <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="10"/>
                                                 <color key="textColor" name="Brown"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="754" text="Your score is equal to 600 bags of trash thrown into a landfill" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogg-aG-2vS">
-                                                <rect key="frame" x="16" y="564" width="338" height="51"/>
+                                                <rect key="frame" x="16" y="544" width="338" height="51"/>
                                                 <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="20"/>
                                                 <color key="textColor" name="Brown"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Trash-US" translatesAutoresizingMaskIntoConstraints="NO" id="c23-Ya-u8M">
-                                                <rect key="frame" x="16" y="623" width="338" height="100"/>
+                                                <rect key="frame" x="16" y="603" width="338" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="C4v-Uv-C9Y"/>
                                                 </constraints>
@@ -395,7 +395,7 @@
                                             <constraint firstItem="AW1-f2-xdZ" firstAttribute="top" secondItem="wV8-HM-p47" secondAttribute="bottom" constant="16" id="aji-7e-aKV"/>
                                             <constraint firstAttribute="trailing" secondItem="P9i-0F-cxj" secondAttribute="trailing" constant="16" id="axE-zz-4bD"/>
                                             <constraint firstItem="vec-5T-CAA" firstAttribute="leading" secondItem="khf-Vx-fpI" secondAttribute="leading" constant="16" id="b8l-d9-5dL"/>
-                                            <constraint firstItem="Ocv-e7-jXy" firstAttribute="top" secondItem="c23-Ya-u8M" secondAttribute="bottom" constant="4" id="cD7-kJ-xZ6"/>
+                                            <constraint firstItem="Ocv-e7-jXy" firstAttribute="top" secondItem="c23-Ya-u8M" secondAttribute="bottom" constant="24" id="cD7-kJ-xZ6"/>
                                             <constraint firstAttribute="trailing" secondItem="Ogg-aG-2vS" secondAttribute="trailing" constant="16" id="czr-dQ-yfv"/>
                                             <constraint firstItem="Nwe-ps-skq" firstAttribute="leading" secondItem="khf-Vx-fpI" secondAttribute="leading" constant="16" id="dLe-vT-RDL"/>
                                             <constraint firstItem="wV8-HM-p47" firstAttribute="top" secondItem="Uho-Qs-XDh" secondAttribute="bottom" constant="16" id="e1y-F6-7hc"/>
