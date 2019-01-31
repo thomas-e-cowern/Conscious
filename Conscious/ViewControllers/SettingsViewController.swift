@@ -11,7 +11,6 @@ import UserNotifications
 
 class SettingsViewController: UIViewController {
     
-    
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,21 +19,20 @@ class SettingsViewController: UIViewController {
     // MARK: - Methods
     @IBAction func notificationButtonTapped(_ sender: Any) {
         print("notificationButtonTapped")
-            guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
-                return
-            }
-            
-            if UIApplication.shared.canOpenURL(settingsUrl) {
-                UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
-                    print("Settings opened: \(success)") // Prints true
-                })
-            }
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+            return
+        }
         
+        if UIApplication.shared.canOpenURL(settingsUrl) {
+            UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+                print("Settings opened: \(success)") // Prints true
+            })
+        }
     }
     
     // MARK: - Actions
     @IBAction func doneButtonTapped(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }
 }

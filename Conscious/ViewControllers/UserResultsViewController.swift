@@ -42,6 +42,7 @@ class UserResultsViewController: UIViewController {
     // Local storage
     var savedData: [SavedData] = []
     var isNewQuiz: Bool = false
+    var question: Question?
     
     // MARK: - View Life Cycle
     override func viewWillAppear(_ animated: Bool) {
@@ -118,7 +119,7 @@ class UserResultsViewController: UIViewController {
     func setFoodGraph(_ foodScore: Double, _ totalScore: Double){
         
         UIView.animate(withDuration: 2.5) {
-            self.foodPercentage = CGFloat((foodScore/totalScore)*100)
+            self.foodPercentage = CGFloat((foodScore/totalScore)*350)
             print(self.foodPercentage)
             self.foodWidthGraph.constant = self.foodPercentage
             self.view.layoutIfNeeded()
@@ -128,7 +129,7 @@ class UserResultsViewController: UIViewController {
     // HOUSE
     func setHouseGraph(_ houseScore: Double, _ totalScore: Double){
         UIView.animate(withDuration: 2.5) {
-            self.housePercentage = CGFloat((houseScore/totalScore)*100)
+            self.housePercentage = CGFloat((houseScore/totalScore)*350)
             print(self.housePercentage)
             self.houseWidthGraph.constant =  self.housePercentage
             self.view.layoutIfNeeded()
@@ -138,7 +139,7 @@ class UserResultsViewController: UIViewController {
     // TRAVEL
     func setTravelGraph(_ travelScore: Double, _ totalScore: Double){
         UIView.animate(withDuration: 2.5) {
-            self.travelPercentage = CGFloat((travelScore/totalScore)*100)
+            self.travelPercentage = CGFloat((travelScore/totalScore)*350)
             print(self.travelPercentage)
             self.travelWidthGraph.constant =  self.travelPercentage
             self.view.layoutIfNeeded()
@@ -148,15 +149,27 @@ class UserResultsViewController: UIViewController {
     // MARK: - Images
     // Trees
     func setScoreImage() {
-        if GreenCalculatorController.shared.totalScoreCard() > 50 {
+        if GreenCalculatorController.shared.totalScoreCard() < 1000 {
             treesImageView.image = #imageLiteral(resourceName: "4trees")
-        } else if GreenCalculatorController.shared.totalScoreCard() < 100 {
+            trashImageView.image = #imageLiteral(resourceName: "4trees")
+            gasImageView.image = #imageLiteral(resourceName: "4trees")
+        } else if GreenCalculatorController.shared.totalScoreCard() < 2000 {
             treesImageView.image = #imageLiteral(resourceName: "alltrees")
+            trashImageView.image = #imageLiteral(resourceName: "4trees")
+            gasImageView.image = #imageLiteral(resourceName: "4trees")
+        } else if GreenCalculatorController.shared.totalScoreCard() < 3000 {
+            treesImageView.image = #imageLiteral(resourceName: "alltrees")
+            trashImageView.image = #imageLiteral(resourceName: "4trees")
+            gasImageView.image = #imageLiteral(resourceName: "4trees")
+        } else if GreenCalculatorController.shared.totalScoreCard() < 4000 {
+            treesImageView.image = #imageLiteral(resourceName: "alltrees")
+            trashImageView.image = #imageLiteral(resourceName: "4trees")
+            gasImageView.image = #imageLiteral(resourceName: "4trees")
+        } else if GreenCalculatorController.shared.totalScoreCard() < 5000 {
+            treesImageView.image = #imageLiteral(resourceName: "alltrees")
+            trashImageView.image = #imageLiteral(resourceName: "4trees")
+            gasImageView.image = #imageLiteral(resourceName: "4trees")
         }
-    }
-    
-    @IBAction func retakeQuizButtonTapped(_ sender: Any) {
-        
     }
     
     // MARK: - Setup
@@ -166,5 +179,10 @@ class UserResultsViewController: UIViewController {
         houseScoreLabel.text = String(format: "%.2f%%", housePercentage)
         travelScoreLabel.text = String(format: "%.2f%%", travelPercentage)
         setScoreImage()
+    }
+    
+    // MARK: - Actions
+    @IBAction func retakeQuizButtonTapped(_ sender: Any) {
+        question?.selectedAnswers = []
     }
 }
