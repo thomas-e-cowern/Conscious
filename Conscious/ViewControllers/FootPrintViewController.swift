@@ -16,13 +16,26 @@ class FootPrintViewController: UIViewController {
     @IBOutlet weak var progressChartView: LineChartView!
     
     // MARK: - Properties
-    let weeks = ["0", "1", "2", "3", "4"]
-    let completionPercent: [Double] = [0.0, 50.0, 80.0, 90.0, 100.0]
+    var weeks: [Int] = []
+    var completionPercent: [Double] = []
+    
+    var results: [SavedData] = []
+    
+    
     
     // MARK: - ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.progressChartView.delegate = self
+        results = ActionPlanController.shared.loadFromPersistenceStore(path: "data")
+        
+        for i in 0..<results.count {
+            completionPercent.append(results[i].overallScore / 12)
+        }
+        print("‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️\(completionPercent)‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️‼️")
+        for i in 0..<results.count {
+            weeks.append(i+1)
+        }
         setUpLineChart()
         setChartData(weeks: weeks)
     }
@@ -39,19 +52,19 @@ class FootPrintViewController: UIViewController {
         progressChartView.xAxis.setLabelCount(4, force: false)
         let leftAxis = progressChartView.leftAxis
         leftAxis.removeAllLimitLines()
-        leftAxis.axisMaximum = 105
+        leftAxis.axisMaximum = 5000
         leftAxis.axisMinimum = 0
         leftAxis.drawLimitLinesBehindDataEnabled = true
         progressChartView.rightAxis.enabled = false
     }
     
     
-    func setChartData(weeks: [String]) {
+    func setChartData(weeks: [Int]) {
         let values = (0..<weeks.count).map { (i) -> ChartDataEntry in
             let val = completionPercent
             return ChartDataEntry(x: Double(i), y: val[i])
         }
-        let set1: LineChartDataSet = LineChartDataSet(values: values, label: "TEST")
+        let set1: LineChartDataSet = LineChartDataSet(values: values, label: "Result Number")
         set1.axisDependency = .left
         set1.setColor(UIColor.orange, alpha: 0.5)
         set1.setCircleColor(UIColor.orange)
@@ -68,5 +81,4 @@ class FootPrintViewController: UIViewController {
 
 // MARK: - ChartViewDelegate
 extension FootPrintViewController: ChartViewDelegate {
-    
 }
