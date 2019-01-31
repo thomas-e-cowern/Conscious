@@ -86,9 +86,9 @@ No big deal.</string>
                                     </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="cUk-es-XjB" firstAttribute="top" secondItem="KSo-6S-jeE" secondAttribute="bottom" constant="16" id="FhK-7V-Zpl"/>
                                     <constraint firstItem="bWz-I9-iPq" firstAttribute="leading" secondItem="jby-bk-P75" secondAttribute="leading" constant="24" id="ODb-HU-lZ1"/>
                                     <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="cUk-es-XjB" secondAttribute="bottom" constant="16" id="X4z-F6-v0S"/>
-                                    <constraint firstItem="cUk-es-XjB" firstAttribute="top" secondItem="KSo-6S-jeE" secondAttribute="bottom" constant="16" id="aFc-tZ-qGY"/>
                                     <constraint firstItem="KSo-6S-jeE" firstAttribute="leading" secondItem="jby-bk-P75" secondAttribute="leading" constant="65" id="hep-ZK-nnc"/>
                                     <constraint firstAttribute="trailing" secondItem="bWz-I9-iPq" secondAttribute="trailing" constant="24" id="rsO-xE-gxZ"/>
                                     <constraint firstAttribute="trailing" secondItem="KSo-6S-jeE" secondAttribute="trailing" constant="65" id="vGF-V0-Ofb"/>
