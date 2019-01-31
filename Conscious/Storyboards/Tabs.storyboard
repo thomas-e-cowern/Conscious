@@ -256,6 +256,7 @@
                                                     <outlet property="actionTableViewImage" destination="cxW-V4-MFW" id="xYz-ea-UbT"/>
                                                     <outlet property="actionViewCellButton" destination="2aj-n0-8Jv" id="DHy-2a-8ET"/>
                                                     <outlet property="actionViewCellLabel" destination="dqM-xe-cu4" id="yJQ-Vk-yv7"/>
+                                                    <segue destination="DuF-PE-N8Z" kind="presentation" id="HmS-N8-bWJ"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -311,15 +312,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="aVq-Le-6OR">
+                        <view key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="aVq-Le-6OR">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="163"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VM8-CF-hyp">
-                                    <rect key="frame" x="16" y="100" width="343" height="47"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VM8-CF-hyp">
+                                    <rect key="frame" x="16" y="100" width="343" height="96"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ZBI-iJ-Sqx">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="47"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ZBI-iJ-Sqx">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="96"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="xYF-Kg-AhT">
                                                     <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
@@ -366,8 +367,8 @@
                                                         </button>
                                                     </subviews>
                                                 </stackView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dir-iu-54l">
-                                                    <rect key="frame" x="0.0" y="46" width="343" height="1"/>
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dir-iu-54l">
+                                                    <rect key="frame" x="0.0" y="46.000000000000014" width="343" height="50"/>
                                                     <color key="backgroundColor" name="Brown"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="UDv-mX-TaM"/>
@@ -378,7 +379,7 @@
                                     </subviews>
                                 </stackView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take Action" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCk-Rl-BqI">
-                                    <rect key="frame" x="16" y="43" width="343" height="33"/>
+                                    <rect key="frame" x="16" y="43" width="343" height="43.333333333333343"/>
                                     <fontDescription key="fontDescription" name="CircularStd-Medium" family="Circular Std" pointSize="34"/>
                                     <color key="textColor" name="Brown"/>
                                     <nil key="highlightedColor"/>
@@ -526,7 +527,7 @@
                                                 <fragment content="view breakdown">
                                                     <attributes>
                                                         <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <font key="NSFont" size="12" name="CircularStd-Medium"/>
+                                                        <font key="NSFont" metaFont="cellTitle"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         <integer key="NSUnderline" value="1"/>
                                                     </attributes>
@@ -1006,5 +1007,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="QFq-uC-ueq"/>
+        <segue reference="HmS-N8-bWJ"/>
     </inferredMetricsTieBreakers>
 </document>
