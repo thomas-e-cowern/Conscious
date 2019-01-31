@@ -28,6 +28,8 @@
 		41A8BDCC21F67AAF001EB547 /* ActionsAlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A8BDCB21F67AAF001EB547 /* ActionsAlarmController.swift */; };
 		41D89A7121EE8B9F00CFF725 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D89A7021EE8B9F00CFF725 /* AppDelegate.swift */; };
 		7E04541B220398D10084AC95 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E04541A220398D10084AC95 /* TermsViewController.swift */; };
+		7E04541F2203AFA70084AC95 /* TransparentNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E04541E2203AFA70084AC95 /* TransparentNavigationController.swift */; };
+		7E0454232203B0810084AC95 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0454222203B0810084AC95 /* NavigationViewController.swift */; };
 		7E3A5B7821FCF67A00BB4F16 /* PageOneViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E3A5B7721FCF67A00BB4F16 /* PageOneViewController.storyboard */; };
 		7E3A5B8721FD230600BB4F16 /* CitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3A5B8621FD230600BB4F16 /* CitationViewController.swift */; };
 		7E52EB5A22038FF700BC4D85 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E52EB5922038FF700BC4D85 /* TableViewController.swift */; };
@@ -72,6 +74,8 @@
 		41D89A7021EE8B9F00CFF725 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41D89A7C21EE8BB700CFF725 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E04541A220398D10084AC95 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
+		7E04541E2203AFA70084AC95 /* TransparentNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentNavigationController.swift; sourceTree = "<group>"; };
+		7E0454222203B0810084AC95 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		7E3A5B7721FCF67A00BB4F16 /* PageOneViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PageOneViewController.storyboard; sourceTree = "<group>"; };
 		7E3A5B8621FD230600BB4F16 /* CitationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitationViewController.swift; sourceTree = "<group>"; };
 		7E52EB5922038FF700BC4D85 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -217,6 +221,7 @@
 				7E3A5B8621FD230600BB4F16 /* CitationViewController.swift */,
 				7E6CC80121FBB6E6006C0E4A /* TabBarControllor.swift */,
 				7E6CC7FF21FB8D51006C0E4A /* FootPrintViewController.swift */,
+				7E0454222203B0810084AC95 /* NavigationViewController.swift */,
 				416EFA2921F8F00C00972AB0 /* ActionTableViewCell.swift */,
 				4176753A21F3F87500CC4C07 /* SettingsViewController.swift */,
 				7ECE81A021F13F2F00F2F9DA /* Views */,
@@ -233,6 +238,7 @@
 		7ECE819321F122BD00F2F9DA /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7E04541E2203AFA70084AC95 /* TransparentNavigationController.swift */,
 				41228B5822023FB600AFA468 /* GreenCalculatorController.swift */,
 				7ECE819A21F1234F00F2F9DA /* ActionPlanController.swift */,
 				41A8BDCB21F67AAF001EB547 /* ActionsAlarmController.swift */,
@@ -398,7 +404,9 @@
 				7E6CC80021FB8D51006C0E4A /* FootPrintViewController.swift in Sources */,
 				7E04541B220398D10084AC95 /* TermsViewController.swift in Sources */,
 				41228B5422023F7600AFA468 /* ActionPlan.swift in Sources */,
+				7E04541F2203AFA70084AC95 /* TransparentNavigationController.swift in Sources */,
 				416C50C52202437E00E5A056 /* Question.swift in Sources */,
+				7E0454232203B0810084AC95 /* NavigationViewController.swift in Sources */,
 				7E94754F21F7E7710070F111 /* UserResultsViewController.swift in Sources */,
 				7ECE819B21F1234F00F2F9DA /* ActionPlanController.swift in Sources */,
 				414C721C21F2BE1F00C8687F /* ActionDetailViewController.swift in Sources */,
