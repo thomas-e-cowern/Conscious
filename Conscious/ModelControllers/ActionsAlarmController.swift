@@ -56,44 +56,7 @@ class ActionsAlarmController: AlarmScheduler {
         print(newAlarm.fireDate)
         scheduleUserNotifications(for: newAlarm)
         alarms.append(newAlarm)
-
-//        saveToPersistentStore()
     }
-    
-//    func fileURL() -> URL {
-//        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-//        let documentsDirectory = paths[0]
-//        let fileName = "alarms.json"
-//        let fullURL = documentsDirectory.appendingPathComponent(fileName)
-//
-//        print(fullURL)
-//
-//        return(fullURL)
-//    }
-    
-//    func saveToPersistentStore() {
-//        let encoder = JSONEncoder()
-//        do {
-//            let data = try encoder.encode(self.alarms)
-//            try data.write(to: fileURL())
-//        } catch {
-//            print("Error: \(#function): \(error) : \(error.localizedDescription)")
-//        }
-//    }
-//
-//    func loadFromPersistenceStore() -> [Alarm] {
-//        do {
-//            let data = try Data(contentsOf: fileURL())
-//            let decoder = JSONDecoder()
-//            let alarms = try decoder.decode([Alarm].self, from: data)
-//            return alarms
-//        } catch  {
-//            print("Error: \(#function): \(error) : \(error.localizedDescription)")
-//        }
-//
-//        return []
-//    }
-    
 }
 
 extension AlarmScheduler {
@@ -114,9 +77,9 @@ extension AlarmScheduler {
         
         let fireDate = alarm.fireDate
 
-        let dateComponentsMinute = Calendar.current.dateComponents([.second], from: fireDate)
+        let dateComponents = Calendar.current.dateComponents([.year, .month, .day], from: fireDate)
         
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponentsMinute, repeats: true)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         let request = UNNotificationRequest(identifier: alarm.uuid, content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request) { (error) in
             if let error = error {
