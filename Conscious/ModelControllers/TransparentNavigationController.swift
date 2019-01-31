@@ -20,10 +20,6 @@ class TransparentNavigationController: UINavigationController {
         setupViews()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        setupViews()
-    }
-    
     // MARK: - Setup
     func setupViews() {
         navigationBar.setBackgroundImage(UIImage(), for: .default)
