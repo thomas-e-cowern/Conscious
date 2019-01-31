@@ -35,6 +35,7 @@ class MyActionsViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        clearTaskListDone()
         let loadedActions: [ActionPlanDetail] = ActionPlanController.shared.loadFromPersistenceStore(path: "action")
         self.savedActions = loadedActions
         //        print("👠👠👠👠👠👠👠👠\(savedActions[0].completed)👠👠👠👠👠👠👠👠👠👠👠")
@@ -42,35 +43,29 @@ class MyActionsViewController: UIViewController{
         print("🥼🥼🥼🥼🥼🥼🥼🥼🥼🥼\(myActions)🥼🥼🥼🥼🥼🥼🥼🥼🥼🥼")
         myActionsTableview.dataSource = self
         actionsPledged.text = "\(myActions.count)"
+//        clearTaskListDone()
         actionsCompleted = myActions.filter { $0.completed == true }
         actionsCompletedCount = actionsCompleted.count
         print("Acc: \(actionsCompletedCount)")
         updateCarbonSaved()
         print("TCS: \(totalCarbonSavings)")
         checkDate()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         myActions = ActionPlanController.shared.loadFromPersistenceStore(path: "action")
         updateViews()
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateStyle = .medium
-//        let now = Date()
-//        print("N: \(now)")
-//        let date = dateFormatter.string(from: now)
-//        print("D: \(date)")
-//        let weekday = getDayOfWeek(date)
-//        print("WD: \(weekday)")
-//        if weekday == 1 {
-//            print("Holy cow it's Sunday, time to reset the task list")
-//            for i in 0..<myActions.count {
-//                myActions[i].completed = false
-//            }
-//            ActionPlanController.shared.saveToPersistentStoreData(path: "action")
-//        }
     }
     
+    func clearTaskListDone () {
+        for i in 0..<myActions.count {
+            myActions[i].completed = false
+        }
+        ActionPlanController.shared.saveToPersistentStoreData(path: "action")
+        updateViews()
+    }
     
     func checkDate() {
         savedDate = ActionPlanController.shared.loadFromPersistenceStore(path: "savedDate")
@@ -96,6 +91,7 @@ class MyActionsViewController: UIViewController{
             let stringDate = formatter.string(from: date)
             let newDate = SavedDate(date: stringDate)
             ActionPlanController.shared.saveDate(date: newDate)
+            updateViews()
         } else {
             print("Checked todays date: \(date) and last saved date: \(last) and Weekday: \(weekDay) and we're good")
         }
