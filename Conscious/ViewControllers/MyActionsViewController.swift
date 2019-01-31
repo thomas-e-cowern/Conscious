@@ -21,6 +21,7 @@ class MyActionsViewController: UIViewController{
     var totalCarbonSavings: Double = 0
     var actionsCompletedCount: Int = 0
     var savedActions: [ActionPlanDetail] = []
+    var savedDate: [SavedDate] = []
     
     fileprivate func updateCarbonSaved() {
         for i in 0..<actionsCompletedCount {
@@ -34,7 +35,6 @@ class MyActionsViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UIApplication.willEnterForegroundNotification
         let loadedActions: [ActionPlanDetail] = ActionPlanController.shared.loadFromPersistenceStore(path: "action")
         self.savedActions = loadedActions
         //        print("👠👠👠👠👠👠👠👠\(savedActions[0].completed)👠👠👠👠👠👠👠👠👠👠👠")
@@ -47,26 +47,57 @@ class MyActionsViewController: UIViewController{
         print("Acc: \(actionsCompletedCount)")
         updateCarbonSaved()
         print("TCS: \(totalCarbonSavings)")
+        checkDate()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         myActions = ActionPlanController.shared.loadFromPersistenceStore(path: "action")
         updateViews()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        let now = Date()
-        print("N: \(now)")
-        let date = dateFormatter.string(from: now)
-        print("D: \(date)")
-        let weekday = getDayOfWeek(date)
-        print("WD: \(weekday)")
-        if weekday == 1 {
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateStyle = .medium
+//        let now = Date()
+//        print("N: \(now)")
+//        let date = dateFormatter.string(from: now)
+//        print("D: \(date)")
+//        let weekday = getDayOfWeek(date)
+//        print("WD: \(weekday)")
+//        if weekday == 1 {
+//            print("Holy cow it's Sunday, time to reset the task list")
+//            for i in 0..<myActions.count {
+//                myActions[i].completed = false
+//            }
+//            ActionPlanController.shared.saveToPersistentStoreData(path: "action")
+//        }
+    }
+    
+    
+    func checkDate() {
+        savedDate = ActionPlanController.shared.loadFromPersistenceStore(path: "savedDate")
+        let formatter  = DateFormatter()
+        let date = Date()
+        let myCalendar = Calendar(identifier: .gregorian)
+        guard let last = savedDate.last?.date else {
+            print("No last saved date")
+            let stringDate = formatter.string(from: date)
+            let newDate = SavedDate(date: stringDate)
+            ActionPlanController.shared.saveDate(date: newDate)
+            return
+        }
+        let weekDay = myCalendar.component(.weekday, from: date)
+        formatter.dateFormat = "MMM/dd/yyyy"
+        guard let previousResetDate = formatter.date(from: last) else { return }
+        if previousResetDate < date && weekDay == 1{
             print("Holy cow it's Sunday, time to reset the task list")
             for i in 0..<myActions.count {
                 myActions[i].completed = false
             }
             ActionPlanController.shared.saveToPersistentStoreData(path: "action")
+            let stringDate = formatter.string(from: date)
+            let newDate = SavedDate(date: stringDate)
+            ActionPlanController.shared.saveDate(date: newDate)
+        } else {
+            print("Checked todays date: \(date) and last saved date: \(last) and Weekday: \(weekDay) and we're good")
         }
     }
     

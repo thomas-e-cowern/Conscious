@@ -27,6 +27,8 @@ class ActionPlanController {
     
     var savedActions: [ActionPlanDetail] = []
     
+    var savedDate: [SavedDate] = []
+    
     func addNewResults(overallScore: Double, foodScore: Double, houseScore: Double, travelScore: Double) {
         let newResults = SavedData(overallScore: overallScore, foodScore: foodScore, houseScore: houseScore, travelScore: travelScore)
         savedData.append(newResults)
@@ -34,16 +36,16 @@ class ActionPlanController {
     }
     
     func addNewActions(action: ActionPlanDetail) {
-        print("🧸🧸🧸🧸🧸\(action)🧸🧸🧸🧸🧸")
+//        print("🧸🧸🧸🧸🧸\(action)🧸🧸🧸🧸🧸")
         let newAction = action
         savedActions.append(newAction)
-        print("🎈🎈🎈🎈🎈\(savedActions)🎈🎈🎈🎈🎈")
+//        print("🎈🎈🎈🎈🎈\(savedActions)🎈🎈🎈🎈🎈")
         ActionPlanController.shared.saveToPersistentStoreData(path: "action")
     }
     
     func saveActions(actions: [ActionPlanDetail]) {
         savedActions = actions
-        print("🎈🎈🎈🎈🎈\(savedActions[0].completed)🎈🎈🎈🎈🎈")
+//        print("🎈🎈🎈🎈🎈\(savedActions[0].completed)🎈🎈🎈🎈🎈")
         ActionPlanController.shared.saveToPersistentStoreData(path: "action")
     }
     
@@ -53,6 +55,13 @@ class ActionPlanController {
         savedActions.remove(at: index)
         print("deleted")
         ActionPlanController.shared.saveToPersistentStoreData(path: "action")
+    }
+    
+    func saveDate(date: SavedDate) {
+        print("Saved Date")
+        savedDate.append(date)
+        print(savedDate)
+        ActionPlanController.shared.saveToPersistentStoreData(path: "savedDate")
     }
     
     // Saving data
@@ -76,20 +85,21 @@ class ActionPlanController {
             } catch {
                 print("☎️☎️☎️☎️☎️Error: \(#function): \(error) : \(error.localizedDescription)☎️☎️☎️☎️☎️")
             }
-        } else {
+        } else if path == "action"{
             do {
                 let data = try encoder.encode(self.savedActions)
                 try data.write(to: fileURL(path: path))
             } catch {
                 print("☎️☎️☎️☎️☎️Error: \(#function): \(error) : \(error.localizedDescription)☎️☎️☎️☎️☎️")
             }
+        } else {
+            do {
+                let data = try encoder.encode(self.savedDate)
+                try data.write(to: fileURL(path: path))
+            } catch {
+                print("☎️☎️☎️☎️☎️Error: \(#function): \(error) : \(error.localizedDescription)☎️☎️☎️☎️☎️")
+            }
         }
-        //        do {
-        //            let data = try encoder.encode(self.savedData)
-        //            try data.write(to: fileURL(path: path))
-        //        } catch {
-        //            print("☎️☎️☎️☎️☎️Error: \(#function): \(error) : \(error.localizedDescription)☎️☎️☎️☎️☎️")
-        //        }
     }
     
     func loadFromPersistenceStore<T: Codable>(path: String) -> [T] {
@@ -101,8 +111,10 @@ class ActionPlanController {
             
             if T.self == SavedData.self{
                 savedData = returnData as! [SavedData]
-            }else{
+            }else if T.self == ActionPlanDetail.self{
                 savedActions = returnData as! [ActionPlanDetail]
+            }else {
+                savedDate = returnData as! [SavedDate]
             }
             return returnData
         } catch  {
