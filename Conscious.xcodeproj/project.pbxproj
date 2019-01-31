@@ -39,7 +39,6 @@
 		7E92676721F23B8000A5B396 /* QuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E92676621F23B8000A5B396 /* QuizTableViewCell.swift */; };
 		7E94754F21F7E7710070F111 /* UserResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E94754E21F7E7710070F111 /* UserResultsViewController.swift */; };
 		7ECD8C4C2200FEE700152D0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ECD8C4B2200FEE600152D0F /* Assets.xcassets */; };
-		7ECD8C572201097600152D0F /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD8C562201097600152D0F /* SettingsTableViewController.swift */; };
 		7ECD8C5922010AF000152D0F /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD8C5822010AF000152D0F /* SettingsTableViewCell.swift */; };
 		7ECD8C5B22011B7200152D0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ECD8C5A22011B7200152D0F /* LaunchScreen.storyboard */; };
 		7ECE819B21F1234F00F2F9DA /* ActionPlanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE819A21F1234F00F2F9DA /* ActionPlanController.swift */; };
@@ -90,7 +89,6 @@
 		7ECD8C532201002300152D0F /* CircularStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Bold.otf"; sourceTree = "<group>"; };
 		7ECD8C542201002300152D0F /* CircularStd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Book.otf"; sourceTree = "<group>"; };
 		7ECD8C552201002300152D0F /* CircularStd-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Medium.otf"; sourceTree = "<group>"; };
-		7ECD8C562201097600152D0F /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		7ECD8C5822010AF000152D0F /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		7ECD8C5A22011B7200152D0F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7ECE819A21F1234F00F2F9DA /* ActionPlanController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPlanController.swift; sourceTree = "<group>"; };
@@ -216,7 +214,6 @@
 				416EFA2921F8F00C00972AB0 /* ActionTableViewCell.swift */,
 				4176753A21F3F87500CC4C07 /* SettingsViewController.swift */,
 				7ECE81A021F13F2F00F2F9DA /* Views */,
-				7ECD8C562201097600152D0F /* SettingsTableViewController.swift */,
 				414C721921F2B6E500C8687F /* MyActionsViewController.swift */,
 				7ECE819E21F136CD00F2F9DA /* QuizViewController.swift */,
 				7E94754E21F7E7710070F111 /* UserResultsViewController.swift */,
@@ -406,7 +403,6 @@
 				7E92676721F23B8000A5B396 /* QuizTableViewCell.swift in Sources */,
 				410CA389220000EF00D7BAC5 /* ActionListTableViewCell.swift in Sources */,
 				7ECE819F21F136CD00F2F9DA /* QuizViewController.swift in Sources */,
-				7ECD8C572201097600152D0F /* SettingsTableViewController.swift in Sources */,
 				7ECD8C5922010AF000152D0F /* SettingsTableViewCell.swift in Sources */,
 				4176753B21F3F87500CC4C07 /* SettingsViewController.swift in Sources */,
 				41A8BDCC21F67AAF001EB547 /* ActionsAlarmController.swift in Sources */,
