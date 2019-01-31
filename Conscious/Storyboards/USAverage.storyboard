@@ -455,10 +455,10 @@
             </objects>
             <point key="canvasLocation" x="5608.8000000000002" y="-1272.8635682158922"/>
         </scene>
-        <!--Navigation View Controller-->
+        <!--Transparent Navigation Controller-->
         <scene sceneID="uFf-Un-oqL">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oR0-Kv-7dC" customClass="NavigationViewController" customModule="Conscious" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oR0-Kv-7dC" customClass="TransparentNavigationController" customModule="Conscious" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="vQ5-9O-Cz0">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
