@@ -47,15 +47,15 @@ class ActionDetailViewController: UIViewController {
         if buttonActive == false {
             addToActionListButton.isEnabled = false
             addToActionListButton.setTitle("Added to List", for: .normal)
-            addToActionListButton.backgroundColor = #colorLiteral(red: 0.2996547818, green: 0.2658156753, blue: 0.2664010525, alpha: 1)
-            addToActionListButton.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .disabled)
+
+
             doneButton.isHidden = false
             
         } else {
             addToActionListButton.isEnabled = true
             addToActionListButton.setTitle("Add to List", for: .normal)
-            addToActionListButton.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-            addToActionListButton.setTitleColor(#colorLiteral(red: 0.2996547818, green: 0.2658156753, blue: 0.2664010525, alpha: 1), for: .normal)
+
+
             doneButton.isHidden = true
         }
         
@@ -78,12 +78,12 @@ class ActionDetailViewController: UIViewController {
     }
     
     @IBAction func addToActionListButtonTapped(_ sender: Any) {
-        guard let action = action else { return }
-        ActionsAlarmController.shared.addAlarm(fireDate: Date(), name: action.action, message: action.actionSummry, enabled: true, frequency: action.frequency, repeats: true)
-        ActionPlanController.shared.userActionList.append(action)
-        ActionPlanController.shared.addNewActions(action: action)
-        ActionPlanController.shared.reductionInCost += action.costSavings ?? 0.0
-        navigationController?.popViewController(animated: true)
-        dismiss(animated: true, completion: nil)
-    }
-}
+
+            guard let action = action else { return }
+            ActionsAlarmController.shared.addAlarm(fireDate: Date(), name: action.action, message: action.actionSummry, enabled: true, frequency: action.frequency, repeats: true)
+            ActionPlanController.shared.userActionList.append(action)
+            ActionPlanController.shared.addNewActions(action: action)
+            ActionPlanController.shared.reductionInCost += action.costSavings ?? 0.0
+            addToActionListButton.setTitle("Added to List", for: .normal)
+        }
+
