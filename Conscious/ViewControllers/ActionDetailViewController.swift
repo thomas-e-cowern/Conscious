@@ -47,15 +47,15 @@ class ActionDetailViewController: UIViewController {
         if buttonActive == false {
             addToActionListButton.isEnabled = false
             addToActionListButton.setTitle("Added to List", for: .normal)
-
-
+            addToActionListButton.backgroundColor = #colorLiteral(red: 0.3450980392, green: 0.3215686275, blue: 0.3215686275, alpha: 1)
+            addToActionListButton.setTitleColor(.white, for: .normal)
             doneButton.isHidden = false
             
         } else {
             addToActionListButton.isEnabled = true
             addToActionListButton.setTitle("Add to List", for: .normal)
-
-
+            addToActionListButton.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            addToActionListButton.setTitleColor(.black, for: .normal)
             doneButton.isHidden = true
         }
         
@@ -85,6 +85,9 @@ class ActionDetailViewController: UIViewController {
             ActionPlanController.shared.addNewActions(action: action)
             ActionPlanController.shared.reductionInCost += action.costSavings ?? 0.0
             addToActionListButton.setTitle("Added to List", for: .normal)
+            addToActionListButton.isEnabled = false
+            addToActionListButton.backgroundColor = #colorLiteral(red: 0.3450980392, green: 0.3215686275, blue: 0.3215686275, alpha: 1)
+            addToActionListButton.setTitleColor(.white, for: .normal)
         }
 
 }
