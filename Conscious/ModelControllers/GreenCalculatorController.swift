@@ -45,7 +45,6 @@ class GreenCalculatorController {
         Question(text: "Of the food you buy how much is wasted and thrown away?", category: .food, possibleAnswers: WastedFood.possibleAnswers, questionType: .mutuallyExclusive),
         Question(text: "How often do you buy locally produced food?", category: .food, possibleAnswers: LocallyProducedFood.possibleAnswers, questionType: .mutuallyExclusive),
         Question(text: "How would you best describe your diet?", category: .food, possibleAnswers: DietType.possibleAnswers, questionType: .mutuallyExclusive),
-        Question(text: "Of the food you buy how much is wasted and thrown away?", category: .food, possibleAnswers: ThrownFood.possibleAnswers, questionType: .mutuallyExclusive),
         Question(text: "What type of house do you live in?", category: .house, possibleAnswers: TypeOfHouse.possibleAnswers, questionType: .mutuallyExclusive),
         Question(text: "How many people live in the house above the age of 18?", category: .house, possibleAnswers: NumberOfHouseHoldMembers.possibleAnswers, questionType: .mutuallyExclusive),
         Question(text: "What temperature do you keep your house at in the winter?", category: .house, possibleAnswers: HouseTempInWinter.possibleAnswers, questionType: .mutuallyExclusive),

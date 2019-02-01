@@ -503,17 +503,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YRb-6p-edl">
-                                        <rect key="frame" x="109" y="158.33333333333334" width="157" height="91.333333333333343"/>
+                                        <rect key="frame" x="112.33333333333333" y="165.66666666666666" width="150.33333333333337" height="84"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="2,903" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0b-Og-KJk">
-                                                <rect key="frame" x="0.0" y="0.0" width="157" height="76"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="150.33333333333334" height="70"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="CircularStd-Black" family="Circular Std" pointSize="60"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lbs of Co2 emissions/month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umG-3m-u63">
-                                                <rect key="frame" x="0.0" y="76" width="157" height="15.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="70" width="150.33333333333334" height="14"/>
                                                 <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="12"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -568,7 +568,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="400" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DhM-K0-val">
-                                                <rect key="frame" x="31" y="44" width="62" height="44"/>
+                                                <rect key="frame" x="33.666666666666671" y="44" width="57" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="swD-WE-48U"/>
                                                 </constraints>
@@ -577,7 +577,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL LBS CO2 SAVED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bF-t1-IaU">
-                                                <rect key="frame" x="7.6666666666666643" y="92" width="109" height="12"/>
+                                                <rect key="frame" x="7.3333333333333357" y="92" width="109.66666666666666" height="12"/>
                                                 <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="10"/>
                                                 <color key="textColor" name="Brown"/>
                                                 <nil key="highlightedColor"/>
@@ -613,7 +613,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$150" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9N-EQ-cZF">
-                                                <rect key="frame" x="25.666666666666657" y="44" width="73" height="44"/>
+                                                <rect key="frame" x="24.333333333333343" y="44" width="75.666666666666671" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="Xho-u0-3o0"/>
                                                 </constraints>
@@ -622,7 +622,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="TOTAL DOLLARS SAVED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbK-Bj-EiI">
-                                                <rect key="frame" x="5.3333333333333428" y="92" width="113.66666666666667" height="12"/>
+                                                <rect key="frame" x="5.3333333333333428" y="92" width="113.33333333333333" height="12"/>
                                                 <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="10"/>
                                                 <color key="textColor" name="Brown"/>
                                                 <nil key="highlightedColor"/>
@@ -706,11 +706,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="450"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Meatless Monday" translatesAutoresizingMaskIntoConstraints="NO" id="Pgd-fN-Ycf">
-                                        <rect key="frame" x="0.0" y="91.666666666666686" width="375" height="238"/>
+                                        <rect key="frame" x="0.0" y="95.333333333333314" width="375" height="238"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meatless Monday" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2U-aV-JQ6">
-                                        <rect key="frame" x="24" y="337.66666666666669" width="327" height="43.333333333333314"/>
+                                        <rect key="frame" x="24" y="341.33333333333331" width="327" height="39.666666666666686"/>
                                         <fontDescription key="fontDescription" name="CircularStd-Medium" family="Circular Std" pointSize="34"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -763,7 +763,7 @@
                                 <rect key="frame" x="0.0" y="458" width="375" height="762"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="epb-8W-CcO">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="727.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="692.33333333333337"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Challenge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8PK-JF-s13" userLabel="Chalenge Detail">
                                                 <rect key="frame" x="16" y="16" width="343" height="31"/>
@@ -775,19 +775,19 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Benefits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adM-dA-6QJ">
-                                                <rect key="frame" x="16" y="385" width="343" height="30.666666666666686"/>
+                                                <rect key="frame" x="16" y="363" width="343" height="28"/>
                                                 <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="24"/>
                                                 <color key="textColor" name="Brown"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Eliminate meat from all of your meal choices on Monday." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFV-QG-uDV">
-                                                <rect key="frame" x="16" y="55" width="343" height="40.666666666666657"/>
+                                                <rect key="frame" x="16" y="55" width="343" height="37.333333333333343"/>
                                                 <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOi-bz-C6n">
-                                                <rect key="frame" x="16" y="158.33333333333337" width="343" height="202.66666666666663"/>
+                                                <rect key="frame" x="16" y="152.33333333333337" width="343" height="186.66666666666663"/>
                                                 <string key="text">Eating less meat is a great way to reduce your impact on the Earth! Animal farming is the second biggest contributor to greenhouse gas emissions and a leading cause of deforestation, air pollution, and water pollution. Replacing your meat for veggies or beans just one day a week could save up to 730 pounds of carbon emissions a year. For context, that’s the equivalent to not burning 37 gallons of gas or not driving 810 miles.  </string>
                                                 <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="16"/>
                                                 <nil key="textColor"/>
@@ -795,13 +795,13 @@
                                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qL7-Ep-8hd">
-                                                <rect key="frame" x="16" y="119.66666666666664" width="343" height="30.666666666666671"/>
+                                                <rect key="frame" x="16" y="116.33333333333337" width="343" height="28"/>
                                                 <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="24"/>
                                                 <color key="textColor" name="Brown"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F10-u3-tO6">
-                                                <rect key="frame" x="16" y="423.66666666666663" width="343" height="101.33333333333337"/>
+                                                <rect key="frame" x="16" y="399" width="343" height="93.333333333333314"/>
                                                 <string key="text">• 	Reducing your carbon footprint
 • 	High levels of meat consumption have been linked to higher risks of heart disease, cancer, and Alzheimer’s 
 • 	Cows are, like, really cute</string>
@@ -810,22 +810,22 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M61-xT-oC2">
-                                                <rect key="frame" x="16" y="587.66666666666674" width="343" height="100"/>
+                                                <rect key="frame" x="16" y="552.33333333333337" width="343" height="100"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="92" translatesAutoresizingMaskIntoConstraints="NO" id="aj2-jP-5nw">
-                                                        <rect key="frame" x="35.333333333333343" y="16" width="272.66666666666663" height="68"/>
+                                                        <rect key="frame" x="33.666666666666657" y="17" width="276" height="66.333333333333329"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Wh3-TI-rWF">
-                                                                <rect key="frame" x="0.0" y="0.0" width="117" height="68"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="119.33333333333333" height="66.333333333333329"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Co2" translatesAutoresizingMaskIntoConstraints="NO" id="CDO-PS-0wR">
-                                                                        <rect key="frame" x="27.999999999999993" y="0.0" width="61.000000000000007" height="40"/>
+                                                                        <rect key="frame" x="29.000000000000007" y="0.0" width="60.999999999999993" height="40"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="40" id="x3I-sd-YUU"/>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="62 lbs CO2e saved" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tc-2z-X00">
-                                                                        <rect key="frame" x="0.0" y="48" width="117" height="20"/>
+                                                                        <rect key="frame" x="0.0" y="47.999999999999886" width="119.33333333333333" height="18.333333333333329"/>
                                                                         <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="14"/>
                                                                         <color key="textColor" name="Brown"/>
                                                                         <nil key="highlightedColor"/>
@@ -833,16 +833,16 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="J5t-g3-V0E">
-                                                                <rect key="frame" x="208.99999999999997" y="0.0" width="63.666666666666657" height="68"/>
+                                                                <rect key="frame" x="211.33333333333334" y="0.0" width="64.666666666666657" height="66.333333333333329"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MoneyBox" translatesAutoresizingMaskIntoConstraints="NO" id="HxP-db-OP0">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="63.666666666666664" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="64.666666666666671" height="50"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="50" id="6gl-1u-UUi"/>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$58 saved" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJk-wL-SZK">
-                                                                        <rect key="frame" x="0.0" y="50" width="63.666666666666664" height="18"/>
+                                                                        <rect key="frame" x="0.0" y="49.999999999999886" width="64.666666666666671" height="16.333333333333329"/>
                                                                         <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="14"/>
                                                                         <color key="textColor" name="Brown"/>
                                                                         <nil key="highlightedColor"/>
@@ -866,7 +866,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Effects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vh-0g-hS1">
-                                                <rect key="frame" x="16" y="549" width="343" height="30.666666666666629"/>
+                                                <rect key="frame" x="16" y="516.33333333333337" width="343" height="28"/>
                                                 <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="24"/>
                                                 <color key="textColor" name="Brown"/>
                                                 <nil key="highlightedColor"/>
@@ -1003,6 +1003,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="0Rd-Ml-aBa">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
