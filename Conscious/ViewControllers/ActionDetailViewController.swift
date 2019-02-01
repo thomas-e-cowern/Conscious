@@ -11,7 +11,6 @@ import UIKit
 class ActionDetailViewController: UIViewController {
     
     // MARK: - Outlets
-
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var addToActionListButton: UIButton!
     @IBOutlet weak var actionTitleLabel: UILabel!
@@ -26,6 +25,7 @@ class ActionDetailViewController: UIViewController {
     // MARK: - Properties
     var action: ActionPlanDetail?
     var buttonActive: Bool = true
+    
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,16 +47,18 @@ class ActionDetailViewController: UIViewController {
         if buttonActive == false {
             addToActionListButton.isEnabled = false
             addToActionListButton.setTitle("Added to List", for: .normal)
+
+
             doneButton.isHidden = false
             
         } else {
             addToActionListButton.isEnabled = true
             addToActionListButton.setTitle("Add to List", for: .normal)
+
+
             doneButton.isHidden = true
         }
         
-        
-        // Needs Work
         if action.icon == "Food" {
             print("Food")
             backgroundView.backgroundColor = #colorLiteral(red: 0.9399999976, green: 0.4199999869, blue: 0.3400000036, alpha: 1)
@@ -67,17 +69,16 @@ class ActionDetailViewController: UIViewController {
             print("Travel")
             backgroundView.backgroundColor = #colorLiteral(red: 1, green: 0.7599999905, blue: 0.02999999933, alpha: 1)
         }
-        
     }
-        
-        // MARK: - Actions
     
+    // MARK: - Actions
     @IBAction func backButtonPressed(_ sender: Any) {
         navigationController?.popViewController(animated: true )
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func addToActionListButtonTapped(_ sender: Any) {
+
             guard let action = action else { return }
             ActionsAlarmController.shared.addAlarm(fireDate: Date(), name: action.action, message: action.actionSummry, enabled: true, frequency: action.frequency, repeats: true)
             ActionPlanController.shared.userActionList.append(action)
@@ -85,4 +86,4 @@ class ActionDetailViewController: UIViewController {
             ActionPlanController.shared.reductionInCost += action.costSavings ?? 0.0
             addToActionListButton.setTitle("Added to List", for: .normal)
         }
-}
+

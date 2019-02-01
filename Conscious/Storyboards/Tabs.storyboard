@@ -917,7 +917,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="rCB-88-GEJ">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="Settings" id="p2l-qZ-GWj"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="Settings" id="0N5-3o-1rv"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="375" height="1220"/>
@@ -959,8 +959,8 @@
             <objects>
                 <navigationController id="W17-s5-Eki" customClass="TransparentNavigationController" customModule="Conscious" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="TAKE ACTION" image="Not Active Take Action" selectedImage="Active Take Action" id="Lgw-QV-X89"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="j8o-H0-wRV">
-                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="j8o-H0-wRV">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

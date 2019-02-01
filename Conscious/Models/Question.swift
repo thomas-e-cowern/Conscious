@@ -42,7 +42,7 @@ class Question {
 
 enum EmmissionCategory: String {
     case food = "Food"
-    case house = "House"
+    case house = "Home"
     case travel = "Travel"
 }
 
