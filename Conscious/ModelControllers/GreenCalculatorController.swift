@@ -23,7 +23,6 @@ class GreenCalculatorController {
     var wastedFood: WastedFood?
     var locallyProducedFood: LocallyProducedFood?
     var dietType: DietType?
-    var thrownFood: ThrownFood?
     
     // HOUSE
     var numberOfHouseholdMembers: NumberOfHouseHoldMembers?
@@ -62,8 +61,7 @@ class GreenCalculatorController {
     func calculateFoodScore() -> Double? {
         guard let dietType = dietType?.results,
             let localFood = locallyProducedFood?.results,
-            let wastedFood = wastedFood?.results,
-            let thrownFood = thrownFood?.results else { return nil }
+            let wastedFood = wastedFood?.results else { return nil }
         if dietType < 1.6 {
             isVegetarian = true
         }
@@ -73,7 +71,7 @@ class GreenCalculatorController {
         if wastedFood < 0.039 {
             composts = true
         }
-        return dietType - (dietType * localFood) + wastedFood + thrownFood
+        return dietType - (dietType * localFood) + wastedFood
     }
     
     func calculateFoodPercentage() -> Double {

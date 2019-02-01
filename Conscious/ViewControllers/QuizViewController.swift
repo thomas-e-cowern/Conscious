@@ -195,8 +195,6 @@ extension QuizViewController {
             GreenCalculatorController.shared.locallyProducedFood = nil
         } else if answer is DietType {
             GreenCalculatorController.shared.dietType = nil
-        } else if answer is ThrownFood {
-            GreenCalculatorController.shared.thrownFood = nil
             // HOUSE
         } else if answer is NumberOfHouseHoldMembers {
             GreenCalculatorController.shared.numberOfHouseholdMembers = nil
@@ -232,8 +230,6 @@ extension QuizViewController {
             GreenCalculatorController.shared.locallyProducedFood = locallyProducedFood
         } else if let dietType = answer as? DietType {
             GreenCalculatorController.shared.dietType = dietType
-        } else if let thrownFood = answer as? ThrownFood {
-            GreenCalculatorController.shared.thrownFood = thrownFood
             // HOUSE
         } else if let numberOfHouseHoldMembers = answer as? NumberOfHouseHoldMembers {
             GreenCalculatorController.shared.numberOfHouseholdMembers = numberOfHouseHoldMembers
