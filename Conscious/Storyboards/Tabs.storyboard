@@ -684,6 +684,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="co2Label" destination="DhM-K0-val" id="GnY-72-4bQ"/>
+                        <outlet property="co2SubLabel" destination="2bF-t1-IaU" id="UMe-eO-ura"/>
                         <outlet property="moneyLabel" destination="j9N-EQ-cZF" id="crh-PV-Lya"/>
                         <outlet property="progressChartView" destination="Van-sr-ROu" id="PxM-Bi-7l7"/>
                         <outlet property="resultsLabel" destination="M0b-Og-KJk" id="CZl-Jt-0ry"/>
@@ -1039,6 +1040,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="HmS-N8-bWJ"/>
-        <segue reference="0fF-P1-bE6"/>
+        <segue reference="j5C-cG-Fqs"/>
     </inferredMetricsTieBreakers>
 </document>
