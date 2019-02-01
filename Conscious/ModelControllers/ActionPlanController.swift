@@ -32,6 +32,7 @@ class ActionPlanController {
     func addNewResults(overallScore: Double, foodScore: Double, houseScore: Double, travelScore: Double) {
         let newResults = SavedData(overallScore: overallScore, foodScore: foodScore, houseScore: houseScore, travelScore: travelScore)
         savedData.append(newResults)
+        print("💔💔💔💔💔💔💔\(savedData)💔💔💔💔💔💔💔💔")
         ActionPlanController.shared.saveToPersistentStoreData(path: "data")
     }
     

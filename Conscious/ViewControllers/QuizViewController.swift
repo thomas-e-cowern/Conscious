@@ -46,9 +46,9 @@ class QuizViewController: UIViewController {
         LocalStorageController.shared.isNewQuiz = true
         updateViews()
         
-        if LocalStorageController.shared.isNewQuiz == false {
-            question?.selectedAnswers = []
-        }
+//        if LocalStorageController.shared.isNewQuiz == false {
+//            question?.selectedAnswers = []
+//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

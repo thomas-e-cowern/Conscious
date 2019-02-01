@@ -27,6 +27,10 @@ class UserResultsViewController: UIViewController {
     @IBOutlet weak var foodWidthGraph: NSLayoutConstraint!
     @IBOutlet weak var houseWidthGraph: NSLayoutConstraint!
     @IBOutlet weak var travelWidthGraph: NSLayoutConstraint!
+    @IBOutlet weak var staticFoodLabel: UILabel!
+    @IBOutlet weak var staticHomeLabel: UILabel!
+    @IBOutlet weak var staticTravelLabel: UILabel!
+ 
     
     // Raw scores
     var totalScore: Double = 1.0
