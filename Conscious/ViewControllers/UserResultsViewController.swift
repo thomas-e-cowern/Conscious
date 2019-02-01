@@ -51,8 +51,6 @@ class UserResultsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getSavedData()
-        updateViews()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -119,9 +117,9 @@ class UserResultsViewController: UIViewController {
     func setFoodGraph(_ foodScore: Double, _ totalScore: Double){
         
         UIView.animate(withDuration: 2.5) {
-            self.foodPercentage = CGFloat((foodScore/totalScore)*350)
+            self.foodPercentage = CGFloat((foodScore/totalScore)*100)
             print(self.foodPercentage)
-            self.foodWidthGraph.constant = self.foodPercentage
+            self.foodWidthGraph.constant = self.foodPercentage * 3
             self.view.layoutIfNeeded()
         }
     }
@@ -129,9 +127,9 @@ class UserResultsViewController: UIViewController {
     // HOUSE
     func setHouseGraph(_ houseScore: Double, _ totalScore: Double){
         UIView.animate(withDuration: 2.5) {
-            self.housePercentage = CGFloat((houseScore/totalScore)*350)
+            self.housePercentage = CGFloat((houseScore/totalScore)*100)
             print(self.housePercentage)
-            self.houseWidthGraph.constant =  self.housePercentage
+            self.houseWidthGraph.constant =  self.housePercentage * 3
             self.view.layoutIfNeeded()
         }
     }
@@ -139,9 +137,9 @@ class UserResultsViewController: UIViewController {
     // TRAVEL
     func setTravelGraph(_ travelScore: Double, _ totalScore: Double){
         UIView.animate(withDuration: 2.5) {
-            self.travelPercentage = CGFloat((travelScore/totalScore)*350)
+            self.travelPercentage = CGFloat((travelScore/totalScore)*100)
             print(self.travelPercentage)
-            self.travelWidthGraph.constant =  self.travelPercentage
+            self.travelWidthGraph.constant =  self.travelPercentage * 3
             self.view.layoutIfNeeded()
         }
     }
