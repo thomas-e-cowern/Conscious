@@ -29,7 +29,7 @@ class FootPrintViewController: UIViewController {
         super.viewDidLoad()
         self.progressChartView.delegate = self
         results = ActionPlanController.shared.loadFromPersistenceStore(path: "data")
-        
+        print("Results: \(results)")
         // SavedData
         for i in 0..<results.count {
             completionPercent.append(results[i].overallScore / 12)
@@ -48,7 +48,7 @@ class FootPrintViewController: UIViewController {
         if co2Difference >= 0 {
             co2SubLabel.text = "MORE THAN U.S. AVG"
         } else {
-            co2SubLabel.text = "TOTAL LBS CO2 SAVED"
+            co2SubLabel.text = "LESS THAN U.S. AVG"
         }
         let costSaved = abs(co2Difference) * 0.11
         if co2Difference >= 0 {
@@ -66,7 +66,7 @@ class FootPrintViewController: UIViewController {
     // MARK: - Setup
     func setUpLineChart() {
         self.progressChartView.noDataText = "Haven't take the Quiz yet"
-        let lXAxis = ChartLimitLine(limit: 5, label: "Weeks")
+        let lXAxis = ChartLimitLine(limit: Double(weeks.count), label: "Quiz Results")
         lXAxis.lineWidth = 5
         lXAxis.labelPosition = .rightBottom
         lXAxis.valueFont = .systemFont(ofSize: 10)
@@ -86,7 +86,7 @@ class FootPrintViewController: UIViewController {
             let val = completionPercent
             return ChartDataEntry(x: Double(i), y: val[i])
         }
-        let set1: LineChartDataSet = LineChartDataSet(values: values, label: "Results")
+        let set1: LineChartDataSet = LineChartDataSet(values: values, label: "Quiz Results in lbs of carbon emitted")
         set1.axisDependency = .left
         set1.setColor(UIColor.orange, alpha: 0.5)
         set1.setCircleColor(UIColor.orange)

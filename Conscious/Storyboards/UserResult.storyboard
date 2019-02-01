@@ -151,8 +151,11 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LOv-5o-hSp">
                                                 <rect key="frame" x="0.0" y="62.5" width="1" height="40"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnN-Y9-bYE">
-                                                        <rect key="frame" x="16" y="7.5" width="45" height="25.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnN-Y9-bYE">
+                                                        <rect key="frame" x="16" y="7.5" width="150" height="25.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="150" id="0o2-61-P55"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -452,6 +455,9 @@
                         <outlet property="houseScoreLabel" destination="3S9-yG-tGU" id="D0P-7S-Iws"/>
                         <outlet property="houseWidthGraph" destination="Rfe-UH-djV" id="8DD-3t-VqC"/>
                         <outlet property="scoreLabel" destination="415-p9-TXV" id="m2j-KA-7QT"/>
+                        <outlet property="staticFoodLabel" destination="gnN-Y9-bYE" id="zLS-n1-g0t"/>
+                        <outlet property="staticHomeLabel" destination="pv5-UM-rpS" id="faz-6h-Xrt"/>
+                        <outlet property="staticTravelLabel" destination="d17-XZ-I7l" id="sgq-lZ-lIR"/>
                         <outlet property="trashImageView" destination="rFc-U8-cJj" id="UAL-IO-YrC"/>
                         <outlet property="trashLabel" destination="eaQ-hf-t1Q" id="c4N-ae-AX3"/>
                         <outlet property="travelGraph" destination="qYo-tb-fkK" id="tkR-IF-KLK"/>
