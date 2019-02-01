@@ -78,7 +78,7 @@ class QuizViewController: UIViewController {
             categoryLabel.backgroundColor = #colorLiteral(red: 0.9399999976, green: 0.4199999869, blue: 0.3400000036, alpha: 1)
             nextButton.setImage(#imageLiteral(resourceName: "Next"), for: .normal)
             previousButton.setImage(#imageLiteral(resourceName: "Previous"), for: .normal)
-        } else if question?.category.rawValue == "House" {
+        } else if question?.category.rawValue == "Home" {
             categoryImageView.image = #imageLiteral(resourceName: "House")
             categoryLabel.backgroundColor = #colorLiteral(red: 0.4900000095, green: 0.8299999833, blue: 0.6899999976, alpha: 1)
             nextButton.setImage(#imageLiteral(resourceName: "NextGreen"), for: .normal)
