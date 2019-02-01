@@ -29,6 +29,7 @@ class ActionDetailViewController: UIViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+
         updateViews()
     }
     
@@ -56,17 +57,22 @@ class ActionDetailViewController: UIViewController {
         }
         
         
-//        // Needs Work
-        if action.icon == "Food" {
-            backgroundView.backgroundColor = #colorLiteral(red: 0.9399999976, green: 0.4199999869, blue: 0.3400000036, alpha: 1)
-        } else if action.icon == "house" {
-            backgroundView.backgroundColor = #colorLiteral(red: 0.4900000095, green: 0.8299999833, blue: 0.6899999976, alpha: 1)
-        } else if action.icon == "Travel" {
-            backgroundView.backgroundColor = #colorLiteral(red: 1, green: 0.7599999905, blue: 0.02999999933, alpha: 1)
+        // Needs Work
+        if self.action?.icon == "Food" {
+            print("Food")
+            self.backgroundView.backgroundColor = #colorLiteral(red: 0.9399999976, green: 0.4199999869, blue: 0.3400000036, alpha: 1)
+        } else if self.action?.icon == "house" {
+            print("House")
+            self.backgroundView.backgroundColor = #colorLiteral(red: 0.4900000095, green: 0.8299999833, blue: 0.6899999976, alpha: 1)
+        } else {
+            print("Travel")
+            self.backgroundView.backgroundColor = #colorLiteral(red: 1, green: 0.7599999905, blue: 0.02999999933, alpha: 1)
         }
+        
     }
         
         // MARK: - Actions
+    
     @IBAction func backButtonPressed(_ sender: Any) {
         navigationController?.popViewController(animated: true )
         dismiss(animated: true, completion: nil)
