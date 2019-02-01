@@ -121,6 +121,7 @@ class ActionListTableViewController: UITableViewController {
             }
             let chosenAction = actions[indexPath.row]
             destinationVC?.action = chosenAction
+            destinationVC?.buttonActive = true
         }
     }
 }

@@ -186,6 +186,7 @@ extension MyActionsViewController: UITableViewDataSource {
         }
         let chosenAction = myActions[indexPath.row]
         destinationVC?.action = chosenAction
+        destinationVC?.buttonActive = false
     }
 }
 
