@@ -27,6 +27,7 @@ class FootPrintViewController: UIViewController {
     // MARK: - ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.progressChartView.delegate = self
         results = ActionPlanController.shared.loadFromPersistenceStore(path: "data")
         print("Results: \(results)")
@@ -63,6 +64,11 @@ class FootPrintViewController: UIViewController {
         updateViews()
     }
     
+    @IBAction func newQuizTapped(_ sender: Any) {
+        self.tabBarController?.dismiss(animated: true, completion: nil)
+    }
+    
+    
     // MARK: - Setup
     func setUpLineChart() {
         self.progressChartView.noDataText = "Haven't take the Quiz yet"
@@ -86,7 +92,7 @@ class FootPrintViewController: UIViewController {
             let val = completionPercent
             return ChartDataEntry(x: Double(i), y: val[i])
         }
-        let set1: LineChartDataSet = LineChartDataSet(values: values, label: "Quiz Results in lbs of carbon emitted")
+        let set1: LineChartDataSet = LineChartDataSet(values: values, label: "Weekly")
         set1.axisDependency = .left
         set1.setColor(UIColor.orange, alpha: 0.5)
         set1.setCircleColor(UIColor.orange)

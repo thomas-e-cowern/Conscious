@@ -30,6 +30,7 @@ class ActionPlanController {
     var savedDate: [SavedDate] = []
     
     func addNewResults(overallScore: Double, foodScore: Double, houseScore: Double, travelScore: Double) {
+        savedData = loadFromPersistenceStore(path: "data")
         let newResults = SavedData(overallScore: overallScore, foodScore: foodScore, houseScore: houseScore, travelScore: travelScore)
         savedData.append(newResults)
         print("💔💔💔💔💔💔💔\(savedData)💔💔💔💔💔💔💔💔")

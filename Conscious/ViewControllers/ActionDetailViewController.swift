@@ -46,12 +46,12 @@ class ActionDetailViewController: UIViewController {
         
         if buttonActive == false {
             addToActionListButton.isEnabled = false
-            addToActionListButton.setTitle("Added to Action List", for: .normal)
+            addToActionListButton.setTitle("Added to List", for: .normal)
             doneButton.isHidden = false
             
         } else {
             addToActionListButton.isEnabled = true
-            addToActionListButton.setTitle("Add to Action List", for: .normal)
+            addToActionListButton.setTitle("Add to List", for: .normal)
             doneButton.isHidden = true
         }
         
@@ -83,7 +83,6 @@ class ActionDetailViewController: UIViewController {
             ActionPlanController.shared.userActionList.append(action)
             ActionPlanController.shared.addNewActions(action: action)
             ActionPlanController.shared.reductionInCost += action.costSavings ?? 0.0
-            navigationController?.popViewController(animated: true)
-            dismiss(animated: true, completion: nil)            
+            addToActionListButton.setTitle("Added to List", for: .normal)
         }
 }
