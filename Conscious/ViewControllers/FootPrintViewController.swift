@@ -16,11 +16,13 @@ class FootPrintViewController: UIViewController {
     @IBOutlet weak var resultsLabel: UILabel!
     @IBOutlet weak var co2Label: UILabel!
     @IBOutlet weak var moneyLabel: UILabel!
+    @IBOutlet weak var co2SubLabel: UILabel!
     
     // MARK: - Properties
     var weeks: [Int] = []
     var completionPercent: [Double] = []
     var results: [SavedData] = []
+    var co2Difference: Double = 0.0
     
     // MARK: - ViewLifeCycle
     override func viewDidLoad() {
@@ -38,6 +40,22 @@ class FootPrintViewController: UIViewController {
         }
         setUpLineChart()
         setChartData(weeks: weeks)
+        let roundedUserAmount = round(completionPercent.last ?? 0)
+        print(roundedUserAmount)
+        co2Difference = roundedUserAmount - 2903.0
+        print("COD: \(abs(co2Difference))")
+        co2Label.text = "\(abs(co2Difference))"
+        if co2Difference >= 0 {
+            co2SubLabel.text = "MORE THAN U.S. AVG"
+        } else {
+            co2SubLabel.text = "TOTAL LBS CO2 SAVED"
+        }
+        let costSaved = abs(co2Difference) * 0.11
+        if co2Difference >= 0 {
+            moneyLabel.text = "\(0.0)"
+        } else {
+            moneyLabel.text = "\(costSaved)"
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
