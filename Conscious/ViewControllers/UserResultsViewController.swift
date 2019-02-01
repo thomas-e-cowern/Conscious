@@ -151,22 +151,37 @@ class UserResultsViewController: UIViewController {
             treesImageView.image = #imageLiteral(resourceName: "4trees")
             trashImageView.image = #imageLiteral(resourceName: "4trees")
             gasImageView.image = #imageLiteral(resourceName: "4trees")
+            treesLabel.text = "3,392 trees will need to be planted to offset your carbon emissions "
+            trashLabel.text = "Your score is equal to 600 bags of trash thrown into a landfill"
+            gasLabel.text = "Or 300 gallons of gas burned"
         } else if GreenCalculatorController.shared.totalScoreCard() < 2000 {
             treesImageView.image = #imageLiteral(resourceName: "alltrees")
             trashImageView.image = #imageLiteral(resourceName: "4trees")
             gasImageView.image = #imageLiteral(resourceName: "4trees")
+            treesLabel.text = "3,392 trees will need to be planted to offset your carbon emissions "
+            trashLabel.text = "Your score is equal to 600 bags of trash thrown into a landfill"
+            gasLabel.text = "Or 300 gallons of gas burned"
         } else if GreenCalculatorController.shared.totalScoreCard() < 3000 {
             treesImageView.image = #imageLiteral(resourceName: "alltrees")
             trashImageView.image = #imageLiteral(resourceName: "4trees")
             gasImageView.image = #imageLiteral(resourceName: "4trees")
+            treesLabel.text = "3,392 trees will need to be planted to offset your carbon emissions "
+            trashLabel.text = "Your score is equal to 600 bags of trash thrown into a landfill"
+            gasLabel.text = "Or 300 gallons of gas burned"
         } else if GreenCalculatorController.shared.totalScoreCard() < 4000 {
             treesImageView.image = #imageLiteral(resourceName: "alltrees")
             trashImageView.image = #imageLiteral(resourceName: "4trees")
             gasImageView.image = #imageLiteral(resourceName: "4trees")
+            treesLabel.text = "3,392 trees will need to be planted to offset your carbon emissions "
+            trashLabel.text = "Your score is equal to 600 bags of trash thrown into a landfill"
+            gasLabel.text = "Or 300 gallons of gas burned"
         } else if GreenCalculatorController.shared.totalScoreCard() < 5000 {
             treesImageView.image = #imageLiteral(resourceName: "alltrees")
             trashImageView.image = #imageLiteral(resourceName: "4trees")
             gasImageView.image = #imageLiteral(resourceName: "4trees")
+            treesLabel.text = "3,392 trees will need to be planted to offset your carbon emissions "
+            trashLabel.text = "Your score is equal to 600 bags of trash thrown into a landfill"
+            gasLabel.text = "Or 300 gallons of gas burned"
         }
     }
     

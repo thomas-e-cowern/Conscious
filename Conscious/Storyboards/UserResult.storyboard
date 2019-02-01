@@ -435,7 +435,7 @@
                         <viewLayoutGuide key="safeArea" id="zJv-my-6Dq"/>
                     </view>
                     <navigationItem key="navigationItem" title="Your Footprint" id="0Ez-D6-vKD">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="Rounded" id="0b8-bs-Kqh">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="Settings" id="0b8-bs-Kqh">
                             <connections>
                                 <segue destination="RaS-Mg-IJy" kind="show" id="O7S-05-omb"/>
                             </connections>
@@ -493,7 +493,7 @@
     </scenes>
     <resources>
         <image name="Gas-US" width="316" height="58"/>
-        <image name="Rounded" width="23" height="24"/>
+        <image name="Settings" width="23" height="24"/>
         <image name="Trash-US" width="327" height="100"/>
         <image name="Tree-US" width="327" height="58"/>
         <namedColor name="Brown">

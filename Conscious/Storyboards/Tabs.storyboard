@@ -58,25 +58,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="azV-hm-2pm">
-                                        <rect key="frame" x="106.33333333333333" y="179" width="162.66666666666669" height="88"/>
+                                        <rect key="frame" x="108.66666666666667" y="181" width="157.66666666666663" height="88"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="IBH-Ow-vYL">
-                                                <rect key="frame" x="0.0" y="0.0" width="162.66666666666666" height="88"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="157.66666666666666" height="88"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfZ-a6-lzc">
-                                                        <rect key="frame" x="0.0" y="0.0" width="44.666666666666664" height="88"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="40.333333333333336" height="88"/>
                                                         <fontDescription key="fontDescription" name="CircularStd-Medium" family="Circular Std" pointSize="72"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OUT OF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0A-1d-VFZ">
-                                                        <rect key="frame" x="64.666666666666671" y="0.0" width="38" height="88"/>
+                                                        <rect key="frame" x="60.333333333333329" y="0.0" width="37" height="88"/>
                                                         <fontDescription key="fontDescription" name="CircularStd-Black" family="Circular Std" pointSize="10"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFN-xg-KkQ">
-                                                        <rect key="frame" x="122.66666666666669" y="0.0" width="40" height="88"/>
+                                                        <rect key="frame" x="117.33333333333333" y="0.0" width="40.333333333333329" height="88"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="88" id="Zue-et-JTu"/>
                                                         </constraints>
@@ -89,19 +89,19 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actions Listed" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggy-9I-cBj">
-                                        <rect key="frame" x="215.66666666666666" y="267" width="66.333333333333343" height="28"/>
+                                        <rect key="frame" x="214.33333333333334" y="269" width="63.666666666666657" height="28"/>
                                         <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="10"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Job!  You've Completed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHC-Cy-b5T">
-                                        <rect key="frame" x="16" y="145.66666666666666" width="343" height="25.333333333333343"/>
+                                        <rect key="frame" x="16" y="149.66666666666666" width="343" height="23.333333333333343"/>
                                         <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fam-bY-YSN">
-                                        <rect key="frame" x="110.66666666666667" y="267" width="35.666666666666671" height="28"/>
+                                        <rect key="frame" x="112.00000000000001" y="269" width="33.666666666666671" height="28"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="28" id="Ucb-AF-0wi"/>
                                         </constraints>
@@ -110,7 +110,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(300) lbs. of CO2e lbs saved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYx-zV-uCj">
-                                        <rect key="frame" x="16" y="311" width="343" height="23"/>
+                                        <rect key="frame" x="16" y="313" width="343" height="21"/>
                                         <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -264,10 +264,10 @@
                         <viewLayoutGuide key="safeArea" id="L79-i5-R2l"/>
                     </view>
                     <navigationItem key="navigationItem" title="My Actions" id="6tM-Wm-e40">
-                        <barButtonItem key="rightBarButtonItem" image="Rounded" width="25" style="plain" id="S0L-sh-q2U">
+                        <barButtonItem key="rightBarButtonItem" image="Settings" width="25" style="plain" id="S0L-sh-q2U">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="ecw-cC-m8Y" kind="show" id="0fF-P1-bE6"/>
+                                <segue destination="VMK-um-ufX" kind="show" id="H4D-uY-0Xe"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -465,10 +465,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Take Action" id="dqb-wS-Vo1">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="Rounded" id="7iS-bS-6JI">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="SettingsBrown" id="7iS-bS-6JI">
                             <color key="tintColor" name="Brown"/>
                             <connections>
-                                <segue destination="ecw-cC-m8Y" kind="show" id="29o-Ay-LN6"/>
+                                <segue destination="VMK-um-ufX" kind="show" id="wit-ej-YfM"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -482,14 +482,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gBL-B2-kKq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2032.8" y="1036.6995073891626"/>
-        </scene>
-        <!--Settings-->
-        <scene sceneID="5yA-0y-y7X">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Settings" id="ecw-cC-m8Y" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="U5U-bB-Hca" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-881" y="670"/>
         </scene>
         <!--Your Footprint-->
         <scene sceneID="1bM-QD-F3F">
@@ -675,10 +667,10 @@
                         <viewLayoutGuide key="safeArea" id="asn-Rb-8EY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Your Footprint" id="SVC-2f-dOm">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="Rounded" id="C66-qA-6a7">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="Settings" id="C66-qA-6a7">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="ecw-cC-m8Y" kind="show" id="j5C-cG-Fqs"/>
+                                <segue destination="VMK-um-ufX" kind="show" id="wVm-8t-NGB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -922,9 +914,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hzM-2j-DRf"/>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="ND9-SJ-zWJ"/>
-                    </toolbarItems>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="rCB-88-GEJ">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="Settings" id="p2l-qZ-GWj"/>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="375" height="1220"/>
                     <connections>
@@ -944,6 +937,14 @@
             </objects>
             <point key="canvasLocation" x="1002.4" y="1178.5714285714287"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="d9y-yB-G8E">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="VMK-um-ufX" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i7I-fs-I1z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-273" y="890"/>
+        </scene>
         <!--UserResult-->
         <scene sceneID="d76-Uy-D3K">
             <objects>
@@ -961,6 +962,7 @@
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
                         <segue destination="ykf-oU-BYa" kind="relationship" relationship="rootViewController" id="WTS-dX-4b9"/>
@@ -1029,7 +1031,8 @@
         <image name="Not Active My Actions" width="25" height="31"/>
         <image name="Not Active My Footprint" width="28" height="28"/>
         <image name="Not Active Take Action" width="28" height="30"/>
-        <image name="Rounded" width="23" height="24"/>
+        <image name="Settings" width="23" height="24"/>
+        <image name="SettingsBrown" width="23" height="24"/>
         <namedColor name="Brown">
             <color red="0.29399999976158142" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
@@ -1038,7 +1041,7 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="wit-ej-YfM"/>
         <segue reference="Mqa-Br-Gvx"/>
-        <segue reference="j5C-cG-Fqs"/>
     </inferredMetricsTieBreakers>
 </document>
