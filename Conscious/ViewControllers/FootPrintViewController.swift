@@ -82,7 +82,7 @@ class FootPrintViewController: UIViewController {
     }
     
     func updateViews() {
-        resultsLabel.text = "\(completionPercent.last ?? 0)"
+        resultsLabel.text = "\(round(completionPercent.last ?? 0) )"
     }
 }
 
