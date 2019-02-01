@@ -23,7 +23,7 @@ class ActionDetailViewController: UIViewController {
     
     // MARK: - Properties
     var action: ActionPlanDetail?
-    
+    var buttonActive: Bool = true
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +41,15 @@ class ActionDetailViewController: UIViewController {
         co2ReductionLabel.text = "\(action.carbonReduction ?? 0.0) lbs CO2e Saved"
         moneySavedLabel.text = "$\(action.costSavings ?? 0.0) Saved"
         actionImageView.image = UIImage(named: imageTitle)
+        
+        if buttonActive == false {
+            addToActionListButton.isEnabled = false
+            addToActionListButton.setTitle("Added to Action List", for: .normal)
+        } else {
+            addToActionListButton.isEnabled = true
+            addToActionListButton.setTitle("Add to Action List", for: .normal)
+        }
+        
         
         // Needs Work
         if action.icon == "Food" {
