@@ -11,6 +11,8 @@ import UIKit
 class ActionDetailViewController: UIViewController {
     
     // MARK: - Outlets
+
+    @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var addToActionListButton: UIButton!
     @IBOutlet weak var actionTitleLabel: UILabel!
     @IBOutlet weak var actionSummaryLabel: UILabel!
@@ -45,9 +47,12 @@ class ActionDetailViewController: UIViewController {
         if buttonActive == false {
             addToActionListButton.isEnabled = false
             addToActionListButton.setTitle("Added to Action List", for: .normal)
+            doneButton.isHidden = false
+            
         } else {
             addToActionListButton.isEnabled = true
             addToActionListButton.setTitle("Add to Action List", for: .normal)
+            doneButton.isHidden = true
         }
         
         
@@ -62,7 +67,12 @@ class ActionDetailViewController: UIViewController {
     }
         
         // MARK: - Actions
-        @IBAction func addToActionListButtonTapped(_ sender: Any) {
+    @IBAction func backButtonPressed(_ sender: Any) {
+        navigationController?.popViewController(animated: true )
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func addToActionListButtonTapped(_ sender: Any) {
             guard let action = action else { return }
             ActionsAlarmController.shared.addAlarm(fireDate: Date(), name: action.action, message: action.actionSummry, enabled: true, frequency: action.frequency, repeats: true)
             ActionPlanController.shared.userActionList.append(action)

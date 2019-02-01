@@ -23,6 +23,7 @@ class TransparentNavigationController: UINavigationController {
     // MARK: - Setup
     func setupViews() {
         navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationBar.prefersLargeTitles = false
         navigationBar.shadowImage = UIImage()
         navigationBar.isTranslucent = true
         view.backgroundColor = .clear
