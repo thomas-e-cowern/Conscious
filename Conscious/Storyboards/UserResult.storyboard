@@ -54,7 +54,7 @@
             <objects>
                 <viewController id="eNb-qV-2MD" customClass="UserResultsViewController" customModule="Conscious" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fCd-MO-xpj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1400"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mkT-LC-iPq">
@@ -137,7 +137,7 @@
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RuI-Ir-wJw">
-                                <rect key="frame" x="0.0" y="300" width="375" height="1100"/>
+                                <rect key="frame" x="0.0" y="300" width="375" height="1020"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4j1-Dw-3vx">
                                         <rect key="frame" x="2.5" y="0.0" width="370" height="1026"/>
@@ -434,8 +434,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zJv-my-6Dq"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Your Footprint" id="0Ez-D6-vKD"/>
-                    <size key="freeformSize" width="375" height="1400"/>
+                    <navigationItem key="navigationItem" title="Your Footprint" id="0Ez-D6-vKD">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="Rounded" id="0b8-bs-Kqh">
+                            <connections>
+                                <segue destination="RaS-Mg-IJy" kind="show" id="O7S-05-omb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <size key="freeformSize" width="375" height="1320"/>
                     <connections>
                         <outlet property="foodGraph" destination="LOv-5o-hSp" id="txM-P6-9F6"/>
                         <outlet property="foodScoreLabel" destination="e6g-8k-qgA" id="xY2-IX-JHq"/>
@@ -459,10 +465,10 @@
             </objects>
             <point key="canvasLocation" x="3832.8000000000002" y="-1265.6671664167918"/>
         </scene>
-        <!--Navigation View Controller-->
+        <!--Transparent Navigation Controller-->
         <scene sceneID="UAf-kb-fA6">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eOX-ar-sPY" customClass="NavigationViewController" customModule="Conscious" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eOX-ar-sPY" customClass="TransparentNavigationController" customModule="Conscious" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="xa4-sT-yH7">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
@@ -487,6 +493,7 @@
     </scenes>
     <resources>
         <image name="Gas-US" width="316" height="58"/>
+        <image name="Rounded" width="23" height="24"/>
         <image name="Trash-US" width="327" height="100"/>
         <image name="Tree-US" width="327" height="58"/>
         <namedColor name="Brown">

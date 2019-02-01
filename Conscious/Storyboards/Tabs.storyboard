@@ -264,8 +264,11 @@
                         <viewLayoutGuide key="safeArea" id="L79-i5-R2l"/>
                     </view>
                     <navigationItem key="navigationItem" title="My Actions" id="6tM-Wm-e40">
-                        <barButtonItem key="rightBarButtonItem" image="gear" width="25" style="plain" id="S0L-sh-q2U">
+                        <barButtonItem key="rightBarButtonItem" image="Rounded" width="25" style="plain" id="S0L-sh-q2U">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="ecw-cC-m8Y" kind="show" id="0fF-P1-bE6"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -287,21 +290,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="aVq-Le-6OR">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="73"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="aVq-Le-6OR">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VM8-CF-hyp">
-                                    <rect key="frame" x="16" y="-53" width="343" height="30"/>
+                                    <rect key="frame" x="16" y="16" width="343" height="27"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ZBI-iJ-Sqx">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="27"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="xYF-Kg-AhT">
-                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="27"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="liu-Pk-i29">
-                                                            <rect key="frame" x="0.0" y="0.0" width="85.666666666666671" height="30"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="85.666666666666671" height="27"/>
                                                             <fontDescription key="fontDescription" name="CircularStd-Medium" family="Circular Std" pointSize="14"/>
                                                             <state key="normal" title="All">
                                                                 <color key="titleColor" red="0.29411764709999999" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -311,7 +314,7 @@
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aph-Cl-45K">
-                                                            <rect key="frame" x="85.666666666666686" y="0.0" width="86" height="30"/>
+                                                            <rect key="frame" x="85.666666666666686" y="0.0" width="86" height="27"/>
                                                             <fontDescription key="fontDescription" name="CircularStd-Medium" family="Circular Std" pointSize="14"/>
                                                             <state key="normal" title="Food">
                                                                 <color key="titleColor" name="Brown"/>
@@ -321,7 +324,7 @@
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mI3-Rj-KkZ">
-                                                            <rect key="frame" x="171.66666666666666" y="0.0" width="85.666666666666657" height="30"/>
+                                                            <rect key="frame" x="171.66666666666666" y="0.0" width="85.666666666666657" height="27"/>
                                                             <fontDescription key="fontDescription" name="CircularStd-Medium" family="Circular Std" pointSize="14"/>
                                                             <state key="normal" title="Home">
                                                                 <color key="titleColor" name="Brown"/>
@@ -331,7 +334,7 @@
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4d2-G7-wmF">
-                                                            <rect key="frame" x="257.33333333333331" y="0.0" width="85.666666666666686" height="30"/>
+                                                            <rect key="frame" x="257.33333333333331" y="0.0" width="85.666666666666686" height="27"/>
                                                             <fontDescription key="fontDescription" name="CircularStd-Medium" family="Circular Std" pointSize="14"/>
                                                             <state key="normal" title="Travel">
                                                                 <color key="titleColor" name="Brown"/>
@@ -347,7 +350,7 @@
                                     </subviews>
                                 </stackView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ert-69-uK1">
-                                    <rect key="frame" x="29" y="-23" width="60" height="5"/>
+                                    <rect key="frame" x="29" y="43" width="60" height="5"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="5" id="EhA-Je-vIM"/>
@@ -355,7 +358,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wNw-wi-whD">
-                                    <rect key="frame" x="114.66666666666669" y="-23" width="60" height="5"/>
+                                    <rect key="frame" x="114.66666666666669" y="43" width="60" height="5"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="5" id="IPt-n2-ugv"/>
@@ -363,7 +366,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahI-LK-tCp">
-                                    <rect key="frame" x="200.33333333333334" y="-23" width="60.000000000000028" height="5"/>
+                                    <rect key="frame" x="200.33333333333334" y="43" width="60.000000000000028" height="5"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="60" id="7YS-2w-TQf"/>
@@ -371,15 +374,15 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CVe-CY-wvV">
-                                    <rect key="frame" x="286" y="-23" width="60" height="5"/>
+                                    <rect key="frame" x="286" y="43" width="60" height="5"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="60" id="4ZZ-QV-QuJ"/>
                                         <constraint firstAttribute="height" constant="5" id="S4H-dF-aZH"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OO2-dj-7xf">
-                                    <rect key="frame" x="16" y="-10" width="343" height="2"/>
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OO2-dj-7xf">
+                                    <rect key="frame" x="16" y="56" width="343" height="2"/>
                                     <color key="backgroundColor" name="Brown"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="2" id="c8d-7q-VnO"/>
@@ -396,17 +399,21 @@
                                 <constraint firstAttribute="trailing" secondItem="VM8-CF-hyp" secondAttribute="trailing" constant="16" id="Nzy-Na-hRc"/>
                                 <constraint firstItem="CVe-CY-wvV" firstAttribute="top" secondItem="wNw-wi-whD" secondAttribute="top" id="Ryh-fU-5es"/>
                                 <constraint firstItem="OO2-dj-7xf" firstAttribute="top" secondItem="ert-69-uK1" secondAttribute="bottom" constant="8" id="W8c-hC-dmp"/>
-                                <constraint firstAttribute="trailing" secondItem="OO2-dj-7xf" secondAttribute="trailing" constant="16" id="Wgt-GN-n28"/>
                                 <constraint firstItem="CVe-CY-wvV" firstAttribute="top" secondItem="ert-69-uK1" secondAttribute="top" id="Xe8-PQ-GeP"/>
                                 <constraint firstAttribute="bottom" secondItem="OO2-dj-7xf" secondAttribute="bottom" constant="8" id="Zpm-ED-ChB"/>
                                 <constraint firstItem="CVe-CY-wvV" firstAttribute="top" secondItem="ahI-LK-tCp" secondAttribute="top" id="jqi-bm-tar"/>
                                 <constraint firstItem="ert-69-uK1" firstAttribute="centerX" secondItem="liu-Pk-i29" secondAttribute="centerX" id="mYD-wh-hSj"/>
-                                <constraint firstItem="OO2-dj-7xf" firstAttribute="leading" secondItem="aVq-Le-6OR" secondAttribute="leading" constant="16" id="wZr-l0-RHV"/>
+                                <constraint firstItem="VM8-CF-hyp" firstAttribute="top" secondItem="aVq-Le-6OR" secondAttribute="top" constant="16" id="naQ-Qr-v0H"/>
                             </constraints>
+                        </view>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="Odk-qe-fVd">
+                            <rect key="frame" x="0.0" y="142" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="actionCell" rowHeight="48" id="wBT-ZG-eB1" userLabel="actionCell" customClass="ActionListTableViewCell" customModule="Conscious" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="101" width="375" height="48"/>
+                                <rect key="frame" x="0.0" y="94" width="375" height="48"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wBT-ZG-eB1" id="nCn-q4-fpS">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="47.666666666666664"/>
@@ -458,8 +465,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Take Action" id="dqb-wS-Vo1">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="gear" id="7iS-bS-6JI">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="Rounded" id="7iS-bS-6JI">
                             <color key="tintColor" name="Brown"/>
+                            <connections>
+                                <segue destination="ecw-cC-m8Y" kind="show" id="29o-Ay-LN6"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -472,6 +482,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gBL-B2-kKq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2032.8" y="1036.6995073891626"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="5yA-0y-y7X">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="ecw-cC-m8Y" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U5U-bB-Hca" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-881" y="670"/>
         </scene>
         <!--Your Footprint-->
         <scene sceneID="1bM-QD-F3F">
@@ -657,8 +675,11 @@
                         <viewLayoutGuide key="safeArea" id="asn-Rb-8EY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Your Footprint" id="SVC-2f-dOm">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="gear" id="C66-qA-6a7">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="Rounded" id="C66-qA-6a7">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="ecw-cC-m8Y" kind="show" id="j5C-cG-Fqs"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -677,7 +698,7 @@
             <objects>
                 <viewController id="DuF-PE-N8Z" customClass="ActionDetailViewController" customModule="Conscious" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LM0-5V-Xlx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1220"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1137"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k9W-kh-H1U">
@@ -916,14 +937,15 @@
             </objects>
             <point key="canvasLocation" x="-3833" y="696"/>
         </scene>
-        <!--Item-->
+        <!--TAKE ACTION-->
         <scene sceneID="OQl-Op-mvQ">
             <objects>
                 <navigationController id="W17-s5-Eki" customClass="TransparentNavigationController" customModule="Conscious" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Lgw-QV-X89"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="j8o-H0-wRV">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                    <tabBarItem key="tabBarItem" title="TAKE ACTION" image="Not Active Take Action" selectedImage="Active Take Action" id="Lgw-QV-X89"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="j8o-H0-wRV">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
                         <segue destination="ykf-oU-BYa" kind="relationship" relationship="rootViewController" id="WTS-dX-4b9"/>
@@ -933,14 +955,21 @@
             </objects>
             <point key="canvasLocation" x="-4388" y="1029"/>
         </scene>
-        <!--Item-->
+        <!--MY ACTIONS-->
         <scene sceneID="kgm-Mw-vNx">
             <objects>
                 <navigationController id="FZd-Lb-TuD" customClass="TransparentNavigationController" customModule="Conscious" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="cal-1q-XTq"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qmw-06-GlR">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                    <tabBarItem key="tabBarItem" title="MY ACTIONS" image="Not Active My Actions" selectedImage="Active My Actions" id="cal-1q-XTq"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Qmw-06-GlR">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="sqo-jx-Ig6" kind="relationship" relationship="rootViewController" id="F3F-51-0D0"/>
@@ -950,14 +979,20 @@
             </objects>
             <point key="canvasLocation" x="-4388" y="1850"/>
         </scene>
-        <!--Item-->
+        <!--MY FOOTPRINT-->
         <scene sceneID="PCy-5P-pwg">
             <objects>
                 <navigationController id="Zc7-Xe-s7i" customClass="TransparentNavigationController" customModule="Conscious" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="5GO-9E-7pv"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Rd-Ml-aBa">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                    <tabBarItem key="tabBarItem" title="MY FOOTPRINT" image="Not Active My Footprint" selectedImage="Active My Footprint Icon" id="5GO-9E-7pv"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="0Rd-Ml-aBa">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="m5D-ge-21F" kind="relationship" relationship="rootViewController" id="OhB-hW-PzO"/>
@@ -969,10 +1004,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Active My Actions" width="25" height="31"/>
+        <image name="Active My Footprint Icon" width="31" height="29"/>
+        <image name="Active Take Action" width="28" height="30"/>
         <image name="Co2" width="61" height="39"/>
         <image name="Meatless Monday" width="238" height="238"/>
         <image name="MoneyBox" width="47" height="45"/>
-        <image name="gear" width="1200" height="1200"/>
+        <image name="Not Active My Actions" width="25" height="31"/>
+        <image name="Not Active My Footprint" width="28" height="28"/>
+        <image name="Not Active Take Action" width="28" height="30"/>
+        <image name="Rounded" width="23" height="24"/>
         <namedColor name="Brown">
             <color red="0.29399999976158142" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
@@ -984,6 +1025,7 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HmS-N8-bWJ"/>
+        <segue reference="Mqa-Br-Gvx"/>
+        <segue reference="29o-Ay-LN6"/>
     </inferredMetricsTieBreakers>
 </document>
