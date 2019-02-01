@@ -32,6 +32,7 @@
 		7E0454232203B0810084AC95 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0454222203B0810084AC95 /* NavigationViewController.swift */; };
 		7E3A5B7821FCF67A00BB4F16 /* PageOneViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E3A5B7721FCF67A00BB4F16 /* PageOneViewController.storyboard */; };
 		7E3A5B8721FD230600BB4F16 /* CitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3A5B8621FD230600BB4F16 /* CitationViewController.swift */; };
+		7E424DB02204C56F003AA5C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E424DAF2204C56E003AA5C2 /* Assets.xcassets */; };
 		7E52EB5A22038FF700BC4D85 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E52EB5922038FF700BC4D85 /* TableViewController.swift */; };
 		7E6CC7F421FB6BFB006C0E4A /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E6CC7F321FB6BFB006C0E4A /* Settings.storyboard */; };
 		7E6CC7F821FB770D006C0E4A /* Tabs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E6CC7F721FB770D006C0E4A /* Tabs.storyboard */; };
@@ -42,7 +43,6 @@
 		7E6CC80221FBB6E6006C0E4A /* TabBarControllor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6CC80121FBB6E6006C0E4A /* TabBarControllor.swift */; };
 		7E92676721F23B8000A5B396 /* QuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E92676621F23B8000A5B396 /* QuizTableViewCell.swift */; };
 		7E94754F21F7E7710070F111 /* UserResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E94754E21F7E7710070F111 /* UserResultsViewController.swift */; };
-		7ECD8C4C2200FEE700152D0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ECD8C4B2200FEE600152D0F /* Assets.xcassets */; };
 		7ECD8C5922010AF000152D0F /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD8C5822010AF000152D0F /* SettingsTableViewCell.swift */; };
 		7ECD8C5B22011B7200152D0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ECD8C5A22011B7200152D0F /* LaunchScreen.storyboard */; };
 		7ECE819B21F1234F00F2F9DA /* ActionPlanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE819A21F1234F00F2F9DA /* ActionPlanController.swift */; };
@@ -78,6 +78,7 @@
 		7E0454222203B0810084AC95 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		7E3A5B7721FCF67A00BB4F16 /* PageOneViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PageOneViewController.storyboard; sourceTree = "<group>"; };
 		7E3A5B8621FD230600BB4F16 /* CitationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitationViewController.swift; sourceTree = "<group>"; };
+		7E424DAF2204C56E003AA5C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E52EB5922038FF700BC4D85 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		7E6CC7F321FB6BFB006C0E4A /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		7E6CC7F721FB770D006C0E4A /* Tabs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabs.storyboard; sourceTree = "<group>"; };
@@ -88,7 +89,6 @@
 		7E6CC80121FBB6E6006C0E4A /* TabBarControllor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllor.swift; sourceTree = "<group>"; };
 		7E92676621F23B8000A5B396 /* QuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTableViewCell.swift; sourceTree = "<group>"; };
 		7E94754E21F7E7710070F111 /* UserResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResultsViewController.swift; sourceTree = "<group>"; };
-		7ECD8C4B2200FEE600152D0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7ECD8C4E2201002200152D0F /* CircularStd-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-MediumItalic.otf"; sourceTree = "<group>"; };
 		7ECD8C4F2201002200152D0F /* CircularStd-BookItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-BookItalic.otf"; sourceTree = "<group>"; };
 		7ECD8C502201002200152D0F /* CircularStd-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-BlackItalic.otf"; sourceTree = "<group>"; };
@@ -164,8 +164,8 @@
 		41D89A8221EE8BDE00CFF725 /* Resorces */ = {
 			isa = PBXGroup;
 			children = (
+				7E424DAF2204C56E003AA5C2 /* Assets.xcassets */,
 				7ECD8C4D2201000500152D0F /* Font */,
-				7ECD8C4B2200FEE600152D0F /* Assets.xcassets */,
 				41D89A7021EE8B9F00CFF725 /* AppDelegate.swift */,
 				41D89A7C21EE8BB700CFF725 /* Info.plist */,
 			);
@@ -339,7 +339,7 @@
 				7E3A5B7821FCF67A00BB4F16 /* PageOneViewController.storyboard in Resources */,
 				7E6CC7F821FB770D006C0E4A /* Tabs.storyboard in Resources */,
 				7E6CC7F421FB6BFB006C0E4A /* Settings.storyboard in Resources */,
-				7ECD8C4C2200FEE700152D0F /* Assets.xcassets in Resources */,
+				7E424DB02204C56F003AA5C2 /* Assets.xcassets in Resources */,
 				7E6CC7FE21FB7C8D006C0E4A /* Quiz.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

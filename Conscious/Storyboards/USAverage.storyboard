@@ -425,7 +425,7 @@
                         <viewLayoutGuide key="safeArea" id="dOh-QV-42D"/>
                     </view>
                     <navigationItem key="navigationItem" title="U.S. Average" id="Iqf-6m-kIK">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="Rounded" id="Pgy-0a-j5o">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="Settings" id="Pgy-0a-j5o">
                             <connections>
                                 <segue destination="V55-cq-gXd" kind="show" id="rPb-Sw-hgU"/>
                             </connections>
@@ -464,6 +464,7 @@
         <!--Transparent Navigation Controller-->
         <scene sceneID="uFf-Un-oqL">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="swU-eX-qMx" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oR0-Kv-7dC" customClass="TransparentNavigationController" customModule="Conscious" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="vQ5-9O-Cz0">
@@ -482,14 +483,13 @@
                         <segue destination="saf-Hn-9m1" kind="relationship" relationship="rootViewController" id="kMi-JO-oYE"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="swU-eX-qMx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3696.8000000000002" y="-1421.7391304347827"/>
         </scene>
     </scenes>
     <resources>
         <image name="Gas-US" width="316" height="58"/>
-        <image name="Rounded" width="23" height="24"/>
+        <image name="Settings" width="23" height="24"/>
         <image name="Trash-US" width="327" height="100"/>
         <image name="Tree-US" width="327" height="58"/>
         <namedColor name="Brown">
