@@ -410,7 +410,11 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
                         <viewLayoutGuide key="safeArea" id="PKX-7w-c8d"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="UMf-Yh-58c">
-                        <barButtonItem key="rightBarButtonItem" image="Close Icon" id="BFT-Gn-gkh"/>
+                        <barButtonItem key="rightBarButtonItem" image="Close Icon" id="BFT-Gn-gkh">
+                            <connections>
+                                <action selector="doneButtonTapped:" destination="JkB-De-YDg" id="afX-v5-bVa"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jsu-E1-BFR" userLabel="First Responder" sceneMemberID="firstResponder"/>

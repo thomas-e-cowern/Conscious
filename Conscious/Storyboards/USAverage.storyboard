@@ -424,7 +424,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dOh-QV-42D"/>
                     </view>
-                    <navigationItem key="navigationItem" title="U.S. Average" id="Iqf-6m-kIK"/>
+                    <navigationItem key="navigationItem" title="U.S. Average" id="Iqf-6m-kIK">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="Rounded" id="Pgy-0a-j5o">
+                            <connections>
+                                <segue destination="V55-cq-gXd" kind="show" id="rPb-Sw-hgU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <size key="freeformSize" width="375" height="1400"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uMo-Zj-Vgy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -483,6 +489,7 @@
     </scenes>
     <resources>
         <image name="Gas-US" width="316" height="58"/>
+        <image name="Rounded" width="23" height="24"/>
         <image name="Trash-US" width="327" height="100"/>
         <image name="Tree-US" width="327" height="58"/>
         <namedColor name="Brown">
