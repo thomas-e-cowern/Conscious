@@ -157,10 +157,10 @@ class UserResultsViewController: UIViewController {
     // MARK: - Images
     // Trees
     func setScoreImage() {
-        let monthScore = totalScore / 12
-        let treeScore = (totalScore / 13)
-        let trashScore = (totalScore / 0.229)
-        let gasScore = (totalScore / 0.888)
+        let monthScore = round(totalScore / 12)
+        let treeScore = round(totalScore / 13)
+        let trashScore = round(totalScore / 2.29)
+        let gasScore = round(totalScore / 8.88)
         if monthScore > 5000 {
             treesImageView.image = #imageLiteral(resourceName: "alltrees")
             trashImageView.image = #imageLiteral(resourceName: "Trash-US")
