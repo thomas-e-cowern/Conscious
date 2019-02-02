@@ -41,7 +41,7 @@ class ActionPlanController {
 //        print("🧸🧸🧸🧸🧸\(action)🧸🧸🧸🧸🧸")
         let newAction = action
         savedActions.append(newAction)
-//        print("🎈🎈🎈🎈🎈\(savedActions)🎈🎈🎈🎈🎈")
+        print("🎈🎈🎈🎈🎈\(savedActions[0].added)🎈🎈🎈🎈🎈")
         ActionPlanController.shared.saveToPersistentStoreData(path: "action")
     }
     
