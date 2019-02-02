@@ -159,8 +159,6 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LOv-5o-hSp">
                                                 <rect key="frame" x="0.0" y="62.5" width="1" height="40"/>
                                                 <subviews>
-<<<<<<< HEAD
-=======
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnN-Y9-bYE">
                                                         <rect key="frame" x="17" y="7.5" width="150" height="25.5"/>
                                                         <constraints>
