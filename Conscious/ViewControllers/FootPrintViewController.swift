@@ -92,7 +92,7 @@ class FootPrintViewController: UIViewController {
             let val = completionPercent
             return ChartDataEntry(x: Double(i), y: val[i])
         }
-        let set1: LineChartDataSet = LineChartDataSet(values: values, label: "Weekly")
+        let set1: LineChartDataSet = LineChartDataSet(values: values, label: "Test Results")
         set1.axisDependency = .left
         set1.setColor(UIColor.orange, alpha: 0.5)
         set1.setCircleColor(UIColor.orange)
