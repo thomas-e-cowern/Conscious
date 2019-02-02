@@ -11,6 +11,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="CircularStd-Bold.otf">
+            <string>CircularStd-Bold</string>
+        </array>
         <array key="CircularStd-Book.otf">
             <string>CircularStd-Book</string>
         </array>
@@ -48,7 +51,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="HyK-AM-GCf"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="CircularStd-Medium" family="Circular Std" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
@@ -154,7 +157,7 @@
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9IB-NT-pf5">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="25"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="31"/>
                                 <color key="backgroundColor" name="LightGreen"/>
                             </view>
                         </subviews>
@@ -184,7 +187,7 @@
                             <constraint firstItem="HQ6-wi-uxj" firstAttribute="top" secondItem="gtW-kf-AhB" secondAttribute="bottom" constant="8" id="q6c-6a-hcs"/>
                             <constraint firstItem="gtW-kf-AhB" firstAttribute="leading" secondItem="q0Q-Qw-HN9" secondAttribute="leading" constant="24" id="udO-ve-mTQ"/>
                             <constraint firstItem="duG-5a-OGn" firstAttribute="leading" secondItem="q0Q-Qw-HN9" secondAttribute="leading" id="xqo-lz-gqu"/>
-                            <constraint firstItem="pmV-3S-lka" firstAttribute="top" secondItem="9IB-NT-pf5" secondAttribute="bottom" constant="10" id="ydH-0S-W1j"/>
+                            <constraint firstItem="pmV-3S-lka" firstAttribute="top" secondItem="9IB-NT-pf5" secondAttribute="bottom" constant="4" id="ydH-0S-W1j"/>
                             <constraint firstItem="gtW-kf-AhB" firstAttribute="top" secondItem="EdW-KS-XIl" secondAttribute="bottom" constant="16" id="zAS-VH-kT2"/>
                             <constraint firstItem="duG-5a-OGn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="q0Q-Qw-HN9" secondAttribute="leading" id="zC4-cS-yzg"/>
                         </constraints>
