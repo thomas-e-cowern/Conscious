@@ -29,4 +29,17 @@ class TransparentNavigationController: UINavigationController {
         view.backgroundColor = .clear
     }
     
+    override func viewDidLayoutSubviews() {
+        setUpSettingsButton()
+    }
+    
+    func setUpSettingsButton(){
+        let settingsButton = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(presentSettingsViewController))
+        self.navigationItem.rightBarButtonItem = settingsButton
+    }
+    
+    @objc func presentSettingsViewController() {
+        guard let settingVC = UIStoryboard.init(name: "Settings", bundle: .main).instantiateInitialViewController() else { return }
+        self.present(settingVC, animated: true, completion: nil)
+    }
 }

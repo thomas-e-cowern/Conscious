@@ -159,6 +159,8 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LOv-5o-hSp">
                                                 <rect key="frame" x="0.0" y="62.5" width="1" height="40"/>
                                                 <subviews>
+<<<<<<< HEAD
+=======
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnN-Y9-bYE">
                                                         <rect key="frame" x="17" y="7.5" width="150" height="25.5"/>
                                                         <constraints>
@@ -168,6 +170,7 @@
                                                         <color key="textColor" name="Brown"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+>>>>>>> 572f5f0abf09015345a0e2d76d68328d4eae408a
                                                 </subviews>
                                                 <color key="backgroundColor" name="Red"/>
                                                 <constraints>
@@ -380,8 +383,7 @@
                                             <constraint firstItem="LWG-Ev-lHR" firstAttribute="top" secondItem="Tfj-3I-paq" secondAttribute="bottom" constant="8" id="biH-0k-dn6"/>
                                             <constraint firstItem="ebA-kV-5h1" firstAttribute="top" secondItem="3d7-79-BLo" secondAttribute="bottom" constant="16" id="cbC-9A-QNN"/>
                                             <constraint firstItem="pv5-UM-rpS" firstAttribute="centerY" secondItem="3S9-yG-tGU" secondAttribute="centerY" id="eDi-V2-p9J"/>
-                                            <constraint firstAttribute="width" constant="370" id="eJP-Pz-CSI"/>
-                                            <constraint firstItem="gnN-Y9-bYE" firstAttribute="leading" secondItem="LOv-5o-hSp" secondAttribute="trailing" constant="16" id="eXJ-Z3-Klq"/>
+                                            <constraint firstAttribute="width" constant="370" id="eJP-Pz-CSI"/>                                    
                                             <constraint firstItem="LOv-5o-hSp" firstAttribute="leading" secondItem="4j1-Dw-3vx" secondAttribute="leading" id="fzi-vA-eFD"/>
                                             <constraint firstItem="LOv-5o-hSp" firstAttribute="top" secondItem="6CR-Hn-ymA" secondAttribute="bottom" constant="16" id="hkZ-U0-ynJ"/>
                                             <constraint firstItem="rFc-U8-cJj" firstAttribute="top" secondItem="eaQ-hf-t1Q" secondAttribute="bottom" constant="8" id="hzK-15-fkl"/>

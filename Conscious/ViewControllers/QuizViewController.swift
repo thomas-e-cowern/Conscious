@@ -74,7 +74,7 @@ class QuizViewController: UIViewController {
     
     func updateImageView() {
         if question?.category.rawValue == "Food" {
-            categoryImageView.image = #imageLiteral(resourceName: "Cow")
+            categoryImageView.image = #imageLiteral(resourceName: "new cow")
             categoryLabel.backgroundColor = #colorLiteral(red: 0.9399999976, green: 0.4199999869, blue: 0.3400000036, alpha: 1)
             nextButton.setImage(#imageLiteral(resourceName: "Next"), for: .normal)
             previousButton.setImage(#imageLiteral(resourceName: "Previous"), for: .normal)

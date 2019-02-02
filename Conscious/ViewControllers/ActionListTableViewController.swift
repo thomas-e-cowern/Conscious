@@ -29,6 +29,7 @@ class ActionListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
+        allUnderlineView.backgroundColor = #colorLiteral(red: 0.6899999976, green: 0.7799999714, blue: 0.5899999738, alpha: 1)
     }
 
     // MARK: - Actions
