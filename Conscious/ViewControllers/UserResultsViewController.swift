@@ -64,10 +64,12 @@ class UserResultsViewController: UIViewController {
             print("💊💊💊💊💊💊New Quiz💊💊💊💊💊💊")
             getNewResults()
             updateViews()
+            setScoreImage()
         } else {
             print("Saved Data")
             getSavedData()
             updateViews()
+            setScoreImage()
         }
     }
     
@@ -91,6 +93,10 @@ class UserResultsViewController: UIViewController {
         ActionPlanController.shared.addNewResults(overallScore: totalScore, foodScore: foodScore, houseScore: houseScore, travelScore: travelScore)
         
         LocalStorageController.shared.isNewQuiz = false
+    }
+    
+    @IBAction func takeACTIONTAPPED(_ sender: Any) {
+        navigationController?.dismiss(animated: true, completion: nil)
     }
     
     func getSavedData () {
@@ -151,41 +157,46 @@ class UserResultsViewController: UIViewController {
     // MARK: - Images
     // Trees
     func setScoreImage() {
-        if GreenCalculatorController.shared.totalScoreCard() < 1000 {
+        let monthScore = totalScore / 12
+        let treeScore = (totalScore / 13)
+        let trashScore = (totalScore / 0.229)
+        let gasScore = (totalScore / 0.888)
+        if monthScore > 5000 {
+            treesImageView.image = #imageLiteral(resourceName: "alltrees")
+            trashImageView.image = #imageLiteral(resourceName: "Trash-US")
+            gasImageView.image = #imageLiteral(resourceName: "Gas-US")
+            treesLabel.text = "\(treeScore) trees will need to be planted to offset your carbon emissions "
+            trashLabel.text = "Your score is equal to \(trashScore) bags of trash thrown into a landfill"
+            gasLabel.text = "Or \(gasScore) gallons of gas burned"
+        } else if monthScore > 4000 {
             treesImageView.image = #imageLiteral(resourceName: "4trees")
-            trashImageView.image = #imageLiteral(resourceName: "4trees")
-            gasImageView.image = #imageLiteral(resourceName: "4trees")
-            treesLabel.text = "3,392 trees will need to be planted to offset your carbon emissions "
-            trashLabel.text = "Your score is equal to 600 bags of trash thrown into a landfill"
-            gasLabel.text = "Or 300 gallons of gas burned"
-        } else if GreenCalculatorController.shared.totalScoreCard() < 2000 {
-            treesImageView.image = #imageLiteral(resourceName: "alltrees")
-            trashImageView.image = #imageLiteral(resourceName: "4trees")
-            gasImageView.image = #imageLiteral(resourceName: "4trees")
-            treesLabel.text = "3,392 trees will need to be planted to offset your carbon emissions "
-            trashLabel.text = "Your score is equal to 600 bags of trash thrown into a landfill"
-            gasLabel.text = "Or 300 gallons of gas burned"
-        } else if GreenCalculatorController.shared.totalScoreCard() < 3000 {
-            treesImageView.image = #imageLiteral(resourceName: "alltrees")
-            trashImageView.image = #imageLiteral(resourceName: "4trees")
-            gasImageView.image = #imageLiteral(resourceName: "4trees")
-            treesLabel.text = "3,392 trees will need to be planted to offset your carbon emissions "
-            trashLabel.text = "Your score is equal to 600 bags of trash thrown into a landfill"
-            gasLabel.text = "Or 300 gallons of gas burned"
-        } else if GreenCalculatorController.shared.totalScoreCard() < 4000 {
-            treesImageView.image = #imageLiteral(resourceName: "alltrees")
-            trashImageView.image = #imageLiteral(resourceName: "4trees")
-            gasImageView.image = #imageLiteral(resourceName: "4trees")
-            treesLabel.text = "3,392 trees will need to be planted to offset your carbon emissions "
-            trashLabel.text = "Your score is equal to 600 bags of trash thrown into a landfill"
-            gasLabel.text = "Or 300 gallons of gas burned"
-        } else if GreenCalculatorController.shared.totalScoreCard() < 5000 {
-            treesImageView.image = #imageLiteral(resourceName: "alltrees")
-            trashImageView.image = #imageLiteral(resourceName: "4trees")
-            gasImageView.image = #imageLiteral(resourceName: "4trees")
-            treesLabel.text = "3,392 trees will need to be planted to offset your carbon emissions "
-            trashLabel.text = "Your score is equal to 600 bags of trash thrown into a landfill"
-            gasLabel.text = "Or 300 gallons of gas burned"
+            trashImageView.image = #imageLiteral(resourceName: "5 bags")
+            gasImageView.image = #imageLiteral(resourceName: "4 gaspumps")
+            treesLabel.text = "\(treeScore) trees will need to be planted to offset your carbon emissions "
+            trashLabel.text = "Your score is equal to \(trashScore) bags of trash thrown into a landfill"
+            gasLabel.text = "Or \(gasScore) gallons of gas burned"
+        } else if monthScore > 3000 {
+            treesImageView.image = #imageLiteral(resourceName: "3 trees")
+            trashImageView.image = #imageLiteral(resourceName: "4 bags")
+            gasImageView.image = #imageLiteral(resourceName: "3 gaspumps")
+            treesLabel.text = "\(treeScore) trees will need to be planted to offset your carbon emissions "
+            trashLabel.text = "Your score is equal to \(trashScore) bags of trash thrown into a landfill"
+            gasLabel.text = "Or \(gasScore) gallons of gas burned"
+        } else if monthScore > 2000 {
+            treesImageView.image = #imageLiteral(resourceName: "2 trees")
+            trashImageView.image = #imageLiteral(resourceName: "3 bags")
+            gasImageView.image = #imageLiteral(resourceName: "2 gaspumps")
+            treesLabel.text = "\(treeScore) trees will need to be planted to offset your carbon emissions "
+            trashLabel.text = "Your score is equal to \(trashScore) bags of trash thrown into a landfill"
+            gasLabel.text = "Or \(gasScore) gallons of gas burned"
+            
+        } else {
+            treesImageView.image = #imageLiteral(resourceName: "Tree")
+            trashImageView.image = #imageLiteral(resourceName: "2 bags")
+            gasImageView.image = #imageLiteral(resourceName: "1 gaspumps")
+            treesLabel.text = "\(treeScore) trees will need to be planted to offset your carbon emissions "
+            trashLabel.text = "Your score is equal to \(trashScore) bags of trash thrown into a landfill"
+            gasLabel.text = "Or \(gasScore) gallons of gas burned"
         }
     }
     

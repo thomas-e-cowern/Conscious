@@ -93,6 +93,7 @@ class ActionListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        let actionsAdded = actions.filter { $0.added == false }.count
         return actions.count
     }
 
@@ -100,6 +101,11 @@ class ActionListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "actionCell", for: indexPath) as? ActionListTableViewCell else { return UITableViewCell() }
 //        cell.textLabel?.text = actions[indexPath.row].action
+//        if actions[indexPath.row].added == true {
+//
+//        } else {
+//            cell.listCellLabel.text = actions[indexPath.row].action
+//        }
         cell.listCellLabel.text = actions[indexPath.row].action
         
         switch actions[indexPath.row].icon {

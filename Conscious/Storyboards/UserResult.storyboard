@@ -44,8 +44,8 @@
         <!--Tabs-->
         <scene sceneID="43w-Et-NpE">
             <objects>
-                <viewControllerPlaceholder storyboardName="Tabs" id="ovA-rz-whv" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vsC-ne-IDa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Tabs" id="ovA-rz-whv" sceneMemberID="viewController"/>
             </objects>
             <point key="canvasLocation" x="4536.8000000000002" y="-1010.1949025487257"/>
         </scene>
@@ -151,6 +151,18 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LOv-5o-hSp">
                                                 <rect key="frame" x="0.0" y="62.5" width="1" height="40"/>
                                                 <subviews>
+<<<<<<< HEAD
+=======
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnN-Y9-bYE">
+                                                        <rect key="frame" x="17" y="7.5" width="150" height="25.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="150" id="0o2-61-P55"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="20"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+>>>>>>> 572f5f0abf09015345a0e2d76d68328d4eae408a
                                                 </subviews>
                                                 <color key="backgroundColor" name="Red"/>
                                                 <constraints>

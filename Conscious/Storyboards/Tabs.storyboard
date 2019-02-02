@@ -28,6 +28,7 @@
         <!--Tab Bar Controllor-->
         <scene sceneID="IQY-6t-Pj8">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gc9-Uf-gOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController id="pNT-gg-Ugn" customClass="TabBarControllor" customModule="Conscious" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" itemPositioning="centered" id="vXZ-5f-Ool">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
@@ -42,7 +43,6 @@
                         <segue destination="FZd-Lb-TuD" kind="relationship" relationship="viewControllers" id="vCJ-FI-8Yc"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gc9-Uf-gOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-5751" y="1029"/>
         </scene>
@@ -528,7 +528,7 @@
                                         </state>
                                         <connections>
                                             <action selector="newQuizTapped:" destination="m5D-ge-21F" eventType="touchUpInside" id="RlG-UG-jhc"/>
-                                            <segue destination="V2p-0g-3tq" kind="show" id="0qs-6I-MCP"/>
+                                            <segue destination="V2p-0g-3tq" kind="presentation" id="0qs-6I-MCP"/>
                                         </connections>
                                     </button>
                                 </subviews>
