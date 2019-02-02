@@ -65,7 +65,7 @@ class FootPrintViewController: UIViewController {
     }
     
     @IBAction func newQuizTapped(_ sender: Any) {
-        self.tabBarController?.dismiss(animated: true, completion: nil)
+//        self.tabBarController?.dismiss(animated: true, completion: nil)
     }
     
     

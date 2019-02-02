@@ -448,8 +448,8 @@
         <!--Tabs-->
         <scene sceneID="fFi-Mp-ENp">
             <objects>
-                <viewControllerPlaceholder storyboardName="Tabs" id="t3N-An-wGo" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JXq-XW-zJG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Tabs" id="t3N-An-wGo" sceneMemberID="viewController"/>
             </objects>
             <point key="canvasLocation" x="5628" y="-1396.1019490254873"/>
         </scene>
@@ -464,7 +464,6 @@
         <!--Transparent Navigation Controller-->
         <scene sceneID="uFf-Un-oqL">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="swU-eX-qMx" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oR0-Kv-7dC" customClass="TransparentNavigationController" customModule="Conscious" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="vQ5-9O-Cz0">
@@ -483,6 +482,7 @@
                         <segue destination="saf-Hn-9m1" kind="relationship" relationship="rootViewController" id="kMi-JO-oYE"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="swU-eX-qMx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3696.8000000000002" y="-1421.7391304347827"/>
         </scene>

@@ -81,6 +81,7 @@ class ActionDetailViewController: UIViewController {
 
             guard let action = action else { return }
             ActionsAlarmController.shared.addAlarm(fireDate: Date(), name: action.action, message: action.actionSummry, enabled: true, frequency: action.frequency, repeats: true)
+            action.added = true
             ActionPlanController.shared.userActionList.append(action)
             ActionPlanController.shared.addNewActions(action: action)
             ActionPlanController.shared.reductionInCost += action.costSavings ?? 0.0
