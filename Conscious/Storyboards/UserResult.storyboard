@@ -158,9 +158,6 @@
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LOv-5o-hSp">
                                                 <rect key="frame" x="0.0" y="62.5" width="1" height="40"/>
-
-                                                </subviews>
-
                                                 <color key="backgroundColor" name="Red"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Z5Q-AL-Fbc"/>
