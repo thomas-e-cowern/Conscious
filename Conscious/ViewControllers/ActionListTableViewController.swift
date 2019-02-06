@@ -78,8 +78,21 @@ class ActionListTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.backgroundColor = .white
+        self.navigationController?.view.backgroundColor = .white
+        if let navController = self.navigationController as? TransparentNavigationController {
+            navController.restoreDefaultNavBar()
+            navController.hidesBarsOnSwipe = true
+        }
         updateViews()
         }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        if let navController = self.navigationController as? TransparentNavigationController {
+            navController.setupViews()
+        }
+    }
     
     // MARK: - Table view data source
     func setUpView() {
@@ -110,9 +123,9 @@ class ActionListTableViewController: UITableViewController {
         
         switch actions[indexPath.row].icon {
         case "Food":
-            cell.listCellImage.image = UIImage(named: "Food")
+            cell.listCellImage.image = #imageLiteral(resourceName: "FoodIcon")
         case "house":
-            cell.listCellImage.image = UIImage(named: "home")
+            cell.listCellImage.image = #imageLiteral(resourceName: "HomeIcon")
         default:
             cell.listCellImage.image = UIImage(named: "TravelIcon")
         }
@@ -130,5 +143,13 @@ class ActionListTableViewController: UITableViewController {
             destinationVC?.action = chosenAction
             destinationVC?.buttonActive = true
         }
+    }
+}
+
+// MARK: - TableViewDelegate Methods
+extension ActionListTableViewController {
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
     }
 }

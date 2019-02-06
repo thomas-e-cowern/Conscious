@@ -43,6 +43,8 @@
 		7E6CC80221FBB6E6006C0E4A /* TabBarControllor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6CC80121FBB6E6006C0E4A /* TabBarControllor.swift */; };
 		7E92676721F23B8000A5B396 /* QuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E92676621F23B8000A5B396 /* QuizTableViewCell.swift */; };
 		7E94754F21F7E7710070F111 /* UserResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E94754E21F7E7710070F111 /* UserResultsViewController.swift */; };
+		7EB655A5220B500800875DC9 /* ActionIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EB655A4220B500800875DC9 /* ActionIcons.xcassets */; };
+		7EB655A7220B566C00875DC9 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB655A6220B566C00875DC9 /* UIViewExtension.swift */; };
 		7ECD8C5922010AF000152D0F /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECD8C5822010AF000152D0F /* SettingsTableViewCell.swift */; };
 		7ECD8C5B22011B7200152D0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ECD8C5A22011B7200152D0F /* LaunchScreen.storyboard */; };
 		7ECE819B21F1234F00F2F9DA /* ActionPlanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE819A21F1234F00F2F9DA /* ActionPlanController.swift */; };
@@ -89,6 +91,8 @@
 		7E6CC80121FBB6E6006C0E4A /* TabBarControllor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllor.swift; sourceTree = "<group>"; };
 		7E92676621F23B8000A5B396 /* QuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTableViewCell.swift; sourceTree = "<group>"; };
 		7E94754E21F7E7710070F111 /* UserResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResultsViewController.swift; sourceTree = "<group>"; };
+		7EB655A4220B500800875DC9 /* ActionIcons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = ActionIcons.xcassets; path = Pods/ActionIcons.xcassets; sourceTree = SOURCE_ROOT; };
+		7EB655A6220B566C00875DC9 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIViewExtension.swift; path = Conscious/ModelControllers/UIViewExtension.swift; sourceTree = SOURCE_ROOT; };
 		7ECD8C4E2201002200152D0F /* CircularStd-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-MediumItalic.otf"; sourceTree = "<group>"; };
 		7ECD8C4F2201002200152D0F /* CircularStd-BookItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-BookItalic.otf"; sourceTree = "<group>"; };
 		7ECD8C502201002200152D0F /* CircularStd-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-BlackItalic.otf"; sourceTree = "<group>"; };
@@ -164,10 +168,12 @@
 		41D89A8221EE8BDE00CFF725 /* Resorces */ = {
 			isa = PBXGroup;
 			children = (
+				7EB655A4220B500800875DC9 /* ActionIcons.xcassets */,
 				7E424DAF2204C56E003AA5C2 /* Assets.xcassets */,
 				7ECD8C4D2201000500152D0F /* Font */,
 				41D89A7021EE8B9F00CFF725 /* AppDelegate.swift */,
 				41D89A7C21EE8BB700CFF725 /* Info.plist */,
+				7EB655A6220B566C00875DC9 /* UIViewExtension.swift */,
 			);
 			path = Resorces;
 			sourceTree = "<group>";
@@ -335,6 +341,7 @@
 			files = (
 				7E6CC7FC21FB7A5F006C0E4A /* UserResult.storyboard in Resources */,
 				7ECD8C5B22011B7200152D0F /* LaunchScreen.storyboard in Resources */,
+				7EB655A5220B500800875DC9 /* ActionIcons.xcassets in Resources */,
 				7E6CC7FA21FB7A50006C0E4A /* USAverage.storyboard in Resources */,
 				7E3A5B7821FCF67A00BB4F16 /* PageOneViewController.storyboard in Resources */,
 				7E6CC7F821FB770D006C0E4A /* Tabs.storyboard in Resources */,
@@ -422,6 +429,7 @@
 				7ECD8C5922010AF000152D0F /* SettingsTableViewCell.swift in Sources */,
 				4176753B21F3F87500CC4C07 /* SettingsViewController.swift in Sources */,
 				41A8BDCC21F67AAF001EB547 /* ActionsAlarmController.swift in Sources */,
+				7EB655A7220B566C00875DC9 /* UIViewExtension.swift in Sources */,
 				414C721621F2A9E800C8687F /* ActionListTableViewController.swift in Sources */,
 				41228B5322023F7600AFA468 /* Food.swift in Sources */,
 				41228B5722023F7600AFA468 /* SavedData.swift in Sources */,

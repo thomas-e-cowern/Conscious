@@ -30,7 +30,9 @@ class UserResultsViewController: UIViewController {
     @IBOutlet weak var staticFoodLabel: UILabel!
     @IBOutlet weak var staticHomeLabel: UILabel!
     @IBOutlet weak var staticTravelLabel: UILabel!
- 
+    @IBOutlet weak var takeActionButton: UIButton!
+    
+    var seguedFromFootPrintVC: Bool = false
     
     // Raw scores
     var totalScore: Double = 1.0
@@ -51,6 +53,9 @@ class UserResultsViewController: UIViewController {
     // MARK: - View Life Cycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        if seguedFromFootPrintVC {
+            takeActionButton.isHidden = true
+        }
     }
     
     override func viewDidLoad() {

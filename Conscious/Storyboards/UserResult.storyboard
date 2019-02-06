@@ -122,7 +122,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Footprint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uST-tp-RnU">
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Footprint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uST-tp-RnU">
                                         <rect key="frame" x="24" y="54" width="218" height="43.5"/>
                                         <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="34"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -143,6 +143,11 @@
                                     <constraint firstAttribute="trailing" secondItem="5uB-Wg-4U3" secondAttribute="trailing" constant="16" id="pEC-Bs-Qv5"/>
                                     <constraint firstItem="uST-tp-RnU" firstAttribute="leading" secondItem="mkT-LC-iPq" secondAttribute="leading" constant="24" id="tNR-HM-xfV"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RuI-Ir-wJw">
                                 <rect key="frame" x="0.0" y="300" width="375" height="1020"/>
@@ -438,6 +443,7 @@
                         <outlet property="staticFoodLabel" destination="gnN-Y9-bYE" id="zLS-n1-g0t"/>
                         <outlet property="staticHomeLabel" destination="pv5-UM-rpS" id="faz-6h-Xrt"/>
                         <outlet property="staticTravelLabel" destination="d17-XZ-I7l" id="sgq-lZ-lIR"/>
+                        <outlet property="takeActionButton" destination="ebA-kV-5h1" id="p3z-2v-F83"/>
                         <outlet property="trashImageView" destination="rFc-U8-cJj" id="UAL-IO-YrC"/>
                         <outlet property="trashLabel" destination="eaQ-hf-t1Q" id="c4N-ae-AX3"/>
                         <outlet property="travelGraph" destination="qYo-tb-fkK" id="tkR-IF-KLK"/>

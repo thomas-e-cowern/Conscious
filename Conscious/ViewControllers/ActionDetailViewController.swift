@@ -21,6 +21,9 @@ class ActionDetailViewController: UIViewController {
     @IBOutlet weak var moneySavedLabel: UILabel!
     @IBOutlet weak var actionImageView: UIImageView!
     @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet weak var co2Icon: UIImageView!
+    @IBOutlet weak var moneySavedIconImageView: UIImageView!
+    @IBOutlet weak var bgView: UIView!
     
     // MARK: - Properties
     var action: ActionPlanDetail?
@@ -29,7 +32,34 @@ class ActionDetailViewController: UIViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        addToActionListButton.addDropShadow()
+        bgView.addDropShadow()
+        bgView.layer.masksToBounds = false
         updateViews()
+    }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        if let navController = self.navigationController as? TransparentNavigationController {
+//            navController.setupViews()
+//        }
+//    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if let navController = self.navigationController as? TransparentNavigationController {
+            navController.setupViews()
+//            navController.view.tintColor = .purple
+//            navController.navigationBar.barStyle = .default
+//            navController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.clear]
+//            navController.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.clear]
+//            navController.navigationBar.tintColor = .red
+//            navController.navigationBar.barTintColor = .blue
+//            navController.view.backgroundColor = .orange
+//            navController.navigationItem.rightBarButtonItem?.tintColor = .white
+//            navController.navigationItem.leftBarButtonItem?.tintColor = .white
+//
+        }
     }
     
     // MARK: - Setup

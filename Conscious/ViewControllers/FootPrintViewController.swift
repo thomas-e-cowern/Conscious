@@ -17,6 +17,9 @@ class FootPrintViewController: UIViewController {
     @IBOutlet weak var co2Label: UILabel!
     @IBOutlet weak var moneyLabel: UILabel!
     @IBOutlet weak var co2SubLabel: UILabel!
+    @IBOutlet weak var co2bgView: UIView!
+    @IBOutlet weak var moneySavedbgView: UIView!
+    @IBOutlet weak var graphBgView: UIView!
     
     // MARK: - Properties
     var weeks: [Int] = []
@@ -27,7 +30,7 @@ class FootPrintViewController: UIViewController {
     // MARK: - ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setUpUI()
         self.progressChartView.delegate = self
         results = ActionPlanController.shared.loadFromPersistenceStore(path: "data")
         print("Results: \(results)")
@@ -70,6 +73,16 @@ class FootPrintViewController: UIViewController {
     
     
     // MARK: - Setup
+    func setUpUI(){
+        co2bgView.layer.masksToBounds = false
+        progressChartView.layer.masksToBounds = false
+        moneySavedbgView.layer.masksToBounds = false
+        graphBgView.layer.cornerRadius = 5
+        graphBgView.addDropShadow()
+        co2bgView.addDropShadow()
+        moneySavedbgView.addDropShadow()
+    }
+    
     func setUpLineChart() {
         self.progressChartView.noDataText = "Haven't take the Quiz yet"
         let lXAxis = ChartLimitLine(limit: Double(weeks.count), label: "Quiz Results")
@@ -107,6 +120,14 @@ class FootPrintViewController: UIViewController {
     
     func updateViews() {
         resultsLabel.text = "\(round(completionPercent.last ?? 0) )"
+    }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toUserResults"{
+            let destination = segue.destination as! UserResultsViewController
+            destination.seguedFromFootPrintVC = true
+        }
     }
 }
 
