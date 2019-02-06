@@ -48,6 +48,11 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="LN4-qb-QbO"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -260,6 +265,11 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="1Xe-ta-2mK"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="iyG-fi-IUu">
                                 <rect key="frame" x="16" y="216" width="382" height="249"/>
@@ -449,7 +459,7 @@ We reserve the right, at our sole discretion, to modify or replace these Terms a
     </scenes>
     <resources>
         <image name="Close" width="14" height="14"/>
-        <image name="See More Icon" width="16" height="24"/>
+        <image name="See More Icon" width="8" height="12"/>
         <namedColor name="Brown">
             <color red="0.29399999976158142" green="0.2669999897480011" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

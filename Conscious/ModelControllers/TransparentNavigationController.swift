@@ -29,6 +29,12 @@ class TransparentNavigationController: UINavigationController {
         view.backgroundColor = .clear
     }
     
+    func restoreDefaultNavBar() {
+        navigationBar.setBackgroundImage(nil, for: .default)
+        navigationBar.shadowImage = nil
+        view.backgroundColor = .white
+    }
+    
     override func viewDidLayoutSubviews() {
         setUpSettingsButton()
     }

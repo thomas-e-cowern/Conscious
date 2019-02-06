@@ -94,6 +94,11 @@
                                     <constraint firstAttribute="bottom" secondItem="lQZ-H7-EEF" secondAttribute="bottom" constant="16" id="tTR-YW-MRS"/>
                                     <constraint firstAttribute="height" constant="300" id="uwW-JK-uMi"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5RR-bF-zfV">
                                 <rect key="frame" x="0.0" y="300" width="375" height="1050"/>
