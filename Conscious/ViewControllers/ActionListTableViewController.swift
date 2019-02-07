@@ -113,12 +113,7 @@ class ActionListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "actionCell", for: indexPath) as? ActionListTableViewCell else { return UITableViewCell() }
-//        cell.textLabel?.text = actions[indexPath.row].action
-//        if actions[indexPath.row].added == true {
-//
-//        } else {
-//            cell.listCellLabel.text = actions[indexPath.row].action
-//        }
+        actions.sort { $0.action < $1.action }
         cell.listCellLabel.text = actions[indexPath.row].action
         
         switch actions[indexPath.row].icon {
