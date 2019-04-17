@@ -1,6 +1,8 @@
-# Project Title
+# Conscious_Green
 
-One Paragraph of project description goes here
+HTTPS://ITUNES.APPLE.COM/US/APP/CONSCIOUS-GREEN/ID1450096891?MT=8
+
+Designed to simplify understanding of how user actions impact climate change, this app uses an intuitive quiz and scoring system to give a concrete impact and options to change that impact.  Initiated with user research, using data compiled from numerous government and environmental organizations and developed from scratch in cooperation with designers using UIKit, cocoa pods, local storage and custom animation and graphing
 
 ## Getting Started
 
